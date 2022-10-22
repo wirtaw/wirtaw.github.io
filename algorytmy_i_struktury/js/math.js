@@ -12,7 +12,7 @@ window.MathJax = {
     digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
     // pattern for recognizing numbers
     tags: 'none',              // or 'ams' or 'all'
-    tagSide: 'right',          // side for \tag macros
+    tagSide: 'left',          // side for \tag macros
     tagIndent: '0.8em',        // amount to indent tags
     useLabelIds: true,         // use label name rather than tag for ids
     maxMacros: 1000,           // maximum number of macro substitutions per expression
