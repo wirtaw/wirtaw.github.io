@@ -1,0 +1,218 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Algorytmy i struktury danych (UwB filia w Wilnie) - Udowodnienia częściowej i całkowitej poprawności algorytmu sumy tablicy c liczbami metoda iteracji pętli</title>
+    <meta name="description" content="Algorytmy i Struktury Danych (UwB filia w Wilnie)">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://polyfill.io/v3/polyfill.js?features=es6"></script>
+</head>
+<body>
+<section class="section">
+    <div class="container">
+        <h1 class="title">
+            Przykład udowodnienia częściowej i całkowitej poprawności algorytmu sumy tablicy c liczbami metoda iteracji pętli.
+        </h1>
+        <p class="subtitle">
+
+        </p>
+    </div>
+</section>
+<div class="content ml-2">
+    <h2>Dana tablica <code>arr</code> z liczbami całkowitymi. Rozmiar tablicy - <span id="#ArryLength" class="">$ n > 0 $</span>. Suma elementów tablicy. Przeanalizować dane wejściowe. Zaimplementować psedokod. Udowodnić częściowa poprawność algorytmu.</h2>
+    <h3>Analiza</h3>
+    <p>Dodatkowe zmienne $ i = 0 $ i $ sum = 0 $ do inicjacji pętli</p>
+    <h3>Pseudokod</h3>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                       <pre class="has-background-black has-text-white-ter">
+// Vladimir Poplavskij. Wykladowca
+// Suma elementow tablicy
+// 2022-10-21
+
+ArraySum(arr, n) {
+  i = 0;
+  sum = 0;
+
+  while (i < n) {
+    sum = sum + arr[i];
+    <span id="#iteration" class="">i = i + 1;</span>
+  }
+
+  return sum;
+}
+                       </pre>
+            </div>
+        </div>
+        <footer class="card-footer"></footer>
+    </div>
+    <h3>Pętla</h3>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <p><span id="#startStep"><b>Q</b> (warunek wstępny ): $ i = 0 $ i $ sum = 0 $</span></p>
+                <p><span id="#loopGuard"><b>B</b> (warunek zatrzymania): $  while (i < n) $</span></p>
+                <p><span id="#loopBody"><b>S</b> (ciało pętli ): $  sum = sum + arr[i]; $ oraz $  i = i + 1; $</span></p>
+                <p><span id="#finalResult"><b>R</b> (warunek końcowy): $  \sum_{i=0}^{n} arr[i] $</span></p>
+                <p><span id="#invariant">$Niezmiennik( i, sum ) =  0 \leq i \leq n  \space\Lambda\space  \sum_{k=0}^{i-1} arr[k]$ </span></p>
+            </div>
+            <footer class="card-footer"></footer>
+        </div>
+    </div>
+    <h3 id="stopProperty">Wlasnosc stopu</h3>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <ul>
+                    <li>algorytm zatrzyma się, kiedykolwiek zajdzie ${ i \leq len }$ - jest iteracja $ i $ oraz $ n $ skończoną liczbą naturalną</li>
+                    <li>$ n $ jest stałą i skończoną liczbą naturalną - <a href="#ArryLength" class="">tak</a></li>
+                    <li>wartość zmiennej $ i $ rośnie o 1 w każdej iteracji - <a href="#iteration" class="">tak</a></li>
+                </ul>
+            </div>
+        </div>
+        <footer class="card-footer"></footer>
+    </div>
+    <h3 id="partialTrue">Częściowa poprawność</h3>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <p>
+                    <ol>
+                        <li><a href="#baseCase">Przypadek podstawowy</a>: udowodnic, że niezmiennik pętli jest prawdziwy po osiągnięciu pętli</li>
+                        <li><a href="#inductionStep">Krok indukcii</a>:
+                           <ul>
+                               <li>
+                                   załóżmy, że <a href="#invariant">niezmiennik</a> i <a href="#loopGuard">warunek zatrzymania</a> są prawdziwe na końcu dowolnego kroku iteracji (hipoteza indukcji $ P(n-1) $)
+                               </li>
+                               <li>
+                                   pokaż, że niezmiennik pozostaje prawdziwy po jednej iteracji $(P(n))$
+                               </li>
+                           </ul>
+                        </li>
+                        <li><a href="#finalStep">Udowodnic warunek końcowy</a>: argumentuj, że <a href="#invariant">niezmiennik</a> i negacja <a href="#loopGuard">warunka zatrzymania</a> razem sfinalizujmy <a href="#finalResult">stan końcowy programu</a>.</li>
+                    </ol>
+                </p>
+            </div>
+        </div>
+        <footer class="card-footer"></footer>
+    </div>
+    <h3 id="baseCase">Przypadek podstawowy</h3>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <p>Udowdnimy że niezmiennik pętli jest prawdziwy po osiągnięciu pętli:</p>
+                <ol>
+                    <li>Na starcie pętli mamy $ i = 0 $ i $ sum = 0 $</li>
+                    <li>$Niezmiennik( 0, 0 ) =  0 \leq 0 \leq n  \space\Lambda\space  \sum_{k=0}^{-1} arr[k]$ </li>
+                    <li>Obydwa tych założenia są prawdziwe </li>
+                </ol>
+                <p class="has-text-danger">Przypadek podstawowy jest wypelniony</p>
+            </div>
+        </div>
+        <footer class="card-footer"></footer>
+    </div>
+    <h3 id="#inductionStep">Krok indukcii</h3>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <h4>Nieformalnie</h4>
+                <p>
+                    Załóżmy, że niezmiennik i warunek zatrzymania są prawdziwe na końcu dowolnej iteracji, pokaż, że niezmiennik pozostaje prawdziwy po jednej iteracji.
+                </p>
+                <ul>
+                    <li> Na końcu dowolnej iteracji i niezmiennik będący prawdą oznacza, że suma jest sumą pierwszych $ i $ elementów $ arr $.</li>
+                    <li> Po jeszcze jednej iteracji dodajemy $ arr[i] $ do sumy, dlatego suma staje się suma pierwszych $ i+1 $ elementów $ arr $.</li>
+                    <li> Aby "naprawić to", musimy zwiększyć $ i $ o $ 1 $</li>
+                    <li> dokładnie to robi pętla</li>
+                    <li> więc niezmiennik pętli pozostaje prawdziwy </li>
+                </ul>
+                <h4>Formalnie</h4>
+                <p>
+                    Załóżmy, że niezmiennik i warunek zatrzymania są prawdziwe na końcu dowolnej iteracji,
+                    pokaż, że niezmiennik pozostaje prawdziwy po jednej iteracji.
+                </p>
+                <p>
+                    Indeksu dolnego $ 0 $ używamy dla wartości <b>przed iteracją</b>, a $ 1 $ dla wartości <b>po iteracji</b>.
+                </p>
+                <p>
+                    Zakładamy dwie rzeczy, <b> niezmiennik </b> i <b> warunek zatrzymania </b> przed pętlami <br>
+                </p>
+                <ul>
+                    <li>$Niezmiennik( i_0, sum_0 ) = 0 \leq i_0 \leq n  \space\Lambda\space  sum_0=\sum_{k=0}^{i_0-1} arr[k]$</li>
+                    <li>$ i_0 < n $</li>
+                </ul>
+                <p>
+                    Musimy udowodnic, ze: <br>
+                    $Niezmiennik( i_1, sum_1 ) = 0 \leq i_1 \leq n \space\Lambda\space  sum_1=\sum_{k=0}^{i_1-1} arr[k]$
+                </p>
+                <p>
+                    Udowodnimy te dwie koniunkcje osobno
+                </p>
+                <p> <b>Konjunkcja 1</b> <br> $ 0 \leq i_1 \leq n $</p>
+                <ul>
+                    <li>Z ciała pętli, my mamy ze $ i_1 = i_0 + 1 $</li>
+                    <li>Podstawiamy do konjunkcii i mamy do udowdnenia $ 0 \leq (i_0 + 1) \leq n $</li>
+                    <li>Lewa strona jest prawda, bo $ 0 \leq i_0 $ ze niezmiennik</li>
+                    <li>Prawa strona jest prawda, bo $ i_0 \leq n $ ze warunka zatrzymania</li>
+                </ul>
+                <p> <b>Konjunkcja 2</b> <br> $ sum_1=\sum_{k=0}^{i_1-1} arr[k] $</p>
+                <p>
+                    Z ciala pętli mamy $sum_1 = sum_1 + arr[i_0] $ i $ i_1 = i_0 + 1$ <br>
+                    $$ sum_1 = sum_1 + arr[i_0] $$(z ciala pętli)
+                    $$  = (\sum_{k=0}^{i_0-1} arr[k]) + arr[i_0] $$(z $Niezmiennik(i_0, sum_0)$)
+                    $$  = \sum_{k=0}^{i_0} arr[k] $$
+                    $$  = \sum_{k=0}^{i_1 - 1} arr[k] $$
+                </p>
+                <p class="has-text-danger">
+                    Sprawdzony konjunkcji 1 i 2, wykonany krok indukcyjny.
+                </p>
+            </div>
+        </div>
+        <footer class="card-footer"></footer>
+    </div>
+    <h3 id="#finalStep">Warunek końcowy</h3>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <p>
+                    Udowodnic, że niezmiennik i negacja warunka zatrzymania razem pozwalają nam podsumować warunek końcowy.
+                </p>
+                <p>
+                    niezmiennik i negacja warunka zatrzymania razem:
+                    $$  0 \leq i \leq n \space\Lambda\space sum=\sum_{k=0}^{i-1} arr[k] \space\Lambda\space i \geq n$$
+                    jedyne co trzeba udowdnic ze 1 i 3 konkjukcii sa prawdziwe gdy $ i = n $ , wtedy mamy
+                    $$ i = n \space\Lambda\space sum = \sum_{k=0}^{n} arr[k]  $$
+                    Suma wszystkich elementów tablicy $ arr $ jest równa $ sum $.
+                </p>
+                <p class="has-text-danger">
+                    Warunek końcowy - udowdniony.
+                </p>
+            </div>
+        </div>
+        <footer class="card-footer"></footer>
+    </div>
+    <h3 id="#final">Całkowicie poprawny</h3>
+    <p class="is-size-4">
+        Mamy ze algorytm obliczenia sumy tablicy ma <a href="#stopProperty">własność stopu</a> i <a href="#partialTrue">częściowo poprawny</a> - z tego wynika ze jest całkowicie poprawny
+    </p>
+    <p><a href="../cwiczenia.html">Cwiczenia</a><br> <a href="../index.html">Na glowna</a></p>
+</div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>&copy;</strong> by <a href="https://poplauki.eu">Poplavskij Vladimir</a>. 2022
+        </p>
+    </div>
+</footer>
+<script src="../js/main.js"></script>
+<script src="../js/math.js" async></script>
+</body>
+</html>
