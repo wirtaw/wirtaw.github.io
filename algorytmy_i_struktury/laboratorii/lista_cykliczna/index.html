@@ -78,13 +78,14 @@
     struct Item {
         float value;
         struct Item *next;
+        struct Item *prev;
     };
 
-    int find(float value, int *head)
+    float find(float value, int *head)
 
-    int locate(float value, int *head)
+    float locate(float value, int *head) // pointer
 
-    int retrieve(Item *item, int *head)
+    float retrieve(Item *item) // wartosc
 
     void insert(Item *item, float value, Item *head)
 
@@ -104,7 +105,7 @@
 
     void previous(Item *item, Item *head)
 
-    int makeNull(int *head)
+    void makeNull(int *head)
 
     #include &lt;stdio.h&gt;
 
