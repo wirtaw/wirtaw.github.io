@@ -81,11 +81,11 @@
         struct Item *prev;
     };
 
-    int find(float value, int *head)
+    float find(float value, Item *head)
 
-    int locate(float value, int *head)
+    Item locate(float value, Item *head)
 
-    int retrieve(Item *item, int *head)
+    float retrieve(Item *item, Item *head)
 
     void insert(Item *item, float value, Item *head)
 
@@ -93,19 +93,19 @@
 
     int size(int *head)
 
-    Item findMax(int *head)
+    Item findMax(Item *head)
 
-    Item findMin(int *head)
+    Item findMin(Item *head)
 
-    int printList(int *head)
+    int printList(Item *head)
 
-    int isEmpty(int *head)
+    int isEmpty(Item *head)
 
     void next(Item *item, Item *head)
 
     void previous(Item *item, Item *head)
 
-    int makeNull(int *head)
+    void makeNull(Item *head)
 
     #include &lt;stdio.h&gt;
 
