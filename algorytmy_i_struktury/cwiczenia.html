@@ -26,6 +26,91 @@
         </section>
         <div class="content ml-2">
             <h1>Lista cwiczen</h1>
+            <h2>3</h2>
+            <p>
+
+            </p>
+            <ul>
+                <li> Czy jest $ 2n+1 = Θ(2n)$?</li>
+                <li> Czy jest $(x + y)^2 = Θ(x^2 + y^2 )$?</li>
+            </ul>
+            <p>
+                Oblicz złożoność czasową dla każdego fragmentu kodu ćwiczenia.
+            </p>
+            <ul>
+                <li>
+                    <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+2       i, j = 0;
+3       for (i; i &lt; n*1000 ; i++) {
+4           for (j; j &lt; n*20; j++) {
+5               printf("%d", i + j);
+6           }
+7       }
+9   }
+                    </pre>
+                </li>
+                <li>
+                <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+2       i, j, k, l = 0;
+3       for (i; i &lt; n ; i++) {
+4           for (j; j &lt; n; j++) {
+5               for (k; k &lt; n; j++) {
+6                   for (l; l &lt; 10; j++) {
+7                       printf("%d", i + j + k + l);
+8                   }
+9              }
+10           }
+11       }
+12  }
+                    </pre>
+                </li>
+            </ul>
+            <p>
+                Notacja Big-O
+            </p>
+            <ul>
+                <li>
+                    <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+2       i = 0;
+3       for (i; i &lt; 1000 ; i++) {
+4           printf("%d", i);
+5       }
+6   }
+                    </pre>
+                </li>
+                <li>
+               <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+2       i = 0;
+3       for (i; i &lt; n * 10 ; i++) {
+4           printf("%d", i);
+5       }
+6   }
+                    </pre>
+                </li>
+                <li>
+               <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+2       i = 0;
+3       for (i; i &lt; n  ; i = i * 2) {
+4           printf("%d", i);
+5       }
+6   }
+                    </pre>
+                </li>
+                <li>
+               <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+3       while (true) {
+4           printf("%d", n);
+5       }
+6   }
+                    </pre>
+                </li>
+            </ul>
             <h2>2</h2>
             <p>
                 <a href="https://leoncvlt.github.io/imml/#"> Formatowanie MD </a> /
@@ -37,7 +122,7 @@
                 <a href="cwiczenia/poprawnosc-algorytmu-matematcna-indukcja.html">Przykład udowodnienia częściowej i całkowitej poprawności algorytmu sumy ciągu z liczbami metoda matematycznej indukcji.</a>
             </p>
             <ul>
-                <li>Factorial <a href="https://en.wikipedia.org/wiki/Factorial">wiki</a></li>
+                <li>Silnia(factorial) <a href="https://en.wikipedia.org/wiki/Factorial">wiki</a></li>
                 <li>Iloczyn i reszta. Realizacja z warunkem pocztkawym calkowita liczba - n, wyjsce licby(lista) - q i r <a href="https://pl.wikipedia.org/wiki/Twierdzenie_o_dzieleniu_z_reszt%C4%85">wiki</a> <a href="https://pl.wikipedia.org/wiki/Mno%C5%BCenie">wiki</a></li>
                 <li>NWD <a href="https://pl.wikipedia.org/wiki/Najwi%C4%99kszy_wsp%C3%B3lny_dzielnik">wiki</a></li>
                 <li>Srednia arytmetyczna <a href="https://pl.wikipedia.org/wiki/%C5%9Arednia_arytmetyczna">wiki</a></li>
@@ -66,5 +151,6 @@
           </div>
         </footer>
         <script src="js/main.js"></script>
+        <script src="js/math.js" async></script>
     </body>
 </html>
