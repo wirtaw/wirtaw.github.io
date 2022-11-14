@@ -28,11 +28,38 @@
             <h1>Lista cwiczen</h1>
             <h2>3</h2>
             <p>
-
+                Big-O i Big-Omega
             </p>
             <ul>
-                <li> Czy jest $ 2n+1 = Θ(2n)$?</li>
-                <li> Czy jest $(x + y)^2 = Θ(x^2 + y^2 )$?</li>
+                <li>Mamy funkcja $T(n) = 3n^3 + 2n^2$. Czy jest $Θ(n^3)$? Wiezmiemy $n_0=0$ i $c=5$. Wtedy mamy zauważyć ze przy $n>= 0$, $3n^3 + 2n^2 <= 5n^3$. Tak samo możemy  twierdzić ze $T(n)$ jest $Θ(n^4)$, ale to słabsze twierdzenie niż $Θ(n^3)$</li>
+                <li>Mamy funckja $T(n) = n^3 + 2n^2$. Czy jest $\Omega(n^3)$? Niech $c = 1$. Wtedy $T(n) >= cn^3$ dla $n = 0,1,...$</li>
+                <li>$T(n) = 3n^3 + 2n + 7 ∊ Θ(n3)$ <br> Gdy $n ≥ 1$, then $T(n) = 3n^3 + 2n + 7 ≤ 3n^3 + 2n^3 + 7n^3 = 12n^3$. Stąd $T(n) ∊ O(n^3)$. <br>
+                    Z drugiej strony, $T(n) = 3n^3 + 2n + 7 > n^3$ dla wszytkich $n > 0$. W związku z tym $T(n) ∊ Ω(n^3)$.<br>
+                    I konsekwentnie $T(n) ∊ Θ(n^3)$</li>
+            </ul>
+            <p>
+                Zadania
+            </p>
+            <ul>
+                <li> Czy jest $ 2n+1 ∊ Θ(2n)$?</li>
+                <li> Czy jest $(x + y)^2 ∊ Θ(x^2 + y^2 )$?</li>
+                <li> Czy jest $ 17 ∊ Θ(1)$?</li>
+                <li> Czy jest $ {2(n-1)}/{2} ∊ Θ(n^2)$?</li>
+                <li> Czy jest $ max(n^3, 10n^2) ∊ Θ(n^3)$?</li>
+                <li> Czy jest $ \sum_{i=1}^{n}i^k ∊ Θ(n^{k+1})$ i \Omega(n^{k+1}) dla calkowitych k?</li>
+            </ul>
+            <p>Uporządkuj następujące funkcje według rosnącej</p>
+            <ul>
+                <li>$n$</li>
+                <li>$\sqrt{n}$</li>
+                <li>$log{n}$</li>
+                <li>$log{log{n}}$</li>
+                <li>$log^2{n}$</li>
+                <li>${n}/{log{n}}$</li>
+                <li>$\sqrt{n}log^2{n}$</li>
+                <li>$(\frac{1}{2})^n$</li>
+                <li>$(\frac{3}{2})^n$</li>
+                <li>17</li>
             </ul>
             <p>
                 Oblicz złożoność czasową dla każdego fragmentu kodu ćwiczenia.
