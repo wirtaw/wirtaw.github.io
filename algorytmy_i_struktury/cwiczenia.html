@@ -26,6 +26,118 @@
         </section>
         <div class="content ml-2">
             <h1>Lista cwiczen</h1>
+            <h2>3</h2>
+            <p>
+                Big-O i Big-Omega
+            </p>
+            <ul>
+                <li>Mamy funkcja $T(n) = 3n^3 + 2n^2$. Czy jest $Θ(n^3)$? Wiezmiemy $n_0=0$ i $c=5$. Wtedy mamy zauważyć ze przy $n>= 0$, $3n^3 + 2n^2 <= 5n^3$. Tak samo możemy  twierdzić ze $T(n)$ jest $Θ(n^4)$, ale to słabsze twierdzenie niż $Θ(n^3)$</li>
+                <li>Mamy funckja $T(n) = n^3 + 2n^2$. Czy jest $\Omega(n^3)$? Niech $c = 1$. Wtedy $T(n) >= cn^3$ dla $n = 0,1,...$</li>
+                <li>$T(n) = 3n^3 + 2n + 7 ∊ Θ(n3)$ <br> Gdy $n ≥ 1$, then $T(n) = 3n^3 + 2n + 7 ≤ 3n^3 + 2n^3 + 7n^3 = 12n^3$. Stąd $T(n) ∊ O(n^3)$. <br>
+                    Z drugiej strony, $T(n) = 3n^3 + 2n + 7 > n^3$ dla wszytkich $n > 0$. W związku z tym $T(n) ∊ Ω(n^3)$.<br>
+                    I konsekwentnie $T(n) ∊ Θ(n^3)$</li>
+            </ul>
+            <p>
+                Zadania
+            </p>
+            <ul>
+                <li> Czy jest $ 2n+1 ∊ Θ(2n)$?</li>
+                <li> Czy jest $(x + y)^2 ∊ Θ(x^2 + y^2 )$?</li>
+                <li> Czy jest $ 17 ∊ Θ(1)$?</li>
+                <li> Czy jest $ {2(n-1)}/{2} ∊ Θ(n^2)$?</li>
+                <li> Czy jest $ max(n^3, 10n^2) ∊ Θ(n^3)$?</li>
+                <li> Czy jest $ \sum_{i=1}^{n}i^k ∊ Θ(n^{k+1})$ i \Omega(n^{k+1}) dla calkowitych k?</li>
+            </ul>
+            <p>Uporządkuj następujące funkcje według rosnącej</p>
+            <ul>
+                <li>$n$</li>
+                <li>$\sqrt{n}$</li>
+                <li>$log{n}$</li>
+                <li>$log{log{n}}$</li>
+                <li>$log^2{n}$</li>
+                <li>${n}/{log{n}}$</li>
+                <li>$\sqrt{n}log^2{n}$</li>
+                <li>$(\frac{1}{2})^n$</li>
+                <li>$(\frac{3}{2})^n$</li>
+                <li>17</li>
+            </ul>
+            <p>
+                Oblicz złożoność czasową dla każdego fragmentu kodu ćwiczenia.
+            </p>
+            <ul>
+                <li>
+                    <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+2       i, j = 0;
+3       for (i; i &lt; n*1000 ; i++) {
+4           for (j; j &lt; n*20; j++) {
+5               printf("%d", i + j);
+6           }
+7       }
+9   }
+                    </pre>
+                </li>
+                <li>
+                <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+2       i, j, k, l = 0;
+3       for (i; i &lt; n ; i++) {
+4           for (j; j &lt; n; j++) {
+5               for (k; k &lt; n; j++) {
+6                   for (l; l &lt; 10; j++) {
+7                       printf("%d", i + j + k + l);
+8                   }
+9              }
+10           }
+11       }
+12  }
+                    </pre>
+                </li>
+            </ul>
+            <p>
+                Notacja Big-O
+            </p>
+            <ul>
+                <li>
+                    <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+2       i = 0;
+3       for (i; i &lt; 1000 ; i++) {
+4           printf("%d", i);
+5       }
+6   }
+                    </pre>
+                </li>
+                <li>
+               <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+2       i = 0;
+3       for (i; i &lt; n * 10 ; i++) {
+4           printf("%d", i);
+5       }
+6   }
+                    </pre>
+                </li>
+                <li>
+               <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+2       i = 0;
+3       for (i; i &lt; n  ; i = i * 2) {
+4           printf("%d", i);
+5       }
+6   }
+                    </pre>
+                </li>
+                <li>
+               <pre class="has-background-black has-text-white-ter">
+1 function someFunction(n) {
+3       while (true) {
+4           printf("%d", n);
+5       }
+6   }
+                    </pre>
+                </li>
+            </ul>
             <h2>2</h2>
             <p>
                 <a href="https://leoncvlt.github.io/imml/#"> Formatowanie MD </a> /
@@ -37,7 +149,7 @@
                 <a href="cwiczenia/poprawnosc-algorytmu-matematcna-indukcja.html">Przykład udowodnienia częściowej i całkowitej poprawności algorytmu sumy ciągu z liczbami metoda matematycznej indukcji.</a>
             </p>
             <ul>
-                <li>Factorial <a href="https://en.wikipedia.org/wiki/Factorial">wiki</a></li>
+                <li>Silnia(factorial) <a href="https://en.wikipedia.org/wiki/Factorial">wiki</a></li>
                 <li>Iloczyn i reszta. Realizacja z warunkem pocztkawym calkowita liczba - n, wyjsce licby(lista) - q i r <a href="https://pl.wikipedia.org/wiki/Twierdzenie_o_dzieleniu_z_reszt%C4%85">wiki</a> <a href="https://pl.wikipedia.org/wiki/Mno%C5%BCenie">wiki</a></li>
                 <li>NWD <a href="https://pl.wikipedia.org/wiki/Najwi%C4%99kszy_wsp%C3%B3lny_dzielnik">wiki</a></li>
                 <li>Srednia arytmetyczna <a href="https://pl.wikipedia.org/wiki/%C5%9Arednia_arytmetyczna">wiki</a></li>
@@ -66,5 +178,6 @@
           </div>
         </footer>
         <script src="js/main.js"></script>
+        <script src="js/math.js" async></script>
     </body>
 </html>
