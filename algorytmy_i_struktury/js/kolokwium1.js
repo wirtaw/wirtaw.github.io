@@ -10,7 +10,7 @@ const stopButtonID = 'stopKolokwiumButton';
 const questionsID = 'QuestionsTest';
 const questionsComplexityID = 'QuestionsComplexity';
 const questionsCorrectnessID = 'QuestionsCorrectness';
-const questionsPseudocodeID = 'QuestionsPseudocode';
+
 const AnswersID = 'Answers';
 const AnswersTextAreaID = 'AnswersTextArea';
 let now = null;
@@ -132,11 +132,11 @@ const testQuestions = [
       },
       {
         label: 'c',
-        value: '$O(n)$'
+        value: '$O(n^2)$'
       },
       {
         label: 'd',
-        value: '$O(n^2)$'
+        value: '$O(n)$'
       },
       {
         label: 'e',
@@ -361,15 +361,15 @@ const testQuestions = [
       },
       {
         label: 'c',
-        value: '$W(n) = 3n^2 + 4 = Θ(n^2 )$'
-      },
-      {
-        label: 'd',
         value: '$Θ(n!)$'
       },
       {
-        label: 'e',
+        label: 'd',
         value: '$S(n) = 3 = Θ(1)$'
+      },
+      {
+        label: 'e',
+        value: '$W(n) = 3n^2 + 4 = Θ(n^2 )$'
       },
       {
         label: 'f',
@@ -396,15 +396,15 @@ const testQuestions = [
     answers: [
       {
         label: 'a',
-        value: '$A(n) = Θ(n^3)$'
+        value: '$W(n) = 3n^2 + 4 = Θ(n^2 )$'
       },
       {
         label: 'b',
-        value: '$W(n) = 2 + lg2 n = Θ(log(n))$'
+        value: '$A(n) = Θ(n^3)$'
       },
       {
         label: 'c',
-        value: '$W(n) = 3n^2 + 4 = Θ(n^2 )$'
+        value: '$W(n) = 2 + lg2 n = Θ(log(n))$'
       },
       {
         label: 'd',
@@ -443,11 +443,11 @@ const testQuestions = [
       },
       {
         label: 'b',
-        value: 'ma byc while pętlia'
+        value: 'jeśli predykat jest spełniony przed wejściem w pewną (dowolną) iterację pętli to jest także spełniony po wyjściu z tej iteracji pętli'
       },
       {
         label: 'c',
-        value: 'jeśli predykat jest spełniony przed wejściem w pewną (dowolną) iterację pętli to jest także spełniony po wyjściu z tej iteracji pętli'
+        value: 'ma byc while pętlia'
       },
       {
         label: 'd',
@@ -474,11 +474,11 @@ const testQuestions = [
       },
       {
         label: 'b',
-        value: 'znajdź operacja dominująca'
+        value: 'określić złożoność czasowa'
       },
       {
         label: 'c',
-        value: 'określić złożoność czasowa'
+        value: 'znajdź operacja dominująca'
       },
       {
         label: 'd',
@@ -516,7 +516,7 @@ const testComplexity = [
       },
       {
         label: 'c',
-        value: '$Θ(n^2 )$'
+        value: '$Θ(n^2)$'
       },
       {
         label: 'd',
@@ -524,14 +524,18 @@ const testComplexity = [
       },
       {
         label: 'e',
-        value: '$Θ(1)$'
+        value: '$Θ(n)$'
       },
       {
         label: 'f',
-        value: '$Θ(nlog(n))$'
+        value: '$Θ(1)$'
       },
       {
         label: 'g',
+        value: '$Θ(nlog(n))$'
+      },
+      {
+        label: 'h',
         value: '$Θ(2^n)$'
       }
     ],
@@ -551,7 +555,7 @@ const testComplexity = [
       },
       {
         label: 'c',
-        value: '$Θ(n^2 )$'
+        value: '$Θ(n^2)$'
       },
       {
         label: 'd',
@@ -559,14 +563,18 @@ const testComplexity = [
       },
       {
         label: 'e',
-        value: '$Θ(1)$'
+        value: '$Θ(n)$'
       },
       {
         label: 'f',
-        value: '$Θ(nlog(n))$'
+        value: '$Θ(1)$'
       },
       {
         label: 'g',
+        value: '$Θ(nlog(n))$'
+      },
+      {
+        label: 'h',
         value: '$Θ(2^n)$'
       }
     ],
@@ -586,7 +594,7 @@ const testComplexity = [
       },
       {
         label: 'c',
-        value: '$Θ(n^2 )$'
+        value: '$Θ(n^2)$'
       },
       {
         label: 'd',
@@ -594,14 +602,18 @@ const testComplexity = [
       },
       {
         label: 'e',
-        value: '$Θ(1)$'
+        value: '$Θ(n)$'
       },
       {
         label: 'f',
-        value: '$Θ(nlog(n))$'
+        value: '$Θ(1)$'
       },
       {
         label: 'g',
+        value: '$Θ(nlog(n))$'
+      },
+      {
+        label: 'h',
         value: '$Θ(2^n)$'
       }
     ],
@@ -621,7 +633,7 @@ const testComplexity = [
       },
       {
         label: 'c',
-        value: '$Θ(n^2 )$'
+        value: '$Θ(n^2)$'
       },
       {
         label: 'd',
@@ -629,14 +641,18 @@ const testComplexity = [
       },
       {
         label: 'e',
-        value: '$Θ(1)$'
+        value: '$Θ(n)$'
       },
       {
         label: 'f',
-        value: '$Θ(nlog(n))$'
+        value: '$Θ(1)$'
       },
       {
         label: 'g',
+        value: '$Θ(nlog(n))$'
+      },
+      {
+        label: 'h',
         value: '$Θ(2^n)$'
       }
     ],
@@ -656,7 +672,7 @@ const testComplexity = [
       },
       {
         label: 'c',
-        value: '$Θ(n^2 )$'
+        value: '$Θ(n^2)$'
       },
       {
         label: 'd',
@@ -664,14 +680,18 @@ const testComplexity = [
       },
       {
         label: 'e',
-        value: '$Θ(1)$'
+        value: '$Θ(n)$'
       },
       {
         label: 'f',
-        value: '$Θ(nlog(n))$'
+        value: '$Θ(1)$'
       },
       {
         label: 'g',
+        value: '$Θ(nlog(n))$'
+      },
+      {
+        label: 'h',
         value: '$Θ(2^n)$'
       }
     ],
