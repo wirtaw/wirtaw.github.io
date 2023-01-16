@@ -31,15 +31,15 @@ const testQuestions = [
     answers: [
       {
         label: 'a',
-        value: 'sposob pracy i przetwarzania danych w pamięci komputera'
+        value: 'dokładny opis, przepis, np. w postaci listy kolejnych kroków, jak coś wykonać, etc. (nie tylko zadania obliczeniowe, np. przepis wykonania pewnej potrawy albo dokonania pewnej procedury prawnej, etc.'
       },
       {
         label: 'b',
-        value: 'olbiczenie matymatycznych twierdzen na psedokodowym'
+        value: 'sposob pracy i przetwarzania danych w pamięci komputera'
       },
       {
         label: 'c',
-        value: 'dokładny opis, przepis, np. w postaci listy kolejnych kroków, jak coś wykonać, etc. (nie tylko zadania obliczeniowe, np. przepis wykonania pewnej potrawy albo dokonania pewnej procedury prawnej, etc.'
+        value: 'olbiczenie matymatycznych twierdzen na psedokodowym'
       },
       {
         label: 'd',
@@ -159,15 +159,15 @@ const testQuestions = [
       },
       {
         label: 'b',
-        value: 'Algorytm do poszukiwania maksymalnej'
+        value: 'Algorytm z wykorzystaniem pętli for'
       },
       {
         label: 'c',
-        value: 'Typ algorytmów chciwych'
+        value: 'Algorytm do poszukiwania maksymalnej'
       },
       {
         label: 'd',
-        value: 'Algorytm z wykorzystaniem pętli for'
+        value: 'Typ algorytmów chciwych'
       },
       {
         label: 'e',
@@ -190,11 +190,11 @@ const testQuestions = [
       },
       {
         label: 'b',
-        value: 'print (wyswetlenia elementow)'
+        value: 'pop (wyjmowanie elementa)'
       },
       {
         label: 'c',
-        value: 'pop (wyjmowanie elementa)'
+        value: 'print (wyswetlenia elementow)'
       },
       {
         label: 'd',
@@ -404,11 +404,11 @@ const testQuestions = [
       },
       {
         label: 'c',
-        value: '$W(n) = 2 + lg2 n = Θ(log(n))$'
+        value: '$Θ(n!)$'
       },
       {
         label: 'd',
-        value: '$Θ(n!)$'
+        value: '$W(n) = 2 + lg2 n = Θ(log(n))$'
       },
       {
         label: 'e',
@@ -494,6 +494,158 @@ const testQuestions = [
       },
       {
         label: 'g',
+        value: 'wszystko nieprawidłowe'
+      }
+    ],
+    description: ''
+  },
+  {
+    id: 15,
+    title: 'Jaka z podanych definicji jest definicja chciwego algorytmu.',
+    answers: [
+      {
+        label: 'a',
+        value: 'Algorytm, który wybiera najlepszy wybór na każdym kroku, zamiast uwzględnienie wszystkich sekwencji kroków, które mogą prowadzić do optymalnego rozwiązania.'
+      },
+      {
+        label: 'b',
+        value: 'Algorytm, który uwzględnienie wszystkich sekwencji kroków prowadzych do optymalnego rozwiązania problemy'
+      },
+      {
+        label: 'c',
+        value: 'Algorytm, dla ktorego niemozliwe udowodnic poprawnosc.'
+      },
+      {
+        label: 'd',
+        value: 'Algorytm, ktore sa poprawne i wydajne wedlug czasu'
+      },
+      {
+        label: 'e',
+        value: 'wszystko prawidłowe'
+      },
+      {
+        label: 'f',
+        value: 'wszystko nieprawidłowe'
+      }
+    ],
+    description: ''
+  },
+  {
+    id: 16,
+    title: 'Jakie z podanych operacji niemozliwe w liscie jednekierunkowej.',
+    answers: [
+      {
+        label: 'a',
+        value: 'push (dodanie elementa)'
+      },
+      {
+        label: 'b',
+        value: 'pop (wyjmowanie elementa)'
+      },
+      {
+        label: 'c',
+        value: 'print (wyswetlenia elementow)'
+      },
+      {
+        label: 'd',
+        value: 'search (poszukiwanie elementa)'
+      },
+      {
+        label: 'e',
+        value: 'next (przejście od head do tail)'
+      },
+      {
+        label: 'f',
+        value: 'previous (przejście od taila do head)'
+      },
+      {
+        label: 'g',
+        value: 'wszystko prawidłowe'
+      },
+      {
+        label: 'h',
+        value: 'wszystko nieprawidłowe'
+      }
+    ],
+    description: ''
+  },
+  {
+    id: 17,
+    title: 'Jakie z podanych operacji niemozliwe w liscie dwukierunkowej.',
+    answers: [
+      {
+        label: 'a',
+        value: 'push (dodanie elementa)'
+      },
+      {
+        label: 'b',
+        value: 'pop (wyjmowanie elementa)'
+      },
+      {
+        label: 'c',
+        value: 'print (wyswetlenia elementow)'
+      },
+      {
+        label: 'd',
+        value: 'search (poszukiwanie elementa)'
+      },
+      {
+        label: 'e',
+        value: 'next (przejście od head do tail)'
+      },
+      {
+        label: 'f',
+        value: 'previous (przejście od taila do head)'
+      },
+      {
+        label: 'g',
+        value: 'wszystko prawidłowe'
+      },
+      {
+        label: 'h',
+        value: 'wszystko nieprawidłowe'
+      }
+    ],
+    description: ''
+  },
+  {
+    id: 18,
+    title: 'Jaka z notacji asymptotycznych jest ze złożonością liniowo-logarytmiczna?',
+    answers: [
+      {
+        label: 'a',
+        value: '$W(n) = 3n^2 + 4 = Θ(n^2)$'
+      },
+      {
+        label: 'b',
+        value: '$A(n) = Θ(n^3)$'
+      },
+      {
+        label: 'c',
+        value: '$Θ(n!)$'
+      },
+      {
+        label: 'd',
+        value: '$W(n) = 2 + lg2 n = Θ(log(n))$'
+      },
+      {
+        label: 'e',
+        value: '$S(n) = 3 = Θ(1)$'
+      },
+      {
+        label: 'f',
+        value: '$A(n) = Θ(nlog(n))$'
+      },
+      {
+        label: 'g',
+        value: '$A(n) = Θ(2^n)$'
+      },
+      {
+        label: 'h',
+        value: 'wszystko prawidłowe'
+      },
+      {
+        label: 'i',
         value: 'wszystko nieprawidłowe'
       }
     ],
@@ -1026,7 +1178,7 @@ function fillTextArea() {
       // let answers = '';
 
       innerText = `${innerText}
-Pytanie ${(questionTitle) ? `'${questionTitle.innerText}'` : question.id}: 
+Pytanie ${(questionTitle) ? `${question.id}) '${questionTitle.innerText}'` : question.id}: 
 Odpowiedzi: 
         ${question.answers.map((answerId) => {
           const answerTitle = document.getElementById('labelTestquestionTest' + question.id + 'Content' +question.id + answerId);
@@ -1040,7 +1192,7 @@ Odpowiedzi:
       // let answers = '';
 
       innerText = `${innerText}
-Pytanie ${(questionTitle) ? `'${questionTitle.innerText}'` : question.id}: 
+Pytanie ${(questionTitle) ? `${question.id}) '${questionTitle.innerText}'` : question.id}: 
 Odpowiedz: 
         ${question.answers.map((answerId) => {
         const answerTitle = document.getElementById('labelComplexityquestionComplexity' + question.id + 'Content' + question.id + answerId);
@@ -1054,7 +1206,7 @@ Odpowiedz:
       // let answers = '';
 
       innerText = `${innerText}
-Pytanie ${(questionTitle) ? `'${questionTitle.innerText}'` : question.id}: 
+Pytanie ${(questionTitle) ? `${question.id}) '${questionTitle.innerText}'` : question.id}: 
 Pseudokod: 
 \`\`\`c
 ${document.getElementById('pseudocodeCorrectness' + question.id).innerText}
