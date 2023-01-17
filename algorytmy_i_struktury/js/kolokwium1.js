@@ -10,7 +10,7 @@ const stopButtonID = 'stopKolokwiumButton';
 const questionsID = 'QuestionsTest';
 const questionsComplexityID = 'QuestionsComplexity';
 const questionsCorrectnessID = 'QuestionsCorrectness';
-const questionsPseudocodeID = 'QuestionsPseudocode';
+
 const AnswersID = 'Answers';
 const AnswersTextAreaID = 'AnswersTextArea';
 let now = null;
@@ -31,15 +31,15 @@ const testQuestions = [
     answers: [
       {
         label: 'a',
-        value: 'sposob pracy i przetwarzania danych w pamięci komputera'
+        value: 'dokładny opis, przepis, np. w postaci listy kolejnych kroków, jak coś wykonać, etc. (nie tylko zadania obliczeniowe, np. przepis wykonania pewnej potrawy albo dokonania pewnej procedury prawnej, etc.'
       },
       {
         label: 'b',
-        value: 'olbiczenie matymatycznych twierdzen na psedokodowym'
+        value: 'sposob pracy i przetwarzania danych w pamięci komputera'
       },
       {
         label: 'c',
-        value: 'dokładny opis, przepis, np. w postaci listy kolejnych kroków, jak coś wykonać, etc. (nie tylko zadania obliczeniowe, np. przepis wykonania pewnej potrawy albo dokonania pewnej procedury prawnej, etc.'
+        value: 'olbiczenie matymatycznych twierdzen na psedokodowym'
       },
       {
         label: 'd',
@@ -132,11 +132,11 @@ const testQuestions = [
       },
       {
         label: 'c',
-        value: '$O(n)$'
+        value: '$O(n^2)$'
       },
       {
         label: 'd',
-        value: '$O(n^2)$'
+        value: '$O(n)$'
       },
       {
         label: 'e',
@@ -159,15 +159,15 @@ const testQuestions = [
       },
       {
         label: 'b',
-        value: 'Algorytm do poszukiwania maksymalnej'
+        value: 'Algorytm z wykorzystaniem pętli for'
       },
       {
         label: 'c',
-        value: 'Typ algorytmów chciwych'
+        value: 'Algorytm do poszukiwania maksymalnej'
       },
       {
         label: 'd',
-        value: 'Algorytm z wykorzystaniem pętli for'
+        value: 'Typ algorytmów chciwych'
       },
       {
         label: 'e',
@@ -190,11 +190,11 @@ const testQuestions = [
       },
       {
         label: 'b',
-        value: 'print (wyswetlenia elementow)'
+        value: 'pop (wyjmowanie elementa)'
       },
       {
         label: 'c',
-        value: 'pop (wyjmowanie elementa)'
+        value: 'print (wyswetlenia elementow)'
       },
       {
         label: 'd',
@@ -361,15 +361,15 @@ const testQuestions = [
       },
       {
         label: 'c',
-        value: '$W(n) = 3n^2 + 4 = Θ(n^2 )$'
-      },
-      {
-        label: 'd',
         value: '$Θ(n!)$'
       },
       {
-        label: 'e',
+        label: 'd',
         value: '$S(n) = 3 = Θ(1)$'
+      },
+      {
+        label: 'e',
+        value: '$W(n) = 3n^2 + 4 = Θ(n^2 )$'
       },
       {
         label: 'f',
@@ -396,19 +396,19 @@ const testQuestions = [
     answers: [
       {
         label: 'a',
-        value: '$A(n) = Θ(n^3)$'
-      },
-      {
-        label: 'b',
-        value: '$W(n) = 2 + lg2 n = Θ(log(n))$'
-      },
-      {
-        label: 'c',
         value: '$W(n) = 3n^2 + 4 = Θ(n^2 )$'
       },
       {
-        label: 'd',
+        label: 'b',
+        value: '$A(n) = Θ(n^3)$'
+      },
+      {
+        label: 'c',
         value: '$Θ(n!)$'
+      },
+      {
+        label: 'd',
+        value: '$W(n) = 2 + lg2 n = Θ(log(n))$'
       },
       {
         label: 'e',
@@ -443,11 +443,11 @@ const testQuestions = [
       },
       {
         label: 'b',
-        value: 'ma byc while pętlia'
+        value: 'jeśli predykat jest spełniony przed wejściem w pewną (dowolną) iterację pętli to jest także spełniony po wyjściu z tej iteracji pętli'
       },
       {
         label: 'c',
-        value: 'jeśli predykat jest spełniony przed wejściem w pewną (dowolną) iterację pętli to jest także spełniony po wyjściu z tej iteracji pętli'
+        value: 'ma byc while pętlia'
       },
       {
         label: 'd',
@@ -474,11 +474,11 @@ const testQuestions = [
       },
       {
         label: 'b',
-        value: 'znajdź operacja dominująca'
+        value: 'określić złożoność czasowa'
       },
       {
         label: 'c',
-        value: 'określić złożoność czasowa'
+        value: 'znajdź operacja dominująca'
       },
       {
         label: 'd',
@@ -494,6 +494,158 @@ const testQuestions = [
       },
       {
         label: 'g',
+        value: 'wszystko nieprawidłowe'
+      }
+    ],
+    description: ''
+  },
+  {
+    id: 15,
+    title: 'Jaka z podanych definicji jest definicja chciwego algorytmu.',
+    answers: [
+      {
+        label: 'a',
+        value: 'Algorytm, który wybiera najlepszy wybór na każdym kroku, zamiast uwzględnienie wszystkich sekwencji kroków, które mogą prowadzić do optymalnego rozwiązania.'
+      },
+      {
+        label: 'b',
+        value: 'Algorytm, który uwzględnienie wszystkich sekwencji kroków prowadzych do optymalnego rozwiązania problemy'
+      },
+      {
+        label: 'c',
+        value: 'Algorytm, dla ktorego niemozliwe udowodnic poprawnosc.'
+      },
+      {
+        label: 'd',
+        value: 'Algorytm, ktore sa poprawne i wydajne wedlug czasu'
+      },
+      {
+        label: 'e',
+        value: 'wszystko prawidłowe'
+      },
+      {
+        label: 'f',
+        value: 'wszystko nieprawidłowe'
+      }
+    ],
+    description: ''
+  },
+  {
+    id: 16,
+    title: 'Jakie z podanych operacji niemozliwe w liscie jednekierunkowej.',
+    answers: [
+      {
+        label: 'a',
+        value: 'push (dodanie elementa)'
+      },
+      {
+        label: 'b',
+        value: 'pop (wyjmowanie elementa)'
+      },
+      {
+        label: 'c',
+        value: 'print (wyswetlenia elementow)'
+      },
+      {
+        label: 'd',
+        value: 'search (poszukiwanie elementa)'
+      },
+      {
+        label: 'e',
+        value: 'next (przejście od head do tail)'
+      },
+      {
+        label: 'f',
+        value: 'previous (przejście od taila do head)'
+      },
+      {
+        label: 'g',
+        value: 'wszystko prawidłowe'
+      },
+      {
+        label: 'h',
+        value: 'wszystko nieprawidłowe'
+      }
+    ],
+    description: ''
+  },
+  {
+    id: 17,
+    title: 'Jakie z podanych operacji niemozliwe w liscie dwukierunkowej.',
+    answers: [
+      {
+        label: 'a',
+        value: 'push (dodanie elementa)'
+      },
+      {
+        label: 'b',
+        value: 'pop (wyjmowanie elementa)'
+      },
+      {
+        label: 'c',
+        value: 'print (wyswetlenia elementow)'
+      },
+      {
+        label: 'd',
+        value: 'search (poszukiwanie elementa)'
+      },
+      {
+        label: 'e',
+        value: 'next (przejście od head do tail)'
+      },
+      {
+        label: 'f',
+        value: 'previous (przejście od taila do head)'
+      },
+      {
+        label: 'g',
+        value: 'wszystko prawidłowe'
+      },
+      {
+        label: 'h',
+        value: 'wszystko nieprawidłowe'
+      }
+    ],
+    description: ''
+  },
+  {
+    id: 18,
+    title: 'Jaka z notacji asymptotycznych jest ze złożonością liniowo-logarytmiczna?',
+    answers: [
+      {
+        label: 'a',
+        value: '$W(n) = 3n^2 + 4 = Θ(n^2)$'
+      },
+      {
+        label: 'b',
+        value: '$A(n) = Θ(n^3)$'
+      },
+      {
+        label: 'c',
+        value: '$Θ(n!)$'
+      },
+      {
+        label: 'd',
+        value: '$W(n) = 2 + lg2 n = Θ(log(n))$'
+      },
+      {
+        label: 'e',
+        value: '$S(n) = 3 = Θ(1)$'
+      },
+      {
+        label: 'f',
+        value: '$A(n) = Θ(nlog(n))$'
+      },
+      {
+        label: 'g',
+        value: '$A(n) = Θ(2^n)$'
+      },
+      {
+        label: 'h',
+        value: 'wszystko prawidłowe'
+      },
+      {
+        label: 'i',
         value: 'wszystko nieprawidłowe'
       }
     ],
@@ -516,7 +668,7 @@ const testComplexity = [
       },
       {
         label: 'c',
-        value: '$Θ(n^2 )$'
+        value: '$Θ(n^2)$'
       },
       {
         label: 'd',
@@ -524,14 +676,18 @@ const testComplexity = [
       },
       {
         label: 'e',
-        value: '$Θ(1)$'
+        value: '$Θ(n)$'
       },
       {
         label: 'f',
-        value: '$Θ(nlog(n))$'
+        value: '$Θ(1)$'
       },
       {
         label: 'g',
+        value: '$Θ(nlog(n))$'
+      },
+      {
+        label: 'h',
         value: '$Θ(2^n)$'
       }
     ],
@@ -551,7 +707,7 @@ const testComplexity = [
       },
       {
         label: 'c',
-        value: '$Θ(n^2 )$'
+        value: '$Θ(n^2)$'
       },
       {
         label: 'd',
@@ -559,14 +715,18 @@ const testComplexity = [
       },
       {
         label: 'e',
-        value: '$Θ(1)$'
+        value: '$Θ(n)$'
       },
       {
         label: 'f',
-        value: '$Θ(nlog(n))$'
+        value: '$Θ(1)$'
       },
       {
         label: 'g',
+        value: '$Θ(nlog(n))$'
+      },
+      {
+        label: 'h',
         value: '$Θ(2^n)$'
       }
     ],
@@ -586,7 +746,7 @@ const testComplexity = [
       },
       {
         label: 'c',
-        value: '$Θ(n^2 )$'
+        value: '$Θ(n^2)$'
       },
       {
         label: 'd',
@@ -594,14 +754,18 @@ const testComplexity = [
       },
       {
         label: 'e',
-        value: '$Θ(1)$'
+        value: '$Θ(n)$'
       },
       {
         label: 'f',
-        value: '$Θ(nlog(n))$'
+        value: '$Θ(1)$'
       },
       {
         label: 'g',
+        value: '$Θ(nlog(n))$'
+      },
+      {
+        label: 'h',
         value: '$Θ(2^n)$'
       }
     ],
@@ -621,7 +785,7 @@ const testComplexity = [
       },
       {
         label: 'c',
-        value: '$Θ(n^2 )$'
+        value: '$Θ(n^2)$'
       },
       {
         label: 'd',
@@ -629,14 +793,18 @@ const testComplexity = [
       },
       {
         label: 'e',
-        value: '$Θ(1)$'
+        value: '$Θ(n)$'
       },
       {
         label: 'f',
-        value: '$Θ(nlog(n))$'
+        value: '$Θ(1)$'
       },
       {
         label: 'g',
+        value: '$Θ(nlog(n))$'
+      },
+      {
+        label: 'h',
         value: '$Θ(2^n)$'
       }
     ],
@@ -656,7 +824,7 @@ const testComplexity = [
       },
       {
         label: 'c',
-        value: '$Θ(n^2 )$'
+        value: '$Θ(n^2)$'
       },
       {
         label: 'd',
@@ -664,14 +832,18 @@ const testComplexity = [
       },
       {
         label: 'e',
-        value: '$Θ(1)$'
+        value: '$Θ(n)$'
       },
       {
         label: 'f',
-        value: '$Θ(nlog(n))$'
+        value: '$Θ(1)$'
       },
       {
         label: 'g',
+        value: '$Θ(nlog(n))$'
+      },
+      {
+        label: 'h',
         value: '$Θ(2^n)$'
       }
     ],
@@ -1006,7 +1178,7 @@ function fillTextArea() {
       // let answers = '';
 
       innerText = `${innerText}
-Pytanie ${(questionTitle) ? `'${questionTitle.innerText}'` : question.id}: 
+Pytanie ${(questionTitle) ? `${question.id}) '${questionTitle.innerText}'` : question.id}: 
 Odpowiedzi: 
         ${question.answers.map((answerId) => {
           const answerTitle = document.getElementById('labelTestquestionTest' + question.id + 'Content' +question.id + answerId);
@@ -1020,7 +1192,7 @@ Odpowiedzi:
       // let answers = '';
 
       innerText = `${innerText}
-Pytanie ${(questionTitle) ? `'${questionTitle.innerText}'` : question.id}: 
+Pytanie ${(questionTitle) ? `${question.id}) '${questionTitle.innerText}'` : question.id}: 
 Odpowiedz: 
         ${question.answers.map((answerId) => {
         const answerTitle = document.getElementById('labelComplexityquestionComplexity' + question.id + 'Content' + question.id + answerId);
@@ -1034,7 +1206,7 @@ Odpowiedz:
       // let answers = '';
 
       innerText = `${innerText}
-Pytanie ${(questionTitle) ? `'${questionTitle.innerText}'` : question.id}: 
+Pytanie ${(questionTitle) ? `${question.id}) '${questionTitle.innerText}'` : question.id}: 
 Pseudokod: 
 \`\`\`c
 ${document.getElementById('pseudocodeCorrectness' + question.id).innerText}
