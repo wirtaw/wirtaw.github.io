@@ -25,7 +25,6 @@ function countingPoints(elem) {
         .filter((it) => it)
         .reduce((acc, prev) => (!isNaN(parseFloat(prev))) ? acc + parseFloat(prev) : acc, 0);
     }
-
   }
 
   return points;
