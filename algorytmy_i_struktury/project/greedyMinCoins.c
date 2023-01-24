@@ -20,20 +20,26 @@ void swap(int *xp, int *yp);
 void selectionSort(int arr[], int n);
 
 int main(void) {
-   int coins[] = {3, 10, 5};
+   int coins[] = {10, 6, 1};
    int n = 3, value;
    do {
      printf("Wprowadzenie wartoci n. Musi byc > 0 \n");
      scanf("%d", &value);
    } while (value <= 0);
+   printf("Wartosc: %d\nMonety: ", value);
+   for (int i = 0; i < n; i++) {
+      printf("%d, ", coins[i]);
+   }
+   printf("\n");
+
    struct Coins* result = minCoins(coins, n, value);
    if (result->size > 0) {
-      printf("Minimum coins list required: \n");
+      printf("Minimalna ilosc monet potrebna: \n");
       for (int i = 0; i < result->size; i++) {
         printf("%d \n", result->list[i]);
       }
    } else {
-     printf("Niemozliwe podzielic wartosc \n");
+     printf("Niemozliwe podzielic wartosci na dane monety\n");
    }
    return 0;
 }
@@ -83,9 +89,13 @@ struct Coins* minCoins(int coinList[], int n, int value) {
       }
    }
 
-   if (value > 0) {
-       result->list[result->size] = value;
-       result->size++;
+   if(value > 0) {
+      for (int i = 0; i < n; i++) {
+        result->list[i] = 0;
+      }
+      result->size=0;
+      return result;
    }
+
    return result;
 }
