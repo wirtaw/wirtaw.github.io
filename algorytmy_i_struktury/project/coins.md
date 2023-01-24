@@ -75,16 +75,21 @@ Jednak optymalnym rozwiązaniem tego problemu są trzy monety, czyli `S = {6,6,1
 
 ## Algorytm śledzenia wstecznego
 
+### Wstep
+
+Efektwne znaliezenie minimalnej liczby monet od podanej sumy. Wymaga najpierw znalisc minimalna ilosc monet. 
+Zatem, jezeli taka ilosc isnieje to wybieramy wsrod wszykich mozliwych monet przez odejmownia wartosci.
+
 ### Pseudokod
 
-```c 
+```c
 function minCoins(coinList, n, value, dp) {
   if (dp[value] != -1) return dp[value];
   
   coinsRequired = INT_MAX;	
-  for (i = 0; i < l; i++) {
+  for (i = 0; i < n; i++) {
     if (coinList[i] <= value) {
-        subRes = minCoins(coinList, n, value - coinsList[i], dp);
+        subRes = minCoins(coinList, n, value - coinList[i], dp);
         if (subRes != INT_MAX && subRes + 1 < coinsRequired) {
             coinsRequired = subRes + 1;
         }
@@ -123,5 +128,7 @@ Aby udowodnić, że ten algorytm znajduje prawidłowe rozwiązanie, musimy pokaz
 [backtrackingMinCoins.c](./backtrackingMinCoins.c)
 
 ## Literatura
+
+### 
 
 ## Zrodla
