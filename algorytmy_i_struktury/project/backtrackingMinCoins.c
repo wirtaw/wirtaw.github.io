@@ -21,8 +21,8 @@ void coinChange(int coinList[], int n, int value, int S[], int count);
 int countMinCoins(int coinList[], int value, int n);
 
 int main(void) {
-   int coins[] = {1, 2, 5};
-   int n = 3, value, S[MAX], count = 0;
+   int coins[] = {6, 10, 1};
+   int n = 3, value, S[MAX];
 
    do {
      printf("Wprowadzenie n. Musi byc != 0 \n");
@@ -38,8 +38,9 @@ int main(void) {
    dpset(-1, (int)(sizeof(dp) / sizeof(dp[0])));
    int isPossible = countMinCoins(coins, value, n);
    if (isPossible != INT_MAX) {
-	  sset(S, 0, (int)(sizeof(S) / sizeof(S[0])));
-	  //coinChange(coins, value, n, S, count);
+      sset(S, 0, (int)(sizeof(S) / sizeof(S[0])));
+      coinChange(coins, n, value, S, 0);
+
       printf("Minimalna ilosc monet potrebna: %d\n", isPossible);
    } else {
      printf("Niemozliwe podzielic wartosci na dane monety\n");
@@ -80,7 +81,6 @@ int countMinCoins(int coinList[], int value, int n){
 
     for (int i = 0; i < n; i++) {
         if (coinList[i] <= value) {
-
             int x = countMinCoins(coinList, value - coinList[i], n);
 
             if (x != INT_MAX) {
@@ -93,12 +93,18 @@ int countMinCoins(int coinList[], int value, int n){
 }
 
 void coinChange(int coinList[], int n, int value, int S[], int count) {
-  for (int i = 0; i < n; i++) {
-        if (value - coinList[i] >= 0 && dp[value - coinList[i]] + 1 == dp[value]) {
-            S[count] = coinList[i];
-            count++;
-            coinChange(coinList, n, value - coinList[i], S, count);
-            break;
-        }
+  if (value == 0) {
+    for (int i = 0; i < count; i++) {
+       printf("%d, ", S[i]);
+    }
+    return;
   }
+
+  for (int i = 0; i < n; i++) {
+    if (value - coinList[i] >= 0 && dp[value - coinList[i]] + 1 == dp[value]) {
+       S[count] = coinList[i];
+       coinChange(coinList, n, value - coinList[i], S, count + 1);
+       break;
+    }
+ }
 }
