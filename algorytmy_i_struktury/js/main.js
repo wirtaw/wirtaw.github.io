@@ -30,6 +30,18 @@ function countingPoints(elem) {
   return points;
 }
 
+function projectPointCount(tdProject) {
+  return tdProject.innerText.split("\n")
+    .map((it) =>
+      (it.trim().indexOf("\t") > -1) ?
+        it.trim().split("\t") :
+        it.trim())
+    .flat()
+    .filter((it) => !['-'].includes(it) && !isNaN(parseFloat(it)))
+    .map((it) => parseFloat(it))
+    .reduce((acc, curr) => acc + curr, 0);
+}
+
 function loadDocument () {
   const pointsTable = document.getElementById('pointsTable');
 
@@ -40,9 +52,9 @@ function loadDocument () {
         const [, , tdWyklady, tdLabs, tdProject, tdKolokwium, tdEgzamin, tdTotal] = tr.children;
         const pointsWyklady = countingPoints(tdWyklady);
         const pointsLabs = countingPoints(tdLabs);
-        const pointsProject = countingPoints(tdProject);
-        const pointsKolokwium = countingPoints(tdKolokwium);
-        const pointsEgzamin = countingPoints(tdEgzamin);
+        const pointsProject = projectPointCount(tdProject);
+        const pointsKolokwium = projectPointCount(tdKolokwium);
+        const pointsEgzamin = projectPointCount(tdEgzamin);
         const total = pointsWyklady + pointsLabs + pointsProject + pointsKolokwium + pointsEgzamin;
 
         if (total) {
