@@ -1,5 +1,11 @@
 # Minimalna liczba monet, które tworzą daną wartość
 
+## Praca wykonal [Vladimir Poplavskij](https://github.com/wirtaw/)
+
+## Projekt do przedmiotu "Algorytmy i struktury danych"
+
+## Data 2023-01-20
+
 - [Zadanie](#zadanie)
 - [Chciwy algorytm](#chciwy)
 - [Algorytm śledzenia wstecznego](#algorytm)
@@ -29,6 +35,12 @@ Wejście: lista różnych monet, liczba monet, podana wartość.
 
 Dane wyjściowe: Minimalna liczba monet, aby uzyskać daną wartość.
 
+### Diagram blokowy
+
+![](https://kroki.io/mermaid/svg/eNptkMEKwjAQRO9-xRwVVPoBKtjqQRA9KF60h2g2baEmskn1YP1308SDgnvbYebtJAWLW4n9ogc_8-NB1A0NkZlK15V1Q2ya65l4qzrF5hiNZu3OsMPF72vvaJH2d1TTJUoWis0VZVWQdYMATbsQsmdAQ5qHLlhIglEhgXunj3HSmEv5JYHJNrVD1wOvgMrC_ZVCZM2-3C2yf5bpFEmL5ZHJNax_kI_KlbFz_h-eQGgJwfR5mT8Vgr5pyMaWk-j3__AGn8lqvA)
+
+### Program
+
 ```c
 function minCoins (coinList, n, value) {
   S[MAX_INT];
@@ -51,9 +63,9 @@ function minCoins (coinList, n, value) {
 
 ### Zlozoność czasowa
 
-Możemy posortować tablicę C nominałów monet w czasie O(n ㏒₂ n). Podobnie pętla for zajmuje O(n) czasu, ponieważ w najgorszym przypadku możemy potrzebować n monet, aby dokonać zmiany.
+Możemy posortować tablicę C nominałów monet w czasie `O(n ㏒₂ n)`. Podobnie pętla for zajmuje `O(n)` czasu, ponieważ w najgorszym przypadku możemy potrzebować n monet, aby dokonać zmiany.
 
-Stąd ogólna złożoność czasowa algorytmu chciwego staje się O(n) od n ⋘ value. Chociaż możemy wdrożyć to podejście w efektywny sposób z czasem O(n ㏒₂ n).
+Stąd ogólna złożoność czasowa algorytmu chciwego staje się `O(n)` od `n` ⋘ value. Chociaż możemy wdrożyć to podejście w efektywny sposób z czasem `O(n ㏒₂ n)`.
 
 
 ### Poprwaność
@@ -113,8 +125,8 @@ function coinChange(coinList, n, value, dp) {
 
 ### Zlozoność czasowa
 
-Złożoność czasowa: O(N*X), gdzie N to długość danej tablicy, a X to podana liczba całkowita.
-Przestrzeń pomocnicza: O(N)
+Złożoność czasowa: `O(N*X)`, gdzie N to długość danej tablicy, a `X` to podana liczba całkowita.
+Przestrzeń pomocnicza: `O(N)`
 
 
 ### Poprwaność
@@ -129,6 +141,13 @@ Aby udowodnić, że ten algorytm znajduje prawidłowe rozwiązanie, musimy pokaz
 
 ## Literatura
 
-### 
+ - "Algorithms Notes for Professionals", [goalkicker.com](https://goalkicker.com/AlgorithmsBook) ."Change-making problem" 
+ - "Data Structures and Algorithm Analysis", Clifford A. Shaffer, 2011
+ - "The Algorithm Design Manual", Steven S. Skiena, 2020
+
 
 ## Zrodla
+
+- [Coin Change Problem](https://www.scaler.com/topics/coin-change-problem/)
+- [Greedy Algorithm to Find Minimum Number of Coins](https://www.baeldung.com/cs/min-number-of-coins-algorithm)
+- [Find minimum number of coins that make a given value](https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/)
