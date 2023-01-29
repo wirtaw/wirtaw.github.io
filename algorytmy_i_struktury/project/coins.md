@@ -37,8 +37,14 @@ Dane wyjściowe: Minimalna liczba monet, aby uzyskać daną wartość.
 
 ### Diagram blokowy
 
-![](https://kroki.io/mermaid/svg/eNptkMEKwjAQRO9-xRwVVPoBKtjqQRA9KF60h2g2baEmskn1YP1308SDgnvbYebtJAWLW4n9ogc_8-NB1A0NkZlK15V1Q2ya65l4qzrF5hiNZu3OsMPF72vvaJH2d1TTJUoWis0VZVWQdYMATbsQsmdAQ5qHLlhIglEhgXunj3HSmEv5JYHJNrVD1wOvgMrC_ZVCZM2-3C2yf5bpFEmL5ZHJNax_kI_KlbFz_h-eQGgJwfR5mT8Vgr5pyMaWk-j3__AGn8lqvA)
-
+```mermaid
+graph TD
+    A[Value, Coinlist, NumberOfCoins] -->|Sort coinList| B(Select coins from higest)
+    B --> C{Value downgrade of coin value. \n Add coin value result list }
+    C -->|If Value > coin value| C
+    C -->|If Value == 0| E[return result list with coins]
+    C -->|If Value > 0 and are coins in list \n with value < Value| B
+```
 ### Program
 
 ```c
