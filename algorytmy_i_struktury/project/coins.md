@@ -7,8 +7,8 @@
 ## Data 2023-01-20
 
 - [Zadanie](#zadanie)
-- [Chciwy algorytm](#chciwy)
-- [Algorytm śledzenia wstecznego](#algorytm)
+- [Chciwy algorytm](#chciwy-algorytm)
+- [Algorytm śledzenia wstecznego](#algorytm-sledzenia-wstecznego)
 
 ## Zadanie 
 
