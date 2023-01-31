@@ -8,7 +8,7 @@
 
 - [Zadanie](#zadanie)
 - [Chciwy algorytm](#chciwy-algorytm)
-- [Algorytm śledzenia wstecznego](#algorytm-sledzenia-wstecznego)
+- [Algorytm śledzenia wstecznego](#algorytm-%C5%9Bledzenia-wstecznego)
 
 ## Zadanie 
 
