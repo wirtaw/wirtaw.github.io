@@ -1,7 +1,3 @@
-function countTotal() {
-
-}
-
 document.body.onload = loadDocument();
 
 function countingPoints(elem) {
@@ -62,6 +58,12 @@ function loadDocument () {
         }
       }
     }
+  }
+
+  const copyrightDate = document.getElementById('copyrightDate');
+  const dt = new Date();
+  if (copyrightDate) {
+    copyrightDate.innerText = `. ${dt.getFullYear()}`;
   }
 }
 
