@@ -9,6 +9,7 @@
 - [Zadanie](#zadanie)
 - [Chciwy algorytm](#chciwy-algorytm)
 - [Algorytm śledzenia wstecznego](#algorytm-%C5%9Bledzenia-wstecznego)
+- [Zrodla](#zrodla)
 
 ## Zadanie 
 
