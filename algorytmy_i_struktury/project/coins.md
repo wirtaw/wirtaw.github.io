@@ -45,6 +45,10 @@ graph TD
     C -->|If Value == 0| E[return result list with coins]
     C -->|If Value > 0 and are coins in list \n with value < Value| B
 ```
+$$ f \in d $$
+```math
+\sqrt{3}
+```
 ### Program
 
 ```c
