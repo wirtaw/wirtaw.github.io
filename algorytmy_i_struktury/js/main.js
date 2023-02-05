@@ -1,5 +1,49 @@
 document.body.onload = loadDocument();
 
+function convertPointsToGrade(points) {
+  const mapping = {
+    '-': {
+      from: 0,
+      to: 20
+    },
+    '2': {
+      from: 21,
+      to: 40
+    },
+    '3': {
+      from: 41,
+      to: 60
+    },
+    '4': {
+      from: 61,
+      to: 80
+    },
+    '5': {
+      from: 81,
+      to: 100
+    },
+    '5+': {
+      from: 100,
+      to: 200
+    }
+  };
+  let grade = '';
+  let diff = 0;
+
+  for (const key of Object.keys(mapping)) {
+    if (grade) {
+      diff = mapping[key].from - points;
+      break;
+    }
+
+    if (mapping[key].from <= points && points < mapping[key].to && !grade) {
+      grade = key;
+    }
+  }
+
+  return { grade, diff };
+}
+
 function countingPoints(elem) {
   let points = 0;
   const [tbody] = elem.children;
@@ -53,8 +97,19 @@ function loadDocument () {
         const pointsEgzamin = projectPointCount(tdEgzamin);
         const total = pointsWyklady + pointsLabs + pointsProject + pointsKolokwium + pointsEgzamin;
 
-        if (total) {
-          tdTotal.innerHTML = `${total}`;
+        if (total && tdTotal) {
+          const { grade, diff } = convertPointsToGrade(total);
+          const spanTotal = document.createElement('span');
+          const brTotal = document.createElement('br');
+          const spanGrade = document.createElement('span');
+          spanTotal.setAttribute('class', 'is-underlined');
+          spanGrade.setAttribute('class', 'has-text-weight-semibold is-italic has-tooltip-multiline');
+          spanGrade.setAttribute('data-tooltip', `Do nastepnej oceny brakuje ${diff} punktow`);
+          spanTotal.innerHTML = `${total}`;
+          spanGrade.innerHTML = `${grade}`;
+          tdTotal.appendChild(spanTotal);
+          tdTotal.appendChild(brTotal);
+          tdTotal.appendChild(spanGrade);
         }
       }
     }
