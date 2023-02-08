@@ -1,0 +1,76 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Algorytmy i struktury danych (UwB filia w Wilnie) - Egzamin</title>
+    <meta name="description" content="Algorytmy i Struktury Danych (UwB filia w Wilnie)">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+<section class="section">
+    <div class="container">
+        <h1 class="title">
+            Egzamin
+        </h1>
+        <p class="subtitle">
+
+        </p>
+    </div>
+</section>
+<div class="content ml-2">
+    <h2>Treść</h2>
+    <ul>
+        <li>Naciskamy przycisk start.</li>
+        <li>Wlacza sie licznik - <span id="egzaminTime"></span> minut</li>
+        <li>Po jednemu wykonujemy testowe zadania (10).</li>
+        <li>Zadanie z obliczenia złożoności czasowej  (1).</li>
+        <li>Odpowiedzieć tak/nie - czy wskazany algorytm jest całkowitą poprawny. Jaka metoda to metoda możliwe udowodnić?</li>
+        <li>W trakcie robienia w sekcji <a href="#Odpowiedzi">"Odpowiedzi"</a> będzie generowany plik który musi być dodany do Github repozytorium jako `Egzamin/Egzamin.md` plik.</li>
+        <li>Ilosc sprob jest nelimotowana. Wykladowca startuje swoje 30 minutowe odliczanie czasu. Po nim trzeba zapisac plik z odpowiedzianiami.</li>
+    </ul>
+    <div id="timerBlockID" class="has-text-primary" style="display: none"></div>
+    <div id="timerInfoBlockID" class="has-text-primary" style="display: none"></div>
+    <div id="buttons" class="buttons">
+        <button id="startEgzaminButton" class="button is-success">Start</button>
+        <button id="resetEgzaminButton" class="button is-info" style="display: none">Reset</button>
+        <button id="stopEgzaminButton" class="button is-error" style="display: none">Stop</button>
+    </div>
+    <div class="block">
+        <div id="QuestionsTest" style="display: none"></div>
+        <div id="QuestionsComplexity" style="display: none"></div>
+        <div id="QuestionsCorrectness" style="display: none"></div>
+        <div id="QuestionsUniversalRecursion" style="display: none"></div>
+        <div id="QuestionsPseudocode" style="display: none"></div>
+    </div>
+    <div class="block">
+        <div id="Answers" style="display: none">
+            <div class="field">
+                <label class="label" id="Odpowiedzi"> Odpowiedzi
+                    <textarea class="textarea" id="AnswersTextArea" rows="10" cols="50" readonly></textarea>
+                </label>
+            </div>
+        </div>
+    </div>
+    <p><a href="../index.html"> Na glówna </a></p>
+</div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>&copy;</strong> by <a href="https://poplauki.eu">Poplavskij Vladimir</a><span id="copyrightDate"></span>
+        </p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/luxon@3.1.0/build/global/luxon.min.js" integrity="sha256-Gf7owtNug1Hx/SyBFHX+wOBCo6BH4ucEyTZOD+85yNA=" crossorigin="anonymous"></script>
+<script src="../js/main.js"></script>
+<script src="../js/math.js" async></script>
+<script src="../js/egzamin.js"></script>
+</body>
+</html>
+
