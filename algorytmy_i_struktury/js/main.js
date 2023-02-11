@@ -7,19 +7,19 @@ function convertPointsToGrade(points) {
       to: 20
     },
     '2': {
-      from: 21,
+      from: 20,
       to: 40
     },
     '3': {
-      from: 41,
+      from: 40,
       to: 60
     },
     '4': {
-      from: 61,
+      from: 60,
       to: 80
     },
     '5': {
-      from: 81,
+      from: 80,
       to: 100
     },
     '5+': {
