@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
+
 <section class="section">
     <div class="container">
         <h1 class="title">
@@ -24,25 +25,53 @@
         </p>
     </div>
 </section>
-<div class="content ml-2">
-    <h2>Treść</h2>
-    <ul>
-        <li>Przeczytać swoje zadanie</li>
-        <li>Prawidłowo ustawić dane wejściowe i wyjściowe</li>
-        <li>Napisać pseudokod algorytmu</li>
-        <li>Dopelnić program z algorytmem w języku C/C++. Zapisac w swojim repozitorium jako `Egzamin/zadanie.c`</li>
-        <li>Wskazać zlozonosć czasowa </li>
-        <li>Udowodnić czy wskazany algorytm poprawny. Jeżeli tak, cesciowo czy całkowicie poprawny</li>
-        <li>Wskazać zlozonosć czasowa </li>
-    </ul>
-    <p>
+<section class="main-content columns is-fullheight">
+    <aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile">
+        <p class="menu-label is-hidden-touch">Menu</p>
+        <ul class="menu-list">
+            <li>
+                <a href="#tresc" class="">
+                    <span class="icon"><i class="fa fa-home"></i></span> Treść
+                </a>
+            </li>
+            <li>
+                <a href="#" class="is-active">
+                    <span class="icon"><i class="fa fa-table"></i></span> Zadania
+                </a>
 
-    </p>
-    <div class="block" id="problemsBlock">
+                <ul id="menuZadania"></ul>
+            </li>
+            <li>
+                <a href="../index.html" class="">
+                    <span class="icon"><i class="fa fa-info"></i></span> Na glówna
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="container column is-10">
+        <div class="section">
+            <div class="block">
+                <h2><a href="tresc">Treść</a></h2>
+                <ul>
+                    <li>Przeczytać swoje zadanie</li>
+                    <li>Prawidłowo ustawić dane wejściowe i wyjściowe</li>
+                    <li>Napisać pseudokod algorytmu</li>
+                    <li>Dopelnić program z algorytmem w języku C/C++. Zapisac w swojim repozitorium jako `Egzamin/zadanie.c`</li>
+                    <li>Wskazać zlozonosć czasowa </li>
+                    <li>Udowodnić czy wskazany algorytm poprawny. Jeżeli tak, cesciowo czy całkowicie poprawny</li>
+                    <li>Wskazać zlozonosć czasowa </li>
+                </ul>
+            </div>
+            <br>
+            <div class="block" id="problemsBlock">
+
+            </div>
+            <br>
+            <p><a href="../index.html"> Na glówna </a></p>
+        </div>
 
     </div>
-    <p><a href="../index.html"> Na glówna </a></p>
-</div>
+</section>
 <footer class="footer">
     <div class="content has-text-centered">
         <p>

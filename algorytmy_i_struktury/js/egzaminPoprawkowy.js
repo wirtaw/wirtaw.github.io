@@ -35,12 +35,13 @@ const problemsList = [
 #include <stdlib.h>
 #include <string.h>
 
-char* readline();
+char* readline(void);
 char* ltrim(char*);
 char* rtrim(char*);
 char** split_string(char*);
 
 int parse_int(char*);
+void miniMaxSum(int arr_count, int* arr) ;
 
 /*
  * Complete the 'miniMaxSum' function below.
@@ -49,10 +50,10 @@ int parse_int(char*);
  */
 
 void miniMaxSum(int arr_count, int* arr) {
-
+    // Kod algorytmu
 }
 
-int main()
+int main(void)
 {
 
     char** arr_temp = split_string(rtrim(readline()));
@@ -70,7 +71,7 @@ int main()
     return 0;
 }
 
-char* readline() {
+char* readline(void) {
     size_t alloc_length = 1024;
     size_t data_length = 0;
 
@@ -181,7 +182,7 @@ char** split_string(char* str) {
 
 int parse_int(char* str) {
     char* endptr;
-    int value = strtol(str, &endptr, 10);
+    int value = (int)strtol(str, &endptr, 10);
 
     if (endptr == str || *endptr != '\\0') {
         exit(EXIT_FAILURE);
@@ -216,12 +217,14 @@ int parse_int(char* str) {
 #include <stdlib.h>
 #include <string.h>
 
-char* readline();
+char* readline(void);
 char* ltrim(char*);
 char* rtrim(char*);
 char** split_string(char*);
 
 int parse_int(char*);
+
+int birthdayCakeCandles(int candles_count, int* candles);
 
 /*
  * Complete the 'birthdayCakeCandles' function below.
@@ -231,29 +234,11 @@ int parse_int(char*);
  */
 
 int birthdayCakeCandles(int candles_count, int* candles) {
-    int max_candle = 0, i = 0, count;
-    
-    while (i < candles_count) {
-        
-        if (max_candle < candles[i]) {
-            count = 0;
-            for (int j = 0; j < candles_count; j++) {
-                if (candles[i] == candles[j]) {
-                    count++;
-                }
-            }
-            max_candle = candles[i];
-        }
-        i++;
-    }
-    
-    return count;
+    // Kod algorytmu
 }
 
-int main()
+int main(void)
 {
-    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
-
     int candles_count = parse_int(ltrim(rtrim(readline())));
 
     char** candles_temp = split_string(rtrim(readline()));
@@ -268,14 +253,12 @@ int main()
 
     int result = birthdayCakeCandles(candles_count, candles);
 
-    fprintf(fptr, "%d\\n", result);
-
-    fclose(fptr);
+    printf("%d\\n", result);
 
     return 0;
 }
 
-char* readline() {
+char* readline(void) {
     size_t alloc_length = 1024;
     size_t data_length = 0;
 
@@ -386,7 +369,7 @@ char** split_string(char* str) {
 
 int parse_int(char* str) {
     char* endptr;
-    int value = strtol(str, &endptr, 10);
+    int value = (int)strtol(str, &endptr, 10);
 
     if (endptr == str || *endptr != '\\0') {
         exit(EXIT_FAILURE);
@@ -449,29 +432,7 @@ char* readline();
  *
  */
 char* timeConversion(char* s) {
-    static char result[7];
-    
-    for (int i = 0; i < 8; i++ ) {
-        result[i] = s[i];
-    }
-    
-    if (s[8] == 'A') {
-        if (result[0] == '1' && result[1] == '2') {
-            result[0] = '0';
-            result[1] = '0';
-        }
-    } else if (s[8] == 'P') {
-        if (result[0] != '1' || result[1] != '2') {
-            char str[2];  
-            memcpy(str, &result[0], 2);
-            int num = atoi(str);
-            num += 12;
-            result[0] = (char)((int)(num / 10) + 48);
-            result[1] = (char)((num % 10) + 48);
-        }
-    }
-
-    return result;
+    // Kod algorytmu
 }
 
 int main()
@@ -594,12 +555,14 @@ Uwaga: |x| jest <a href="https://www.mathsisfun.com/numbers/absolute-value.html"
 #include <stdlib.h>
 #include <string.h>
 
-char* readline();
+char* readline(void);
 char* ltrim(char*);
 char* rtrim(char*);
 char** split_string(char*);
 
 int parse_int(char*);
+
+int diagonalDifference(int arr_rows, int arr_columns, int** arr);
 
 /*
  * Complete the 'diagonalDifference' function below.
@@ -609,13 +572,11 @@ int parse_int(char*);
  */
 
 int diagonalDifference(int arr_rows, int arr_columns, int** arr) {
-
+    // Kod algorytmu
 }
 
-int main()
+int main(void)
 {
-    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
-
     int n = parse_int(ltrim(rtrim(readline())));
 
     int** arr = malloc(n * sizeof(int*));
@@ -634,14 +595,12 @@ int main()
 
     int result = diagonalDifference(n, n, arr);
 
-    fprintf(fptr, "%d\\n", result);
-
-    fclose(fptr);
+    printf("%d\\n", result);
 
     return 0;
 }
 
-char* readline() {
+char* readline(void) {
     size_t alloc_length = 1024;
     size_t data_length = 0;
 
@@ -752,7 +711,7 @@ char** split_string(char* str) {
 
 int parse_int(char* str) {
     char* endptr;
-    int value = strtol(str, &endptr, 10);
+    int value = (int)strtol(str, &endptr, 10);
 
     if (endptr == str || *endptr != '\\0') {
         exit(EXIT_FAILURE);
@@ -804,12 +763,14 @@ Proporcje występowania są dodatnie: $\\frac{3}{6} = 0.500000$, ujemne: $\\frac
 #include <stdlib.h>
 #include <string.h>
 
-char* readline();
+char* readline(void);
 char* ltrim(char*);
 char* rtrim(char*);
 char** split_string(char*);
 
 int parse_int(char*);
+
+void plusMinus(int arr_count, int* arr);
 
 /*
  * Complete the 'plusMinus' function below.
@@ -818,10 +779,10 @@ int parse_int(char*);
  */
 
 void plusMinus(int arr_count, int* arr) {
-
+    // Kod algorytmu
 }
 
-int main()
+int main(void)
 {
     int n = parse_int(ltrim(rtrim(readline())));
 
@@ -840,7 +801,7 @@ int main()
     return 0;
 }
 
-char* readline() {
+char* readline(void) {
     size_t alloc_length = 1024;
     size_t data_length = 0;
 
@@ -951,15 +912,14 @@ char** split_string(char* str) {
 
 int parse_int(char* str) {
     char* endptr;
-    int value = strtol(str, &endptr, 10);
+    int value = (int)strtol(str, &endptr, 10);
 
     if (endptr == str || *endptr != '\\0') {
         exit(EXIT_FAILURE);
     }
 
     return value;
-}
-`
+}`
   },
   {
     id: 6,
@@ -986,8 +946,7 @@ Trzeci wiersz zawiera $m$ oddzielone spacjami liczby całkowite $drives[i]$, czy
 5 2 8`,
     sampleOutput: '9',
     explanation: 'Kup klawiaturę $2^{nd}$ i dysk USB $3^{rd}$ za łączny koszt $ 8 + 1 = 9$.',
-    code: `
-    #include <assert.h>
+    code: `#include <assert.h>
 #include <limits.h>
 #include <math.h>
 #include <stdbool.h>
@@ -995,40 +954,36 @@ Trzeci wiersz zawiera $m$ oddzielone spacjami liczby całkowite $drives[i]$, czy
 #include <stdlib.h>
 #include <string.h>
 
-char* readline();
+char* readline(void);
 char** split_string(char*);
+int getMoneySpent(int keyboards_count, int* keyboards, int drives_count, int* drives, int b);
 
 /*
  * Complete the getMoneySpent function below.
  */
 int getMoneySpent(int keyboards_count, int* keyboards, int drives_count, int* drives, int b) {
-    /*
-     * Write your code here.
-     */
-
+    // Kod algorytmu
 }
 
-int main()
+int main(void)
 {
-    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
-
     char** bnm = split_string(readline());
 
     char* b_endptr;
     char* b_str = bnm[0];
-    int b = strtol(b_str, &b_endptr, 10);
+    int b = (int)strtol(b_str, &b_endptr, 10);
 
     if (b_endptr == b_str || *b_endptr != '\\0') { exit(EXIT_FAILURE); }
 
     char* n_endptr;
     char* n_str = bnm[1];
-    int n = strtol(n_str, &n_endptr, 10);
+    int n = (int)strtol(n_str, &n_endptr, 10);
 
     if (n_endptr == n_str || *n_endptr != '\\0') { exit(EXIT_FAILURE); }
 
     char* m_endptr;
     char* m_str = bnm[2];
-    int m = strtol(m_str, &m_endptr, 10);
+    int m = (int)strtol(m_str, &m_endptr, 10);
 
     if (m_endptr == m_str || *m_endptr != '\\0') { exit(EXIT_FAILURE); }
 
@@ -1039,7 +994,7 @@ int main()
     for (int keyboards_itr = 0; keyboards_itr < n; keyboards_itr++) {
         char* keyboards_item_endptr;
         char* keyboards_item_str = *(keyboards_temp + keyboards_itr);
-        int keyboards_item = strtol(keyboards_item_str, &keyboards_item_endptr, 10);
+        int keyboards_item = (int)strtol(keyboards_item_str, &keyboards_item_endptr, 10);
 
         if (keyboards_item_endptr == keyboards_item_str || *keyboards_item_endptr != '\\0') { exit(EXIT_FAILURE); }
 
@@ -1055,7 +1010,7 @@ int main()
     for (int drives_itr = 0; drives_itr < m; drives_itr++) {
         char* drives_item_endptr;
         char* drives_item_str = *(drives_temp + drives_itr);
-        int drives_item = strtol(drives_item_str, &drives_item_endptr, 10);
+        int drives_item = (int)strtol(drives_item_str, &drives_item_endptr, 10);
 
         if (drives_item_endptr == drives_item_str || *drives_item_endptr != '\\0') { exit(EXIT_FAILURE); }
 
@@ -1070,14 +1025,12 @@ int main()
 
     int moneySpent = getMoneySpent(keyboards_count, keyboards, drives_count, drives, b);
 
-    fprintf(fptr, "%d\\n", moneySpent);
-
-    fclose(fptr);
+    printf("%d\\n", moneySpent);
 
     return 0;
 }
 
-char* readline() {
+char* readline(void) {
     size_t alloc_length = 1024;
     size_t data_length = 0;
     char* data = malloc(alloc_length);
@@ -1127,8 +1080,7 @@ char** split_string(char* str) {
     }
 
     return splits;
-}
-`
+}`
   },
   {
     id: 7,
@@ -1161,22 +1113,35 @@ Binarna reprezentacja $13_{10}$ jest $1101_2$ , więc maksymalna liczba kolejnyc
 #include <stdlib.h>
 #include <string.h>
 
-char* readline();
+char* readline(void);
 char* ltrim(char*);
 char* rtrim(char*);
-
 int parse_int(char*);
+int maxOnesInBinary(int n);
+
+/*
+ * Complete the 'maxOnesInBinary' function below.
+ *
+ * The function accepts INTEGER n as parameter.
+ */
+
+int maxOnesInBinary(int n) {
+    // Kod algorytmu
+}
 
 
-
-int main()
+int main(void)
 {
     int n = parse_int(ltrim(rtrim(readline())));
-
+    
+    int max = 0;
+    max = maxOnesInBinary(n);
+    
+    printf("%d\\n", max);
     return 0;
 }
 
-char* readline() {
+char* readline(void) {
     size_t alloc_length = 1024;
     size_t data_length = 0;
 
@@ -1316,11 +1281,11 @@ klatka schodowa ma następujące parametry:<br>
 #include <stdlib.h>
 #include <string.h>
 
-char* readline();
+char* readline(void);
 char* ltrim(char*);
 char* rtrim(char*);
-
 int parse_int(char*);
+void staircase(int n);
 
 /*
  * Complete the 'staircase' function below.
@@ -1329,10 +1294,10 @@ int parse_int(char*);
  */
 
 void staircase(int n) {
-
+    // Kod algorytmu
 }
 
-int main()
+int main(void)
 {
     int n = parse_int(ltrim(rtrim(readline())));
 
@@ -1341,7 +1306,7 @@ int main()
     return 0;
 }
 
-char* readline() {
+char* readline(void) {
     size_t alloc_length = 1024;
     size_t data_length = 0;
 
@@ -1431,7 +1396,7 @@ char* rtrim(char* str) {
 
 int parse_int(char* str) {
     char* endptr;
-    int value = strtol(str, &endptr, 10);
+    int value = (int)strtol(str, &endptr, 10);
 
     if (endptr == str || *endptr != '\\0') {
         exit(EXIT_FAILURE);
@@ -1488,7 +1453,8 @@ function createCardDiv({id, title}, type = '', entity = '') {
   cardHeaderDiv.setAttribute('class', 'card-header');
   const cardHeaderTitleDiv = document.createElement('div');
   cardHeaderTitleDiv.setAttribute('class', 'card-header-title is-size-2');
-  cardHeaderTitleDiv.setAttribute('id', entity + type + id + 'Title');
+  const entityTitleId = entity + type + id + 'Title';
+  cardHeaderTitleDiv.setAttribute('id', entityTitleId);
 
   const newTitleContent = document.createTextNode(title);
   cardHeaderTitleDiv.appendChild(newTitleContent);
@@ -1507,7 +1473,7 @@ function createCardDiv({id, title}, type = '', entity = '') {
   cardContentDiv.appendChild(contentDiv);
   cardDiv.appendChild(cardContentDiv);
 
-  return { cardDiv, entityContentId };
+  return { cardDiv, entityContentId, entityTitleId, textValue: title };
 }
 
 async function appendSimple(block, value, key = '', entityContentId) {
@@ -1526,14 +1492,6 @@ async function appendSimple(block, value, key = '', entityContentId) {
     block.appendChild(header);
   }
   block.appendChild(elem);
-
-  /*if (value.includes('$')) {
-    await typeset(() => {
-      const math = document.getElementById(`${entityContentId}${key}`);
-      math.innerHTML = value;
-      return [math];
-    });
-  }*/
 }
 
 async function appendPre(block, value, key = '') {
@@ -1556,10 +1514,33 @@ async function appendPre(block, value, key = '') {
   block.appendChild(elem);
 }
 
+function appendMenuLink(id, title) {
+  const menuBlock = document.getElementById('menuZadania');
+
+  const elem = document.createElement('li');
+
+  const link = document.createElement('a');
+  link.setAttribute('href', `#${id}`);
+  const txt = document.createTextNode(title);
+
+  const span = document.createElement('span');
+  span.setAttribute('class', 'icon is-small');
+
+  const icon = document.createElement('i');
+  icon.setAttribute('class', 'fa fa-link');
+
+  span.appendChild(icon);
+  link.appendChild(span);
+  link.appendChild(txt);
+  elem.appendChild(link);
+  menuBlock.appendChild(elem);
+}
+
 async function appendProblem(block, problem) {
-  const { cardDiv, entityContentId } = createCardDiv(problem, 'Problem', 'problem');
+  const { cardDiv, entityContentId, entityTitleId, textValue } = createCardDiv(problem, 'Problem', 'problem');
 
   block.appendChild(cardDiv);
+  appendMenuLink(entityTitleId, textValue);
 
   const problemsContentBlock = document.getElementById(entityContentId);
 
@@ -1654,9 +1635,3 @@ async function loadProblems() {
 function loadDocument () {
   loadProblems();
 }
-/*
-function typeset(code) {
-  promise = promise.then(() => MathJax.typesetPromise(code()))
-    .catch((err) => console.log('Typeset failed: ' + err.message));
-  return promise;
-}*/
