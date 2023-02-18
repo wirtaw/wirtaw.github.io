@@ -23,11 +23,176 @@ const problemsList = [
     3. Suma wszystkiego oprócz $3$, suma wynosi $ 1 + 2 + 4 + 5 = 12 $<br>
     4. Suma wszystkiego oprócz $4$, suma wynosi $ 1 + 2 + 3 + 5 = 11 $<br>
     5. Suma wszystkiego oprócz $5$, suma wynosi $ 1 + 2 + 3 + 4 = 10 $<br>`,
-    hints: 'Uważaj na przepełnienie liczb całkowitych! Użyj 64-bitowej liczby całkowitej.'
+    hints: 'Uważaj na przepełnienie liczb całkowitych! Użyj 64-bitowej liczby całkowitej.',
+    code: `#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char* ltrim(char*);
+char* rtrim(char*);
+char** split_string(char*);
+
+int parse_int(char*);
+
+/*
+ * Complete the 'miniMaxSum' function below.
+ *
+ * The function accepts INTEGER_ARRAY arr as parameter.
+ */
+
+void miniMaxSum(int arr_count, int* arr) {
+
+}
+
+int main()
+{
+
+    char** arr_temp = split_string(rtrim(readline()));
+
+    int* arr = malloc(5 * sizeof(int));
+
+    for (int i = 0; i < 5; i++) {
+        int arr_item = parse_int(*(arr_temp + i));
+
+        *(arr + i) = arr_item;
+    }
+
+    miniMaxSum(5, arr);
+
+    return 0;
+}
+
+char* readline() {
+    size_t alloc_length = 1024;
+    size_t data_length = 0;
+
+    char* data = malloc(alloc_length);
+
+    while (true) {
+        char* cursor = data + data_length;
+        char* line = fgets(cursor, alloc_length - data_length, stdin);
+
+        if (!line) {
+            break;
+        }
+
+        data_length += strlen(cursor);
+
+        if (data_length < alloc_length - 1 || data[data_length - 1] == '\\n') {
+            break;
+        }
+
+        alloc_length <<= 1;
+
+        data = realloc(data, alloc_length);
+
+        if (!data) {
+            data = '\\0';
+
+            break;
+        }
+    }
+
+    if (data[data_length - 1] == '\\n') {
+        data[data_length - 1] = '\\0';
+
+        data = realloc(data, data_length);
+
+        if (!data) {
+            data = '\\0';
+        }
+    } else {
+        data = realloc(data, data_length + 1);
+
+        if (!data) {
+            data = '\\0';
+        } else {
+            data[data_length] = '\\0';
+        }
+    }
+
+    return data;
+}
+
+char* ltrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    while (*str != '\\0' && isspace(*str)) {
+        str++;
+    }
+
+    return str;
+}
+
+char* rtrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    char* end = str + strlen(str) - 1;
+
+    while (end >= str && isspace(*end)) {
+        end--;
+    }
+
+    *(end + 1) = '\\0';
+
+    return str;
+}
+
+char** split_string(char* str) {
+    char** splits = NULL;
+    char* token = strtok(str, " ");
+
+    int spaces = 0;
+
+    while (token) {
+        splits = realloc(splits, sizeof(char*) * ++spaces);
+
+        if (!splits) {
+            return splits;
+        }
+
+        splits[spaces - 1] = token;
+
+        token = strtok(NULL, " ");
+    }
+
+    return splits;
+}
+
+int parse_int(char* str) {
+    char* endptr;
+    int value = strtol(str, &endptr, 10);
+
+    if (endptr == str || *endptr != '\\0') {
+        exit(EXIT_FAILURE);
+    }
+
+    return value;
+}`
   },
   {
     id: 2,
-    title: 'Birthday Cake Candles',
+    title: 'Urodzinowe Świeczki Tortowe',
     description: 'Jesteś odpowiedzialny za tort na urodziny dziecka. Zdecydowałeś, że na torcie będzie znajdować się jedna świeczka na każdy rok ich całkowitego wieku. Będą mogli zdmuchnąć tylko najwyższą ze świec. Policz, ile świec jest najwyższych.',
     example: '$$ candles = [4, 4, 1, 3] $$ Maksymalna wysokość świec to $4$ jednostki wysokości. Jest ich $2$, więc wróć $2$.',
     functionDescription: 'Uzupełnij funkcję birthdayCakeCandles. Ma następujące parametry: <br> $int \\enspace candles[n]$: wysokości świec',
@@ -39,7 +204,196 @@ const problemsList = [
     sampleInput: `4 
 3 2 1 3`,
     sampleOutput: '2',
-    explanation: 'Wysokości świec są $[3, 2, 1, 3]$. Najwyższe świece to $ 3 $ i jest ich $ 2 $.'
+    explanation: 'Wysokości świec są $[3, 2, 1, 3]$. Najwyższe świece to $ 3 $ i jest ich $ 2 $.',
+    code: `#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char* ltrim(char*);
+char* rtrim(char*);
+char** split_string(char*);
+
+int parse_int(char*);
+
+/*
+ * Complete the 'birthdayCakeCandles' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY candles as parameter.
+ */
+
+int birthdayCakeCandles(int candles_count, int* candles) {
+    int max_candle = 0, i = 0, count;
+    
+    while (i < candles_count) {
+        
+        if (max_candle < candles[i]) {
+            count = 0;
+            for (int j = 0; j < candles_count; j++) {
+                if (candles[i] == candles[j]) {
+                    count++;
+                }
+            }
+            max_candle = candles[i];
+        }
+        i++;
+    }
+    
+    return count;
+}
+
+int main()
+{
+    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
+
+    int candles_count = parse_int(ltrim(rtrim(readline())));
+
+    char** candles_temp = split_string(rtrim(readline()));
+
+    int* candles = malloc(candles_count * sizeof(int));
+
+    for (int i = 0; i < candles_count; i++) {
+        int candles_item = parse_int(*(candles_temp + i));
+
+        *(candles + i) = candles_item;
+    }
+
+    int result = birthdayCakeCandles(candles_count, candles);
+
+    fprintf(fptr, "%d\\n", result);
+
+    fclose(fptr);
+
+    return 0;
+}
+
+char* readline() {
+    size_t alloc_length = 1024;
+    size_t data_length = 0;
+
+    char* data = malloc(alloc_length);
+
+    while (true) {
+        char* cursor = data + data_length;
+        char* line = fgets(cursor, alloc_length - data_length, stdin);
+
+        if (!line) {
+            break;
+        }
+
+        data_length += strlen(cursor);
+
+        if (data_length < alloc_length - 1 || data[data_length - 1] == '\\n') {
+            break;
+        }
+
+        alloc_length <<= 1;
+
+        data = realloc(data, alloc_length);
+
+        if (!data) {
+            data = '\\0';
+
+            break;
+        }
+    }
+
+    if (data[data_length - 1] == '\\n') {
+        data[data_length - 1] = '\\0';
+
+        data = realloc(data, data_length);
+
+        if (!data) {
+            data = '\\0';
+        }
+    } else {
+        data = realloc(data, data_length + 1);
+
+        if (!data) {
+            data = '\\0';
+        } else {
+            data[data_length] = '\\0';
+        }
+    }
+
+    return data;
+}
+
+char* ltrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    while (*str != '\\0' && isspace(*str)) {
+        str++;
+    }
+
+    return str;
+}
+
+char* rtrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    char* end = str + strlen(str) - 1;
+
+    while (end >= str && isspace(*end)) {
+        end--;
+    }
+
+    *(end + 1) = '\\0';
+
+    return str;
+}
+
+char** split_string(char* str) {
+    char** splits = NULL;
+    char* token = strtok(str, " ");
+
+    int spaces = 0;
+
+    while (token) {
+        splits = realloc(splits, sizeof(char*) * ++spaces);
+
+        if (!splits) {
+            return splits;
+        }
+
+        splits[spaces - 1] = token;
+
+        token = strtok(NULL, " ");
+    }
+
+    return splits;
+}
+
+int parse_int(char* str) {
+    char* endptr;
+    int value = strtol(str, &endptr, 10);
+
+    if (endptr == str || *endptr != '\\0') {
+        exit(EXIT_FAILURE);
+    }
+
+    return value;
+}`
   },
   {
     id: 3,
@@ -54,7 +408,138 @@ const problemsList = [
     outputFormat: '',
     sampleInput: '07:05:45PM',
     sampleOutput: '19:05:45',
-    explanation: ''
+    explanation: '',
+    code: `#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+
+/*
+ * Complete the 'timeConversion' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+
+/*
+ * To return the string from the function, you should either do static allocation or dynamic allocation
+ *
+ * For example,
+ * char* return_string_using_static_allocation() {
+ *     static char s[] = "static allocation of string";
+ *
+ *     return s;
+ * }
+ *
+ * char* return_string_using_dynamic_allocation() {
+ *     char* s = malloc(100 * sizeof(char));
+ *
+ *     s = "dynamic allocation of string";
+ *
+ *     return s;
+ * }
+ *
+ */
+char* timeConversion(char* s) {
+    static char result[7];
+    
+    for (int i = 0; i < 8; i++ ) {
+        result[i] = s[i];
+    }
+    
+    if (s[8] == 'A') {
+        if (result[0] == '1' && result[1] == '2') {
+            result[0] = '0';
+            result[1] = '0';
+        }
+    } else if (s[8] == 'P') {
+        if (result[0] != '1' || result[1] != '2') {
+            char str[2];  
+            memcpy(str, &result[0], 2);
+            int num = atoi(str);
+            num += 12;
+            result[0] = (char)((int)(num / 10) + 48);
+            result[1] = (char)((num % 10) + 48);
+        }
+    }
+
+    return result;
+}
+
+int main()
+{
+    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
+
+    char* s = readline();
+
+    char* result = timeConversion(s);
+
+    fprintf(fptr, "%s\\n", result);
+
+    fclose(fptr);
+
+    return 0;
+}
+
+char* readline() {
+    size_t alloc_length = 1024;
+    size_t data_length = 0;
+
+    char* data = malloc(alloc_length);
+
+    while (true) {
+        char* cursor = data + data_length;
+        char* line = fgets(cursor, alloc_length - data_length, stdin);
+
+        if (!line) {
+            break;
+        }
+
+        data_length += strlen(cursor);
+
+        if (data_length < alloc_length - 1 || data[data_length - 1] == '\\n') {
+            break;
+        }
+
+        alloc_length <<= 1;
+
+        data = realloc(data, alloc_length);
+
+        if (!data) {
+            data = '\\0';
+
+            break;
+        }
+    }
+
+    if (data[data_length - 1] == '\\n') {
+        data[data_length - 1] = '\\0';
+
+        data = realloc(data, data_length);
+
+        if (!data) {
+            data = '\\0';
+        }
+    } else {
+        data = realloc(data, data_length + 1);
+
+        if (!data) {
+            data = '\\0';
+        } else {
+            data[data_length] = '\\0';
+        }
+    }
+
+    return data;
+}`
   },
   {
     id: 4,
@@ -97,7 +582,184 @@ Drugorzędna przekątna to:
 </pre>
 Suma na drugorzędnej przekątnej: $4 + 5 + 10 = 19$
 Różnica: $|4 - 19| = 15$
-Uwaga: |x| jest <a href="https://www.mathsisfun.com/numbers/absolute-value.html" target="_blank">wartością bezwzględną</a> x`
+Uwaga: |x| jest <a href="https://www.mathsisfun.com/numbers/absolute-value.html" target="_blank">wartością bezwzględną</a> x`,
+    code: `#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char* ltrim(char*);
+char* rtrim(char*);
+char** split_string(char*);
+
+int parse_int(char*);
+
+/*
+ * Complete the 'diagonalDifference' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+ */
+
+int diagonalDifference(int arr_rows, int arr_columns, int** arr) {
+
+}
+
+int main()
+{
+    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
+
+    int n = parse_int(ltrim(rtrim(readline())));
+
+    int** arr = malloc(n * sizeof(int*));
+
+    for (int i = 0; i < n; i++) {
+        *(arr + i) = malloc(n * (sizeof(int)));
+
+        char** arr_item_temp = split_string(rtrim(readline()));
+
+        for (int j = 0; j < n; j++) {
+            int arr_item = parse_int(*(arr_item_temp + j));
+
+            *(*(arr + i) + j) = arr_item;
+        }
+    }
+
+    int result = diagonalDifference(n, n, arr);
+
+    fprintf(fptr, "%d\\n", result);
+
+    fclose(fptr);
+
+    return 0;
+}
+
+char* readline() {
+    size_t alloc_length = 1024;
+    size_t data_length = 0;
+
+    char* data = malloc(alloc_length);
+
+    while (true) {
+        char* cursor = data + data_length;
+        char* line = fgets(cursor, alloc_length - data_length, stdin);
+
+        if (!line) {
+            break;
+        }
+
+        data_length += strlen(cursor);
+
+        if (data_length < alloc_length - 1 || data[data_length - 1] == '\\n') {
+            break;
+        }
+
+        alloc_length <<= 1;
+
+        data = realloc(data, alloc_length);
+
+        if (!data) {
+            data = '\\0';
+
+            break;
+        }
+    }
+
+    if (data[data_length - 1] == '\\n') {
+        data[data_length - 1] = '\\0';
+
+        data = realloc(data, data_length);
+
+        if (!data) {
+            data = '\\0';
+        }
+    } else {
+        data = realloc(data, data_length + 1);
+
+        if (!data) {
+            data = '\\0';
+        } else {
+            data[data_length] = '\\0';
+        }
+    }
+
+    return data;
+}
+
+char* ltrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    while (*str != '\\0' && isspace(*str)) {
+        str++;
+    }
+
+    return str;
+}
+
+char* rtrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    char* end = str + strlen(str) - 1;
+
+    while (end >= str && isspace(*end)) {
+        end--;
+    }
+
+    *(end + 1) = '\\0';
+
+    return str;
+}
+
+char** split_string(char* str) {
+    char** splits = NULL;
+    char* token = strtok(str, " ");
+
+    int spaces = 0;
+
+    while (token) {
+        splits = realloc(splits, sizeof(char*) * ++spaces);
+
+        if (!splits) {
+            return splits;
+        }
+
+        splits[spaces - 1] = token;
+
+        token = strtok(NULL, " ");
+    }
+
+    return splits;
+}
+
+int parse_int(char* str) {
+    char* endptr;
+    int value = strtol(str, &endptr, 10);
+
+    if (endptr == str || *endptr != '\\0') {
+        exit(EXIT_FAILURE);
+    }
+
+    return value;
+}`
   },
   {
     id: 5,
@@ -130,7 +792,174 @@ Uwaga: |x| jest <a href="https://www.mathsisfun.com/numbers/absolute-value.html"
 0.333333
 0.166667`,
     explanation: `W tablicy są liczby $3$ dodatnie, $2$ liczby ujemne i $1$ zero.
-Proporcje występowania są dodatnie: $\\frac{3}{6} = 0.500000$, ujemne: $\\frac{2}{6} = 0.333333$ i zerowe: $\\frac{1}{6} = 0.166667$.`
+Proporcje występowania są dodatnie: $\\frac{3}{6} = 0.500000$, ujemne: $\\frac{2}{6} = 0.333333$ i zerowe: $\\frac{1}{6} = 0.166667$.`,
+    code: `#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char* ltrim(char*);
+char* rtrim(char*);
+char** split_string(char*);
+
+int parse_int(char*);
+
+/*
+ * Complete the 'plusMinus' function below.
+ *
+ * The function accepts INTEGER_ARRAY arr as parameter.
+ */
+
+void plusMinus(int arr_count, int* arr) {
+
+}
+
+int main()
+{
+    int n = parse_int(ltrim(rtrim(readline())));
+
+    char** arr_temp = split_string(rtrim(readline()));
+
+    int* arr = malloc(n * sizeof(int));
+
+    for (int i = 0; i < n; i++) {
+        int arr_item = parse_int(*(arr_temp + i));
+
+        *(arr + i) = arr_item;
+    }
+
+    plusMinus(n, arr);
+
+    return 0;
+}
+
+char* readline() {
+    size_t alloc_length = 1024;
+    size_t data_length = 0;
+
+    char* data = malloc(alloc_length);
+
+    while (true) {
+        char* cursor = data + data_length;
+        char* line = fgets(cursor, alloc_length - data_length, stdin);
+
+        if (!line) {
+            break;
+        }
+
+        data_length += strlen(cursor);
+
+        if (data_length < alloc_length - 1 || data[data_length - 1] == '\\n') {
+            break;
+        }
+
+        alloc_length <<= 1;
+
+        data = realloc(data, alloc_length);
+
+        if (!data) {
+            data = '\\0';
+
+            break;
+        }
+    }
+
+    if (data[data_length - 1] == '\\n') {
+        data[data_length - 1] = '\\0';
+
+        data = realloc(data, data_length);
+
+        if (!data) {
+            data = '\\0';
+        }
+    } else {
+        data = realloc(data, data_length + 1);
+
+        if (!data) {
+            data = '\\0';
+        } else {
+            data[data_length] = '\\0';
+        }
+    }
+
+    return data;
+}
+
+char* ltrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    while (*str != '\\0' && isspace(*str)) {
+        str++;
+    }
+
+    return str;
+}
+
+char* rtrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    char* end = str + strlen(str) - 1;
+
+    while (end >= str && isspace(*end)) {
+        end--;
+    }
+
+    *(end + 1) = '\\0';
+
+    return str;
+}
+
+char** split_string(char* str) {
+    char** splits = NULL;
+    char* token = strtok(str, " ");
+
+    int spaces = 0;
+
+    while (token) {
+        splits = realloc(splits, sizeof(char*) * ++spaces);
+
+        if (!splits) {
+            return splits;
+        }
+
+        splits[spaces - 1] = token;
+
+        token = strtok(NULL, " ");
+    }
+
+    return splits;
+}
+
+int parse_int(char* str) {
+    char* endptr;
+    int value = strtol(str, &endptr, 10);
+
+    if (endptr == str || *endptr != '\\0') {
+        exit(EXIT_FAILURE);
+    }
+
+    return value;
+}
+`
   },
   {
     id: 6,
@@ -156,10 +985,463 @@ Trzeci wiersz zawiera $m$ oddzielone spacjami liczby całkowite $drives[i]$, czy
 3 1
 5 2 8`,
     sampleOutput: '9',
-    explanation: 'Kup klawiaturę $2^{nd}$ i dysk USB $3^{rd}$ za łączny koszt $ 8 + 1 = 9$.'
+    explanation: 'Kup klawiaturę $2^{nd}$ i dysk USB $3^{rd}$ za łączny koszt $ 8 + 1 = 9$.',
+    code: `
+    #include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char** split_string(char*);
+
+/*
+ * Complete the getMoneySpent function below.
+ */
+int getMoneySpent(int keyboards_count, int* keyboards, int drives_count, int* drives, int b) {
+    /*
+     * Write your code here.
+     */
+
+}
+
+int main()
+{
+    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
+
+    char** bnm = split_string(readline());
+
+    char* b_endptr;
+    char* b_str = bnm[0];
+    int b = strtol(b_str, &b_endptr, 10);
+
+    if (b_endptr == b_str || *b_endptr != '\\0') { exit(EXIT_FAILURE); }
+
+    char* n_endptr;
+    char* n_str = bnm[1];
+    int n = strtol(n_str, &n_endptr, 10);
+
+    if (n_endptr == n_str || *n_endptr != '\\0') { exit(EXIT_FAILURE); }
+
+    char* m_endptr;
+    char* m_str = bnm[2];
+    int m = strtol(m_str, &m_endptr, 10);
+
+    if (m_endptr == m_str || *m_endptr != '\\0') { exit(EXIT_FAILURE); }
+
+    char** keyboards_temp = split_string(readline());
+
+    int* keyboards = malloc(n * sizeof(int));
+
+    for (int keyboards_itr = 0; keyboards_itr < n; keyboards_itr++) {
+        char* keyboards_item_endptr;
+        char* keyboards_item_str = *(keyboards_temp + keyboards_itr);
+        int keyboards_item = strtol(keyboards_item_str, &keyboards_item_endptr, 10);
+
+        if (keyboards_item_endptr == keyboards_item_str || *keyboards_item_endptr != '\\0') { exit(EXIT_FAILURE); }
+
+        *(keyboards + keyboards_itr) = keyboards_item;
+    }
+
+    int keyboards_count = n;
+
+    char** drives_temp = split_string(readline());
+
+    int* drives = malloc(m * sizeof(int));
+
+    for (int drives_itr = 0; drives_itr < m; drives_itr++) {
+        char* drives_item_endptr;
+        char* drives_item_str = *(drives_temp + drives_itr);
+        int drives_item = strtol(drives_item_str, &drives_item_endptr, 10);
+
+        if (drives_item_endptr == drives_item_str || *drives_item_endptr != '\\0') { exit(EXIT_FAILURE); }
+
+        *(drives + drives_itr) = drives_item;
+    }
+
+    int drives_count = m;
+
+    /*
+     * The maximum amount of money she can spend on a keyboard and USB drive, or -1 if she can't purchase both items
+     */
+
+    int moneySpent = getMoneySpent(keyboards_count, keyboards, drives_count, drives, b);
+
+    fprintf(fptr, "%d\\n", moneySpent);
+
+    fclose(fptr);
+
+    return 0;
+}
+
+char* readline() {
+    size_t alloc_length = 1024;
+    size_t data_length = 0;
+    char* data = malloc(alloc_length);
+
+    while (true) {
+        char* cursor = data + data_length;
+        char* line = fgets(cursor, alloc_length - data_length, stdin);
+
+        if (!line) { break; }
+
+        data_length += strlen(cursor);
+
+        if (data_length < alloc_length - 1 || data[data_length - 1] == '\\n') { break; }
+
+        size_t new_length = alloc_length << 1;
+        data = realloc(data, new_length);
+
+        if (!data) { break; }
+
+        alloc_length = new_length;
+    }
+
+    if (data[data_length - 1] == '\\n') {
+        data[data_length - 1] = '\\0';
+    }
+
+    data = realloc(data, data_length);
+
+    return data;
+}
+
+char** split_string(char* str) {
+    char** splits = NULL;
+    char* token = strtok(str, " ");
+
+    int spaces = 0;
+
+    while (token) {
+        splits = realloc(splits, sizeof(char*) * ++spaces);
+        if (!splits) {
+            return splits;
+        }
+
+        splits[spaces - 1] = token;
+
+        token = strtok(NULL, " ");
+    }
+
+    return splits;
+}
+`
   },
   {
     id: 7,
+    title: 'Binary Numbers',
+    description: 'Biorąc pod uwagę liczbę całkowitą bazową $10$, $n$, zamień ją na binarną (podstawa-$2$). Następnie znajdź i wypisz liczbę całkowitą bazową-$10$ oznaczającą maksymalną liczbę kolejnych cyfr $1$ w $n$ reprezentacji binarnej . Podczas pracy z różnymi podstawami często pokazuje się podstawę jako indeks dolny.',
+    example: `$$ n = 125 $$ 
+    Binarna reprezentacja $125_{10}$ to $1111101_2$. W bazie $10$ są $5$ $1$ kolejne z dwóch grup. Wydrukuj maksimum, $5$.`,
+    functionDescription: '',
+    print: '',
+    inputFormat: 'Pojedyncza liczba całkowita, $n$.',
+    constraints: '$$ 1 <= n <= 10^6 $$',
+    outputFormat: 'Wydrukuj pojedynczą liczbę całkowitą bazową-$10$, która oznacza maksymalną liczbę kolejnych liczb $1$ w binarnej reprezentacji $n$.',
+    sampleInput: '5',
+    sampleOutput: '1',
+    sampleInputB: '13',
+    sampleOutputB: '2',
+    explanation: `Przykładowy przypadek 1:<br>
+Binarna reprezentacja $5_{10}$ jest $101_2$, więc maksymalna liczba kolejnych $1$ to $1$.<br>
+<br>
+Przykładowy przypadek 2:<br>
+Binarna reprezentacja $13_{10}$ jest $1101_2$ , więc maksymalna liczba kolejnych to $1$ to $2$.<br>`,
+    code: `#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char* ltrim(char*);
+char* rtrim(char*);
+
+int parse_int(char*);
+
+
+
+int main()
+{
+    int n = parse_int(ltrim(rtrim(readline())));
+
+    return 0;
+}
+
+char* readline() {
+    size_t alloc_length = 1024;
+    size_t data_length = 0;
+
+    char* data = malloc(alloc_length);
+
+    while (true) {
+        char* cursor = data + data_length;
+        char* line = fgets(cursor, alloc_length - data_length, stdin);
+
+        if (!line) {
+            break;
+        }
+
+        data_length += strlen(cursor);
+
+        if (data_length < alloc_length - 1 || data[data_length - 1] == '\\n') {
+            break;
+        }
+
+        alloc_length <<= 1;
+
+        data = realloc(data, alloc_length);
+
+        if (!data) {
+            data = '\\0';
+
+            break;
+        }
+    }
+
+    if (data[data_length - 1] == '\\n') {
+        data[data_length - 1] = '\\0';
+
+        data = realloc(data, data_length);
+
+        if (!data) {
+            data = '\\0';
+        }
+    } else {
+        data = realloc(data, data_length + 1);
+
+        if (!data) {
+            data = '\\0';
+        } else {
+            data[data_length] = '\\0';
+        }
+    }
+
+    return data;
+}
+
+char* ltrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    while (*str != '\\0' && isspace(*str)) {
+        str++;
+    }
+
+    return str;
+}
+
+char* rtrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    char* end = str + strlen(str) - 1;
+
+    while (end >= str && isspace(*end)) {
+        end--;
+    }
+
+    *(end + 1) = '\\0';
+
+    return str;
+}
+
+int parse_int(char* str) {
+    char* endptr;
+    int value = strtol(str, &endptr, 10);
+
+    if (endptr == str || *endptr != '\\0') {
+        exit(EXIT_FAILURE);
+    }
+
+    return value;
+}`
+  },
+  {
+    id: 8,
+    title: 'Staircase (Schody)',
+    description: `
+    To są schody o wymiarach $n = 4$:<br>
+<pre>
+    #
+   ##
+  ###
+ ####
+</pre><br>
+Jego podstawa i wysokość są równe $n$. Jest rysowany za pomocą $\\#$ symboli i spacji. Ostatni wiersz nie jest poprzedzony spacją.
+
+Napisz program, który wypisze klatkę schodową o rozmiarze $n$.`,
+    example: '',
+    functionDescription: `Uzupełnij funkcję <i>staircase</i> .
+klatka schodowa ma następujące parametry:<br>
+<b>int n: liczba całkowita</b>`,
+    print: 'Wydrukuj staircase w sposób opisany powyżej.',
+    inputFormat: 'Pojedyncza liczba całkowita $n$, oznaczająca rozmiar schody.',
+    constraints: '$$ 0 < n <= 100 $$',
+    outputFormat: 'Wydrukuj schody o rozmiarze $n$, używając symboli # i spacji.',
+    sampleInput: '6',
+    sampleOutput: `     #
+    ##
+   ###
+  ####
+ #####
+######`,
+    explanation: 'Schody jest wyrównana do prawej, składa się z $\\#$ symboli i spacji oraz ma wysokość i szerokość $n = 6$.',
+    code: `#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char* ltrim(char*);
+char* rtrim(char*);
+
+int parse_int(char*);
+
+/*
+ * Complete the 'staircase' function below.
+ *
+ * The function accepts INTEGER n as parameter.
+ */
+
+void staircase(int n) {
+
+}
+
+int main()
+{
+    int n = parse_int(ltrim(rtrim(readline())));
+
+    staircase(n);
+
+    return 0;
+}
+
+char* readline() {
+    size_t alloc_length = 1024;
+    size_t data_length = 0;
+
+    char* data = malloc(alloc_length);
+
+    while (true) {
+        char* cursor = data + data_length;
+        char* line = fgets(cursor, alloc_length - data_length, stdin);
+
+        if (!line) {
+            break;
+        }
+
+        data_length += strlen(cursor);
+
+        if (data_length < alloc_length - 1 || data[data_length - 1] == '\\n') {
+            break;
+        }
+
+        alloc_length <<= 1;
+
+        data = realloc(data, alloc_length);
+
+        if (!data) {
+            data = '\\0';
+
+            break;
+        }
+    }
+
+    if (data[data_length - 1] == '\\n') {
+        data[data_length - 1] = '\\0';
+
+        data = realloc(data, data_length);
+
+        if (!data) {
+            data = '\\0';
+        }
+    } else {
+        data = realloc(data, data_length + 1);
+
+        if (!data) {
+            data = '\\0';
+        } else {
+            data[data_length] = '\\0';
+        }
+    }
+
+    return data;
+}
+
+char* ltrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    while (*str != '\\0' && isspace(*str)) {
+        str++;
+    }
+
+    return str;
+}
+
+char* rtrim(char* str) {
+    if (!str) {
+        return '\\0';
+    }
+
+    if (!*str) {
+        return str;
+    }
+
+    char* end = str + strlen(str) - 1;
+
+    while (end >= str && isspace(*end)) {
+        end--;
+    }
+
+    *(end + 1) = '\\0';
+
+    return str;
+}
+
+int parse_int(char* str) {
+    char* endptr;
+    int value = strtol(str, &endptr, 10);
+
+    if (endptr == str || *endptr != '\\0') {
+        exit(EXIT_FAILURE);
+    }
+
+    return value;
+}`
+  },
+  {
+    id: 9,
     title: 'Library Fine',
     description: '',
     example: '',
@@ -170,7 +1452,8 @@ Trzeci wiersz zawiera $m$ oddzielone spacjami liczby całkowite $drives[i]$, czy
     outputFormat: '',
     sampleInput: '',
     sampleOutput: '',
-    explanation: ''
+    explanation: '',
+    code: ''
   }
 ];
 
@@ -186,7 +1469,10 @@ const headerMapping = {
   outputFormat: 'Format wyjściowy',
   sampleInput: 'Przykładowe wejście',
   sampleOutput: 'Przykładowe dane wyjściowe',
-  explanation: 'Wyjaśnienie'
+  sampleInputB: 'Przykładowe wejście 2',
+  sampleOutputB: 'Przykładowe dane wyjściowe 2',
+  explanation: 'Wyjaśnienie',
+  code: 'Kod programu'
 };
 
 document.body.onload = loadDocument();
@@ -259,7 +1545,10 @@ async function appendPre(block, value, key = '') {
   }
 
   const elem = document.createElement('pre');
-  elem.innerHTML = value;
+  elem.innerHTML = ( key=== 'code' ) ? value.replaceAll('<', '&lt;').replaceAll('>', '&gt;') : value;
+  if (key === 'code') {
+    elem.setAttribute('class', 'has-background-black has-text-white-ter');
+  }
 
   if(header) {
     block.appendChild(header);
@@ -286,7 +1575,10 @@ async function appendProblem(block, problem) {
     outputFormat,
     sampleInput,
     sampleOutput,
-    explanation
+    sampleInputB,
+    sampleOutputB,
+    explanation,
+    code
   } = problem;
 
   if (description) {
@@ -333,8 +1625,20 @@ async function appendProblem(block, problem) {
     await appendPre(problemsContentBlock, sampleOutput, 'sampleOutput');
   }
 
+  if (sampleInputB) {
+    await appendPre(problemsContentBlock, sampleInputB, 'sampleInput');
+  }
+
+  if (sampleOutputB) {
+    await appendPre(problemsContentBlock, sampleOutputB, 'sampleOutput');
+  }
+
   if (explanation) {
     await appendSimple(problemsContentBlock, explanation, 'explanation', entityContentId);
+  }
+
+  if (code) {
+    await appendPre(problemsContentBlock, code, 'code', entityContentId);
   }
 }
 
