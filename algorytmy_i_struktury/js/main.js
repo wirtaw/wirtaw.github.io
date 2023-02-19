@@ -122,3 +122,8 @@ function loadDocument () {
   }
 }
 
+function shuffle(array, factor = 0.5) {
+  const indexes = array.map(({id}) => +id).sort(() => Math.random() - factor);
+
+  return indexes.map((i) => array[i-1]);
+}

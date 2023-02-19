@@ -3,6 +3,18 @@
 let promise = Promise.resolve();  // Used to hold chain of typesetting calls
 const DateTime = luxon.DateTime;
 
+const upIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12" height="12"><path d="M6 4c-.2 0-.4.1-.5.2L2.2 7.5c-.3.3-.3.8 0 1.1.3.3.8.3 1.1 0L6 5.9l2.7 2.7c.3.3.8.3 1.1 0 .3-.3.3-.8 0-1.1L6.6 4.3C6.4 4.1 6.2 4 6 4Z"></path></svg>';
+const downIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12" height="12"><path d="M6 8.825c-.2 0-.4-.1-.5-.2l-3.3-3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l2.7 2.7 2.7-2.7c.3-.3.8-.3 1.1 0 .3.3.3.8 0 1.1l-3.2 3.2c-.2.2-.4.3-.6.3Z"></path></svg>';
+
+const students = [
+  { id: 85120, fullName: 'Kovalevskij Deivid' },
+  { id: 85286, fullName: 'Kudžma Valdemar' },
+  { id: 85079, fullName: 'Markevič Beata' },
+  { id: 85109, fullName: 'Miloš Rafal' },
+  { id: 85117, fullName: 'Straževičiūtė Edita' },
+  { id: 85115, fullName: 'Šturo Edmond' }
+];
+
 const problemsList = [
   {
     id: 1,
@@ -1451,15 +1463,50 @@ function createCardDiv({id, title}, type = '', entity = '') {
   cardDiv.setAttribute('class', 'card');
   const cardHeaderDiv = document.createElement('div');
   cardHeaderDiv.setAttribute('class', 'card-header');
-  const cardHeaderTitleDiv = document.createElement('div');
-  cardHeaderTitleDiv.setAttribute('class', 'card-header-title is-size-2');
+  const cardHeaderTitle = document.createElement('p');
+  cardHeaderTitle.setAttribute('class', 'card-header-title is-size-4');
   const entityTitleId = entity + type + id + 'Title';
-  cardHeaderTitleDiv.setAttribute('id', entityTitleId);
+  cardHeaderTitle.setAttribute('id', entityTitleId);
 
-  const newTitleContent = document.createTextNode(title);
-  cardHeaderTitleDiv.appendChild(newTitleContent);
+  const newTitleContent = document.createTextNode(`${id}) ${title}`);
+  cardHeaderTitle.appendChild(newTitleContent);
 
-  cardHeaderDiv.appendChild(cardHeaderTitleDiv);
+  const cardHeaderButton = document.createElement('button');
+  cardHeaderButton.setAttribute('class', 'card-header-icon');
+  cardHeaderButton.setAttribute('aria-label', 'more options');
+  cardHeaderButton.onclick = function() {
+    const content = document.getElementById(entity + type + id + 'Content');
+    const footer = document.getElementById(entity + type + id + 'Footer');
+    const icon = document.getElementById(entity + type + id + 'Icon');
+
+    if (content) {
+
+      if (content.style.display === 'none') {
+        content.style.display = 'block';
+        footer.style.display = 'block';
+        icon.innerHTML = upIcon;
+      } else {
+        content.style.display = 'none';
+        footer.style.display = 'none';
+        icon.innerHTML = downIcon;
+      }
+    }
+  };
+
+  const cardHeaderButtonIcon = document.createElement('span');
+  cardHeaderButtonIcon.setAttribute('class', 'icon');
+
+  const cardHeaderButtonIconElem = document.createElement('i');
+  cardHeaderButtonIconElem.setAttribute('aria-hidden', 'true');
+  cardHeaderButtonIconElem.setAttribute('id', entity + type + id + 'Icon');
+  cardHeaderButtonIconElem.innerHTML = downIcon;
+
+  cardHeaderButtonIcon.appendChild(cardHeaderButtonIconElem);
+
+  cardHeaderButton.appendChild(cardHeaderButtonIcon);
+
+  cardHeaderDiv.appendChild(cardHeaderTitle);
+  cardHeaderDiv.appendChild(cardHeaderButton);
   cardDiv.appendChild(cardHeaderDiv);
 
   const cardContentDiv = document.createElement('div');
@@ -1469,9 +1516,29 @@ function createCardDiv({id, title}, type = '', entity = '') {
   contentDiv.setAttribute('class', 'content');
   const entityContentId = entity + type + id + 'Content';
   contentDiv.setAttribute('id', entityContentId);
+  contentDiv.style.display = 'none';
 
   cardContentDiv.appendChild(contentDiv);
   cardDiv.appendChild(cardContentDiv);
+
+  const cardFooterDiv = document.createElement('div');
+  cardFooterDiv.setAttribute('class', 'card-footer');
+  cardFooterDiv.setAttribute('id', entity + type + id + 'Footer');
+  cardFooterDiv.style.display = 'none';
+
+  const footerItem = document.createElement('p');
+  footerItem.setAttribute('class', 'card-footer-item');
+
+  const footerItemContent = document.createElement('span');
+
+  const footerItemContentTag = document.createElement('a');
+  footerItemContentTag.setAttribute('href', '#top');
+  footerItemContentTag.innerText = 'top';
+
+  footerItemContent.appendChild(footerItemContentTag);
+  footerItem.appendChild(footerItemContent);
+  cardFooterDiv.appendChild(footerItem);
+  cardDiv.appendChild(cardFooterDiv);
 
   return { cardDiv, entityContentId, entityTitleId, textValue: title };
 }
@@ -1514,20 +1581,21 @@ async function appendPre(block, value, key = '') {
   block.appendChild(elem);
 }
 
-function appendMenuLink(id, title) {
+function appendMenuLink(linkId, title, id) {
   const menuBlock = document.getElementById('menuZadania');
 
   const elem = document.createElement('li');
 
   const link = document.createElement('a');
-  link.setAttribute('href', `#${id}`);
-  const txt = document.createTextNode(title);
+  link.setAttribute('href', `#${linkId}`);
+  const txt = document.createTextNode(` ${id}) ${title}`);
 
   const span = document.createElement('span');
   span.setAttribute('class', 'icon is-small');
 
   const icon = document.createElement('i');
-  icon.setAttribute('class', 'fa fa-link');
+  icon.setAttribute('class', '');
+  icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>`;
 
   span.appendChild(icon);
   link.appendChild(span);
@@ -1537,10 +1605,15 @@ function appendMenuLink(id, title) {
 }
 
 async function appendProblem(block, problem) {
-  const { cardDiv, entityContentId, entityTitleId, textValue } = createCardDiv(problem, 'Problem', 'problem');
+  const {
+    cardDiv,
+    entityContentId,
+    entityTitleId,
+    textValue
+  } = createCardDiv(problem, 'Problem', 'problem');
 
   block.appendChild(cardDiv);
-  appendMenuLink(entityTitleId, textValue);
+  appendMenuLink(entityTitleId, textValue, problem.id);
 
   const problemsContentBlock = document.getElementById(entityContentId);
 
@@ -1623,12 +1696,30 @@ async function appendProblem(block, problem) {
   }
 }
 
+document.getElementById('losowacZadaniaDlaStudentow').onclick = function() {
+  const listaZadanIStudentowBlock = document.getElementById('listaZadanIStudentow');
+
+  if (listaZadanIStudentowBlock) {
+    const randProblemsList = shuffle(problemsList.filter(({id}) => id !== 3), 0.5144);
+    listaZadanIStudentowBlock.innerHTML = `${JSON.stringify(randProblemsList.filter((item) => !!item).map(({id, title}) => ({id, title})), null ,' ')}`;
+  }
+};
+
 async function loadProblems() {
   if (problemsList && Array.isArray(problemsList) && problemsList.length) {
     const problemsBlock = document.getElementById('problemsBlock');
-    problemsBlock.innerHTML = '';
 
-    await Promise.all(problemsList.map((item) => appendProblem(problemsBlock, item)));
+    if (problemsBlock) {
+      problemsBlock.innerHTML = '';
+
+      await Promise.all(problemsList.map((item) => appendProblem(problemsBlock, item)));
+    }
+
+    const listaZadanIStudentowBlock = document.getElementById('listaZadanIStudentow');
+
+    if (listaZadanIStudentowBlock) {
+      listaZadanIStudentowBlock.innerHTML = '';
+    }
   }
 }
 

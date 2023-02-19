@@ -17,7 +17,7 @@
 
 <section class="section">
     <div class="container">
-        <h1 class="title">
+        <h1 class="title" id="top">
             Egzamin poprawkowy
         </h1>
         <p class="subtitle">
@@ -26,32 +26,37 @@
     </div>
 </section>
 <section class="main-content columns is-fullheight">
-    <aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile">
+    <aside class="column is-3 p-4 is-narrow-mobile is-fullheight section is-hidden-mobile">
         <p class="menu-label is-hidden-touch">Menu</p>
         <ul class="menu-list">
             <li>
                 <a href="#tresc" class="">
-                    <span class="icon"><i class="fa fa-home"></i></span> Treść
+                    <span class="icon"><i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></i></span> Treść
+                </a>
+            </li>
+            <li>
+                <a href="./poprawkowyLosowanie.html" class="">
+                    <span class="icon"><i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M5.5 4.25a2.25 2.25 0 0 1 4.5 0 .75.75 0 0 0 1.5 0 3.75 3.75 0 1 0-6.14 2.889l-2.272 4.258a.75.75 0 0 0 1.324.706L7 7.25a.75.75 0 0 0-.309-1.015A2.25 2.25 0 0 1 5.5 4.25Z"></path><path d="M7.364 3.607a.75.75 0 0 1 1.03.257l2.608 4.349a3.75 3.75 0 1 1-.628 6.785.75.75 0 0 1 .752-1.299 2.25 2.25 0 1 0-.033-3.88.75.75 0 0 1-1.03-.256L7.107 4.636a.75.75 0 0 1 .257-1.03Z"></path><path d="M2.9 8.776A.75.75 0 0 1 2.625 9.8 2.25 2.25 0 1 0 6 11.75a.75.75 0 0 1 .75-.751h5.5a.75.75 0 0 1 0 1.5H7.425a3.751 3.751 0 1 1-5.55-3.998.75.75 0 0 1 1.024.274Z"></path></svg></i></span> Losowac
                 </a>
             </li>
             <li>
                 <a href="#" class="is-active">
-                    <span class="icon"><i class="fa fa-table"></i></span> Zadania
+                    <span class="icon"><i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"></path></svg></i></span> Zadania
                 </a>
 
                 <ul id="menuZadania"></ul>
             </li>
             <li>
                 <a href="../index.html" class="">
-                    <span class="icon"><i class="fa fa-info"></i></span> Na glówna
+                    <span class="icon"><i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z"></path></svg></i></span> Na glówna
                 </a>
             </li>
         </ul>
     </aside>
-    <div class="container column is-10">
+    <div class="container column is-9">
         <div class="section">
             <div class="block">
-                <h2><a href="tresc">Treść</a></h2>
+                <h2 class="is-size-4" id="tresc">Treść</h2>
                 <ul>
                     <li>Przeczytać swoje zadanie</li>
                     <li>Prawidłowo ustawić dane wejściowe i wyjściowe</li>
@@ -61,13 +66,11 @@
                     <li>Udowodnić czy wskazany algorytm poprawny. Jeżeli tak, cesciowo czy całkowicie poprawny</li>
                     <li>Wskazać zlozonosć czasowa </li>
                 </ul>
+                <button id="losowacZadaniaDlaStudentow" class="button btn-info" style="display: none">Start</button>
             </div>
-            <br>
             <div class="block" id="problemsBlock">
 
             </div>
-            <br>
-            <p><a href="../index.html"> Na glówna </a></p>
         </div>
 
     </div>

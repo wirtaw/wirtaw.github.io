@@ -1321,12 +1321,6 @@ const convertToMinutesAndSeconds = (diff, timeValue) => {
   return `${(minutes - 1) <= 0 ? 0 : minutes - 1}:${seconds < 10 ? `0${seconds}` : seconds}`;
 };
 
-function shuffle(array) {
-  const indexes = array.map(({id}) => +id).sort(() => Math.random() - 0.5);
-
-  return indexes.map((i) => array[i-1]);
-}
-
 function typeset(code) {
   promise = promise.then(() => MathJax.typesetPromise(code()))
     .catch((err) => console.log('Typeset failed: ' + err.message));
