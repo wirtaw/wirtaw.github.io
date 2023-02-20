@@ -1416,21 +1416,6 @@ int parse_int(char* str) {
 
     return value;
 }`
-  },
-  {
-    id: 9,
-    title: 'Library Fine',
-    description: '',
-    example: '',
-    functionDescription: '',
-    print: '',
-    inputFormat: '',
-    constraints: '',
-    outputFormat: '',
-    sampleInput: '',
-    sampleOutput: '',
-    explanation: '',
-    code: ''
   }
 ];
 
@@ -1700,8 +1685,58 @@ document.getElementById('losowacZadaniaDlaStudentow').onclick = function() {
   const listaZadanIStudentowBlock = document.getElementById('listaZadanIStudentow');
 
   if (listaZadanIStudentowBlock) {
-    const randProblemsList = shuffle(problemsList.filter(({id}) => id !== 3), 0.5144);
-    listaZadanIStudentowBlock.innerHTML = `${JSON.stringify(randProblemsList.filter((item) => !!item).map(({id, title}) => ({id, title})), null ,' ')}`;
+    const randProblemsList = shuffle(problemsList, 0.5)
+      .filter((item) => !!item && item.id !== 3).map(({id, title}) => ({id, title}));
+    listaZadanIStudentowBlock.innerHTML = '';
+
+    const table = document.createElement('table');
+
+    const tableHead = document.createElement('thead');
+    const tableBody = document.createElement('tbody');
+    const tableFoot = document.createElement('tfoot');
+
+    const trHead = document.createElement('tr');
+    const trFoot = document.createElement('tr');
+
+    const colNum = document.createElement('th');
+    colNum.innerText = '';
+    trHead.appendChild(colNum);
+
+    const colStudent = document.createElement('th');
+    colStudent.innerText = '';
+    trHead.appendChild(colStudent);
+
+    const colTask = document.createElement('th');
+    colTask.innerText = '';
+    trHead.appendChild(colTask);
+
+    tableHead.appendChild(trHead);
+    tableFoot.appendChild(trFoot);
+
+    table.appendChild(tableHead);
+    table.appendChild(tableFoot);
+    for (let i=0; i < students.length; i++) {
+      const { id, fullName } = students[i];
+      const { id: taskId, title } = randProblemsList[i];
+      const trBody = document.createElement('tr');
+
+      const colNum = document.createElement('td');
+      colNum.innerText = id;
+      trBody.appendChild(colNum);
+
+      const colStudent = document.createElement('td');
+      colStudent.innerText = fullName;
+      trBody.appendChild(colStudent);
+
+      const colTask = document.createElement('td');
+      colTask.innerText = `${taskId} ${title}`;
+      trBody.appendChild(colTask);
+
+      tableBody.appendChild(trBody);
+    }
+    table.appendChild(tableBody);
+
+    listaZadanIStudentowBlock.appendChild(table);
   }
 };
 
