@@ -1,0 +1,151 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+  <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="pl"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Algorytmy i struktury danych (UwB filia w Wilnie) - materialy dodatkowe rozdlenie plikow C</title>
+<meta name="description" content="Algorytmy i Struktury Danych (UwB filia w Wilnie)">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+      <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        </head>
+        <body>
+        <section class="section">
+          <div class="container">
+            <h1 class="title">
+                Rozdlenie plikow . Do programu sortowania i poszukiwania
+            </h1>
+            <p class="subtitle">
+
+            </p>
+          </div>
+        </section>
+        <div class="content ml-2">
+          <div class="card">
+            <div class="card-header">
+                <div class="card-header-title">Glowny plik </div>
+            </div>
+            <div class="card-content">
+              <div class="content">
+        <pre class="has-background-black has-text-white-ter">
+/*
+Vladimir Poplavskij. Wykladowca
+* -----------------
+* Include files.
+* -----------------
+2022-12-13
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;errno.h&gt;
+
+#include "inputOutput.h";
+
+#define MAX_LINE_LENGTH 6
+
+int main(void) {
+    int array[] = {2, 5, 6, -7, 0, 52}, rez = 0;
+    int *arrayRead;
+
+    rez = writeFile(array, MAX_LINE_LENGTH);
+
+    arrayRead = readFile(void);
+    for (int i = 0; i < MAX_LINE_LENGTH; i++) {
+        printf("%d \n", arrayRead[i]);
+    }
+	return 0;
+}
+</pre>
+  </div>
+</div>
+<footer class="card-footer"></footer>
+</div>
+ <div class="card">
+                <div class="card-header">
+                    <div class="card-header-title"> plik inputOutput.h (musi byc w tej same direktorii)</div>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+        <pre class="has-background-black has-text-white-ter">
+/*
+Vladimir Poplavskij. Wykladowca
+* -----------------
+* inputOutput.h
+* -----------------
+2022-12-13
+*/
+#define MAX_LINE_LENGTH 6
+
+// Types
+
+int writeFile(int arr[], int size);
+int* readFile(void);
+
+// Implementation
+
+int writeFile(int arr[], int size) {
+  FILE *fptr2;
+
+  fptr2 = fopen("sorted.dat", "w");
+
+  if (fptr2 != NULL) {
+	printf("Files created successfully!\n");
+  } else {
+	printf("Failed to create the file.\n");
+	return -1;
+  }
+
+  for (int i = 0; i < size; i++) {
+	fprintf(fptr2, "%d\n", arr[i]);
+  }
+
+  fclose(fptr2);
+  return 1;
+}
+
+int* readFile(void){
+	FILE *fptr;
+	static int arr[MAX_LINE_LENGTH];
+	int number, i = 0;
+
+	fptr = fopen("random.dat", "r");
+
+	if (fptr != NULL) {
+      printf("File created successfully!\n");
+	} else {
+		printf("Failed to read the file.\n");
+		// exit status for OS that an error occurred
+		return arr;
+	}
+
+	while ( fscanf(fptr, "%d", &number ) == 1 ) {
+		arr[i] = number;
+		printf("We just read %d\n", arr[i]);
+		i++;
+	}
+
+	fclose(fptr);
+
+	return arr;
+};
+</pre>
+                    </div>
+                </div>
+                <footer class="card-footer"></footer>
+            </div>
+<p><a href="../../index.html"> Na glówna </a></p>
+</div>
+<footer class="footer">
+<div class="content has-text-centered">
+<p>
+  <strong>&copy;</strong> by <a href="https://poplauki.eu">Poplavskij Vladimir</a><span id="copyrightDate"></span>
+</p>
+</div>
+</footer>
+<script src="../../js/main.js"></script>
+</body>
+</html>
