@@ -545,15 +545,15 @@ const testQuestions = [
         value: 'stopnia'
       },
       {
-        label: 'd',
+        label: 'e',
         value: 'wysokości'
       },
       {
-        label: 'e',
+        label: 'f',
         value: 'wszystko prawidłowe'
       },
       {
-        label: 'f',
+        label: 'g',
         value: 'wszystko nieprawidłowe'
       }
     ],
