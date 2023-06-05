@@ -4,26 +4,34 @@ function convertPointsToGrade(points) {
   const mapping = {
     '-': {
       from: 0,
-      to: 20
+      to: 15
     },
     '2': {
-      from: 20,
-      to: 40
+      from: 15,
+      to: 33
+    },
+    '2.5': {
+      from: 33,
+      to: 66
     },
     '3': {
-      from: 40,
-      to: 60
-    },
-    '4': {
-      from: 60,
-      to: 80
-    },
-    '5': {
-      from: 80,
+      from: 66,
       to: 100
     },
-    '5+': {
+    '3.5': {
       from: 100,
+      to: 115
+    },
+    '4': {
+      from: 115,
+      to: 125
+    },
+    '4.5': {
+      from: 125,
+      to: 135
+    },
+    '5': {
+      from: 135,
       to: 200
     }
   };
