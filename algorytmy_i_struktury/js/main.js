@@ -2,37 +2,33 @@ document.body.onload = loadDocument();
 
 function convertPointsToGrade(points) {
   const mapping = {
-    '-': {
-      from: 0,
-      to: 15
-    },
     '2': {
-      from: 15,
-      to: 33
+      from: 0,
+      to: 70
     },
     '2.5': {
-      from: 33,
-      to: 66
+      from: 70,
+      to: 87
     },
     '3': {
-      from: 66,
-      to: 100
+      from: 87,
+      to: 104
     },
-    '3.5': {
-      from: 100,
-      to: 115
+    '3.5': { // 0.61
+      from: 104,
+      to: 121
     },
-    '4': {
-      from: 115,
-      to: 125
+    '4': { // 0.71
+      from: 121,
+      to: 138
     },
-    '4.5': {
-      from: 125,
-      to: 135
+    '4.5': { // 0.81
+      from: 138,
+      to: 155
     },
-    '5': {
-      from: 135,
-      to: 200
+    '5': { // 0.91
+      from: 155,
+      to: 171
     }
   };
   let grade = '';
@@ -90,6 +86,26 @@ function projectPointCount(tdProject) {
     .reduce((acc, curr) => acc + curr, 0);
 }
 
+function evalToMark(points) {
+  if (points <= 2) {
+    return 2;
+  }
+
+  if (2 < points && points < 3) {
+    return 2.5;
+  } else if (3 <= points && points < 3.5) {
+    return 3;
+  } else if (3.5 <= points && points < 4) {
+    return 3.5;
+  } else if (4 <= points && points < 4.5) {
+    return 4;
+  } else if (4.5 <= points && points < 5) {
+    return 4.5;
+  } else if (points >= 5) {
+    return 5;
+  }
+}
+
 function loadDocument () {
   const pointsTable = document.getElementById('pointsTable');
 
@@ -97,13 +113,16 @@ function loadDocument () {
     const [,,tbody] = pointsTable.children;
     if (tbody?.children) {
       for (const tr of tbody.children) {
-        const [, , tdWyklady, tdLabs, tdProject, tdKolokwium, tdEgzamin, tdTotal] = tr.children;
+        const [tdImieNazw, , tdWyklady, tdLabs, tdProject, tdKolokwium, tdEgzamin, tdTotal] = tr.children;
+        const ImieNazw = tdImieNazw.innerText.trim();
         const pointsWyklady = countingPoints(tdWyklady);
         const pointsLabs = countingPoints(tdLabs);
         const pointsProject = projectPointCount(tdProject);
         const pointsKolokwium = projectPointCount(tdKolokwium);
         const pointsEgzamin = projectPointCount(tdEgzamin);
         const total = pointsWyklady + pointsLabs + pointsProject + pointsKolokwium + pointsEgzamin;
+        let ocenaLaboratorium = (pointsLabs) ? evalToMark((pointsLabs + pointsWyklady + pointsKolokwium + pointsEgzamin) / 110 * 5) : 2;
+        let ocenaProject = (pointsProject) ? evalToMark(pointsProject / 60 * 5) : 2;
 
         if (total && tdTotal) {
           const { grade, diff } = convertPointsToGrade(total);
@@ -111,10 +130,13 @@ function loadDocument () {
           const brTotal = document.createElement('br');
           const spanGrade = document.createElement('span');
           spanTotal.setAttribute('class', 'is-underlined');
-          spanGrade.setAttribute('class', 'has-text-weight-semibold is-italic has-tooltip-multiline');
-          spanGrade.setAttribute('data-tooltip', `Do nastepnej oceny brakuje ${diff} punktow`);
-          spanTotal.innerHTML = `${total}`;
-          spanGrade.innerHTML = `${grade}`;
+          spanGrade.setAttribute('class', 'has-text-weight-semibold is-italic is-size-5 has-tooltip-left has-tooltip-info has-tooltip-multiline');
+          spanGrade.setAttribute('data-tooltip', `${ImieNazw}  
+          Laboratorium - ${ocenaLaboratorium.toFixed(2)}/
+          Projekt - ${ocenaProject.toFixed(2)} /               
+          Do nastepnej oceny brakuje ${diff.toFixed(2)} punktow`);
+          spanTotal.innerHTML = `${(pointsLabs + pointsWyklady + pointsKolokwium + pointsEgzamin)} + ${pointsProject} = ${total}`;
+          spanGrade.innerHTML = `${evalToMark((ocenaLaboratorium + ocenaProject) / 2)} / ${grade}`;
           tdTotal.appendChild(spanTotal);
           tdTotal.appendChild(brTotal);
           tdTotal.appendChild(spanGrade);
