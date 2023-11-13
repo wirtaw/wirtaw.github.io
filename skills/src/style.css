@@ -1,0 +1,34 @@
+#hero {
+    background-color:#f0fcee;
+    min-height: 100%;
+}
+
+#hero .navbar.is-transparent {
+    background-color: transparent;
+}
+
+.service-buttons {
+    justify-content: center !important;
+}
+
+.logos:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top: 0;
+    border-top: 1px solid #ebebeb;
+}
+
+#contact {
+    background-size: cover;
+}
+
+@media screen and (max-width: 1023px) {
+    .navbar-menu a.has-text-white {
+        color: #4a4a4a !important;
+    }
+    .navbar-menu a.has-text-white:hover {
+        color: #3273dc !important;
+    }
+}
