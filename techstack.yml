@@ -1,11 +1,12 @@
 repo_name: wirtaw/wirtaw.github.io
 report_id: b32cbe4af781b237292348fccdc323fd
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-11T19:48:29+00:00'
+timestamp: '2024-02-29T18:38:58+00:00'
 requested_by: wirtaw
 provider: github
 branch: master
-detected_tools_count: 4
+detected_tools_count: 7
 tools:
 - name: C lang
   description: One of the most widely used programming languages of all time
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/wirtaw/wirtaw.github.io
   detection_source: Repo Metadata
 - name: CSS 3
   description: The latest evolution of the Cascading Style Sheets language
@@ -24,6 +26,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/wirtaw/wirtaw.github.io
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -34,7 +37,20 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/wirtaw/wirtaw.github.io
   detection_source: Repo Metadata
+- name: pgvector
+  description: Open-source vector similarity search for Postgres
+  website_url: https://github.com/pgvector/pgvector/
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Database Tools
+  image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source_url: https://github.com/wirtaw/wirtaw.github.io/blob/master/algorytmy_i_struktury/2022-2023/humans.txt
+  detection_source: algorytmy_i_struktury/2022-2023/humans.txt
+  last_updated_by: Poplavskij Vladimir
+  last_updated_on: 2023-02-28 02:00:17.000000000 Z
 - name: Git
   description: Fast, scalable, distributed revision control system
   website_url: http://git-scm.com/
@@ -43,4 +59,27 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/wirtaw/wirtaw.github.io
   detection_source: Repo Metadata
+- name: HTML
+  description: Hypertext Markup Language for creating web pages.
+  website_url: http://
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
+  detection_source_url: https://github.com/wirtaw/wirtaw.github.io/blob/master/algorytmy_i_struktury/2022-2023/cwiczenia.html
+  detection_source: algorytmy_i_struktury/2022-2023/cwiczenia.html
+  last_updated_by: Vladimir Poplavskij
+  last_updated_on: 2022-10-04 10:44:19.000000000 Z
+- name: LangChain
+  description: Build AI apps with LLMs through composability
+  website_url: https://github.com/hwchase17/langchain
+  open_source: true
+  hosted_saas: false
+  category: Communications
+  sub_category: Large Language Model Tools
+  image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source_url: https://github.com/wirtaw/wirtaw.github.io/blob/master/algorytmy_i_struktury/2022-2023/humans.txt
+  detection_source: algorytmy_i_struktury/2022-2023/humans.txt
+  last_updated_by: Poplavskij Vladimir
+  last_updated_on: 2023-02-28 02:00:17.000000000 Z
