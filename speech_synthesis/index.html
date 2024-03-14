@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpeechSynthesisUtterance: Convert Text to Speech with JavaScript</title>
+  <meta name="description" content="Easily convert text to speech using JavaScript's SpeechSynthesisUtterance API. Control voice, pitch, and speed to enhance your web applications.">
+  <meta name="keywords" content="SpeechSynthesisUtterance, JavaScript text to speech, accessibility, voice control, personalization">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <section class="hero is-primary is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          SpeechSynthesisUtterance: Convert Text to Speech with JavaScript
+        </h1>
+        <h2 class="subtitle">
+          Enhance your web applications and add a touch of personality with the SpeechSynthesisUtterance API, a JavaScript tool that converts text into spoken audio. This API provides granular control over the voice, pitch, and speed of the synthesized speech, enabling you to create accessible and engaging experiences for your users.
+        </h2>
+      </div>
+    </div>
+    </section>
+    <section class="section is-medium is-block" id="speech-section">
+      <div class="content is-boxed">
+        <div class="control mt-4 mb-4">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label for="rate" class="label">Rate</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <input class="input" type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="control mt-4 mb-4">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label for="pitch" class="label">Pitch</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <input class="input" type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="control mt-4 mb-4">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label for="voice-select" class="label">Voice</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="select">
+                  <select id="voice-select"></select>
+              </div>
+              </div>
+            </div>
+          </div>
+            
+        </div>
+
+        <div class="control mt-4 mb-4">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label for="lang-select" class="label">Language</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="select">
+                    <select id="lang-select" onchange="populateVoiceList(10)"></select>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="control mt-4 mb-4">
+          <div class="field is-horizontal">
+            <div class="field-label is-normal">
+              <label for="text2speech" class="label">Text</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <div class="textarea">
+                  <textarea cols="100" rows="5" id="text2speech"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="control mt-4 mb-4">
+          <div class="field is-grouped is-grouped-centered">
+            <p class="control">
+              <a class="button is-primary" onclick="playText2Speach()">
+                Play
+              </a>
+            </p>
+            <p class="control">
+              <a class="button is-light" onclick="pauseText2Speach()">
+                Pause
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section is-medium is-hidden" id="notification-section">
+      <div class="content is-boxed">
+        <div class="notification">Unfortunately your browser doesn’t support <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis">speechSynthesis</a> feature.</div>
+      </div>
+    </section>
+    <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <p>
+                        <a class="icon" href="https://github.com/wirtaw">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </p>
+                    <div class="control level-item">
+                        <a href="https://blog.poplauki.eu/en/development-2/speechsynthesisutterance-convert-text-to-speech-with-javascript/">
+                            Blog post
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+        </footer>
+  <script type="application/javascript" src="./js/index.js"></script>
+</body>
+</html>
