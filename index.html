@@ -1,80 +1,647 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wirtaw github projects webpage</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-    <!-- Google Tag Manager -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7L6JT"
-                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N7L6JT');</script>
-    <!-- End Google Tag Manager -->
-    <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div class="container-fluid">
-        <div class="row" style="min-height:200px;">
-            <div class="col-md-12">
-                <div style="margin-top:60px;">
-                    <h1>
-                        Welcome to wirtaw.github.io projects
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Vladimir Poplavskij personal webpage</title>
+        <meta name="description" content="Web developer Vladimir Poplavskij personal homepage">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="wirtaw, poplauki, poplavskij, frontend developer, full stack developer, programmer, software engineer, travel, maps, homepage" />
+ 
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="https://wirtaw.github.io/sitemap.xml">
+        <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!-- Facebook -->
+        <meta property="og:title" content="Wirtaw">
+        <meta property="og:description" content="Web developer Vladimir Poplavskij Homepage">
+        <meta property="og:image" content="https://wirtaw.github.io/apple-touch-icon.png">
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://wirtaw.github.io/index.html" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="homepage">
+        <meta name="twitter:site" content="@wirtaw">
+        <meta name="twitter:creator" content="@wirtaw">
+        <meta name="twitter:url" content="https://wirtaw.github.io//index.html">
+        <meta name="twitter:title" content="Wirtaw">
+        <meta name="twitter:description" content="Web developer Vladimir Poplavskij Homepage">
+        <meta name="twitter:image" content="https://wirtaw.github.io//apple-touch-icon.png">
+
+        <link rel="canonical" href="https://wirtaw.github.io/">
+        <link rel="manifest" href="./manifest.json">
+        <meta name="theme-color" content="#ffffff">
+
+        <style type="text/css">
+            body{font-family:'Roboto Slab', serif;overflow-x:hidden}img.email-image,source.email-image{width:250px}
+        </style>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Vladimir Poplavskij","jobTitle":"full-stack, backend developer","description":"web-developer from Vilnius","email":"wirtaw@poplauki.eu","url":"https://wirtaw.github.io","gender":"male","givenName":"Poplavskij","nationality":"Lithuania","contactPoint":[{"@type":"ContactPoint","telephone":"+37065013085","contactType":"technical support","areaServed":["LT","EU"]},{"@type":"ContactPoint","telephone":"+38095221691","contactType":"technical support","areaServed":"UA"}]}</script>
+        <link rel="stylesheet" type="text/css" href="./css/personal.css">
+    </head>
+    <body>
+        <!-- Navigation bar -->
+        <nav class="navbar is-link is-fixed-top">
+            <div class="navbar-brand">
+                <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div id="navbarExampleTransparentExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#about">
+              <span class="icon">
+                <i class="fas fa-info"></i>
+              </span>
+                        <span>About</span>
+                    </a>
+                    <a class="navbar-item" href="#services">
+              <span class="icon">
+                <i class="fas fa-bars"></i>
+              </span>
+                        <span>Services</span>
+                    </a>
+                    <a class="navbar-item" href="#resume">
+              <span class="icon">
+                <i class="fas fa-file-alt"></i>
+              </span>
+                        <span>Resume</span>
+                    </a>
+                    <a class="navbar-item" href="#portfolio">
+              <span class="icon">
+                <i class="fas fa-th-list"></i>
+              </span>
+                        <span>Portfolio</span>
+                    </a>
+                    <a class="navbar-item" href="#contact">
+              <span class="icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <section class="hero is-link is-fullheight is-fullheight-with-navbar">
+            <div class="hero-body">
+                <div class="container">Hello! I am
+                    <h1 class="title is-1">
+                        Vladimir Poplavskij
                     </h1>
+                    <h2 class="subtitle is-3">
+                       Backend Developer
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+            <!-- Title -->
+            <div class="section-heading">
+                <h3 class="title is-2">About Me</h3>
+                <h4 class="subtitle is-5">Jack of all trades, master of "some"</h4>
+                <div class="container">
+                    <p>Backend Developer with more than <strong>15 years</strong> of well-rounded experience with a degree in the
+                        field of
+                        <strong>Computer Science</strong>, extensive knowledge of modern Web techniques.
+                        Welcome to my corner of the web! I'm Vladimir, a passionate backend developer with a keen interest in crafting robust and efficient solutions.
+                        With a strong foundation in NodeJS and a knack for web scraping, I specialize in turning ideas into functional and dynamic web applications.
+                        Whether it's optimizing database queries or delving into the intricacies of web technologies, I thrive on tackling challenges and bringing innovative projects to life.
+                        Explore my portfolio, delve into the code, and join me on this exciting journey through the ever-evolving world of software development.</p>
+                </div>
+            </div>
+
+            <div class="columns has-same-height is-gapless">
+                <div class="column">
+                    <!-- Profile -->
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="title is-4">Profile</h3>
+
+                            <div class="content">
+                                <table class="table-profile">
+                                    <tr>
+                                        <th colspan="1"></th>
+                                        <th colspan="2"></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Address:</td>
+                                        <td>Vilnius, Lithuania</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Blog:</td>
+                                        <td><a href="https://blog.poplauki.eu" class="is-link">Blog</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email:</td>
+                                        <td>
+                                            <picture>
+                                                <source class="email-image" srcset="img/email.svg 2x" media="(min-width: 200px)">
+                                                <img class="email-image" srcset="img/email.png, img/email.png" alt="Contacts - email">
+                                            </picture>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <br>
+                            <div class="buttons has-addons is-centered">
+                                <a href="https://github.com/wirtaw" target="_blank" class="button is-link m-2">GitHub</a>
+                                <a href="https://bitbucket.org/wirtaw/" target="_blank" class="button is-link m-2">bitbucket</a>
+                                <a href="https://jsfiddle.net/user/wirtaw/fiddles/" target="_blank" class="button is-link m-2">personal</a>
+                                <a href="https://codepen.com/wirtaw/" target="_blank" class="button is-link m-2">Codepen</a>
+                                <a href="https://repl.it/@wirtaw" target="_blank" class="button is-link m-2">Repl.it</a>
+                                <a href="https://codewars.com/users/wirtaw" target="_blank" class="button is-link m-2">Codewars</a>
+                                <a href="https://exercism.io/users/wirtaw" target="_blank" class="button is-link m-2">Exercism</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- Profile picture -->
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulmatemplates.github.io/bulma-templates/images/first-post.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <!-- Skills -->
+                    <div class="card">
+                        <div class="card-content skills-content">
+                            <h3 class="title is-4">Skills</h3>
+                            <div class="content">
+
+                                <article class="media">
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>JavaScript:</strong>
+                                                <br>
+                                                <progress class="progress is-primary" value="90" max="100"></progress>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="media">
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>Node.js:</strong>
+                                                <br>
+                                                <progress class="progress is-primary" value="90" max="100"></progress>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="media">
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>Databases</strong>
+                                                <br>
+                                                <progress class="progress is-primary" value="80" max="100"></progress>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="media">
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>HTML5/CSS3</strong>
+                                                <br>
+                                                <progress class="progress is-primary" value="70" max="100"></progress>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="media">
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>Vue.js:</strong>
+                                                <br>
+                                                <progress class="progress is-primary" value="50" max="100"></progress>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="media">
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>
+                                                <strong>HTML5/CSS3</strong>
+                                                <br>
+                                                <progress class="progress is-primary" value="70" max="100"></progress>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills tags -->
+            <div class="columns is-gapless">
+                <div class="column">
+                    <div class="tags custom-tags">
+                        <span class="tag is-light"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                        <span class="tag is-light"><i class="devicon-typescript-plain colored"></i>TypeScript</span>
+                        <span class="tag is-light"><i class="devicon-nestjs-plain colored"></i>NestJS</span>
+                        <span class="tag is-light"><i class="devicon-vuejs-plain colored"></i>VueJS</span>
+                        <span class="tag is-light"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+                        <span class="tag is-light"><i class="devicon-ruby-plain colored"></i>Ruby</span>
+                        <span class="tag is-light"><i class="devicon-html5-plain colored"></i>HTML5</span>
+                        <span class="tag is-light"><i class="devicon-css3-plain colored"></i>CSS3</span>
+                        <span class="tag is-light"><i class="devicon-bulma-plain colored"></i>Bulma</span>
+                        <span class="tag is-light"><i class="devicon-bash-plain colored"></i>Bash</span>
+                        <span class="tag is-light"><i class="devicon-git-plain colored"></i>Git</span>
+                        <span class="tag is-light"><i class="devicon-redis-plain colored"></i>Redis</span>
+                        <span class="tag is-light"><i class="devicon-mysql-plain colored"></i>MySQL</span>
+                        <span class="tag is-light"><i class="devicon-mongodb-plain colored"></i>MongoDB</span>
+                        <span class="tag is-light"><i class="devicon-postgresql-plain colored"></i>Postgres</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-gapless">
+                <div class="column">
+                    <div class="has-text-centered">
+                        <blockquote class="badgr-badge" style="font-family: Helvetica, Roboto, 'Segoe UI', Calibri, sans-serif;"><a href="https://api.badgr.io/public/assertions/Citb83W6TfWqHeBPGU0g2A"><img width="120px" height="120px" src="https://api.badgr.io/public/assertions/Citb83W6TfWqHeBPGU0g2A/image"></a><p class="badgr-badge-name" style="hyphens: auto; overflow-wrap: break-word; word-wrap: break-word; margin: 0; font-size: 16px; font-weight: 600; font-style: normal; font-stretch: normal; line-height: 1.25; letter-spacing: normal; text-align: left; color: #05012c;">30 days of Postman - for developers</p><p class="badgr-badge-date" style="margin: 0; font-size: 12px; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: normal; text-align: left; color: #555555;"><strong style="font-size: 12px; font-weight: bold; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: normal; text-align: left; color: #000;">Awarded: </strong>Feb 14, 2022</p><p class="badgr-badge-recipient" style="margin: 0; font-size: 12px; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: normal; text-align: left; color: #555555;"><strong style="font-size: 12px; font-weight: bold; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: normal; text-align: left; color: #000;">Awarded To: </strong><span style="display: block;"> Poplavskij Vladimir</span></p><p style="margin: 16px 0; padding: 0;"><a class="badgr-badge-verify" target="_blank" href="https://badgecheck.io?url=https%3A%2F%2Fapi.badgr.io%2Fpublic%2Fassertions%2FCitb83W6TfWqHeBPGU0g2A" style="box-sizing: content-box; display: flex; align-items: center; justify-content: center; margin: 0; font-size:14px; font-weight: bold; width: 48px; height: 16px; border-radius: 4px; border: solid 1px black; text-decoration: none; padding: 6px 16px; margin: 16px 0; color: black;">VERIFY</a></p><script async="async" src="https://badgr.com/assets/widgets.bundle.js"></script></blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="section" id="services">
+            <div class="section-heading">
+                <h3 class="title is-2">Services</h3>
+                <h4 class="subtitle is-5">What can I do for you?</h4>
+            </div>
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <div class="box">
+                            <div class="content">
+                                <h4 class="title is-5">Node.js Web Scraping Service</h4>
+                                <p>Unlock the power of data with our cutting-edge Node.js Web Scraping Service! I harness the flexibility and speed of Node.js to scrape, extract, and deliver valuable data from the web. Whether you need real-time updates, comprehensive market research, or competitive intelligence, our Node.js experts ensure seamless and efficient extraction.</p>
+
+                                <b>Key Features:</b><br>
+                                <ul>
+                                    <li>🌐 Scalable and Fast: Leverage the asynchronous nature of Node.js for rapid and scalable web scraping.</li>
+                                    <li>🛠 Custom Solutions: Tailored web scraping solutions to meet your specific data requirements.</li>
+                                    <li>🛡 Robust Error Handling: Built-in mechanisms to handle errors and ensure data accuracy.</li>
+                                    <li>📈 Real-time Updates: Stay ahead of the curve with real-time data extraction and updates.</li>
+                                    <li>🔄 Continuous Monitoring: Set up automated scraping schedules for continuous monitoring.</li>
+                                </ul>
+
+                                <b>Technologies I Use:</b>
+                                <ul>
+                                    <li>Node.js</li>
+                                    <li>Cheerio or Puppeteer for HTML parsing and automation</li>
+                                    <li>Express.js for building RESTful APIs</li>
+                                    <li>MongoDB for storing and managing scraped data</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box">
+                            <div class="content">
+                                <h4 class="title is-5">Node.js API CRUD Application</h4>
+                                <p>
+                                    Transform your data management with our cutting-edge Node.js API CRUD application powered by the Express framework. Ideliver robust and scalable solutions to handle Create, Read, Update, and Delete (CRUD) operations with ease. Whether you're building a dynamic web application or need a backend system to manage your data, our Node.js experts have you covered.
+                                </p>
+
+                                <b>
+                                    Key Features:
+                                </b>
+
+                                <ul>
+                                    <li>
+                                        🌐 RESTful Architecture: Our API follows RESTful principles, providing a standardized and efficient way to interact with your data.
+                                    </li>
+                                    <li>
+                                        🚀 Fast and Scalable: Utilizing the power of Node.js, we ensure rapid and scalable performance to handle your growing data needs.
+                                    </li>
+                                    <li>
+                                        🛠 Flexible and Customizable: Tailor the API to your specific requirements. Add new endpoints, customize data models, and integrate seamlessly with your existing systems.
+                                    </li>
+                                    <li>
+                                        🛡 Robust Validation: Implement robust data validation to ensure the integrity and security of your data.
+                                    </li>
+                                    <li>
+                                        📈 Real-time Updates: Utilize WebSocket integration for real-time updates, ideal for applications that demand instant data synchronization.
+                                    </li>
+                                </ul>
+
+                                <b>
+                                    Technologies We Use:
+                                </b>
+
+                                <ul>
+                                    <li>Node.js: Harness the asynchronous nature of Node.js for efficient handling of concurrent requests.</li>
+                                    <li>Express.js: Build a powerful and flexible API with the widely adopted Express framework.</li>
+                                    <li>MongoDB or SQL Database: Choose between NoSQL (MongoDB) or SQL databases for efficient data storage and retrieval.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+                <div class="columns">
+                    <div class="column">
+                        <div class="box">
+                            <div class="content">
+                                <h4 class="title is-5">Python Web Scraping Service</h4>
+                                <p>Empower your business with our Python Web Scraping Service – your gateway to extracting valuable insights from the web effortlessly! Using Python's robust ecosystem for web scraping, providing you with accurate and up-to-date data for informed decision-making.</p>
 
+                                <b>Key Features:</b>
+                                <ul>
+                                    <li>🕸 Versatility: Python's extensive libraries make it easy to scrape data from websites, APIs, and more.</li>
+                                    <li>🤖 Automation: Utilize tools like BeautifulSoup and Selenium for automated data extraction and interaction.</li>
+                                    <li>📊 Data Analysis: Seamlessly integrate scraped data with Python's data analysis tools for actionable insights.</li>
+                                    <li>🛡 Error Handling: Robust error handling mechanisms to ensure data accuracy.</li>
+                                    <li>🚀 Scalability: Scale your web scraping operations effortlessly with Python's multiprocessing capabilities.</li>
+                                </ul>
+
+                                <b>Technologies We Use:</b>
+                                <ul>
+                                    <li>Python (BeautifulSoup, Selenium, Scrapy)</li>
+                                    <li>Flask or Django for building web applications or APIs</li>
+                                    <li>MongoDB or SQLite for data storage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box">
+                            <div class="content">
+                                <h4 class="title is-5">Back End Web Development</h4>
+                                Develop Back End application/service using Node.js or Python and SQL server or Mongo DB databases.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-xs-6 col-lg-4">
-                <h3>Project list:</h3>
-                <ol>
-                    <li>
-                        <a href="./neural_networks/index.html">Neural Networks</a>
-                    </li>
-                    <li>
-                        <a href="./bgd/index.html">Basic Guest Display</a>
-                    </li>
-                    <li>
-                        <a href="./bulls/index.html">React single page game "Bulls and cows"</a>
-                    </li>
-                    <li>
-                        <a href="./bulls_vue/index.html">Vue single page game "Bulls and cows"</a>
-                    </li>
-                    <li>
-                        <a href="./bio_vue/">Vue single page app "Biorythms"</a>
-                    </li>
-                    <li>
-                        <a href="./skills/">Матрица компетенции</a>
-                    </li>
-                </ol>
+        </section>
+
+        <!-- Resume -->
+        <section class="section" id="resume">
+            <div class="section-heading">
+                <h3 class="title is-2">Resume</h3>
+                <h4 class="subtitle is-5">More about my past</h4>
+                <a href="https://mega.nz/file/ZF4BDJ6B#stB2dq3d2yTkQIWX3ik2J7WEgV0KzSf0MS-e81mw65M" class="button is-link is-medium">
+            <span class="icon">
+              <i class="fas fa-file-alt"></i>
+            </span>
+                    <span>Download My Resume</span>
+                </a>
             </div>
-            <div class="col-md-6 col-xs-6 col-lg-8 vcenter">
-                <blockquote>
-                    <p>
-                        The most exciting phrase to hear in science, the one that heralds new discoveries, is not 'Eureka!' (I found it!) but 'That's funny ...'
-                    </p> <small>science <cite>Isaac Asimov (1920 - 1992)</cite></small>
-                </blockquote>
+        </section>
+
+        <!-- Portfolio -->
+        <section class="section" id="portfolio">
+            <div class="container">
+                <div class="section-heading">
+                    <h3 class="title is-2">Portfolio</h3>
+                    <h4 class="subtitle is-5">My latest works</h4>
+                </div>
+                <br>
+
+                <div class="container portfolio-container">
+                    <div class="columns">
+                        <div class="column is-4">
+                            <!-- admin -->
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title">
+                                        <span>Szawl.eu </span>
+                                        <span class="is-pulled-right">
+                                            <a href="https://szawl.eu">
+                                              <span class="tag is-default">visit</span>
+                                            </a>
+                                          </span>
+                                    </p>
+                                </header>
+                                <div class="card-content">
+                                    <figure class="image">
+                                        <img src="../img/sites/szawleu.webp" image-src="../img/sites/szawleu.webp" alt="Szawl.eu">
+                                    </figure>
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="https://szawl.eu" class="card-footer-item">Preview</a>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+
+                        </div>
+                        <div class="column is-4">
+
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-</body>
+        </section>
+
+        <!-- Projects -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <h3 class="title is-2">Projects</h3>
+                    <h4 class="subtitle is-5">My latest projects</h4>
+                </div>
+                <br>
+
+                <div class="container portfolio-container">
+                    <div class="columns">
+                        <div class="column is-4">
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title">
+                                        <span>Neural Networks </span>
+                                        <span class="is-pulled-right">
+                                            <a href="./neural_networks/index.html">
+                                              <span class="tag is-default">visit</span>
+                                            </a>
+                                          </span>
+                                    </p>
+                                </header>
+                                <div class="card-content">
+                                    
+                                </div>
+                            </div>
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title">
+                                        <span>Basic Guest Display </span>
+                                        <span class="is-pulled-right">
+                                            <a href="./bgd/index.html">
+                                              <span class="tag is-default">visit</span>
+                                            </a>
+                                          </span>
+                                    </p>
+                                </header>
+                                <div class="card-content">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title">
+                                        <span>React single page game "Bulls and cows" </span>
+                                        <span class="is-pulled-right">
+                                            <a href="./bulls/index.html">
+                                              <span class="tag is-default">visit</span>
+                                            </a>
+                                          </span>
+                                    </p>
+                                </header>
+                                <div class="card-content">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title">
+                                        <span>Vue single page game "Bulls and cows"</span>
+                                        <span class="is-pulled-right">
+                                            <a href="./bulls_vue/index.html">
+                                              <span class="tag is-default">visit</span>
+                                            </a>
+                                          </span>
+                                    </p>
+                                </header>
+                                <div class="card-content">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title">
+                                        <span>Vue single page app "Biorythms"</span>
+                                        <span class="is-pulled-right">
+                                            <a href="./bio_vue/">
+                                              <span class="tag is-default">visit</span>
+                                            </a>
+                                          </span>
+                                    </p>
+                                </header>
+                                <div class="card-content">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <header class="card-header">
+                                    <p class="card-header-title">
+                                        <span>Ice Hockey Player Data</span>
+                                        <span class="is-pulled-right">
+                                            <a href="https://ice-hockey-player-search.onrender.com/search">
+                                              <span class="tag is-default">visit</span>
+                                            </a>
+                                          </span>
+                                    </p>
+                                </header>
+                                <div class="card-content">
+                                    A Node.js application to scrape ice hockey player data from various online sources and parse basic information like position, height, weight, birth date, and hand.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-4">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="section-heading">
+                <p id="footer">
+                    <strong>Poplauki</strong> by <a href="https://wirtaw.github.io">Vladimir Poplavskij</a>.
+                </p>
+            </div>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+        <script>
+            WebFont.load({
+                google: {
+                    families: ['Roboto Slab']
+                }
+            });
+            // Example of a simple cookie consent banner in JavaScript
+            document.addEventListener('DOMContentLoaded', function() {
+                if (!localStorage.getItem('cookieConsent')) {
+                    const banner = document.createElement('div');
+                    banner.innerHTML = `
+                    <p class="cookie-consent">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+                    <button class="button" id="acceptCookies">Accept</button>
+                    `;
+                    banner.style.position = 'fixed';
+                    banner.style.bottom = '0';
+                    banner.style.left = '0';
+                    banner.style.right = '0';
+                    banner.style.padding = '20px';
+                    banner.style.backgroundColor = '#fff';
+                    banner.style.border = 'solid 1px #485fc7';
+                    banner.style.color = '#000';
+                    banner.style.textAlign = 'center';
+                    banner.style.zIndex = '1000';
+                    document.body.appendChild(banner);
+
+                    document.getElementById('acceptCookies').addEventListener('click', function() {
+                        localStorage.setItem('cookieConsent', 'true');
+                        document.body.removeChild(banner);
+                    });
+                }
+            });
+
+            (function() {
+                const footer = document.getElementById('footer');
+                if ('undefined' !== typeof footer) {
+                    const date = new Date();
+                    footer.innerHTML = '&copy; Poplauki <a href="https://wirtaw.github.io/">Vladimir Poplavskij</a> ' + date.getFullYear() + '.';
+                }
+                const burger = document.querySelector('.burger');
+                const menu = document.querySelector('#'+burger.dataset.target);
+                burger.addEventListener('click', function() {
+                    burger.classList.toggle('is-active');
+                    menu.classList.toggle('is-active');
+                });
+            }());
+        </script>
+    </body>
 </html>
