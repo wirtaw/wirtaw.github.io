@@ -112,13 +112,7 @@
                 <h3 class="title is-2">About Me</h3>
                 <h4 class="subtitle is-5">Jack of all trades, master of "some"</h4>
                 <div class="container">
-                    <p>Backend Developer with more than <strong>15 years</strong> of well-rounded experience with a degree in the
-                        field of
-                        <strong>Computer Science</strong>, extensive knowledge of modern Web techniques.
-                        Welcome to my corner of the web! I'm Vladimir, a passionate backend developer with a keen interest in crafting robust and efficient solutions.
-                        With a strong foundation in NodeJS and a knack for web scraping, I specialize in turning ideas into functional and dynamic web applications.
-                        Whether it's optimizing database queries or delving into the intricacies of web technologies, I thrive on tackling challenges and bringing innovative projects to life.
-                        Explore my portfolio, delve into the code, and join me on this exciting journey through the ever-evolving world of software development.</p>
+                    <p>is a highly skilled Senior Backend Developer with a proven track record of success in various roles. With expertise in JavaScript, databases, Linux, CSS, and PHP, Vladimir has excelled in seamless integration with third-party and internal services, maintenance of production services, database optimization, and observability enhancement.</p>
                 </div>
             </div>
 
@@ -267,23 +261,7 @@
             <!-- Skills tags -->
             <div class="columns is-gapless">
                 <div class="column">
-                    <div class="tags custom-tags">
-                        <span class="tag is-light"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
-                        <span class="tag is-light"><i class="devicon-typescript-plain colored"></i>TypeScript</span>
-                        <span class="tag is-light"><i class="devicon-nestjs-plain colored"></i>NestJS</span>
-                        <span class="tag is-light"><i class="devicon-vuejs-plain colored"></i>VueJS</span>
-                        <span class="tag is-light"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
-                        <span class="tag is-light"><i class="devicon-python-plain colored"></i>Python</span>
-                        <span class="tag is-light"><i class="devicon-html5-plain colored"></i>HTML5</span>
-                        <span class="tag is-light"><i class="devicon-css3-plain colored"></i>CSS3</span>
-                        <span class="tag is-light"><i class="devicon-bulma-plain colored"></i>Bulma</span>
-                        <span class="tag is-light"><i class="devicon-bash-plain colored"></i>Bash</span>
-                        <span class="tag is-light"><i class="devicon-git-plain colored"></i>Git</span>
-                        <span class="tag is-light"><i class="devicon-redis-plain colored"></i>Redis</span>
-                        <span class="tag is-light"><i class="devicon-mysql-plain colored"></i>MySQL</span>
-                        <span class="tag is-light"><i class="devicon-mongodb-plain colored"></i>MongoDB</span>
-                        <span class="tag is-light"><i class="devicon-postgresql-plain colored"></i>Postgres</span>
-                    </div>
+                    <div class="tags custom-tags" id="skillTagsBlock"></div>
                 </div>
             </div>
 
@@ -600,6 +578,101 @@
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
         <script>
+            const skills = [{
+                title: 'JavaScript (12+ years)',
+                icon: 'devicon-javascript-plain',
+                id: 'js'
+            },
+            {
+                title: 'NodeJS (12+ years)',
+                icon: 'devicon-nodejs-plain',
+                id: 'nodejs'
+            },
+            {
+                title: 'VueJS / Vuex (8+ years)',
+                icon: 'devicon-vuejs-plain',
+                id: 'vuejs'
+            },
+            {
+                title: 'Fastify / Express / Koa (10+ years)',
+                icon: 'devicon-fastify-plain',
+                id: 'fastify'
+            },
+            {
+                title: 'TypeScript (8+ years)',
+                icon: 'devicon-typescript-plain',
+                id: 'ts'
+            },
+            {
+                title: 'NestJS (6+ years)',
+                icon: 'devicon-nestjs-plain',
+                id: 'nestjs'
+            },
+            {
+                title: 'Mocha / Jest (6+ years)',
+                icon: 'devicon-mocha-plain',
+                id: 'mocha'
+            },
+            {
+                title: 'MSSQL/T-SQL (10+ years)',
+                icon: 'devicon-microsoftsqlserver-plain',
+                id: 'mssql'
+            },
+            {
+                title: 'MySQL (10+ years)',
+                icon: 'devicon-mysql-plain',
+                id: 'mysql'
+            },
+            {
+                title: 'MongoDB (8+ years)',
+                icon: 'devicon-mongodb-plain',
+                id: 'mongodb' 
+            },
+            {
+                title: 'RabbitMQ (7+ years)',
+                icon: 'devicon-rabbitmq-plain',
+                id: 'rabbitmq'
+            },
+            {
+                title: 'Redis (7+ years)',
+                icon: 'devicon-redis-plain',
+                id: 'redis'
+            },
+            {
+                title: 'PostgreSQL (5+ years)',
+                icon: 'devicon-postgresql-plain',
+                id: 'postgresql'
+            },
+            {
+                title: 'GIT (12+ years)',
+                icon: 'devicon-git-plain',
+                id: 'git'
+            },
+            {
+                title: 'Rust (2+ years)',
+                icon: 'devicon-rust-plain',
+                id: 'rust'
+            },
+            {
+                title: 'Python (5+ years)',
+                icon: 'devicon-python-plain',
+                id: 'python'
+            },
+            {
+                title: 'Ruby (3+ years)',
+                icon: 'devicon-ruby-plain',
+                id: 'ruby'
+            },
+            {
+                title: 'QT (2+ years)',
+                icon: 'devicon-qt-plain',
+                id: 'qt'
+            },
+            {
+                title: 'C (5+ years)',
+                icon: 'devicon-c-plain',
+                id: 'c'
+            }];
             WebFont.load({
                 google: {
                     families: ['Roboto Slab']
@@ -644,6 +717,21 @@
                     burger.classList.toggle('is-active');
                     menu.classList.toggle('is-active');
                 });
+
+                const skillTagsBlock = document.getElementById('skillTagsBlock');
+                if (skillTagsBlock) {
+                    for (const skill of skills) {
+                        const { title, icon, id } = skill;
+
+                        const span = document.createElement('span');
+                        const tagId = `skill-tag-${id}`;
+
+                        span.classList.add('tag', 'is-light');
+                        span.setAttribute('id', tagId);
+                        span.innerHTML = `<i class="${icon} colored mr-2"></i>${title}`;
+                        skillTagsBlock.appendChild(span);
+                    }
+                }
             }());
         </script>
     </body>
