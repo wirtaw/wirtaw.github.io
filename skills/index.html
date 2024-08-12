@@ -27,8 +27,15 @@
                     </span>
                     <a href="https://github.com/wirtaw" class="has-text-white">wirtaw</a>
                 </div>
-                <div class="column has-text-right-tablet buttons">
-                    <button id="langEn" onClick="changeLanguage('en')" class="button active">En</button> / <button id="langRu" onClick="changeLanguage('ru')" class="button">Ru</button>
+                <div class="column has-text-right-tablet">
+                    <div class="field is-grouped buttons are-medium">
+                        <p class="control">
+                            <button id="langEn" onClick="changeLanguage('en')" class="button active is-link is-inverted" disabled>En</button>
+                        </p>
+                        <p class="control">
+                            <button id="langRu" onClick="changeLanguage('ru')" class="button is-link is-inverted">Ru</button>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -300,6 +307,36 @@ const data = {
                             developer: 'Refactoring is based on \'commonly accepted\' best practices and is done as necessary.',
                             engineer: 'Evaluates refactoring as a business activity, makes refactoring decisions based primarily on the potential benefits of the project in the context of current business goals',
                             guru: 'It practically does not single out refactoring as a separate activity, but the refactoring process itself occurs continuously - on the one hand, there are a lot of changes, on the other hand, they appear in the system gradually, so that the team does not lose the "threads" of what is happening in the system',
+                        },
+                        'Testing': {
+                            coder: 'Can write unit tests for his code.',
+                            developer: 'Understands (though does not necessarily practice) TDD. Writes unit tests as honestly as possible and understands where and when higher-level tests are needed.',
+                            engineer: 'Not only writes effective tests at all levels but also develops and maintains the necessary infrastructure for testing (from loading fixtures to managing animations in the browser).',
+                            guru: 'Identifies non-obvious areas of the project not covered by tests. Optimizes testing infrastructure in line with business goals (e.g., execution speed). Quickly evaluates test plans, including for manual testing. Is proficient in testing performance, security, and other aspects.	',
+                        },
+                        'Business Analysis': {
+                            coder: 'Requires a precise technical specification (TS). Resents changes that occur during work. Considers valid the presumption of innocence—everything not explicitly specified in the TS can be implemented at the developer\'s discretion.',
+                            developer: 'Can identify poorly formalized aspects of the TS before development begins.',
+                            engineer: 'Before starting development, identifies areas where the "effort-to-business-value ratio" is not in favor of business value and works with the Product Owner to develop optimal solutions.',
+                            guru: 'Capable of carrying out the full cycle of business analysis, including adequate requirements management.',
+                        },
+                        'Error Handling': {
+                            coder: 'Doesn\'t think about error handling, believes in the best.',
+                            developer: 'Aware of potentially dangerous areas in the code, uses try/catch and implements error handling.',
+                            engineer: 'Understands the difference between error recovery and failing fast approaches. Knows that these are not mutually exclusive and actively uses both where necessary. Separates error flow/exception flow in the system\'s operation.',
+                            guru: 'Monitors the boundaries of error propagation and the areas of responsibility for error handlers. Identifies places where errors are incorrectly "swallowed" and where continuing after an error poses risks to the system\'s operation.',
+                        },
+                        'Code Documentation': {
+                            coder: 'Writes comments in the code.',
+                            developer: 'Writes code that practically does not need comments. Uses jsdoc or similar approaches.',
+                            engineer: 'Enjoys auto-generated documentation (from swagger to type generation based on graphql endpoints).',
+                            guru: 'Documents high-level architectural decisions to facilitate onboarding new team members.',
+                        },
+                        'Code Extensibility': {
+                            coder: 'Doesn\'t think about code extensibility.',
+                            developer: 'Writes "maximally" extensible code, which sometimes leads to overcomplications.',
+                            engineer: 'Based on personal experience, finds an optimal balance between system extensibility, development speed, and code readability. Anticipates (based on domain knowledge and past experience) potential directions for code development and builds them into the existing codebase.',
+                            guru: 'In addition to finding the optimal compromise on code extensibility and maintainability, monitors important metrics (e.g., coupling with external libraries).',
                         }
                     },
                 }
@@ -605,24 +642,42 @@ const data = {
                 throw new Error('Failed get info ');
             }
 
+            const enBtn = document.getElementById('langEn');
+            const ruBtn = document.getElementById('langRu');
+            
+            if (ruBtn && enBtn) {
+                enBtn.disabled = false;
+                ruBtn.disabled = false;
+                
+                if (lang === 'en') {
+                    enBtn.disabled = true;
+                } else if (lang === 'ru') {
+                    ruBtn.disabled = true;
+                }
+            }
+            
             let str = '';
             document.getElementById('tableContainer').innerHTML = str;
             const { headers, tables } = data[lang];
 
             for (const key in tables) {
-            str += '<h2 class="title is-3">' + key + '</h2>';
-            const table = tables[key];
-            str += '<table class="table is-hoverable is-fullwidth">';
-            str += '<thead><tr>';
-            for (const head in headers) {
-                str += `<th>${headers[head]}</th>`;
-            }
-            str += '</tr></thead><tbody>';
-            for (const name in table) {
-                const row = table[name];
-                str += `<tr><td><span class="is-4">${name}</span></td><td>${row.coder}</td><td>${row.developer}</td><td>${row.engineer}</td><td>${row.guru}</td><td></td></tr>`;
-            }
-            str += '</tbody></table>';
+                str += '<h2 class="title is-3">' + key + '</h2>';
+                const table = tables[key];
+
+                str += '<table class="table is-hoverable is-fullwidth">';
+                str += '<thead><tr>';
+
+                for (const head in headers) {
+                    str += `<th>${headers[head]}</th>`;
+                }
+
+                str += '</tr></thead><tbody>';
+  
+                for (const name in table) {
+                    const row = table[name];
+                    str += `<tr><td><span class="is-4">${name}</span></td><td>${row.coder}</td><td>${row.developer}</td><td>${row.engineer}</td><td>${row.guru}</td><td></td></tr>`;
+                }
+                str += '</tbody></table>';
 
             }
 
