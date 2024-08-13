@@ -32,3 +32,18 @@
         color: #3273dc !important;
     }
 }
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+.dark-mode .navbar, .dark-mode .section, .dark-mode #hero, .dark-mode .table {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+.dark-mode .table th, .dark-mode .table td {
+    border-color: #444444;
+}
+.dark-mode .table tbody tr:not(.is-selected):hover {
+    background-color: #333333;
+}

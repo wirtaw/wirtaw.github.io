@@ -12,34 +12,37 @@
     ></script>
 </head>
 <body>
-    <header class="section has-background-link py-4 has-text-white">
-        <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <span class="icon">
-                      <i class="far fa-envelope"></i>
-                    </span>
-                    <a href="mailto:float45@gmail.com" class="has-text-white">float45@gmail.com</a>
-                </div>
-                <div class="column">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <a href="https://github.com/wirtaw" class="has-text-white">wirtaw</a>
-                </div>
-                <div class="column has-text-right-tablet">
-                    <div class="field is-grouped buttons are-medium">
-                        <p class="control">
-                            <button id="langEn" onClick="changeLanguage('en')" class="button active is-link is-inverted" disabled>En</button>
-                        </p>
-                        <p class="control">
-                            <button id="langRu" onClick="changeLanguage('ru')" class="button is-link is-inverted">Ru</button>
-                        </p>
-                    </div>
+    <nav class="navbar is-spaced">
+        <div class="navbar-brand">
+            <span class="icon">
+                <i class="far fa-envelope"></i>
+            </span>
+            <a href="mailto:float45@gmail.com">float45@gmail.com</a>
+            <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <a href="https://github.com/wirtaw">wirtaw</a>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item has-text-right-tablet">
+                <div class="field is-grouped buttons are-medium">
+                    <p class="control">
+                        <button id="langEn" onClick="changeLanguage('en')" class="button active is-link is-inverted" disabled>En</button>
+                    </p>
+                    <p class="control">
+                        <button id="langRu" onClick="changeLanguage('ru')" class="button is-link is-inverted">Ru</button>
+                    </p>
                 </div>
             </div>
+            <div class="navbar-item">
+                <label class="switch">
+                    <input type="checkbox" id="darkModeSwitch">
+                    <span class="check"></span>
+                </label>
+                <span>Dark Mode</span>
+            </div>
         </div>
-    </header>
+    </nav>
     <section class="section" id="hero">
         <div id="tableContainer" class="container">
 
@@ -52,7 +55,7 @@
     </section>
     <script type="text/javascript">
 
-const data = {
+        const data = {
             en: {
                 headers: {
                     first: "",
@@ -687,24 +690,44 @@ const data = {
         document.addEventListener('DOMContentLoaded', () => {
             // Get all "navbar-burger" elements
             const $navbarBurgers = Array.prototype.slice.call(
-            document.querySelectorAll('.navbar-burger'),
-            0
+                document.querySelectorAll('.navbar-burger'),
+                0
             );
 
             // Check if there are any navbar burgers
             if ($navbarBurgers.length > 0) {
-            // Add a click event on each of them
-            $navbarBurgers.forEach((el) => {
-                el.addEventListener('click', () => {
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-                const $target = document.getElementById(target);
+                // Add a click event on each of them
+                $navbarBurgers.forEach((el) => {
+                    el.addEventListener('click', () => {
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
 
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
                 });
-            });
             }
+
+            const switchButton = document.getElementById('darkModeSwitch');
+            const body = document.body;
+
+            // Check if dark mode was previously enabled
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                body.classList.add('dark-mode');
+                switchButton.checked = true;
+            }
+
+            // Toggle dark mode on switch change
+            switchButton.addEventListener('change', () => {
+                if (switchButton.checked) {
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    body.classList.remove('dark-mode');
+                    localStorage.setItem('darkMode', 'disabled');
+                }
+            });
             
             changeLanguage();
       });
