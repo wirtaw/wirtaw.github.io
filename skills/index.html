@@ -35,11 +35,11 @@
                 </div>
             </div>
             <div class="navbar-item">
-                <label class="switch">
-                    <input type="checkbox" id="darkModeSwitch">
-                    <span class="check"></span>
-                </label>
-                <span>Dark Mode</span>
+                <div class="dark-mode-toggle" id="darkModeToggle">
+                    <span class="icon icon-dark"><i class="fas fa-moon"></i></span>
+                    <span class="icon icon-light"><i class="fas fa-sun"></i></span>
+                    <span>Dark Mode</span>
+                </div>
             </div>
         </div>
     </nav>
@@ -709,22 +709,20 @@
                 });
             }
 
-            const switchButton = document.getElementById('darkModeSwitch');
+            const darkModeToggle = document.getElementById('darkModeToggle');
             const body = document.body;
 
             // Check if dark mode was previously enabled
             if (localStorage.getItem('darkMode') === 'enabled') {
                 body.classList.add('dark-mode');
-                switchButton.checked = true;
             }
 
-            // Toggle dark mode on switch change
-            switchButton.addEventListener('change', () => {
-                if (switchButton.checked) {
-                    body.classList.add('dark-mode');
+            // Toggle dark mode and icons on click
+            darkModeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                if (body.classList.contains('dark-mode')) {
                     localStorage.setItem('darkMode', 'enabled');
                 } else {
-                    body.classList.remove('dark-mode');
                     localStorage.setItem('darkMode', 'disabled');
                 }
             });

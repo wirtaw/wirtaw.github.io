@@ -37,7 +37,7 @@
     background-color: #121212;
     color: #ffffff;
 }
-.dark-mode .navbar, .dark-mode .section, .dark-mode #hero, .dark-mode .table {
+.dark-mode .navbar, .dark-mode .section, .dark-mode #hero, .dark-mode .table, .dark-mode .card {
     background-color: #1e1e1e;
     color: #ffffff;
 }
@@ -46,4 +46,35 @@
 }
 .dark-mode .table tbody tr:not(.is-selected):hover {
     background-color: #333333;
+}
+/* Style for the toggle button */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.dark-mode-toggle .icon {
+    margin-right: 5px;
+}
+.dark-mode-toggle .icon-light {
+    display: none;
+}
+.dark-mode .dark-mode-toggle .icon-light {
+    display: inline-block;
+}
+.dark-mode .dark-mode-toggle .icon-dark {
+    display: none;
+}
+/* Mobile-friendly switch customization */
+.navbar-item .switch {
+    transform: scale(1.5); /* Increase the size of the switch */
+    margin-right: 10px;
+}
+@media (max-width: 768px) {
+    .navbar-item .switch {
+        transform: scale(1.3); /* Slightly smaller for smaller devices */
+    }
+    .navbar-item span {
+        font-size: 1rem; /* Adjust the text size for mobile */
+    }
 }
