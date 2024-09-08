@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Daily Quotes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="quotes" />
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/personal.css">
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Quote of the Day</h1>
+
+      <div class="quote-box">
+        <p id="quote-text" class="quote"></p>
+        <p id="quote-author" class="author"></p>
+      </div>
+
+      <button class="button is-primary" id="new-quote-button">New Quote</button>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-heading">
+        <p id="footer">
+            <strong>Poplauki</strong> by <a href="https://wirtaw.github.io">Vladimir Poplavskij</a>.
+        </p>
+    </div>
+</footer>
+  <script src="script.js"></script>
+  <script src="../js/cookieConsent.js"></script>
+  <script>
+    (function() {
+        const footer = document.getElementById('footer');
+        if ('undefined' !== typeof footer) {
+            const date = new Date();
+            footer.innerHTML = '&copy; Poplauki <a href="https://wirtaw.github.io/">Vladimir Poplavskij</a> ' + date.getFullYear() + '.';
+        }
+    }());
+  </script>
+</body>
+</html>
