@@ -1,8 +1,16 @@
 const quoteText = document.getElementById('quote-text');
 const quoteAuthor = document.getElementById('quote-author');
-const newQuoteButton = document.getElementById('new-quote-button');
+// const newQuoteButton = document.getElementById('new-quote-button');
+
+const PREFIX = 'wirtaw.githab.io';
 
 const quotes = [
+  {
+    quote: "жизнь — привилегия и подарок, а вовсе не право. Если нас одарили жизнью, надо ее отслужить",
+    author: "© Рэй Брэдбери «Дзен в искусстве написания книг» ",
+    language: 'ru',
+    comment: 'Причин своего успеха Брэдбери никогда не скрывал. Ему были присущи чувство детской восторженности перед миром и неизбывной любви к нему. И трудолюбие, достаточное для того, чтобы ежедневно писать не менее тысячи слов. Как сформулировал сам Рэй Брэдбери в одном из эссе из сборника «Дзен в искусстве написания книг» (в довольно парадоксальной формулировке, какая собственно только и подобает настоящему коану для медитации и размышлений)',
+  },
   {
     quote: "​​Истинно отважны те души, которые не довольствуются общепринятыми ценностями и устремляются на поиски своих собственных. Но еще отвaжнее те, кто дерзaет не только воспарять в небесa, но и погружаться в глубины. И те из них, кто не отступится, поймут: это одно и то же.",
     author: "© Мишлен Линден «Тени бездны» ",
@@ -237,17 +245,37 @@ const quotes = [
 
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
+function saveQuote(quote) {
+  const expirationTime = Date.now() + 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+  const quoteData = {
+    data: quote,
+    expires: expirationTime
+  };
+  localStorage.setItem(PREFIX + '-clientQuote', JSON.stringify(quoteData));
+}
+
 function getRandomQuote() {
   const randomIndex = randomInt(0, quotes.length);
   return quotes[randomIndex];
 }
 
 function displayQuote() {
-  const randomQuote = getRandomQuote();
-  quoteText.textContent = randomQuote.quote;
-  quoteAuthor.textContent = `- ${randomQuote.author}`;
+  let quoteData = JSON.parse(localStorage.getItem(PREFIX + '-clientQuote'));
+  let quote = quoteData?.data?.quote || '';
+  let author = quoteData?.data?.author || '';
+  if (!quoteData || quoteData.expires < Date.now()) {
+    quoteData = getRandomQuote();
+    saveQuote(quoteData);
+    quote = quoteData.quote;
+    author = quoteData.author;
+  }
+
+  quoteText.textContent = quote;
+  quoteAuthor.textContent = `- ${author}`;
 }
 
-displayQuote();
+document.addEventListener('DOMContentLoaded', function() {
+  displayQuote();
+});
 
-newQuoteButton.addEventListener('click', displayQuote);
+// newQuoteButton.addEventListener('click', displayQuote);

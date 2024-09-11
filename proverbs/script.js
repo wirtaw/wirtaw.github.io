@@ -1,6 +1,8 @@
 const proverbsText = document.getElementById('proverbs-text');
 const proverbsSource = document.getElementById('proverbs-source');
-const newProverbsButton = document.getElementById('new-proverbs-button');
+// const newProverbsButton = document.getElementById('new-proverbs-button');
+
+const PREFIX = 'wirtaw.githab.io';
 
 const proverbs = [
   {
@@ -132,17 +134,37 @@ const proverbs = [
 
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
+function saveProverb(proverb) {
+    const expirationTime = Date.now() + 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+    const proverbData = {
+      data: proverb,
+      expires: expirationTime
+    };
+    localStorage.setItem(PREFIX + '-clientProverb', JSON.stringify(proverbData));
+  }
+
 function getRandomProverb() {
   const randomIndex = randomInt(0, proverbs.length);
   return proverbs[randomIndex];
 }
 
 function displayProverb() {
-  const randomProverb = getRandomProverb();
-  proverbsText.textContent = randomProverb.proverb;
-  proverbsSource.textContent = `- ${randomProverb.source}`;
+  let proverbData = JSON.parse(localStorage.getItem(PREFIX + '-clientProverb'));
+  let proverb = proverbData?.data?.proverb || '';
+  let source = proverbData?.data?.source || '';
+  if (!proverbData || proverbData.expires < Date.now()) {
+    proverbData = getRandomProverb();
+    saveProverb(proverbData);
+    proverb = proverbData.proverb;
+    source = proverbData.source;
+  }
+
+  proverbsText.textContent = proverb;
+  proverbsSource.textContent = `- ${source}`;
 }
 
-displayProverb();
+document.addEventListener('DOMContentLoaded', function() {
+    displayProverb();
+});
 
-newProverbsButton.addEventListener('click', displayProverb);
+// newProverbsButton.addEventListener('click', displayProverb);
