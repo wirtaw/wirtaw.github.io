@@ -1,6 +1,7 @@
 const quoteText = document.getElementById('quote-text');
 const quoteAuthor = document.getElementById('quote-author');
-// const newQuoteButton = document.getElementById('new-quote-button');
+const langRuButton = document.getElementById('langRu');
+const langEnButton = document.getElementById('langEn');
 
 const PREFIX = 'wirtaw.githab.io';
 
@@ -240,35 +241,72 @@ const quotes = [
     quote: "Жизнь, по сути, очень простая штука и человеку нужно приложить много усилий, чтобы её испортить.",
     author: "© А.Чехов",
     language: "ru"
+  },
+  {
+    quote: "​​Чем спокойнее и уравновешеннее человек, тем мощнее его потенциaл и тем большим будет его успех в достойных делах. Невозмутимость разумa – одно из величайших сокровищ мудроcти. ",
+    author: "© Джеймс Аллен",
+    language: "ru"
+  },
+  {
+    quote: "There are years that ask questions and years that answer.",
+    author: "© Zora Neale Hurston, “Dust Tracks on a Road”",
+    language: "en"
   }
 ];
 
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-function saveQuote(quote) {
+function manageLanguageButtons(language) {
+  if (langRuButton && language !== 'ru') {
+    langRuButton.removeAttribute('disabled');
+    if (langEnButton) {
+      langEnButton.setAttribute('disabled', 'true');
+    }
+  }
+
+  if (langEnButton && language !== 'en') {
+    langEnButton.removeAttribute('disabled');
+    if (langRuButton) {
+      langRuButton.setAttribute('disabled', 'true');
+    }
+  }
+}
+
+function saveQuote(quote, lang) {
   const expirationTime = Date.now() + 24 * 60 * 60 * 1000; // 24 hours in milliseconds
   const quoteData = {
     data: quote,
     expires: expirationTime
   };
-  localStorage.setItem(PREFIX + '-clientQuote', JSON.stringify(quoteData));
+  localStorage.setItem(PREFIX + '-clientQuote-' + lang, JSON.stringify(quoteData));
 }
 
-function getRandomQuote() {
-  const randomIndex = randomInt(0, quotes.length);
-  return quotes[randomIndex];
+function getRandomQuote(lang) {
+  const filteredQuotes = quotes.filter(({ language }) => language === lang);
+
+  if (!filteredQuotes.length) {
+    return null;
+  }
+
+  const randomIndex = randomInt(0, filteredQuotes.length);
+  return filteredQuotes[randomIndex];
 }
 
-function displayQuote() {
-  let quoteData = JSON.parse(localStorage.getItem(PREFIX + '-clientQuote'));
+function displayQuote(lang = 'ru') {
+  let quoteData = JSON.parse(localStorage.getItem(PREFIX + '-clientQuote-' + lang));
   let quote = quoteData?.data?.quote || '';
   let author = quoteData?.data?.author || '';
+  let language = quoteData?.data?.language || lang;
+
   if (!quoteData || quoteData.expires < Date.now()) {
-    quoteData = getRandomQuote();
-    saveQuote(quoteData);
+    quoteData = getRandomQuote(lang);
+    saveQuote(quoteData, lang);
     quote = quoteData.quote;
     author = quoteData.author;
+    language = quoteData.language;
   }
+
+  manageLanguageButtons(language);
 
   quoteText.textContent = quote;
   quoteAuthor.textContent = `- ${author}`;
@@ -278,4 +316,5 @@ document.addEventListener('DOMContentLoaded', function() {
   displayQuote();
 });
 
-// newQuoteButton.addEventListener('click', displayQuote);
+langEnButton.addEventListener('click', displayQuote('en'));
+langRuButton.addEventListener('click', displayQuote('ru'));
