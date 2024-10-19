@@ -2,8 +2,12 @@ const quoteText = document.getElementById('quote-text');
 const quoteAuthor = document.getElementById('quote-author');
 const langRuButton = document.getElementById('langRu');
 const langEnButton = document.getElementById('langEn');
+const regularContainer = document.getElementById('regular');
+const notFoundContainer = document.getElementById('notFound');
 
 const PREFIX = 'wirtaw.githab.io';
+const quoteKey = (lang) => `${PREFIX}-clientQuote-${lang}`;
+const languageKey = `${PREFIX}-clientQuote-language`;
 
 const quotes = [
   {
@@ -301,65 +305,54 @@ const quotes = [
 
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-function manageLanguageButtons(language) {
-  if (langRuButton && language !== 'ru') {
-    langRuButton.removeAttribute('disabled');
-    if (langEnButton) {
-      langEnButton.setAttribute('disabled', 'true');
-    }
-  }
 
-  if (langEnButton && language !== 'en') {
-    langEnButton.removeAttribute('disabled');
-    if (langRuButton) {
-      langRuButton.setAttribute('disabled', 'true');
-    }
-  }
+
+function manageLanguageButtons(language) {
+  langRuButton.disabled = language === 'ru';
+  langEnButton.disabled = language === 'en';
 }
 
 function saveQuote(quote, lang) {
   const expirationTime = Date.now() + 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-  const quoteData = {
-    data: quote,
-    expires: expirationTime
-  };
-  localStorage.setItem(PREFIX + '-clientQuote-' + lang, JSON.stringify(quoteData));
+  const quoteData = { data: quote, expires: expirationTime };
+  localStorage.setItem(quoteKey(lang), JSON.stringify(quoteData));
 }
 
 function getRandomQuote(lang) {
   const filteredQuotes = quotes.filter(({ language }) => language === lang);
-
-  if (!filteredQuotes.length) {
-    return null;
-  }
-
-  const randomIndex = randomInt(0, filteredQuotes.length);
-  return filteredQuotes[randomIndex];
+  return filteredQuotes.length ? filteredQuotes[randomInt(0, filteredQuotes.length - 1)] : null;
 }
 
-function displayQuote(lang = 'ru') {
-  let quoteData = JSON.parse(localStorage.getItem(PREFIX + '-clientQuote-' + lang));
-  let quote = quoteData?.data?.quote || '';
-  let author = quoteData?.data?.author || '';
-  let language = quoteData?.data?.language || lang;
+function displayQuote(lang = null) {
+  let language = lang || localStorage.getItem(languageKey) || navigator.languages[0].split('-')[0] || 'en';
 
+  if (lang) {
+    localStorage.setItem(languageKey, language);
+  }
+
+  let quoteData = JSON.parse(localStorage.getItem(quoteKey(language)));
+  
   if (!quoteData || quoteData.expires < Date.now()) {
-    quoteData = getRandomQuote(lang);
-    saveQuote(quoteData, lang);
-    quote = quoteData.quote;
-    author = quoteData.author;
-    language = quoteData.language;
+    quoteData = getRandomQuote(language);
+    if (quoteData) {
+      saveQuote(quoteData, language);
+    }
   }
 
-  manageLanguageButtons(language);
-
-  quoteText.textContent = quote;
-  quoteAuthor.textContent = `- ${author}`;
+  if (quoteData) {
+    manageLanguageButtons(language);
+    quoteText.textContent = quoteData.quote || quoteData.data.quote;
+    quoteAuthor.textContent = (quoteData?.author) ? `- ${quoteData.author}` : `- ${quoteData.data.author}`;
+    regularContainer.style.display = 'block';
+    notFoundContainer.style.display = 'none';
+  } else {
+    quoteText.textContent = '';
+    quoteAuthor.textContent = '';
+    regularContainer.style.display = 'none';
+    notFoundContainer.style.display = 'block';
+  }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  displayQuote();
-});
-
-langEnButton.addEventListener('click', displayQuote('en'));
-langRuButton.addEventListener('click', displayQuote('ru'));
+document.addEventListener('DOMContentLoaded', displayQuote(null));
+langEnButton.addEventListener('click', () => displayQuote('en'));
+langRuButton.addEventListener('click', () => displayQuote('ru'));
