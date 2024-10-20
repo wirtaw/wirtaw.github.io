@@ -1,8 +1,13 @@
 const proverbsText = document.getElementById('proverbs-text');
 const proverbsSource = document.getElementById('proverbs-source');
-// const newProverbsButton = document.getElementById('new-proverbs-button');
+const langRuButton = document.getElementById('langRu');
+const langEnButton = document.getElementById('langEn');
+const regularContainer = document.getElementById('regular');
+const notFoundContainer = document.getElementById('notFound');
 
 const PREFIX = 'wirtaw.githab.io';
+const proverbKey = (lang) => `${PREFIX}-clientProverb-${lang}`;
+const languageKey = `${PREFIX}-clientProverb-language`;
 
 const proverbs = [
   {
@@ -129,42 +134,72 @@ const proverbs = [
       proverb: "Лучшее время, чтобы посадить дерево, было двадцать лет назад. Следующее лучшее время — сегодня.",
       source: "Китайские пословицы и поговорки",
       language: "ru"
+  },
+  {
+    proverb: "Don't count your chickens before they hatch.",
+    source: "English proverbs",
+    language: "en"
+  },
+  {
+    proverb: "Where there's a will, there's a way.",
+    source: "English proverbs",
+    language: "en"
   }
 ];
 
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-function saveProverb(proverb) {
+function manageLanguageButtons(language) {
+    langRuButton.disabled = language === 'ru';
+    langEnButton.disabled = language === 'en';
+}
+
+function saveProverb(proverb, lang) {
     const expirationTime = Date.now() + 24 * 60 * 60 * 1000; // 24 hours in milliseconds
     const proverbData = {
       data: proverb,
       expires: expirationTime
     };
-    localStorage.setItem(PREFIX + '-clientProverb', JSON.stringify(proverbData));
-  }
-
-function getRandomProverb() {
-  const randomIndex = randomInt(0, proverbs.length);
-  return proverbs[randomIndex];
+    localStorage.setItem(proverbKey(lang), JSON.stringify(proverbData));
 }
 
-function displayProverb() {
-  let proverbData = JSON.parse(localStorage.getItem(PREFIX + '-clientProverb'));
-  let proverb = proverbData?.data?.proverb || '';
-  let source = proverbData?.data?.source || '';
+function getRandomProverb(lang) {
+  const filteredProverbs = proverbs.filter(({ language }) => language === lang);
+  return filteredProverbs.length ? filteredProverbs[randomInt(0, filteredProverbs.length - 1)] : null;
+}
+
+function displayProverb(lang = null) {
+  let language = lang || localStorage.getItem(languageKey) || navigator.languages[0].split('-')[0] || 'en';
+
+  if (lang) {
+    localStorage.setItem(languageKey, language);
+  }
+
+  let proverbData = JSON.parse(localStorage.getItem(proverbKey(language)));
+  
   if (!proverbData || proverbData.expires < Date.now()) {
-    proverbData = getRandomProverb();
-    saveProverb(proverbData);
-    proverb = proverbData.proverb;
-    source = proverbData.source;
+    proverbData = getRandomProverb(language);
+    if (proverbData) {
+        saveProverb(proverbData, language);
+    }
   }
 
-  proverbsText.textContent = proverb;
-  proverbsSource.textContent = `- ${source}`;
+  if (proverbData) {
+    manageLanguageButtons(language);
+    proverbsText.textContent = proverbData.proverb || proverbData.data.proverb;
+    proverbsSource.textContent = (proverbData?.source) ? `- ${proverbData.source}` : `- ${proverbData.data.source}`;
+    regularContainer.style.display = 'block';
+    notFoundContainer.style.display = 'none';
+  } else {
+    proverbsText.textContent = '';
+    proverbsSource.textContent = '';
+    regularContainer.style.display = 'none';
+    notFoundContainer.style.display = 'block';
+  }
+
+  
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    displayProverb();
-});
-
-// newProverbsButton.addEventListener('click', displayProverb);
+document.addEventListener('DOMContentLoaded', displayProverb(null));
+langEnButton.addEventListener('click', () => displayProverb('en'));
+langRuButton.addEventListener('click', () => displayProverb('ru'));
