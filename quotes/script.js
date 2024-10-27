@@ -895,7 +895,6 @@ function displayQuote(lang = null) {
 
 function displayStoicQuote() {
   let lang =
-    localStorage.getItem(languageKey) ||
     navigator.languages[0].split("-")[0] ||
     "en";
 
