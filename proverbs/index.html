@@ -14,7 +14,14 @@
   <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-  <nav class="navbar"></nav>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </div>
     <div id="navbarMenu" class="navbar-menu">
       <div class="navbar-end">
         <div class="tabs is-right">
@@ -68,6 +75,13 @@
             const date = new Date();
             footer.innerHTML = '&copy; Poplauki <a href="https://wirtaw.github.io/">Vladimir Poplavskij</a> ' + date.getFullYear() + '.';
         }
+
+        const burger = document.querySelector('.burger');
+        const menu = document.querySelector('#'+burger.dataset.target);
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('is-active');
+            menu.classList.toggle('is-active');
+        });
     }());
   </script>
 </body>
