@@ -894,12 +894,10 @@ function displayQuote(lang = null) {
 }
 
 function displayStoicQuote() {
-  let lang =
-    navigator.languages[0].split("-")[0] ||
-    "en";
+  let lang = navigator.languages[0].split("-")[0] || "en";
 
   const now = new Date();
-  const quote = StoicQuotes.filter(({ language }) => language === lang).find(
+  let quote = StoicQuotes.filter(({ language }) => language === lang).find(
     ({ date }) => {
       const dateArray = date.split("-").map((item) => Number.parseInt(item));
       return (
@@ -914,10 +912,24 @@ function displayStoicQuote() {
     quoteText.textContent = quote.quote;
     quoteAuthor.textContent = `- ${quote.author}`;
   } else {
-    quoteText.textContent = "";
-    quoteAuthor.textContent = "";
-    regularContainer.style.display = "none";
-    notFoundContainer.style.display = "block";
+    quote = StoicQuotes.find(({ date }) => {
+      const dateArray = date.split("-").map((item) => Number.parseInt(item));
+      return (
+        dateArray[1] === now.getMonth() + 1 && dateArray[2] === now.getDate()
+      );
+    });
+
+    if (quote) {
+      regularContainer.style.display = "block";
+      notFoundContainer.style.display = "none";
+      quoteText.textContent = quote.quote;
+      quoteAuthor.textContent = `- ${quote.author}`;
+    } else {
+      quoteText.textContent = "";
+      quoteAuthor.textContent = "";
+      regularContainer.style.display = "none";
+      notFoundContainer.style.display = "block";
+    }
   }
 }
 
