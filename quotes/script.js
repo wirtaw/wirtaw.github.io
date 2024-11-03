@@ -912,6 +912,7 @@ function displayStoicQuote() {
     quoteText.textContent = quote.quote;
     quoteAuthor.textContent = `- ${quote.author}`;
   } else {
+    localStorage.setItem(languageKey, 'en');
     quote = StoicQuotes.find(({ date }) => {
       const dateArray = date.split("-").map((item) => Number.parseInt(item));
       return (
