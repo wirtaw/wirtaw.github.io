@@ -1,0 +1,5 @@
+<div class="language-switcher">
+    {{ range .Translations }}
+    <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+    {{ end }}
+</div>

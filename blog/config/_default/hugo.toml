@@ -1,0 +1,93 @@
+baseURL = 'https://wirtaw.github.io/blog/'
+defaultContentLanguage = 'pl'
+defaultContentLanguageInSubdir = false
+title = 'Poplavskij Vladimir blog'
+theme = 'blowfish'
+publishDir = "."
+
+[permalinks]
+  posts = "/blog/posts/:filename" 
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "Poplavskij Vladimir blog"
+    [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/en/about/"
+        weight = 10
+    [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Posts" 
+        url = "/en/" 
+        weight = 11
+  [languages.pl]
+    languageName = "Polski"
+    weight = 2
+    title = "Poplavskij Vladimir dziennik"
+    [[languages.pl.menu.main]]
+        identifier = "about"
+        name = "O mnie"
+        url = "/pl/about/"
+        weight = 20
+    [[languages.pl.menu.main]]
+        identifier = "posts"
+        name = "Posty" 
+        url = "/pl/" 
+        weight = 21
+  [languages.lt]
+    languageName = "Lietuvių"
+    weight = 3
+    title = "Poplavskij Vladimir dienrastis"
+    [[languages.lt.menu.main]]
+        identifier = "about"
+        name = "Apie"
+        url = "/lt/about/"
+        weight = 30
+    [[languages.lt.menu.main]]
+        identifier = "posts"
+        name = "Strapsniai" 
+        url = "/lt/" 
+        weight = 31
+  [languages.ru]
+    languageName = "Русский"
+    weight = 4
+    title = "Poplavskij Vladimir dnevnik"
+    [[languages.ru.menu.main]]
+        identifier = "about"
+        name = "Obo mnie"
+        url = "/ru/about/"
+        weight = 10
+    [[languages.ru.menu.main]]
+        identifier = "posts"
+        name = "Posty" 
+        url = "/ru/" 
+        weight = 41
+
+   
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+
+[[params.social]]
+name = "github"
+url = "https://github.com/wirtaw"
+
+[[params.social]]
+name = "bitbucket"
+url = "https://bitbucket.org/wirtaw/"
+
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/wirtaw/"
+
+[pagination]
+  disableAliases = false
+  pagerSize = 10
+  path = 'page'

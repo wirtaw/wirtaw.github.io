@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://wirtaw.github.io/blog/ru/</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://wirtaw.github.io/blog/en/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="pl"
+      href="https://wirtaw.github.io/blog/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="lt"
+      href="https://wirtaw.github.io/blog/lt/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ru"
+      href="https://wirtaw.github.io/blog/ru/"
+    />
+  </url>
+</urlset>
