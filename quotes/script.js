@@ -496,6 +496,315 @@ const StoicQuotes = [
     comment: "",
     date: "2024-11-30",
   },
+  {
+    quote:
+      "If you transfer your opinions to what is within your choice, I guarantee you peace of mind, no matter what is happening around you.",
+    author: "Epictetus",
+    language: "en",
+    comment: "",
+    date: "2024-12-01",
+  },
+
+  {
+    quote:
+      "Think how many things are going on in your (as well as other people’s) mind and body each and every moment. Then why should it be a surprise to you that an infinitely greater number of things – in fact, everything that arises in this vast universe – exists, all at the same time?",
+    author: "Marcus Aurelius",
+    language: "en",
+    comment: "",
+    date: "2024-12-02",
+  },
+
+  {
+    quote:
+      "All human beings want to live happily. But they don’t see clearly what makes a life happy.",
+    author: "Seneca",
+    language: "en",
+    comment: "",
+    date: "2024-12-03",
+  },
+
+  {
+    quote:
+      "When you enter the theatre should you say, 'Let so-and-so win the accolade'? No, you should say, 'Let my choice be in accordance with nature. No one is dearer to me than myself. It would be absurd for me to harm myself so someone else can win the accolade as an actor.'",
+    author: "Epictetus",
+    language: "en",
+    comment: "",
+    date: "2024-12-04",
+  },
+
+  {
+    quote:
+      "Your duty is made of several parts. Pay attention to each one, but don’t make a fuss or return anger for anger. Complete your task methodically.",
+    author: "Marcus Aurelius",
+    language: "en",
+    comment: "",
+    date: "2024-12-05",
+  },
+
+  {
+    quote:
+      "Nothing is more important than this: we should not, like sheep, follow the group that has gone before us. We should go to the right place, not where others are going.",
+    author: "Seneca",
+    language: "en",
+    comment: "",
+    date: "2024-12-06",
+  },
+
+  {
+    quote:
+      "Why, then, did they abuse you? Because everyone hates what stands in their way. They wanted someone to win the accolade and you wanted someone else to win it. They were standing in your way and you in theirs […] What do you expect?",
+    author: "Epictetus",
+    language: "en",
+    comment: "",
+    date: "2024-12-07",
+  },
+
+  {
+    quote:
+      "It is uncivilized to stop people from doing what they believe to be in their proper concerns and interests. Yet, this is what you are doing when you get angry if they misbehave.",
+    author: "Marcus Aurelius",
+    language: "en",
+    comment: "",
+    date: "2024-12-08",
+  },
+
+  {
+    quote:
+      "Nothing gets us into greater trouble than our belief in untested advice; our habit of thinking that what others think as good must be good… Living our life not by reason, but by imitating others.",
+    author: "Seneca",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-09",
+  },
+
+  {
+    quote:
+      "When death finds me, I would rather be doing nothing other than taking care of things under the area of my choice – trying to make it unhindered, unrestrained, serene, and free.",
+
+    author: "Epictetus",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-10",
+  },
+
+  {
+    quote:
+      "You say they are mistaken? Then tell them and explain it to them, instead of being angry.",
+
+    author: "Marcus Aurelius",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-11",
+  },
+
+  {
+    quote:
+      "We perish because we follow the example of others. We should be cured of this, if we want to move away from the crowd.",
+
+    author: "Seneca",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-12",
+  },
+
+  {
+    quote:
+      "Now it is your [God’s] wish that I leave this festival. I go; full of gratitude to you that you found me worthy of sharing this festival with you, and see your works and the way you govern.",
+
+    author: "Epictetus",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-13",
+  },
+
+  {
+    quote:
+      "Death is the end of sense perception, the end of being controlled by your passions, the end of mental activity, and the end of serving our body.",
+
+    author: "Marcus Aurelius",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-14",
+  },
+
+  {
+    quote:
+      "The way things are, the crowd is ready to defend its own mistake by fighting against reason.",
+
+    author: "Seneca",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-15",
+  },
+
+  {
+    quote:
+      "As one man rejoices in improving his farm and another his horse, so I rejoice day-by-day in following my own improvement.",
+
+    author: "Socrates, quoted by Epictetus",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-16",
+  },
+
+  {
+    quote:
+      "Shame on the soul for pausing on the road of life while the body still marches ahead.",
+
+    author: "Marcus Aurelius",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-17",
+  },
+
+  {
+    quote:
+      "Things are not so well with human beings that we can say that the majority would prefer the better course of action. The more supporters a course has, the worse it is likely to be.",
+
+    author: "Seneca",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-18",
+  },
+
+  {
+    quote:
+      "If we spend more time on something at present, we will also find more progress at present.",
+
+    author: "Epictetus",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-19",
+  },
+
+  {
+    quote:
+      "Keep yourself simple, good, pure, reverent, unassuming, and devoted to your duty.",
+
+    author: "Marcus Aurelius",
+
+    language: "en",
+
+    comment: "",
+
+    date: "2024-12-20",
+  },
+
+  {
+    quote:
+      "So let us not worry about what most people do, but what is best for us to do, what will lead us to realize lasting happiness.",
+    author: "Seneca",
+    language: "en",
+    comment: "",
+    date: "2024-12-21",
+  },
+  {
+    quote: "Don’t spend your efforts on one thing and expect results in another.",
+    author: "Epictetus",
+    language: "en",
+    comment: "",
+    date: "2024-12-22",
+  },
+  {
+    quote:
+      "Look after your fellow humans. Life is short. The only reward here is our character within and unselfish action without.",
+    author: "Marcus Aurelius",
+    language: "en",
+    comment: "",
+    date: "2024-12-23",
+  },
+  {
+    quote: "When I think about what I had said, I envy dumb people.",
+    author: "Seneca",
+    language: "en",
+    comment: "",
+    date: "2024-12-24",
+  },
+  {
+    quote: "A good person cannot be defeated.",
+    author: "Epictetus",
+    language: "en",
+    comment: "",
+    date: "2024-12-25",
+  },
+  {
+    quote:
+      "Return to yourself. Remember who you truly are. Awake from your sleep. Realize it is all dreams that troubled you.",
+    author: "Marcus Aurelius",
+    language: "en",
+    comment: "",
+    date: "2024-12-26",
+  },
+  {
+    quote:
+      "For god’s sake, how much better the things I feared than the things I desired!",
+    author: "Seneca",
+    language: "en",
+    comment: "",
+    date: "2024-12-27",
+  },
+  {
+    quote:
+      "If you want my country property, take it. Take my servants, take my office, and take my poor body. But you cannot stop me from getting what I want or force me to get what I don’t want.",
+    author: "Epictetus",
+    language: "en",
+    comment: "",
+    date: "2024-12-28",
+  },
+  {
+    quote: "Being clear-headed now, look at what meets your wakeful eye.",
+    author: "Marcus Aurelius",
+    language: "en",
+    comment: "",
+    date: "2024-12-29",
+  },
+  {
+    quote: "Don’t you see that those who praise your eloquence are after your wealth, want your favours, or praise your power?",
+    author: "Seneca",
+    language: "en",
+    comment: "",
+    date: "2024-12-30",
+  },
+  {
+    quote: "Just as it is impossible to agree to what is false or deny what is clearly true, it is impossible not to go after what is good.",
+    author: "Epictetus",
+    language: "en",
+    comment: "",
+    date: "2024-12-31",
+  },
 ];
 
 const quotes = [
@@ -833,6 +1142,35 @@ const quotes = [
     author: "©  Уинстон Черчилль",
     language: "ru",
   },
+  {
+    quote:
+      "Others again who say that regard should be had for the rights of fellow-citizens, but not of foreigners, would destroy the universal brotherhood of mankind.​",
+    author: "©  Cicero, “On Duties”",
+    language: "en",
+  },
+  {
+    quote:
+      "But the greater the difficulty, the greater the glory; for no occasion arises that can excuse a man for being guilty of injustice.​",
+    author: "©  Cicero, “On Duties”",
+    language: "en",
+  },
+  {
+    quote:
+      "You should use what you have, and whatever you may chance to be doing, do it with all your might.​",
+    author: "©  Cicero, “On Old Age”",
+    language: "en",
+  },
+  {
+    quote: "The higher we are placed, the more humbly should we walk.​",
+    author: "©  Cicero, “On Duties”",
+    language: "en",
+  },
+  {
+    quote:
+      "Again, just as apples when unripe are torn from trees, but when ripe and mellow drop down, so it is violence that takes life from young men, ripeness from old. This ripeness is so delightful to me, that, as I approach nearer to death, I seem as it were to be sighting land, and to be coming to port at last after a long voyage.​",
+    author: "©  Cicero, “On Old Age”",
+    language: "en",
+  },
 ];
 
 const randomInt = (min, max) =>
@@ -912,7 +1250,7 @@ function displayStoicQuote() {
     quoteText.textContent = quote.quote;
     quoteAuthor.textContent = `- ${quote.author}`;
   } else {
-    localStorage.setItem(languageKey, 'en');
+    localStorage.setItem(languageKey, "en");
     quote = StoicQuotes.find(({ date }) => {
       const dateArray = date.split("-").map((item) => Number.parseInt(item));
       return (
