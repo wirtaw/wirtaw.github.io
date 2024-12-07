@@ -1183,7 +1183,7 @@ function manageLanguageButtons(language) {
 }
 
 function saveQuote(quote, lang) {
-  const expirationTime = Date.now() + 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+  const expirationTime = Date.now() + 24 * 60 * 60 * 1000;
   const quoteData = { data: quote, expires: expirationTime };
   localStorage.setItem(quoteKey(lang), JSON.stringify(quoteData));
 }
@@ -1196,13 +1196,16 @@ function getRandomQuote(lang) {
 }
 
 function displayQuote(lang = null) {
+  const languages = [...new Set([...new Set(quotes.map(({ language }) => language)), ...new Set(StoicQuotes.map(({ language }) => language))])];
+  const localLanguage = navigator.languages[0].split("-")[0];
   let language =
     lang ||
-    localStorage.getItem(languageKey) ||
-    navigator.languages[0].split("-")[0] ||
-    "en";
+    localStorage.getItem(languageKey);
 
-  if (lang) {
+  if (!language && localLanguage) {
+    language = languages.includes(localLanguage) ? localLanguage : 'en';
+    localStorage.setItem(languageKey, language);
+  } else if (lang) {
     localStorage.setItem(languageKey, language);
   }
 
