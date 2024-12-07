@@ -169,9 +169,17 @@ function getRandomProverb(lang) {
 }
 
 function displayProverb(lang = null) {
-  let language = lang || localStorage.getItem(languageKey) || navigator.languages[0].split('-')[0] || 'en';
+  
+  const languages = [...new Set(proverbs.map(({ language }) => language))];
+  const localLanguage = navigator.languages[0].split("-")[0];
+  let language =
+    lang ||
+    localStorage.getItem(languageKey);
 
-  if (lang) {
+  if (!language && localLanguage) {
+    language = languages.includes(localLanguage) ? localLanguage : 'en';
+    localStorage.setItem(languageKey, language);
+  } else if (lang) {
     localStorage.setItem(languageKey, language);
   }
 
