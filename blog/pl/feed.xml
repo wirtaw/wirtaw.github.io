@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://wirtaw.github.io/blog" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://wirtaw.github.io" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Poplavskij Vladimir blog</title>
-    <link>https://wirtaw.github.io/blog/pl/feed.xml</link>
-    <atom:link href="https://wirtaw.github.io/blog/pl/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://wirtaw.github.io/pl/feed.xml</link>
+    <atom:link href="https://wirtaw.github.io/pl/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Polski</description>
     <language>pl</language>
     
@@ -13,7 +13,7 @@
       
       <item>
         <title>Суть зрелости: забота о себе и эмоциональная честность</title>
-        <link>https://wirtaw.github.io/blog/pl/blog/essential-of-maturity/</link>
+        <link>https://wirtaw.github.io/pl/blog/essential-of-maturity/</link>
         <description>&lt;p&gt;&lt;strong&gt;Суть зрелости: забота о себе и эмоциональная честность&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Для меня зрелость до неприличия в простом.&lt;br /&gt;
 В умении о себе позаботиться.&lt;br /&gt;
@@ -58,7 +58,7 @@
 </description>
         <pubDate>Sun, 17 Nov 2024 08:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/pl/blog/essential-of-maturity/</guid>
+        <guid>https://wirtaw.github.io/pl/blog/essential-of-maturity/</guid>
       </item>
       
     
@@ -72,13 +72,13 @@
       
       <item>
         <title>Ideały świetlistego rycerza</title>
-        <link>https://wirtaw.github.io/blog/pl/blog/idealy-swietlistego-rycerza/</link>
+        <link>https://wirtaw.github.io/pl/blog/idealy-swietlistego-rycerza/</link>
         <description>&lt;p&gt;&lt;em&gt;Pierwszy ideał&lt;/em&gt;: Życie ponad śmiercią. Siła ponad słabością. Podróż ponad celem.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Drugi ideał Wiatrowych&lt;/em&gt;: Chronić tych, którzy nie mogą chronić się sami.&lt;/p&gt;
 </description>
         <pubDate>Sat, 16 Nov 2024 14:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/pl/blog/idealy-swietlistego-rycerza/</guid>
+        <guid>https://wirtaw.github.io/pl/blog/idealy-swietlistego-rycerza/</guid>
       </item>
       
     
@@ -92,7 +92,7 @@
       
       <item>
         <title>Commencer avec le modèle Polyglot Tech Blog</title>
-        <link>https://wirtaw.github.io/blog/pl/blog/get-started/</link>
+        <link>https://wirtaw.github.io/pl/blog/get-started/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Vous avez découvert Polyglot Tech Blog et vous souhaitez l&#39;utiliser comme base pour votre blog. Génial ! Voyons les étapes à suivre pour obtenir le code et l&#39;adapter à vos besoins.&lt;/p&gt;
 &lt;h2&gt;Obtenir le code et installer les dépendances&lt;/h2&gt;
@@ -191,9 +191,9 @@
 &lt;li&gt;Vous pouvez personnaliser &lt;code&gt;src &amp;gt; index.html&lt;/code&gt; et &lt;code&gt;src &amp;gt; 404.html&lt;/code&gt;, mais ce n&#39;est pas obligatoire.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Adaptez le style&lt;/h2&gt;
-&lt;p&gt;Vous pouvez vous reporter à &lt;a href=&quot;https://wirtaw.github.io/Polyglot-Tech-Blog/pl/blog/colors&quot;&gt;l&#39;article sur les couleurs&lt;/a&gt; pour de plus amples détails sur cette étape.&lt;/p&gt;
+&lt;p&gt;Vous pouvez vous reporter à &lt;a href=&quot;https://wirtaw.github.io/blog/pl/blog/colors&quot;&gt;l&#39;article sur les couleurs&lt;/a&gt; pour de plus amples détails sur cette étape.&lt;/p&gt;
 &lt;h2&gt;Ajouter ou retirer des langues&lt;/h2&gt;
-&lt;p&gt;Enlever une langue se fait simplement en effaçant le répertoire correspondant et en mettant à jour le fichier &lt;code&gt;src &amp;gt; _data &amp;gt; data.json&lt;/code&gt;. Lorsque l&#39;on ajoute une langue, il y a quelques considérations supplémentaires à avoir, détaillées dans &lt;a href=&quot;https://wirtaw.github.io/Polyglot-Tech-Blog/pl/blog/add-language&quot;&gt;l&#39;article dédié&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Enlever une langue se fait simplement en effaçant le répertoire correspondant et en mettant à jour le fichier &lt;code&gt;src &amp;gt; _data &amp;gt; data.json&lt;/code&gt;. Lorsque l&#39;on ajoute une langue, il y a quelques considérations supplémentaires à avoir, détaillées dans &lt;a href=&quot;https://wirtaw.github.io/blog/pl/blog/add-language&quot;&gt;l&#39;article dédié&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Ajouter des pages statiques&lt;/h2&gt;
 &lt;p&gt;Le modèle est fourni avec quatre pages statiques : &amp;quot;Strona główna&amp;quot;, &amp;quot;O mnie&amp;quot;, &amp;quot;Blog&amp;quot; et &amp;quot;404&amp;quot;. Elles sont écrites en HTML et sont disponibles dans chaque répertoire de langue :&lt;/p&gt;
 &lt;pre class=&quot;language-plain&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-plain&quot;&gt;src
@@ -208,9 +208,9 @@
      ├── about.html
      ├── blog.html
      └── 404.html&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Vous pouvez décider d&#39;ajouter d&#39;autres pages statiques. Là aussi, un &lt;a href=&quot;https://wirtaw.github.io/Polyglot-Tech-Blog/pl/blog/add-page&quot;&gt;article dédié&lt;/a&gt; couvre le sujet.&lt;/p&gt;
+&lt;p&gt;Vous pouvez décider d&#39;ajouter d&#39;autres pages statiques. Là aussi, un &lt;a href=&quot;https://wirtaw.github.io/blog/pl/blog/add-page&quot;&gt;article dédié&lt;/a&gt; couvre le sujet.&lt;/p&gt;
 &lt;h2&gt;Ajouter des articles&lt;/h2&gt;
-&lt;p&gt;Voici probablement la chose la plus évidente attendue d&#39;un modèle de blog. Vous pouvez suivre les instructions de &lt;a href=&quot;https://wirtaw.github.io/Polyglot-Tech-Blog/pl/blog/add-post&quot;&gt;article dédié&lt;/a&gt; pour ajouter des articles.&lt;/p&gt;
+&lt;p&gt;Voici probablement la chose la plus évidente attendue d&#39;un modèle de blog. Vous pouvez suivre les instructions de &lt;a href=&quot;https://wirtaw.github.io/blog/pl/blog/add-post&quot;&gt;article dédié&lt;/a&gt; pour ajouter des articles.&lt;/p&gt;
 &lt;h2&gt;Vérifiez la validité de vos balises&lt;/h2&gt;
 &lt;p&gt;Le modèle comprend des commandes qui et des dépendances pour vérifier la validité du HTML et du CSS générés grâce au &lt;a href=&quot;https://validator.github.io/validator/&quot;&gt;vnu-jar du V3C&lt;/a&gt;. Cependant, vnu-jar est écrit en Java, il vous faudra donc installer un Java Runtime Environment pour exécuter ces commandes. Je vous recommande le libre et excellent &lt;a href=&quot;https://adoptium.net/temurin/&quot;&gt;Eclipse Temurin&lt;/a&gt;.&lt;br /&gt;
 Vous pouvez donc vérifier la validité de votre HTML avec :&lt;/p&gt;
@@ -226,15 +226,15 @@ Vous pouvez donc vérifier la validité de votre HTML avec :&lt;/p&gt;
 &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run check:css:win &lt;span class=&quot;token comment&quot;&gt;# avec npm sous un système Windows&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; check:css:win &lt;span class=&quot;token comment&quot;&gt;# avec Yarn sous un système Windows&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Vérifiez différents indicateurs de votre blog&lt;/h2&gt;
-&lt;p&gt;Le nombre de choses à faire pour s&#39;assurer de &lt;a href=&quot;https://www.w3.org/WAI/&quot;&gt;l&#39;accessibilité&lt;/a&gt; (&lt;abbr title=&quot;Accessibility&quot;&gt;a11y&lt;/abbr&gt;), la performance, &lt;a href=&quot;https://fr.wikipedia.org/wiki/Optimisation_pour_les_moteurs_de_recherche&quot;&gt;l&#39;optimisation pour les moteurs de recherche&lt;/a&gt; (&lt;abbr title=&quot;Search Engine Optimization&quot;&gt;SEO&lt;/abbr&gt;), la validité du code... d&#39;un site web est illimité et demande des compétences et des outils avancés. Quelques tests simples et sont couverts par &lt;a href=&quot;https://wirtaw.github.io/Polyglot-Tech-Blog/pl/blog/metrics&quot;&gt;un article dédié&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Le nombre de choses à faire pour s&#39;assurer de &lt;a href=&quot;https://www.w3.org/WAI/&quot;&gt;l&#39;accessibilité&lt;/a&gt; (&lt;abbr title=&quot;Accessibility&quot;&gt;a11y&lt;/abbr&gt;), la performance, &lt;a href=&quot;https://fr.wikipedia.org/wiki/Optimisation_pour_les_moteurs_de_recherche&quot;&gt;l&#39;optimisation pour les moteurs de recherche&lt;/a&gt; (&lt;abbr title=&quot;Search Engine Optimization&quot;&gt;SEO&lt;/abbr&gt;), la validité du code... d&#39;un site web est illimité et demande des compétences et des outils avancés. Quelques tests simples et sont couverts par &lt;a href=&quot;https://wirtaw.github.io/blog/pl/blog/metrics&quot;&gt;un article dédié&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Assemblage et déploiement&lt;/h2&gt;
-&lt;p&gt;Notre blog est prêt à être mis en ligne. Cela peut être fait de nombreuses manières selon où votre code se trouve, et qui va héberger le blog. Cet &lt;a href=&quot;https://wirtaw.github.io/Polyglot-Tech-Blog/pl/blog/deploy&quot;&gt;article&lt;/a&gt; couvre quelques scénarios communs.&lt;/p&gt;
+&lt;p&gt;Notre blog est prêt à être mis en ligne. Cela peut être fait de nombreuses manières selon où votre code se trouve, et qui va héberger le blog. Cet &lt;a href=&quot;https://wirtaw.github.io/blog/pl/blog/deploy&quot;&gt;article&lt;/a&gt; couvre quelques scénarios communs.&lt;/p&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Nous avons vu toutes les étapes qui permettent d&#39;obtenir un Polyglot Tech Blog opérationnel avec votre contenu. Si vous avez suivi toutes ces étapes, vous avez désormais un blog en ligne. Félicitations ! Bien sûr, de nombreuses autres modifications et adaptations sont possibles, n&#39;hésitez donc pas à expérimenter et à partager vos idées sur &lt;a href=&quot;https://gitlab.com/florent_tassy/polyglot-tech-blog&quot;&gt;GitLab&lt;/a&gt; 😉&lt;/p&gt;
 </description>
         <pubDate>Sun, 09 Jul 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw.github.io/blog/pl/blog/get-started/</guid>
+        <guid>https://wirtaw.github.io/pl/blog/get-started/</guid>
       </item>
       
     
@@ -248,7 +248,7 @@ Vous pouvez donc vérifier la validité de votre HTML avec :&lt;/p&gt;
       
       <item>
         <title>Personnaliser les couleurs</title>
-        <link>https://wirtaw.github.io/blog/pl/blog/colors/</link>
+        <link>https://wirtaw.github.io/pl/blog/colors/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Les couleurs d&#39;un blog sont l&#39;élément le plus fondamental à choisir pour se sentir chez soi et refléter qui l&#39;on est. Voyons où Polyglot Tech Blog définit ses couleurs afin de les modifier.&lt;/p&gt;
 &lt;h2&gt;Modifier le bon fichier&lt;/h2&gt;
@@ -299,11 +299,11 @@ Vous pouvez donc vérifier la validité de votre HTML avec :&lt;/p&gt;
 &lt;p&gt;Ces deux modèles contiennent en fait du code CSS et sont traduits par deux feuilles de styles CSS qui sont chargées alternativement suivant le schéma de couleur sélectionné. Par défault, le thème clair est le thème &amp;quot;prism-coy&amp;quot; qui fait partie de PrismJS. N&#39;importe quel thème proposé sous forme de paquet NPM pourrait être ajouté de la même manière..&lt;/p&gt;
 &lt;p&gt;Le thème sombre et dérivé du &lt;a href=&quot;https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-dark.css&quot;&gt;thème sombre Gruvbox par Azat S.&lt;/a&gt;. Cependant, il a été un peu modifié pour passer les tests automatiques d&#39;accessibilité effectués par &lt;a href=&quot;https://www.deque.com/axe/browser-extensions/&quot;&gt;l&#39;extension de navigateur axe&lt;/a&gt;. Dans ce cas donc, le code CSS a simplement été copié et modifié dans le fichier &lt;code&gt;src &amp;gt; css &amp;gt; code-highlight-dark.njk&lt;/code&gt;.&lt;/p&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Nous avons vu les fichiers à modifier or remplacer pour changer les couleurs de notre blog. Mais faites preuve de sagesse au moment de choisir vos couleurs et gardez à l&#39;esprit que l&#39;accessibilité dépend pour beaucoup du contraste des couleurs. Si vous souhaitez évaluer l&#39;accessibilité de votre schéma de couleurs, l&#39;article sur les &lt;a href=&quot;https://wirtaw.github.io/Polyglot-Tech-Blog/pl/blog/metrics&quot;&gt;indicateurs du blog&lt;/a&gt; devrait vous donner du grain à moudre.&lt;/p&gt;
+&lt;p&gt;Nous avons vu les fichiers à modifier or remplacer pour changer les couleurs de notre blog. Mais faites preuve de sagesse au moment de choisir vos couleurs et gardez à l&#39;esprit que l&#39;accessibilité dépend pour beaucoup du contraste des couleurs. Si vous souhaitez évaluer l&#39;accessibilité de votre schéma de couleurs, l&#39;article sur les &lt;a href=&quot;https://wirtaw.github.io/blog/pl/blog/metrics&quot;&gt;indicateurs du blog&lt;/a&gt; devrait vous donner du grain à moudre.&lt;/p&gt;
 </description>
         <pubDate>Wed, 05 Jul 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw.github.io/blog/pl/blog/colors/</guid>
+        <guid>https://wirtaw.github.io/pl/blog/colors/</guid>
       </item>
       
     
@@ -317,7 +317,7 @@ Vous pouvez donc vérifier la validité de votre HTML avec :&lt;/p&gt;
       
       <item>
         <title>Add language</title>
-        <link>https://wirtaw.github.io/blog/pl/blog/add-language/</link>
+        <link>https://wirtaw.github.io/pl/blog/add-language/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;div&gt;Polyglot Tech Blog comes in English and French to show in action. However, it is possible to add as many languages as you want. Let&#39;s show how by adding German 🇩🇪&lt;/div&gt;
 &lt;h2&gt;Update data.json&lt;/h2&gt;
@@ -389,7 +389,7 @@ Vous pouvez donc vérifier la validité de votre HTML avec :&lt;/p&gt;
 </description>
         <pubDate>Sun, 02 Jul 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw.github.io/blog/pl/blog/add-language/</guid>
+        <guid>https://wirtaw.github.io/pl/blog/add-language/</guid>
       </item>
       
     
@@ -403,7 +403,7 @@ Vous pouvez donc vérifier la validité de votre HTML avec :&lt;/p&gt;
       
       <item>
         <title>Ajouter une page</title>
-        <link>https://wirtaw.github.io/blog/pl/blog/add-page/</link>
+        <link>https://wirtaw.github.io/pl/blog/add-page/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Polyglot Tech Blog contient trois pages :&lt;/p&gt;
 &lt;ul&gt;
@@ -479,7 +479,7 @@ layout: &quot;base.html&quot;
 </description>
         <pubDate>Fri, 30 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw.github.io/blog/pl/blog/add-page/</guid>
+        <guid>https://wirtaw.github.io/pl/blog/add-page/</guid>
       </item>
       
     
@@ -493,7 +493,7 @@ layout: &quot;base.html&quot;
       
       <item>
         <title>Ajouter un article</title>
-        <link>https://wirtaw.github.io/blog/pl/blog/add-post/</link>
+        <link>https://wirtaw.github.io/pl/blog/add-post/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Schématiquement, un blog est constitué de quelques pages statiques et de beaucoup d&#39;articles. Voyons comment créer un article dans chacune des langues prises en charge par notre blog.&lt;/p&gt;
 &lt;h2&gt;Créer les fichiers&lt;/h2&gt;
@@ -532,7 +532,7 @@ tags:
 </description>
         <pubDate>Fri, 23 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw.github.io/blog/pl/blog/add-post/</guid>
+        <guid>https://wirtaw.github.io/pl/blog/add-post/</guid>
       </item>
       
     
@@ -546,7 +546,7 @@ tags:
       
       <item>
         <title>Vérifier les indicateurs du blog</title>
-        <link>https://wirtaw.github.io/blog/pl/blog/metrics/</link>
+        <link>https://wirtaw.github.io/pl/blog/metrics/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Nous allons maintenant vérifier quelques indicateurs et présenter des outils simples et faciles de prise en main pour assurer la validité, les performance, l&#39;accessibilité et la &lt;abbr title=&quot;Search Engine Optimization&quot;&gt;SEO&lt;/abbr&gt; de notre blog. Ces sujets sont potentiellement infinis et très pointus, c&#39;est pourquoi nous ne ferons qu&#39;effleurer chacun d&#39;entre eux à l&#39;aide d&#39;outils automatiques.&lt;/p&gt;
 &lt;h2&gt;Lighthouse&lt;/h2&gt;
@@ -561,7 +561,7 @@ tags:
 </description>
         <pubDate>Thu, 15 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw.github.io/blog/pl/blog/metrics/</guid>
+        <guid>https://wirtaw.github.io/pl/blog/metrics/</guid>
       </item>
       
     
@@ -575,7 +575,7 @@ tags:
       
       <item>
         <title>Déploiement</title>
-        <link>https://wirtaw.github.io/blog/pl/blog/deploy/</link>
+        <link>https://wirtaw.github.io/pl/blog/deploy/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;div&gt;Maintenant que nous avons adapté le modèle avec notre contenu, il est temps de le déployer sur le web. Passons au travers de quelques scénarios de déploiement communs.&lt;/div&gt;
 &lt;h2&gt;Déploiement manuel&lt;/h2&gt;
@@ -637,7 +637,7 @@ tags:
 </description>
         <pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw.github.io/blog/pl/blog/deploy/</guid>
+        <guid>https://wirtaw.github.io/pl/blog/deploy/</guid>
       </item>
       
     
