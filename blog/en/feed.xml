@@ -188,7 +188,7 @@
 &lt;li&gt;You may personalize &lt;code&gt;src &amp;gt; index.html&lt;/code&gt; and &lt;code&gt;src &amp;gt; 404.html&lt;/code&gt;, but that&#39;s not absolutely necessary.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Adapt the style&lt;/h2&gt;
-&lt;p&gt;You can go to &lt;a href=&quot;https://wirtaw.github.io/en/blog/colors&quot;&gt;the article about colors&lt;/a&gt; for further details about this step.&lt;/p&gt;
+&lt;p&gt;You can go to &lt;a href=&quot;https://wirtaw.github.io/blog/en/blog/colors&quot;&gt;the article about colors&lt;/a&gt; for further details about this step.&lt;/p&gt;
 &lt;h2&gt;Add or remove languages&lt;/h2&gt;
 &lt;p&gt;Removing a language is simply deleting the corresponding directory and updating the &lt;code&gt;src &amp;gt; _data &amp;gt; data.json&lt;/code&gt; file accordingly. When adding a new language, there are a bit more things to consider, so you can consult &lt;a href=&quot;https://wirtaw.github.io/blog/en/blog/add-language/&quot;&gt;the dedicated article&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Add static pages&lt;/h2&gt;
@@ -205,7 +205,7 @@
      ├── about.html
      ├── blog.html
      └── 404.html&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You may decide to add some static pages. Here as well, there is a &lt;a href=&quot;https://wirtaw.github.io/en/blog/add-page&quot;&gt;dedicated article&lt;/a&gt; that covers the topic.&lt;/p&gt;
+&lt;p&gt;You may decide to add some static pages. Here as well, there is a &lt;a href=&quot;https://wirtaw.github.io/blog/en/blog/add-page&quot;&gt;dedicated article&lt;/a&gt; that covers the topic.&lt;/p&gt;
 &lt;h2&gt;Add posts&lt;/h2&gt;
 &lt;p&gt;This is probably the most basic thing expected from a blog start. You can do this by following the instructions on the &lt;a href=&quot;https://wirtaw.github.io/blog/en/blog/add-post/&quot;&gt;dedicated article&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Check markup validity&lt;/h2&gt;
@@ -296,7 +296,7 @@ You can then check the HTML validity with:&lt;/p&gt;
 &lt;p&gt;These two templates actually contain CSS and result in two CSS style sheets that are alternatively added depending on the selected color schema. By default, the light theme is the &amp;quot;prism-coy&amp;quot; theme provided with PrismJS. Any theme provided as an NPM package could be added the same way.&lt;/p&gt;
 &lt;p&gt;The dark theme is based on &lt;a href=&quot;https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-dark.css&quot;&gt;Gruvbox dark theme by Azat S.&lt;/a&gt;. However, it was a bit modified to pass the automated accessibility tests done by &lt;a href=&quot;https://www.deque.com/axe/browser-extensions/&quot;&gt;axe browser extension&lt;/a&gt;. So in that case, the CSS code was simply copied and modified in the &lt;code&gt;src &amp;gt; css &amp;gt; code-highlight-dark.njk&lt;/code&gt; file.&lt;/p&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;We have seen what files we have to modify or replace to change our blog colors. But be wise when choosing your colors and keep in mind that accessibility depends a lot on colors contrast. If you want to assess the accessibility of your color schema, the article about &lt;a href=&quot;https://wirtaw.github.io/en/blog/metrics&quot;&gt;blog metrics&lt;/a&gt; should give you more insight.&lt;/p&gt;
+&lt;p&gt;We have seen what files we have to modify or replace to change our blog colors. But be wise when choosing your colors and keep in mind that accessibility depends a lot on colors contrast. If you want to assess the accessibility of your color schema, the article about &lt;a href=&quot;https://wirtaw.github.io/blog/en/blog/metrics&quot;&gt;blog metrics&lt;/a&gt; should give you more insight.&lt;/p&gt;
 </description>
         <pubDate>Wed, 05 Jul 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
