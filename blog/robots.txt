@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://ftassy.github.io/Polyglot-Tech-Blog/sitemap.xml
