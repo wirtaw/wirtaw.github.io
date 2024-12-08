@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://ftassy.github.io/Polyglot-Tech-Blog" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://wirtaw.github.io/blog" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Poplavskij Vladimir blog</title>
-    <link>https://ftassy.github.io/Polyglot-Tech-Blog/ru/feed.xml</link>
-    <atom:link href="https://ftassy.github.io/Polyglot-Tech-Blog/ru/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://wirtaw.github.io/blog/ru/feed.xml</link>
+    <atom:link href="https://wirtaw.github.io/blog/ru/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Русский</description>
     <language>ru</language>
     
@@ -11,7 +11,7 @@
       
       <item>
         <title>Суть зрелости: забота о себе и эмоциональная честность</title>
-        <link>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/essential-of-maturity/</link>
+        <link>https://wirtaw.github.io/blog/ru/blog/essential-of-maturity/</link>
         <description>&lt;p&gt;&lt;strong&gt;Суть зрелости: забота о себе и эмоциональная честность&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Для меня зрелость до неприличия в простом.&lt;br /&gt;
 В умении о себе позаботиться.&lt;br /&gt;
@@ -56,7 +56,7 @@
 </description>
         <pubDate>Sun, 17 Nov 2024 08:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/essential-of-maturity/</guid>
+        <guid>https://wirtaw.github.io/blog/ru/blog/essential-of-maturity/</guid>
       </item>
       
     
@@ -70,13 +70,13 @@
       
       <item>
         <title>Ideały świetlistego rycerza</title>
-        <link>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/idealy-swietlistego-rycerza/</link>
+        <link>https://wirtaw.github.io/blog/ru/blog/idealy-swietlistego-rycerza/</link>
         <description>&lt;p&gt;&lt;em&gt;Pierwszy ideał&lt;/em&gt;: Życie ponad śmiercią. Siła ponad słabością. Podróż ponad celem.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Drugi ideał Wiatrowych&lt;/em&gt;: Chronić tych, którzy nie mogą chronić się sami.&lt;/p&gt;
 </description>
         <pubDate>Sat, 16 Nov 2024 14:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/idealy-swietlistego-rycerza/</guid>
+        <guid>https://wirtaw.github.io/blog/ru/blog/idealy-swietlistego-rycerza/</guid>
       </item>
       
     
@@ -90,7 +90,7 @@
       
       <item>
         <title>Get started with Polyglot Tech Blog template</title>
-        <link>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/get-started/</link>
+        <link>https://wirtaw.github.io/blog/ru/blog/get-started/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;You have found Polyglot Tech Blog and wish to use it as a basis for your blog. Great! Let&#39;s go through the steps to get the code and adapt it to your needs.&lt;/p&gt;
 &lt;h2&gt;Get the code and install the dependencies&lt;/h2&gt;
@@ -182,9 +182,9 @@
 &lt;li&gt;You may personalize &lt;code&gt;src &amp;gt; index.html&lt;/code&gt; and &lt;code&gt;src &amp;gt; 404.html&lt;/code&gt;, but that&#39;s not absolutely necessary.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Adapt the style&lt;/h2&gt;
-&lt;p&gt;You can go to &lt;a href=&quot;https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/colors&quot;&gt;the article about colors&lt;/a&gt; for further details about this step.&lt;/p&gt;
+&lt;p&gt;You can go to &lt;a href=&quot;https://wirtaw.github.io/Polyglot-Tech-Blog/ru/blog/colors&quot;&gt;the article about colors&lt;/a&gt; for further details about this step.&lt;/p&gt;
 &lt;h2&gt;Add or remove languages&lt;/h2&gt;
-&lt;p&gt;Removing a language is simply deleting the corresponding directory and updating the &lt;code&gt;src &amp;gt; _data &amp;gt; data.json&lt;/code&gt; file accordingly. When adding a new language, there are a bit more things to consider, so you can consult &lt;a href=&quot;https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/add-language/&quot;&gt;the dedicated article&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Removing a language is simply deleting the corresponding directory and updating the &lt;code&gt;src &amp;gt; _data &amp;gt; data.json&lt;/code&gt; file accordingly. When adding a new language, there are a bit more things to consider, so you can consult &lt;a href=&quot;https://wirtaw.github.io/blog/ru/blog/add-language/&quot;&gt;the dedicated article&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Add static pages&lt;/h2&gt;
 &lt;p&gt;The starter comes with four static page: &amp;quot;Главная&amp;quot;, &amp;quot;Обо мне&amp;quot;, &amp;quot;Блог&amp;quot; and &amp;quot;404&amp;quot;. They are written in HTML and can be found in each language directory:&lt;/p&gt;
 &lt;pre class=&quot;language-plain&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-plain&quot;&gt;src
@@ -199,9 +199,9 @@
      ├── about.html
      ├── blog.html
      └── 404.html&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You may decide to add some static pages. Here as well, there is a &lt;a href=&quot;https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/add-page&quot;&gt;dedicated article&lt;/a&gt; that covers the topic.&lt;/p&gt;
+&lt;p&gt;You may decide to add some static pages. Here as well, there is a &lt;a href=&quot;https://wirtaw.github.io/Polyglot-Tech-Blog/ru/blog/add-page&quot;&gt;dedicated article&lt;/a&gt; that covers the topic.&lt;/p&gt;
 &lt;h2&gt;Add posts&lt;/h2&gt;
-&lt;p&gt;This is probably the most basic thing expected from a blog start. You can do this by following the instructions on the &lt;a href=&quot;https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/add-post/&quot;&gt;dedicated article&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is probably the most basic thing expected from a blog start. You can do this by following the instructions on the &lt;a href=&quot;https://wirtaw.github.io/blog/ru/blog/add-post/&quot;&gt;dedicated article&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Check markup validity&lt;/h2&gt;
 &lt;p&gt;The starter template comes with commands and dependencies to check HTML and CSS validity using &lt;a href=&quot;https://validator.github.io/validator/&quot;&gt;W3C&#39;s vnu-jar&lt;/a&gt;. However, vnu-jar checker is written in Java, so you will have to install a Java Runtime Environment to make these commands work. I recommend the free and excellent &lt;a href=&quot;https://adoptium.net/temurin/&quot;&gt;Eclipse Temurin&lt;/a&gt;.&lt;br /&gt;
 You can then check the HTML validity with:&lt;/p&gt;
@@ -217,15 +217,15 @@ You can then check the HTML validity with:&lt;/p&gt;
 &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run check:css:win &lt;span class=&quot;token comment&quot;&gt;# with npm on Window systems&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; check:css:win &lt;span class=&quot;token comment&quot;&gt;# with Yarn on Windows systems&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Check various metrics about your blog&lt;/h2&gt;
-&lt;p&gt;The number of things you can check to ensure the &lt;a href=&quot;https://www.w3.org/WAI/&quot;&gt;accessibility&lt;/a&gt; (&lt;abbr title=&quot;Accessibility&quot;&gt;a11y&lt;/abbr&gt;), performance, &lt;a href=&quot;https://en.wikipedia.org/wiki/Search_engine_optimization&quot;&gt;Search Engine Optimization&lt;/a&gt; (&lt;abbr title=&quot;Search Engine Optimization&quot;&gt;SEO&lt;/abbr&gt;), validity... of a website is unlimited and may require some advanced skills or tools. Some simple and basic checks are covered in the &lt;a href=&quot;https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/metrics/&quot;&gt;dedicated article&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The number of things you can check to ensure the &lt;a href=&quot;https://www.w3.org/WAI/&quot;&gt;accessibility&lt;/a&gt; (&lt;abbr title=&quot;Accessibility&quot;&gt;a11y&lt;/abbr&gt;), performance, &lt;a href=&quot;https://en.wikipedia.org/wiki/Search_engine_optimization&quot;&gt;Search Engine Optimization&lt;/a&gt; (&lt;abbr title=&quot;Search Engine Optimization&quot;&gt;SEO&lt;/abbr&gt;), validity... of a website is unlimited and may require some advanced skills or tools. Some simple and basic checks are covered in the &lt;a href=&quot;https://wirtaw.github.io/blog/ru/blog/metrics/&quot;&gt;dedicated article&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Build and deploy&lt;/h2&gt;
-&lt;p&gt;Our blog is ready to be put online. This can bon done on multiple ways depending on where your code is and who hosts the blog. This &lt;a href=&quot;https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/deploy/&quot;&gt;article&lt;/a&gt; covers some common scenarios.&lt;/p&gt;
+&lt;p&gt;Our blog is ready to be put online. This can bon done on multiple ways depending on where your code is and who hosts the blog. This &lt;a href=&quot;https://wirtaw.github.io/blog/ru/blog/deploy/&quot;&gt;article&lt;/a&gt; covers some common scenarios.&lt;/p&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;We have seen all basic steps to get a Polyglot Tech Blog up and running with your content. If you followed all these steps, you have now an online blog. Congratulations! Of course, many more customizations are possible, so feel free to experiment and share your ideas on &lt;a href=&quot;https://gitlab.com/florent_tassy/polyglot-tech-blog&quot;&gt;GitLab&lt;/a&gt; 😉&lt;/p&gt;
 </description>
         <pubDate>Sun, 09 Jul 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/get-started/</guid>
+        <guid>https://wirtaw.github.io/blog/ru/blog/get-started/</guid>
       </item>
       
     
@@ -239,7 +239,7 @@ You can then check the HTML validity with:&lt;/p&gt;
       
       <item>
         <title>Customize the colors</title>
-        <link>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/colors/</link>
+        <link>https://wirtaw.github.io/blog/ru/blog/colors/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;The colors of a web page are the most fundamental thing to choose in order to feel at home and to reflect who we are. Let&#39;s see where Polyglot Tech Blog colors are defined in order to modify them.&lt;/p&gt;
 &lt;h2&gt;Modify the right file&lt;/h2&gt;
@@ -290,11 +290,11 @@ You can then check the HTML validity with:&lt;/p&gt;
 &lt;p&gt;These two templates actually contain CSS and result in two CSS style sheets that are alternatively added depending on the selected color schema. By default, the light theme is the &amp;quot;prism-coy&amp;quot; theme provided with PrismJS. Any theme provided as an NPM package could be added the same way.&lt;/p&gt;
 &lt;p&gt;The dark theme is based on &lt;a href=&quot;https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-dark.css&quot;&gt;Gruvbox dark theme by Azat S.&lt;/a&gt;. However, it was a bit modified to pass the automated accessibility tests done by &lt;a href=&quot;https://www.deque.com/axe/browser-extensions/&quot;&gt;axe browser extension&lt;/a&gt;. So in that case, the CSS code was simply copied and modified in the &lt;code&gt;src &amp;gt; css &amp;gt; code-highlight-dark.njk&lt;/code&gt; file.&lt;/p&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;We have seen what files we have to modify or replace to change our blog colors. But be wise when choosing your colors and keep in mind that accessibility depends a lot on colors contrast. If you want to assess the accessibility of your color schema, the article about &lt;a href=&quot;https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/metrics&quot;&gt;blog metrics&lt;/a&gt; should give you more insight.&lt;/p&gt;
+&lt;p&gt;We have seen what files we have to modify or replace to change our blog colors. But be wise when choosing your colors and keep in mind that accessibility depends a lot on colors contrast. If you want to assess the accessibility of your color schema, the article about &lt;a href=&quot;https://wirtaw.github.io/Polyglot-Tech-Blog/ru/blog/metrics&quot;&gt;blog metrics&lt;/a&gt; should give you more insight.&lt;/p&gt;
 </description>
         <pubDate>Wed, 05 Jul 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/colors/</guid>
+        <guid>https://wirtaw.github.io/blog/ru/blog/colors/</guid>
       </item>
       
     
@@ -308,7 +308,7 @@ You can then check the HTML validity with:&lt;/p&gt;
       
       <item>
         <title>Add language</title>
-        <link>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/add-language/</link>
+        <link>https://wirtaw.github.io/blog/ru/blog/add-language/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;div&gt;Polyglot Tech Blog comes in English and French to show in action. However, it is possible to add as many languages as you want. Let&#39;s show how by adding German 🇩🇪&lt;/div&gt;
 &lt;h2&gt;Update data.json&lt;/h2&gt;
@@ -380,7 +380,7 @@ You can then check the HTML validity with:&lt;/p&gt;
 </description>
         <pubDate>Sun, 02 Jul 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/add-language/</guid>
+        <guid>https://wirtaw.github.io/blog/ru/blog/add-language/</guid>
       </item>
       
     
@@ -394,7 +394,7 @@ You can then check the HTML validity with:&lt;/p&gt;
       
       <item>
         <title>Add a static page</title>
-        <link>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/add-page/</link>
+        <link>https://wirtaw.github.io/blog/ru/blog/add-page/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Polyglot Tech Blog comes with three pages:&lt;/p&gt;
 &lt;ul&gt;
@@ -470,7 +470,7 @@ layout: &quot;base.html&quot;
 </description>
         <pubDate>Fri, 30 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/add-page/</guid>
+        <guid>https://wirtaw.github.io/blog/ru/blog/add-page/</guid>
       </item>
       
     
@@ -484,7 +484,7 @@ layout: &quot;base.html&quot;
       
       <item>
         <title>Add a post</title>
-        <link>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/add-post/</link>
+        <link>https://wirtaw.github.io/blog/ru/blog/add-post/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;A blog is basically made of a few static pages and many articles. Let&#39;s see then how we can create a new article in all that languages that our blog supports.&lt;/p&gt;
 &lt;h2&gt;Create the files&lt;/h2&gt;
@@ -523,7 +523,7 @@ tags:
 </description>
         <pubDate>Fri, 23 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/add-post/</guid>
+        <guid>https://wirtaw.github.io/blog/ru/blog/add-post/</guid>
       </item>
       
     
@@ -537,7 +537,7 @@ tags:
       
       <item>
         <title>Check blog metrics</title>
-        <link>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/metrics/</link>
+        <link>https://wirtaw.github.io/blog/ru/blog/metrics/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;We are now going to verify a few metrics and present some simple and user-friendly tools to ensure our blog&#39;s validity, performance, accessibility and &lt;abbr title=&quot;Search Engine Optimization&quot;&gt;SEO&lt;/abbr&gt;. Those topics are potentially infinite and highly specialized, that is why we will just touch on each of them with automated tools.&lt;/p&gt;
 &lt;h2&gt;Lighthouse&lt;/h2&gt;
@@ -552,7 +552,7 @@ tags:
 </description>
         <pubDate>Thu, 15 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/metrics/</guid>
+        <guid>https://wirtaw.github.io/blog/ru/blog/metrics/</guid>
       </item>
       
     
@@ -566,7 +566,7 @@ tags:
       
       <item>
         <title>Deploy</title>
-        <link>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/deploy/</link>
+        <link>https://wirtaw.github.io/blog/ru/blog/deploy/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;div&gt;Now that we have adapted the template with our content, we would like to deploy it on the web. Let&#39;s go through some common deployment scenarios.&lt;/div&gt;
 &lt;h2&gt;Deploy manually&lt;/h2&gt;
@@ -628,7 +628,7 @@ tags:
 </description>
         <pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://ftassy.github.io/Polyglot-Tech-Blog/ru/blog/deploy/</guid>
+        <guid>https://wirtaw.github.io/blog/ru/blog/deploy/</guid>
       </item>
       
     
