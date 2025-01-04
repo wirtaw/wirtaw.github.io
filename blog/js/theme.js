@@ -1,6 +1,6 @@
-const baseUrl = document.querySelector("base").getAttribute("href");
-const darkCodeHighlight = baseUrl + "/css/dark.css";
-const lightCodeHighlight = baseUrl + "/css/light.css";
+const baseUrlTheme = document.querySelector("base").getAttribute("href");
+const darkCodeHighlight = baseUrlTheme + "/css/dark.css";
+const lightCodeHighlight = baseUrlTheme + "/css/light.css";
 const title = "Code highlight";
 
 const nightModeButton = document.getElementById("nightModeButton");
