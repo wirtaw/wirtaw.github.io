@@ -1,0 +1,184 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Wheel</title>
+    <meta name="description" content="Vladimir Poplavskij - Wheel">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wheel, wirtaw, poplauki, poplavskij, backend developer, senior nodejs developer, full stack developer, programmer, software engineer, travel, maps, homepage" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/personal.css">
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+            <h1 class="title">
+                <a href="../index.html">Main page</a>
+            </h1> 
+            <h2 class="subtitle">
+                Your one-stop shop for all things bookish
+            </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Wheel</h1>
+            <h2 class="subtitle">
+                A simple Jim Rohn’s Wheel of Life
+            </h2>
+            <div class="content">
+                <div id="wheel-container">
+                    <canvas id="myCanvas" width="400" height="400"></canvas>
+                </div> 
+                <p>
+                    <a href="https://wirtaw.github.io/wheel/index.html">Wheel</a>
+                </p>
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-heading">
+            <p id="footer">
+                "Poplauki" by <a href="https://wirtaw.github.io">Vladimir Poplavskij</a>.
+            </p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script src="../js/cookieConsent.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Roboto Slab']
+            }
+        });
+
+        (function() {
+            const footer = document.getElementById('footer');
+            if ('undefined' !== typeof footer) {
+                const date = new Date();
+                footer.innerHTML = '&copy; <strong>Poplauki</strong> <a href="https://wirtaw.github.io/">Vladimir Poplavskij</a> ' + date.getFullYear() + '.';
+            }
+            const wheelOfLifeData = {
+                categories: [
+                    {
+                        name: "Business / Career",
+                        color: "#f44336", // Red (adjust as needed)
+                        score: 70 // Initial score (0-100)
+                    },
+                    {
+                        name: "Money & Finances",
+                        color: "#ff9800", // Orange
+                        score: 30
+                    },
+                    {
+                        name: "Family",
+                        color: "#9c27b0", // Purple
+                        score: 50
+                    },
+                    {
+                        name: "Romance",
+                        color: "#4caf50", // Green
+                        score: 40
+                    },
+                    {
+                        name: "Friends / Social",
+                        color: "#f44336", // Red
+                        score: 10
+                    },
+                    {
+                        name: "Recreation & Fun",
+                        color: "#2196f3", // Blue
+                        score: 20
+                    },
+                    {
+                        name: "Health & Fitness",
+                        color: "#9e9e9e", // Gray
+                        score: 10
+                    },
+                    {
+                        name: "Personal Growth",
+                        color: "#00bcd4", // Cyan
+                        score: 70
+                    }
+                ]
+            };
+
+
+            const canvas = document.getElementById('myCanvas');
+            const ctx = canvas.getContext('2d');
+            function drawWheelOfLife(data) {
+                const centerX = canvas.width / 2;
+                const centerY = canvas.height / 2;
+                const radius = Math.min(centerX, centerY) * 0.8; // 80% of the smaller dimension
+
+                const numCategories = data.categories.length;
+                const angleSlice = (Math.PI * 2) / numCategories;
+
+                data.categories.forEach((category, index) => {
+                    // Calculate the angle for this category
+                    const angle = angleSlice * index;
+
+                    // Calculate the coordinates for the outer point of the slice
+                    const x = centerX + radius * Math.cos(angle);
+                    const y = centerY + radius * Math.sin(angle);
+
+                    // Draw the slice (example - you'll need to fill and style)
+                    ctx.beginPath();
+                    ctx.moveTo(centerX, centerY);
+                    ctx.lineTo(x, y);
+                    ctx.arc(centerX, centerY, radius, angle, angle + angleSlice);
+                    ctx.closePath();
+
+                    ctx.fillStyle = category.color;
+                    ctx.fill();
+
+                    const scoreRadius = radius * (category.score / 100); // Scale radius by score
+                    ctx.beginPath();
+                    ctx.moveTo(centerX, centerY);
+                    ctx.arc(centerX, centerY, scoreRadius, angle, angle + angleSlice);
+                    ctx.closePath();
+
+                    // You can use a slightly different color or transparency for the score
+                    ctx.fillStyle = category.color; // Or a slightly lighter/darker shade
+                    ctx.fill(); 
+
+                    // Add stroke (outline)
+                    ctx.strokeStyle = 'white'; // Example stroke color
+                    ctx.lineWidth = 2; // Example stroke width
+                    ctx.stroke();
+
+                    // Add text labels (example - adjust position as needed)
+                    const textRadius = radius + 20; // Adjust distance from the center
+                    const textX = centerX + textRadius * Math.cos(angle + angleSlice / 2);
+                    const textY = centerY + textRadius * Math.sin(angle + angleSlice / 2);
+
+                    ctx.font = '12px Arial'; // Example font
+                    ctx.fillStyle = 'black'; // Example text color
+                    ctx.textAlign = 'center';
+                    ctx.fillText(category.name, textX, textY);
+                });
+            }
+
+
+            // Function to create the wheel
+            function createWheel() {
+                const wheelContainer = document.getElementById('wheel-container');
+                drawWheelOfLife(wheelOfLifeData);
+            }
+
+            createWheel();
+        }());
+    </script>
+</body>
+</html>
