@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Secure Key Setup</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div id="step1" class="box">
+            <h1 class="title">Welcome!</h1>
+            <p>To enhance your account security, let's set up a secure key from your password.</p>
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control">
+                <input id="passwordInput" class="input" type="password" placeholder="Enter your password">
+              </div>
+            </div>
+            <div class="field">
+                <label class="label">Salt</label>
+                <div class="control">
+                  <input id="saltInput" class="input" placeholder="Salt">
+                </div>
+            </div>
+            <button class="button is-primary" id="startButton">Generate Key</button>
+          </div>
+
+          <div id="step2" class="box is-hidden">
+            <h2 class="title">Generating Key...</h2>
+            <progress class="progress is-primary" max="100">30%</progress>
+          </div>
+
+          <div id="step3" class="box is-hidden">
+            <h2 class="title">Your Encrypted Text</h2>
+            <div class="field">
+                <label class="label">Salt2</label>
+                <div class="control">
+                  <input id="saltInput2" class="input" placeholder="Salt">
+                </div>
+            </div>
+            <p>Here's an example of text encrypted with your derived key:</p>
+            <div class="field">
+              <div class="control">
+                <textarea id="encryptedTextDisplay" class="textarea" readonly></textarea>
+              </div>
+            </div>
+            <button class="button is-primary" id="completeSetup">Finish Setup</button>
+          </div>
+
+          <div id="step4" class="box is-hidden">
+            <h2 class="title">Setup Complete!</h2>
+            <p>Your account is now secured with a strong key derived from your password.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/sjcl@1.0.8/sjcl.min.js"></script>
+  <script type="module">
+    function generateSalt(words, paranoia) {
+        const salt = sjcl.random.randomWords(words, paranoia);
+
+        return salt;
+    }
+
+    const step1 = document.getElementById('step1');
+    const step2 = document.getElementById('step2');
+    const step3 = document.getElementById('step3');
+    const step4 = document.getElementById('step4');
+    const passwordInput = document.getElementById('passwordInput');
+    const saltInput = document.getElementById('saltInput');
+    const saltInput2 = document.getElementById('saltInput2');
+    const encryptedTextDisplay = document.getElementById('encryptedTextDisplay');
+    const startButton = document.getElementById('startButton');
+    const completeSetupButton = document.getElementById('completeSetup');
+
+    startButton.addEventListener('click', startKeyGeneration);
+    completeSetupButton.addEventListener('click', completeSetup);
+
+    async function startKeyGeneration() {
+      const password = passwordInput.value;
+      if (!password) {
+        alert("Please enter a password.");
+        return;
+      }
+
+      step1.classList.add('is-hidden');
+      step2.classList.remove('is-hidden');
+
+      let salt = saltInput.value;
+      if (!salt) {
+        salt = generateSalt(8, 10);
+        saltInput.value = sjcl.codec.hex.fromBits(salt);
+      } else {
+        salt = sjcl.codec.hex.toBits(salt);
+      }
+      saltInput2.value = sjcl.codec.hex.fromBits(salt);
+
+      setTimeout(async () => {
+        const key = sjcl.misc.pbkdf2(password, salt, 10000, 256);
+
+        const encryptedText = sjcl.encrypt(key, "This is some secret text.");
+
+        encryptedTextDisplay.value = encryptedText;
+
+        step2.classList.add('is-hidden');
+        step3.classList.remove('is-hidden');
+      }, 1000);
+    }
+
+    function completeSetup() {
+      step3.classList.add('is-hidden');
+      step4.classList.remove('is-hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Encryption check</title>
+    <meta name="description" content="Vladimir Poplavskij - Wheel">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wheel, wirtaw, poplauki, poplavskij, backend developer, senior nodejs developer, full stack developer, programmer, software engineer, travel, maps, homepage" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/personal.css">
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+            <h1 class="title">
+                <a href="../index.html">Main page</a>
+            </h1> 
+            <h2 class="subtitle">
+                Your one-stop shop for all things bookish
+            </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Crypto check</h1>
+            <h2 class="subtitle">
+                
+            </h2>
+            <div class="content">
+                <div class="">
+                    <textarea id="key" rows="4" cols="50" readonly></textarea>
+                </div> 
+                <div id="text">
+                    <textarea id="crypto" rows="4" cols="50"></textarea>
+                </div> 
+                <p>
+                    <textarea id="encrypted" rows="4" cols="50" readonly></textarea>
+                </p>
+                <p>
+                    <textarea id="decryped" rows="4" cols="50" readonly></textarea>
+                </p>
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-heading">
+            <p id="footer">
+                "Poplauki" by <a href="https://wirtaw.github.io">Vladimir Poplavskij</a>.
+            </p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script src="../js/cookieConsent.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Roboto Slab']
+            }
+        });
+
+        const algoritmName = 'AES-GCM';
+
+        const generateKey = async () => {
+            return window.crypto.subtle.generateKey({
+                name: algoritmName,
+                length: 256,
+            }, true, ['encrypt', 'decrypt']);
+        };
+
+        const encode = (data) => {
+            const encoder = new TextEncoder();
+
+            return encoder.encode(data);
+        }
+
+        const generateIv = () => {
+            // https://developer.mozilla.org/en-US/docs/Web/API/AesGcmParams
+            return window.crypto.getRandomValues(new Uint8Array(12));
+        }
+
+        const encrypt = async (data, key) => {
+            const encoded = encode(data);
+            const iv = generateIv();
+            const cipher = await window.crypto.subtle.encrypt({
+                name: algoritmName,
+                iv: iv,
+            }, key, encoded);
+
+            return {
+                cipher,
+                iv,
+            };
+        }
+
+        const pack = (buffer) => {
+            return window.btoa(
+                String.fromCharCode.apply(null, new Uint8Array(buffer))
+            );
+        }
+
+        const unpack = (packed) => {
+            const string = window.atob(packed);
+            const buffer = new ArrayBuffer(string.length);
+            const bufferView = new Uint8Array(buffer);
+
+            for (let i = 0; i < string.length; i++) {
+                bufferView[i] = string.charCodeAt(i);
+            }
+
+            return buffer;
+        }
+
+        const decode = (bytestream) => {
+            const decoder = new TextDecoder();
+
+            return decoder.decode(bytestream);
+        }
+
+        const decrypt = async (cipher, key, iv) => {
+            const encoded = await window.crypto.subtle.decrypt({
+                name: algoritmName,
+                iv: iv,
+            }, key, cipher);
+
+            return decode(encoded);
+        }
+
+        async function generateEd25519Key() {
+            const keypair = await window.crypto.subtle.generateKey(
+                {
+                    name: 'ECDSA',
+                    namedCurve: 'P-256',
+                },
+                true,
+                ['sign', 'verify']
+            );
+
+            return {
+                publicKey: keypair.publicKey,
+                privateKey: keypair.privateKey,
+            };
+        }
+
+
+        (async function() {
+            const footer = document.getElementById('footer');
+            if ('undefined' !== typeof footer) {
+                const date = new Date();
+                footer.innerHTML = '&copy; <strong>Poplauki</strong> <a href="https://wirtaw.github.io/">Vladimir Poplavskij</a> ' + date.getFullYear() + '.';
+            }
+
+            if (!window?.crypto) {
+                throw new Error('Crypto API not available');
+            }
+
+            const key = await generateKey();
+
+            /*const keys = await generateEd25519Key();
+
+            const rawKey = await window.crypto.subtle.exportKey('raw', keys.privateKey);
+            const keyHash = await window.crypto.subtle.digest('SHA-256', rawKey);
+            const encryptionKey = await window.crypto.subtle.importKey(
+                'raw',
+                keyHash,
+                { name: 'AES-GCM' },
+                false, // Not extractable
+                ['encrypt', 'decrypt']
+            );*/
+
+            // 3. Generate Mnemonic Phrase
+            //const exportedKey = await window.crypto.subtle.exportKey('jwk', keys.privateKey);
+            //const privateKeyJwk = JSON.stringify(exportedKey);
+            //const mnemonic = bip39.entropyToMnemonic(privateKeyJwk); // Use the JWK as entropy
+
+            const keyArea = document.getElementById('key');
+            const crypto = document.getElementById('crypto');
+            const encrypted = document.getElementById('encrypted');
+            const decryped = document.getElementById('decryped');
+
+            keyArea.value = JSON.stringify(key);
+
+            crypto.addEventListener('input', async (e) => {
+                e.preventDefault();
+                const { cipher, iv } = await encrypt(crypto.value, key);
+
+                localStorage.setItem(
+                    'encryptedProfile',
+                    JSON.stringify({
+                        cipher: pack(cipher),
+                        iv: pack(iv),
+                    }),
+                );
+
+                const response = JSON.parse(localStorage.getItem('encryptedProfile'));
+                encrypted.value = JSON.stringify(response);
+                const final = await decrypt(unpack(response.cipher), key, unpack(response.iv))
+                console.log(final)
+
+                decryped.value = JSON.stringify(final);
+            });
+        }());
+    </script>
+</body>
+</html>

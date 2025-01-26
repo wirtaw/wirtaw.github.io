@@ -1,0 +1,162 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Encryption check (mnemonic)</title>
+    <meta name="description" content="Vladimir Poplavskij - Wheel">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wheel, wirtaw, poplauki, poplavskij, backend developer, senior nodejs developer, full stack developer, programmer, software engineer, travel, maps, homepage" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/personal.css">
+    <script src="https://unpkg.com/bip39@3.1.0/src/index.js"></script>
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+            <h1 class="title">
+                <a href="../index.html">Main page</a>
+            </h1> 
+            <h2 class="subtitle">
+                Your one-stop shop for all things bookish
+            </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Crypto check</h1>
+            <h2 class="subtitle">
+                
+            </h2>
+            <div class="content">
+                <div class="">
+                    <textarea id="key" rows="4" cols="50" readonly></textarea>
+                </div> 
+                <div class="">
+                    <textarea id="mnemonic" rows="4" cols="50" readonly></textarea>
+                </div>
+                <div id="text">
+                    <textarea id="crypto" rows="4" cols="50"></textarea>
+                </div> 
+                <p>
+                    <textarea id="encrypted" rows="4" cols="50" readonly></textarea>
+                </p>
+                <p>
+                    <textarea id="decryped" rows="4" cols="50" readonly></textarea>
+                </p>
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="section-heading">
+            <p id="footer">
+                "Poplauki" by <a href="https://wirtaw.github.io">Vladimir Poplavskij</a>.
+            </p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    
+    <script src="../js/cookieConsent.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Roboto Slab']
+            }
+        });
+
+        const algoritmName = 'ECDSA';
+        const namedCurve = 'P-256';
+
+        async function generateKeys() {
+            try {
+                // Generate an Ed25519 key pair (you can use other algorithms like ECDSA as well)
+                const keyPair = await window.crypto.subtle.generateKey(
+                    {
+                        name: algoritmName,
+                        namedCurve: namedCurve
+                    },
+                    true, // Extractable (for mnemonic generation)
+                    ['sign', 'verify']
+                );
+
+                // Store the keys securely (consider using Web Crypto API key storage)
+                await window.crypto.subtle.importKey(
+                    'jwk', 
+                    await window.crypto.subtle.exportKey('jwk', keyPair.privateKey),
+                        { name: algoritmName, namedCurve: namedCurve },
+                        true,
+                        ['sign']
+                );
+                await window.crypto.subtle.importKey(
+                    'jwk', 
+                    await window.crypto.subtle.exportKey('jwk', keyPair.publicKey),
+                        { name: algoritmName, namedCurve: namedCurve },
+                        true,
+                        ['verify']
+                );
+
+                return keyPair;
+            } catch (error) {
+                console.error('Error generating keys:', error);
+                // Handle the error appropriately (e.g., display an error message)
+            }
+        }
+
+        async function generateMnemonic(privateKey) {
+            if (!bip39) {
+                throw new Error('BIP39 library not available');
+            }
+
+            try {
+                // Export the private key in JWK format
+                const exportedKey = await window.crypto.subtle.exportKey('jwk', privateKey);
+                const privateKeyJwk = JSON.stringify(exportedKey);
+
+                // Generate the mnemonic phrase
+                const mnemonic = bip39.entropyToMnemonic(privateKeyJwk); 
+                return mnemonic;
+            } catch (error) {
+                console.error('Error generating mnemonic:', error);
+                // Handle the error
+            }
+        }
+
+        (async function() {
+            const footer = document.getElementById('footer');
+            if ('undefined' !== typeof footer) {
+                const date = new Date();
+                footer.innerHTML = '&copy; <strong>Poplauki</strong> <a href="https://wirtaw.github.io/">Vladimir Poplavskij</a> ' + date.getFullYear() + '.';
+            }
+
+            if (!window?.crypto) {
+                throw new Error('Crypto API not available');
+            }
+
+            const keys = await generateKeys();
+
+            const keyArea = document.getElementById('key');
+            const mnemonicArea = document.getElementById('mnemonic');   
+            const crypto = document.getElementById('crypto');
+            const encrypted = document.getElementById('encrypted');
+            const decryped = document.getElementById('decryped');
+
+            keyArea.value = JSON.stringify(keys);
+            mnemonicArea.value = await generateMnemonic(keys.privateKey);
+
+            crypto.addEventListener('input', async () => {
+                
+            });
+        }());
+    </script>
+</body>
+</html>
