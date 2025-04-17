@@ -132,6 +132,12 @@ const tools = [
     description: "Plant UML Mindmap",
     tags: ["diagram", "uml"],
   },
+  {
+    url: "https://www.measurethat.net/",
+    title: "MeasureThat",
+    description: "Create a benchmark, measure performance of the JavaScript code and pick the fastest version.",
+    tags: ["development", "performance", "benchmark"],
+  },
 ];
 
 const toolsContainer = document.getElementById("tools-container");
