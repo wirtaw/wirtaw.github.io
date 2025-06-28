@@ -1,5 +1,6 @@
 html,body {
-    font-family: 'Questrial', sans-serif;
+    font-family: "Inter", sans-serif;
+    background-color: #f5f5f5; /* Light gray background for Bulma */
     font-size: 14px;
     font-weight: 300;
 }
@@ -12,6 +13,8 @@ html,body {
 }
 .box {
     margin-top: 5rem;
+    border-radius: 8px; /* Rounded corners for Bulma cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 input {
     font-weight: 300;
@@ -37,4 +40,30 @@ p.subtitle {
 
 .fa{
     margin-left: 5px; 
+}
+
+.section {
+    padding: 3rem 1.5rem;
+}
+.notification.is-info-light {
+    background-color: #e6f3ff; /* Light blue background for info notification */
+    color: #004d80; /* Darker blue text */
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+.term-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    margin-bottom: 1rem; /* Spacing between terms */
+}
+/* Ensure responsive grid for terms */
+.terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; /* Gap between grid items */
+}
+.is-rounded {
+    border-radius: 290486px; /* Bulma's rounded modifier */
 }

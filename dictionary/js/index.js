@@ -586,9 +586,14 @@ const list = document.getElementById("myList");
 
 function populateList() {
   items.forEach((item) => {
-    const listItem = document.createElement("li");
-    listItem.textContent = `${item.Lithuanian} | ${item.English}`;
-    list.appendChild(listItem);
+    const card = document.createElement("div");
+    card.className = "term-item";
+    card.innerHTML = `
+      <p class="is-size-5 has-text-weight-semibold has-text-grey-darker">${item.English}</p>
+      <p class="is-size-6 has-text-grey-light is-italic">${item.Lithuanian}</p>
+      <p class="is-size-7 has-text-grey-light mt-2">${item?.description ?? ''}</p>
+  `;
+    list.appendChild(card);
   });
 }
 
@@ -596,7 +601,7 @@ populateList();
 
 function filterList() {
   const filterValue = searchInput.value.toLowerCase();
-  const listItems = list.querySelectorAll("li");
+  const listItems = list.querySelectorAll("div");
 
   listItems.forEach((item) => {
     const text = item.textContent.toLowerCase();

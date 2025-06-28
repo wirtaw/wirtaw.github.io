@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dictionary</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="web tools, developer tools, online tools, utilities, JSON, regex, time, diagram">
+    <title>English-Lithuanian IT Terms Dictionary</title>
+    <meta name="description" content="A comprehensive English-Lithuanian IT terms dictionary for developers, students, and professionals. Find accurate translations for technology terms.">
+    <meta name="keywords" content="English Lithuanian IT dictionary, IT terms, technology terms, English to Lithuanian, IT glossary, tech dictionary, Lithuanian IT vocabulary">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
@@ -15,26 +15,36 @@
 </head>
 
 <body>
-    <section class="hero is-primary is-medium">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">Dictionary</h1>
-                <p class="subtitle"></p>
+    <section class="section">
+        <div class="container">
+            <!-- One-sentence description at the top -->
+            <p class="has-text-centered is-size-5 has-text-grey-dark mb-5">
+                This page offers a comprehensive English-Lithuanian IT terms dictionary, designed to assist anyone navigating the world of technology in both languages.
+            </p>
+
+            <h1 class="title is-1 has-text-centered has-text-grey-darker mb-6">
+                English-Lithuanian IT Terms Dictionary
+            </h1>
+
+            <div class="box p-6">
+                <!-- Search Term Input -->
+                <div class="field mb-5">
+                    <p class="control has-icons-left">
+                        <input class="input is-large is-info is-rounded" type="text" id="searchInput" placeholder="Search for a term (e.g., algorithm, derinimas)">
+                        <span class="icon is-left">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </p>
+                </div>
+
+                <!-- Dictionary content section -->
+                <div class="space-y-6">
+                    <div class="notification is-info-light p-5">
+                        <h2 class="title is-4 has-text-info mb-4">Sample Terms</h2>
+                        <div id="myList" class="terms-grid"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <input type="text" id="searchInput" placeholder="Search...">
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <ul id="myList">
-                <!-- List items will be dynamically added here -->
-            </ul>
         </div>
     </section>
 
@@ -50,6 +60,7 @@
         </div>
 
     </footer>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
     <script type="application/javascript" src="./js/index.js"></script>
 </body>
 
