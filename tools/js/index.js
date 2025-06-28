@@ -135,13 +135,15 @@ const tools = [
   {
     url: "https://www.measurethat.net/",
     title: "MeasureThat",
-    description: "Create a benchmark, measure performance of the JavaScript code and pick the fastest version.",
+    description:
+      "Create a benchmark, measure performance of the JavaScript code and pick the fastest version.",
     tags: ["development", "performance", "benchmark"],
   },
   {
     url: "https://vert.sh/",
     title: "The file converter you'll love",
-    description: "All image, audio, and document processing is done on your device. Videos are converted on our lightning-fast servers. No file size limit, no ads, and completely open source.",
+    description:
+      "All image, audio, and document processing is done on your device. Videos are converted on our lightning-fast servers. No file size limit, no ads, and completely open source.",
     tags: ["document", "convert", "utility"],
   },
 ];

@@ -581,36 +581,44 @@ const items = [
   },
 ];
 
-const searchInput = document.getElementById("searchInput");
-const list = document.getElementById("myList");
+(function () {
+  const searchInput = document.getElementById("searchInput");
+  const list = document.getElementById("myList");
 
-function populateList() {
-  items.forEach((item) => {
-    const card = document.createElement("div");
-    card.className = "term-item";
-    card.innerHTML = `
-      <p class="is-size-5 has-text-weight-semibold has-text-grey-darker">${item.English}</p>
-      <p class="is-size-6 has-text-grey-light is-italic">${item.Lithuanian}</p>
-      <p class="is-size-7 has-text-grey-light mt-2">${item?.description ?? ''}</p>
-  `;
-    list.appendChild(card);
-  });
-}
+  function populateList() {
+    items.forEach((item) => {
+      const card = document.createElement("div");
+      card.className = "term-item";
+      card.innerHTML = `
+        <p class="is-size-5 has-text-weight-semibold has-text-grey-darker">${
+          item.English
+        }</p>
+        <p class="is-size-6 has-text-grey-light is-italic">${
+          item.Lithuanian
+        }</p>
+        <p class="is-size-7 has-text-grey-light mt-2">${
+          item?.description ?? ""
+        }</p>
+    `;
+      list.appendChild(card);
+    });
+  }
 
-populateList();
+  populateList();
 
-function filterList() {
-  const filterValue = searchInput.value.toLowerCase();
-  const listItems = list.querySelectorAll("div");
+  function filterList() {
+    const filterValue = searchInput.value.toLowerCase();
+    const listItems = list.querySelectorAll("div");
 
-  listItems.forEach((item) => {
-    const text = item.textContent.toLowerCase();
-    if (text.includes(filterValue)) {
-      item.style.display = "";
-    } else {
-      item.style.display = "none";
-    }
-  });
-}
+    listItems.forEach((item) => {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(filterValue)) {
+        item.style.display = "";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }
 
-searchInput.addEventListener("input", filterList);
+  searchInput.addEventListener("input", filterList);
+})();
