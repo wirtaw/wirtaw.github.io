@@ -1,40 +1,143 @@
-html,body {
+/* style.css */
+
+/* General body styling for better readability */
+body {
     font-family: 'Questrial', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-}
-.hero.is-success {
-    background: #F2F6FA;
-}
-.hero .nav, .hero.is-success .nav {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.box {
-    margin-top: 5rem;
-}
-input {
-    font-weight: 300;
-}
-p {
-    font-weight: 700;
-}
-p.subtitle {
-    padding-top: 1rem;
-}
-
-.login-hr{
-    border-bottom: 1px solid black;
-}
-
-.has-text-black{
-    color: black;
-}
-
-.field{
-    padding-bottom: 10px;
-}
-
-.fa{
-    margin-left: 5px; 
-}
+    line-height: 1.6;
+    color: #363636; /* Dark grey for text */
+    background-color: #f5f5f5; /* Light grey background */
+  }
+  
+  /* Hero section adjustments */
+  .hero.is-primary.is-bold {
+    background-color: #48c78e; /* Bulma's 'success' color or your preferred primary color */
+    background-image: linear-gradient(135deg, #48c78e 0%, #209cee 100%); /* A subtle gradient */
+    color: #fff;
+    padding: 3rem 1.5rem; /* Adjust padding */
+  }
+  
+  .hero .title {
+    font-size: 3.5rem; /* Larger title */
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.5rem; /* Larger subtitle */
+    max-width: 800px; /* Limit width for readability */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Main content area */
+  main.section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .container.content {
+    max-width: 860px; /* Max width for content for readability */
+    margin-top: -80px; /* Pull the content box up visually over the hero */
+    position: relative; /* For z-index to work */
+    z-index: 10;
+  }
+  
+  .box {
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  /* Specific adjustments for input fields and selects */
+  .field-label.is-normal {
+    flex-basis: 150px; /* Give more space to labels */
+    text-align: right;
+    padding-right: 1.5rem;
+  }
+  
+  .field-body {
+    flex-grow: 1;
+  }
+  
+  /* Adjust textarea height */
+  textarea.textarea {
+    min-height: 120px; /* Give more initial space for text */
+  }
+  
+  /* Slider styling for better appearance */
+  input[type="range"] {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+  
+  input[type="range"]:hover {
+    opacity: 1;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #48c78e; /* Primary color thumb */
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #48c78e;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+  }
+  
+  /* Buttons */
+  .button.is-large {
+    min-width: 120px; /* Ensure buttons have a decent minimum width */
+  }
+  
+  /* Notification section */
+  #notification-section {
+    margin-top: 2rem;
+  }
+  
+  #notification-section .notification {
+    border-radius: 8px;
+    padding: 2rem;
+  }
+  
+  #notification-section .icon {
+    margin-bottom: 10px;
+    color: #ffdd57; /* Warning yellow */
+  }
+  
+  /* Footer styling */
+  .footer {
+    background-color: #202020;
+    color: #eee;
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  .footer a {
+    color: #48c78e;
+  }
+  
+  .footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .footer .icon {
+    color: #eee;
+  }
+  
+  .footer .icon:hover {
+    color: #48c78e;
+  }
