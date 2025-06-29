@@ -10,6 +10,39 @@
     
       
       <item>
+        <title>Полезные ресурсы для изучения JavaScript на GitHub</title>
+        <link>https://wirtaw.github.io/blog/ru/blog/list-js-useful-links/</link>
+        <description>&lt;h1&gt;Полезные ресурсы для изучения JavaScript на GitHub&lt;/h1&gt;
+&lt;p&gt;Добро пожаловать в мой отобранный список отличных репозиториев GitHub, которые могут помочь вам изучить JavaScript, от самых основ до продвинутых концепций. GitHub является кладезем учебных материалов, примеров кода и интерактивных проектов.&lt;/p&gt;
+&lt;p&gt;Список ссылок на JavaScript:&lt;/p&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sorrycc/awesome-javascript&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Awesome JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/getify/You-Dont-Know-JS&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;You-Dont-Know-JS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/denysdovhan/wtfjs&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Wtfjs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mbeaudru/modern-js-cheatsheet&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Modern JS Cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/HowProgrammingWorks/Book/blob/master/content/en/Index.md&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;HowProgrammingWorks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/trekhleb/javascript-algorithms&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;JavaScript Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ryanmcdermott/clean-code-javascript&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;clean-code-javascript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/sindresorhus/awesome-npm&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Awesome npm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/tc39&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Ecma International, Technical Committee 39 – ECMAScript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 29 Jun 2025 12:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/ru/blog/list-js-useful-links/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>Разоблачение невротизма: 5 ловушек, которые нужно распознать в себе и других</title>
         <link>https://wirtaw.github.io/blog/ru/blog/understanding-the-5-traps-of-neuroticism/</link>
         <description>&lt;h1&gt;Невидимые цепи: Понимание 5 ловушек невротизма&lt;/h1&gt;
