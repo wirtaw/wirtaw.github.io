@@ -10,6 +10,25 @@
     
       
       <item>
+        <title>Helpful Fedora Resources: Manage Your Linux System with Ease</title>
+        <link>https://wirtaw.github.io/blog/en/blog/list-fedora-useful-links/</link>
+        <description>&lt;h1&gt;Helpful Resources to Manage Fedora Linux&lt;/h1&gt;
+&lt;p&gt;Welcome to our comprehensive collection of helpful resources designed to make managing your Fedora Linux system straightforward and efficient. Whether you’re a new user looking for installation guidance or an experienced administrator seeking advanced tips, this page offers a curated selection of articles, tutorials, and tools. Dive in to learn how to master package management, configure your desktop, troubleshoot common issues, and unlock the full potential of your Fedora workstation or server. We aim to equip you with the knowledge and resources necessary to confidently navigate and optimize your Fedora experience.&lt;/p&gt;
+&lt;p&gt;List of the Fedora links:&lt;/p&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://wirtaw.github.io/blog/en/blog/list-fedora-useful-links/en/blog/fix-dnf-transaction-failed/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Fix Fedora “Transaction Failed” Updates: Beginner’s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 01 Jul 2025 12:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/en/blog/list-fedora-useful-links/</guid>
+      </item>
+      
+    
+    
+      
+      <item>
         <title>Fix Fedora &quot;Transaction Failed&quot; Updates: Beginner&#39;s Guide</title>
         <link>https://wirtaw.github.io/blog/en/blog/fix-dnf-transaction-failed/</link>
         <description>&lt;h1&gt;Revised Guide: Resolving “Transaction failed: Rpm transaction failed” on Fedora Updates&lt;/h1&gt;
