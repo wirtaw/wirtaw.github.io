@@ -10,6 +10,41 @@
     
       
       <item>
+        <title>Fixing JNLP `libnsl.so.1` Error on Fedora Linux</title>
+        <link>https://wirtaw.github.io/blog/en/blog/fedora-jnlp-libnsl-fix/</link>
+        <description>&lt;h1&gt;Resolving &lt;code&gt;libnsl.so.1&lt;/code&gt; Error for JNLP Applications on Fedora&lt;/h1&gt;
+&lt;p&gt;When attempting to launch Java Web Start (JNLP) applications on recent Fedora Linux installations, experienced users may encounter a &lt;code&gt;javaws&lt;/code&gt; execution error similar to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;javaws: error while loading shared libraries: libnsl.so.1: cannot open shared object file: No such file or directory
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This issue typically arises because the &lt;code&gt;libnsl&lt;/code&gt; (Network Services Library) package, while crucial for some legacy Java applications or specific JDK components, is no longer a default dependency or is deprecated in its traditional form on modern Linux distributions like Fedora. Consequently, a clean JDK installation might not include this library by default.&lt;/p&gt;
+&lt;h3&gt;The Solution&lt;/h3&gt;
+&lt;p&gt;The resolution is straightforward: explicitly install the &lt;code&gt;libnsl&lt;/code&gt; package using DNF.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Install &lt;code&gt;libnsl&lt;/code&gt;:&lt;/strong&gt;
+Execute the following command in your terminal:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; libnsl&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Rerun Your JNLP Application:&lt;/strong&gt;
+After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching your &lt;code&gt;.jnlp&lt;/code&gt; file:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;javaws start.jnlp&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The application should now execute without the &lt;code&gt;libnsl.so.1&lt;/code&gt; error.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Context and Explanation&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;libnsl&lt;/code&gt; library historically provided an interface for network services, including functionalities related to NIS (Network Information Service). While its direct role has diminished in modern system architectures, certain older applications, or specific implementations within the Java Development Kit (JDK), might still carry dependencies on it. When these applications are invoked on systems where &lt;code&gt;libnsl&lt;/code&gt; is not present, the &lt;code&gt;javaws&lt;/code&gt; binary (part of the JDK) fails to load due to the missing shared object. Manually installing it ensures all necessary dependencies are met for legacy Java Web Start applications to function correctly.&lt;/p&gt;
+&lt;p&gt;This fix is applicable across various Fedora versions where this dependency omission might occur, ensuring smooth operation of JNLP applications for those requiring them.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 03 Jul 2026 08:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/en/blog/fedora-jnlp-libnsl-fix/</guid>
+      </item>
+      
+    
+    
+      
+      <item>
         <title>Helpful Fedora Resources: Manage Your Linux System with Ease</title>
         <link>https://wirtaw.github.io/blog/en/blog/list-fedora-useful-links/</link>
         <description>&lt;h1&gt;Helpful Resources to Manage Fedora Linux&lt;/h1&gt;
@@ -18,6 +53,7 @@
 &lt;hr /&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://wirtaw.github.io/blog/en/blog/fix-dnf-transaction-failed/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Fix Fedora “Transaction Failed” Updates: Beginner’s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://wirtaw.github.io/blog/en/blog/fedora-jnlp-libnsl-fix/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Fixing JNLP &lt;code&gt;libnsl.so.1&lt;/code&gt; Error on Fedora Linux&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 01 Jul 2025 12:00:00 +0000</pubDate>
