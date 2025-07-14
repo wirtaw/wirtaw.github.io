@@ -146,6 +146,13 @@ const tools = [
       "All image, audio, and document processing is done on your device. Videos are converted on our lightning-fast servers. No file size limit, no ads, and completely open source.",
     tags: ["document", "convert", "utility"],
   },
+  {
+    url: "https://explainshell.com/",
+    title: "The Power shell",
+    description:
+      "write down a command-line to see the help text that matches each argument",
+    tags: ["shell", "linux", "terminL"],
+  },
 ];
 
 const toolsContainer = document.getElementById("tools-container");
