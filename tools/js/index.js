@@ -153,6 +153,12 @@ const tools = [
       "write down a command-line to see the help text that matches each argument",
     tags: ["shell", "linux", "terminL"],
   },
+  {
+    url: "https://brandmint.ai/color-genie",
+    title: "Find the perfect color",
+    description: "Describe the mood, style, vibe of the color you want. Or anything for that matter. We'll find the best options from an aggregated library of over 30,000 named colors.",
+    tags: ["web-development", "color", "design"],
+  },
 ];
 
 const toolsContainer = document.getElementById("tools-container");
