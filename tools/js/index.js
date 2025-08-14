@@ -159,6 +159,12 @@ const tools = [
     description: "Describe the mood, style, vibe of the color you want. Or anything for that matter. We'll find the best options from an aggregated library of over 30,000 named colors.",
     tags: ["web-development", "color", "design"],
   },
+  {
+    url: "https://free-for.dev/#/",
+    title: "Free for dev",
+    description: "Developers and Open Source authors now have many services offering free tiers, but finding them all takes time to make informed decisions.",
+    tags: ["utility", "tools", "development"],
+  },
 ];
 
 const toolsContainer = document.getElementById("tools-container");
