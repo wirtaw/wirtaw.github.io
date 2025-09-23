@@ -165,6 +165,12 @@ const tools = [
     description: "Developers and Open Source authors now have many services offering free tiers, but finding them all takes time to make informed decisions.",
     tags: ["utility", "tools", "development"],
   },
+  {
+    url: "https://devresourc.es/",
+    title: "Free for dev",
+    description: "Get every campaign on the same page with a tool that helps you work better, faster, and based on results.",
+    tags: ["utility", "tools", "development", "resources"],
+  },
 ];
 
 const toolsContainer = document.getElementById("tools-container");
