@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +11,21 @@
     <style>
         :root {
             /* Colors pulled from the image theme */
-            --accent-color: #c0392b; /* Deep Red */
-            --secondary-color: #276645; /* Forest Green */
+            --accent-color: #c0392b;
+            /* Deep Red */
+            --secondary-color: #276645;
+            /* Forest Green */
             --cream-text: #fffef0;
             --dark-text: #2c3e50;
+            --red-dark-text: #690400;
         }
 
         body {
-            font-family: 'Georgia', serif; /* Switched to a more festive serif font */
-            background-image: url('https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/website/advent-calendar-2025.png');
-            background-size: cover; /* Covers the whole screen */
+            font-family: 'Georgia', serif;
+            background-image: url('background.jpg');
+            background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Background stays put when scrolling */
+            background-attachment: fixed;
             color: var(--cream-text);
             display: flex;
             flex-direction: column;
@@ -33,9 +37,10 @@
             box-sizing: border-box;
         }
 
-        /* Hide the standard H1 header since the image has one illustrated */
+
         h1.main-header {
-            display: none;
+            display: block;
+            color: var(--red-dark-text);
         }
 
         /* Calendar Grid Container */
@@ -44,11 +49,13 @@
             background: rgba(0, 0, 0, 0.3);
             padding: 30px;
             border-radius: 15px;
-            backdrop-filter: blur(5px); /* Optional: Adds a frosted glass effect */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            /* Optional: Adds a frosted glass effect */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             max-width: 900px;
             width: 100%;
-            margin-top: 10vh; /* Push it down a bit from the top */
+            margin-top: 10vh;
+            /* Push it down a bit from the top */
         }
 
         .calendar {
@@ -59,48 +66,98 @@
         }
 
         .day-card {
-            /* Semi-transparent white boxes */
+            /* DEFAULT STATE (Empty) */
             background: rgba(255, 255, 255, 0.15);
             height: 100px;
             border-radius: 8px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
         }
 
         .day-card:hover {
-            transform: translateY(-5px) scale(1.05);
-            background: var(--accent-color); /* Turns red on hover */
-            border-color: var(--cream-text);
-            box-shadow: 0 5px 15px rgba(192, 57, 43, 0.6);
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .day-number {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--cream-text);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s;
         }
 
-        /* --- Modal/Popup Styles (Cleaned up) --- */
+        /* --- STYLES FOR FILLED ITEMS --- */
+        .day-card.filled {
+            background-color: var(--accent-green);
+            /* Solid Green background */
+            border-color: var(--accent-gold);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .day-card.filled .day-number {
+            font-size: 1.5rem;
+            /* Shrink number slightly */
+            margin-bottom: 5px;
+        }
+
+        .check-mark {
+            display: none;
+            /* Hidden by default */
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            font-weight: bold;
+            animation: popIn 0.5s ease;
+        }
+
+        .day-card.filled .check-mark {
+            display: block;
+            /* Show only if filled */
+        }
+
+        /* Animation for the checkmark */
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+            }
+
+            80% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* --- Modal Styles --- */
         .modal-overlay {
             display: none;
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8); /* Darker overlay */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
             justify-content: center;
             align-items: center;
             z-index: 1000;
         }
 
-        .modal-overlay.open { display: flex; }
+        .modal-overlay.open {
+            display: flex;
+        }
 
         .modal-card {
-            background: #fffef0; /* Cream background for the popup card */
+            background: #fffef0;
             color: var(--dark-text);
             padding: 40px;
             border-radius: 12px;
@@ -108,68 +165,86 @@
             width: 90%;
             text-align: center;
             position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            border-top: 8px solid var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border: 4px solid var(--accent-green);
         }
 
         .close-btn {
             position: absolute;
-            top: 15px; right: 20px;
-            font-size: 1.5rem;
+            top: 10px;
+            right: 15px;
+            font-size: 2rem;
             cursor: pointer;
             color: #999;
+            line-height: 1;
         }
 
         .modal-date {
             text-transform: uppercase;
             font-weight: bold;
-            color: var(--secondary-color);
-            letter-spacing: 1px;
-            margin-bottom: 10px;
+            color: #888;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
         }
 
         .modal-title {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin: 0 0 15px 0;
-            color: var(--accent-color);
+            color: var(--accent-green);
+            font-family: "Times New Roman", Times, serif;
         }
 
         .modal-desc {
             font-size: 1.1rem;
             line-height: 1.6;
             margin-bottom: 30px;
+            font-style: italic;
         }
 
         .ratings {
             display: flex;
             justify-content: center;
-            gap: 50px;
-            border-top: 2px solid #eee;
+            gap: 40px;
+            border-top: 1px solid #ddd;
             padding-top: 20px;
         }
 
-        .rating-group { display: flex; flex-direction: column; }
-        
-        .rating-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-            font-weight: bold;
+        .rating-group {
+            display: flex;
+            flex-direction: column;
         }
 
-        .rating-score { font-size: 1.8rem; font-weight: 800; }
-        .his-score { color: var(--secondary-color); }
-        .her-score { color: var(--accent-color); }
+        .rating-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
+        .rating-score {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .his-score {
+            color: #2c3e50;
+        }
+
+        .her-score {
+            color: #c0392b;
+        }
     </style>
 </head>
+
 <body>
 
-    <h1 class="main-header">Advent Calendar</h1>
+    <h1 class="main-header">☕ Coffee Advent Calendar 2025</h1>
 
     <div class="calendar-container">
         <div class="calendar" id="calendar-grid">
-            </div>
+        </div>
     </div>
 
     <div class="modal-overlay" id="modal">
@@ -178,7 +253,7 @@
             <div class="modal-date" id="m-date">DEC 01</div>
             <h2 class="modal-title" id="m-title">Coffee Title</h2>
             <p class="modal-desc" id="m-desc">Description...</p>
-            
+
             <div class="ratings">
                 <div class="rating-group">
                     <span class="rating-label" style="color:var(--her-color)">Her Rating</span>
@@ -198,15 +273,15 @@
         */
 
         const calendarData = [
-            { day: 1,  title: "", desc: "", her: "", him: "" },
-            { day: 2,  title: "", desc: "", her: "", him: "" },
-            { day: 3,  title: "", desc: "", her: "", him: "" },
-            { day: 4,  title: "", desc: "", her: "", him: "" },
-            { day: 5,  title: "", desc: "", her: "", him: "" },
-            { day: 6,  title: "", desc: "", her: "", him: "" },
-            { day: 7,  title: "", desc: "", her: "", him: "" },
-            { day: 8,  title: "", desc: "", her: "", him: "" },
-            { day: 9,  title: "", desc: "", her: "", him: "" },
+            { day: 1, title: "dy", desc: "dy", her: "10", him: "10" },
+            { day: 2, title: "", desc: "", her: "", him: "" },
+            { day: 3, title: "", desc: "", her: "", him: "" },
+            { day: 4, title: "", desc: "", her: "", him: "" },
+            { day: 5, title: "", desc: "", her: "", him: "" },
+            { day: 6, title: "", desc: "", her: "", him: "" },
+            { day: 7, title: "", desc: "", her: "", him: "" },
+            { day: 8, title: "", desc: "", her: "", him: "" },
+            { day: 9, title: "", desc: "", her: "", him: "" },
             { day: 10, title: "", desc: "", her: "", him: "" },
             { day: 11, title: "", desc: "", her: "", him: "" },
             { day: 12, title: "", desc: "", her: "", him: "" },
@@ -224,44 +299,45 @@
             { day: 24, title: "", desc: "", her: "", him: "" }
         ];
 
-        // --- JavaScript Logic ---
-
         const grid = document.getElementById('calendar-grid');
         const modal = document.getElementById('modal');
 
-        // Build the grid cards
         calendarData.forEach(item => {
             const card = document.createElement('div');
             card.className = 'day-card';
-            // Just show the number
-            card.innerHTML = `<span class="day-number">${item.day}</span>`;
-            
-            // Click handler to open modal
+
+            // CHECK: Is the day filled out?
+            // If title is not empty, we add the 'filled' class
+            if (item.title && item.title.trim() !== "") {
+                card.classList.add('filled');
+            }
+
+            card.innerHTML = `
+                <span class="day-number">${item.day}</span>
+                <span class="check-mark">✔</span>
+            `;
+
             card.addEventListener('click', () => {
-                // Fill modal with data (or placeholders if empty)
                 document.getElementById('m-date').innerText = `DECEMBER ${item.day}`;
-                document.getElementById('m-title').innerText = item.title || "Not Yet Tasted"; 
-                document.getElementById('m-desc').innerText = item.desc || "Open up the coffee for today and fill in the details!";
+                document.getElementById('m-title').innerText = item.title || "TBD";
+                document.getElementById('m-desc').innerText = item.desc || "Not yet tasted.";
                 document.getElementById('m-her').innerText = item.her || "-";
                 document.getElementById('m-him').innerText = item.him || "-";
-                
-                // Show modal
                 modal.classList.add('open');
             });
 
             grid.appendChild(card);
         });
 
-        // Close functions for the modal
         function closeModal() {
             modal.classList.remove('open');
         }
 
-        // Close if clicking outside the white card
         modal.addEventListener('click', (e) => {
             if (e.target === modal) closeModal();
         });
 
     </script>
 </body>
+
 </html>
