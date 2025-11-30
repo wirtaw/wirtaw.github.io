@@ -3,213 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Advent Calendar 2025</title>
+    <title>Advent Coffee Calendar</title>
+    <meta name="description" content="☕ Coffee Advent Calendar">
+    <meta name="keywords" content="advent calendar 2025, coffee">
+
     <style>
         :root {
-            --primary: #8B4513; /* Coffee Brown */
-            --secondary: #D2691E; /* Bronze/Orange */
-            --accent: #2F4F4F; /* Dark Slate Green for contrast */
-            --bg: #F5F5DC; /* Beige/Cream */
-            --card-bg: #fff;
-            --text: #333;
+            /* Colors pulled from the image theme */
+            --accent-color: #c0392b; /* Deep Red */
+            --secondary-color: #276645; /* Forest Green */
+            --cream-text: #fffef0;
+            --dark-text: #2c3e50;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 20px;
+            font-family: 'Georgia', serif; /* Switched to a more festive serif font */
+            background-image: url('https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/website/advent-calendar-2025.png');
+            background-size: cover; /* Covers the whole screen */
+            background-position: center;
+            background-attachment: fixed; /* Background stays put when scrolling */
+            color: var(--cream-text);
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
+        /* Hide the standard H1 header since the image has one illustrated */
+        h1.main-header {
+            display: none;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        p.subtitle {
-            font-style: italic;
-            color: var(--accent);
-        }
-
-        /* Calendar Grid */
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
+        /* Calendar Grid Container */
+        .calendar-container {
+            /* A semi-transparent dark backdrop to make the numbers pop against the busy image */
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px); /* Optional: Adds a frosted glass effect */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 900px;
             width: 100%;
+            margin-top: 10vh; /* Push it down a bit from the top */
         }
 
-        /* The Day Card */
+        .calendar {
+            display: grid;
+            /* Responsive grid: fits as many as possible, min 100px wide */
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+        }
+
         .day-card {
-            background: var(--card-bg);
-            border: 2px solid var(--primary);
-            border-radius: 10px;
-            height: 150px;
+            /* Semi-transparent white boxes */
+            background: rgba(255, 255, 255, 0.15);
+            height: 100px;
+            border-radius: 8px;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
         }
 
         .day-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            background-color: var(--primary);
-        }
-
-        .day-card:hover .day-number {
-            color: white;
+            transform: translateY(-5px) scale(1.05);
+            background: var(--accent-color); /* Turns red on hover */
+            border-color: var(--cream-text);
+            box-shadow: 0 5px 15px rgba(192, 57, 43, 0.6);
         }
 
         .day-number {
             font-size: 3rem;
-            font-weight: bold;
-            color: var(--primary);
-            z-index: 2;
+            font-weight: 700;
+            color: var(--cream-text);
         }
 
-        /* Modal / Popup Styles */
+        /* --- Modal/Popup Styles (Cleaned up) --- */
         .modal-overlay {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); /* Darker overlay */
             justify-content: center;
             align-items: center;
             z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.3s ease;
         }
 
-        .modal-overlay.active {
-            display: flex;
-            opacity: 1;
-        }
+        .modal-overlay.open { display: flex; }
 
-        .modal-content {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 500px;
+        .modal-card {
+            background: #fffef0; /* Cream background for the popup card */
+            color: var(--dark-text);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 400px;
             width: 90%;
             text-align: center;
             position: relative;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            border-top: 10px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            border-top: 8px solid var(--accent-color);
         }
 
         .close-btn {
             position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 24px;
+            top: 15px; right: 20px;
+            font-size: 1.5rem;
             cursor: pointer;
-            color: #aaa;
+            color: #999;
         }
 
-        .modal-day {
-            font-size: 1.2rem;
-            color: var(--secondary);
-            font-weight: bold;
-            margin-bottom: 5px;
+        .modal-date {
             text-transform: uppercase;
+            font-weight: bold;
+            color: var(--secondary-color);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
         }
 
         .modal-title {
-            font-size: 2rem;
-            margin: 10px 0;
-            color: var(--primary);
+            font-size: 1.8rem;
+            margin: 0 0 15px 0;
+            color: var(--accent-color);
         }
 
         .modal-desc {
             font-size: 1.1rem;
             line-height: 1.6;
-            margin-bottom: 25px;
-            color: #555;
+            margin-bottom: 30px;
         }
 
-        /* Ratings Section */
-        .ratings-container {
+        .ratings {
             display: flex;
-            justify-content: space-around;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
+            justify-content: center;
+            gap: 50px;
+            border-top: 2px solid #eee;
+            padding-top: 20px;
         }
 
-        .rating-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .rater-name {
-            font-weight: bold;
-            margin-bottom: 5px;
-            font-size: 0.9rem;
+        .rating-group { display: flex; flex-direction: column; }
+        
+        .rating-label {
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 5px;
+            font-weight: bold;
         }
 
-        .score {
-            font-size: 1.5rem;
-            font-weight: 800;
-        }
-
-        .her-score { color: #D2691E; }
-        .him-score { color: #2F4F4F; }
+        .rating-score { font-size: 1.8rem; font-weight: 800; }
+        .his-score { color: var(--secondary-color); }
+        .her-score { color: var(--accent-color); }
 
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>☕ Coffee Advent Calendar</h1>
-        <p class="subtitle">A tasting journey for two. Click a day to reveal the brew.</p>
-    </header>
+    <h1 class="main-header">Advent Calendar</h1>
 
-    <div class="calendar-grid" id="calendar">
-        </div>
+    <div class="calendar-container">
+        <div class="calendar" id="calendar-grid">
+            </div>
+    </div>
 
     <div class="modal-overlay" id="modal">
-        <div class="modal-content">
+        <div class="modal-card">
             <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div class="modal-day" id="m-day">Day 1</div>
-            <h2 class="modal-title" id="m-title">Coffee Name</h2>
-            <p class="modal-desc" id="m-desc">Description goes here.</p>
+            <div class="modal-date" id="m-date">DEC 01</div>
+            <h2 class="modal-title" id="m-title">Coffee Title</h2>
+            <p class="modal-desc" id="m-desc">Description...</p>
             
-            <div class="ratings-container">
-                <div class="rating-box">
-                    <span class="rater-name">Lidusik Rating</span>
-                    <span class="score her-score" id="m-her">8/10</span>
+            <div class="ratings">
+                <div class="rating-group">
+                    <span class="rating-label" style="color:var(--her-color)">Her Rating</span>
+                    <span class="rating-score her-score" id="m-her">-</span>
                 </div>
-                <div class="rating-box">
-                    <span class="rater-name">Vovusik Rating</span>
-                    <span class="score him-score" id="m-him">7/10</span>
+                <div class="rating-group">
+                    <span class="rating-label" style="color:var(--his-color)">His Rating</span>
+                    <span class="rating-score his-score" id="m-him">-</span>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // DATA: You can edit the text and ratings here easily
+        /* INSTRUCTIONS: Fill your data inside the quotes "" below.
+           Leave them empty "" to show placeholders in the popup.
+        */
+
         const calendarData = [
             { day: 1,  title: "", desc: "", her: "", him: "" },
             { day: 2,  title: "", desc: "", her: "", him: "" },
@@ -236,43 +223,43 @@
             { day: 23, title: "", desc: "", her: "", him: "" },
             { day: 24, title: "", desc: "", her: "", him: "" }
         ];
-        
 
-        const calendarEl = document.getElementById('calendar');
-        const modalEl = document.getElementById('modal');
+        // --- JavaScript Logic ---
 
-        // Render the Calendar Grid
-        coffeeData.forEach(data => {
+        const grid = document.getElementById('calendar-grid');
+        const modal = document.getElementById('modal');
+
+        // Build the grid cards
+        calendarData.forEach(item => {
             const card = document.createElement('div');
-            card.classList.add('day-card');
-            card.innerHTML = `<span class="day-number">${data.day}</span>`;
+            card.className = 'day-card';
+            // Just show the number
+            card.innerHTML = `<span class="day-number">${item.day}</span>`;
             
-            // Add click event to open modal
-            card.addEventListener('click', () => openModal(data));
-            
-            calendarEl.appendChild(card);
+            // Click handler to open modal
+            card.addEventListener('click', () => {
+                // Fill modal with data (or placeholders if empty)
+                document.getElementById('m-date').innerText = `DECEMBER ${item.day}`;
+                document.getElementById('m-title').innerText = item.title || "Not Yet Tasted"; 
+                document.getElementById('m-desc').innerText = item.desc || "Open up the coffee for today and fill in the details!";
+                document.getElementById('m-her').innerText = item.her || "-";
+                document.getElementById('m-him').innerText = item.him || "-";
+                
+                // Show modal
+                modal.classList.add('open');
+            });
+
+            grid.appendChild(card);
         });
 
-        // Modal Functions
-        function openModal(data) {
-            document.getElementById('m-day').innerText = `December ${data.day}`;
-            document.getElementById('m-title').innerText = data.title;
-            document.getElementById('m-desc').innerText = data.desc;
-            document.getElementById('m-her').innerText = `${data.her}/10`;
-            document.getElementById('m-him').innerText = `${data.him}/10`;
-            
-            modalEl.classList.add('active');
-        }
-
+        // Close functions for the modal
         function closeModal() {
-            modalEl.classList.remove('active');
+            modal.classList.remove('open');
         }
 
-        // Close modal if clicking outside the white box
-        modalEl.addEventListener('click', (e) => {
-            if (e.target === modalEl) {
-                closeModal();
-            }
+        // Close if clicking outside the white card
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
         });
 
     </script>
