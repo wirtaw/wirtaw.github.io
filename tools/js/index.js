@@ -171,6 +171,12 @@ const tools = [
     description: "Get every campaign on the same page with a tool that helps you work better, faster, and based on results.",
     tags: ["utility", "tools", "development", "resources"],
   },
+  {
+    url: 'https://github.com/pahen/madge',
+    title: "Madge",
+    description: "Developer tool for generating a visual graph of your module dependencies, finding circular dependencies, and giving you other useful info",
+    tags: ["utility", "tools", "graph", "dependencies"],
+  }
 ];
 
 const toolsContainer = document.getElementById("tools-container");
