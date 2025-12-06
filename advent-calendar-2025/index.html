@@ -189,14 +189,14 @@
         }
 
         .modal-title {
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin: 0 0 15px 0;
             color: var(--accent-green);
             font-family: "Times New Roman", Times, serif;
         }
 
         .modal-desc {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             line-height: 1.6;
             margin-bottom: 30px;
             font-style: italic;
@@ -268,16 +268,12 @@
     </div>
 
     <script>
-        /* INSTRUCTIONS: Fill your data inside the quotes "" below.
-           Leave them empty "" to show placeholders in the popup.
-        */
-
         const calendarData = [
-            { day: 1, title: "DR CONGO KIVU. Altitude: 1500 m . Process: washed. Roast: dark. Taste palate: marzipane, dried dates, dark chocolate", desc: "The color and smell are normal. Afterwards, the taste is very bitter.", her: "5", him: "4.5" },
-            { day: 2, title: "Nikaragua Maragogype. Altitude: 1200-1500 m . Process: washed. Roast: dark, medium. Taste palate: honey, caramel, spices", desc: "The color and smell are good. Good tasted", her: "8.5", him: "9" },
-            { day: 3, title: "Parallel 12 African coffee bean blend. Altitude: -. Country: Ethiopia, Tanzania. Process: washed. Roast: medium. Taste palate: Berries, fruit, wine, flowers", desc: "The color and smell are good. Good tasted. Strong kind of the coffee", her: "7", him: "8" },
-            { day: 4, title: "Brasil Santa luzia. Altitude: 1200 m . Process: natural. Roast: medium. Taste palate: milk chocolate, caramel, ripe fruit", desc: "The color and smell are good. Prefect tasted", her: "-", him: "9" },
-            { day: 5, title: "Parallel 17. Origin: India and Papua new Guinea. Process: natural. Roast: medium. Taste palate: cacao, cloves, dried fruits", desc: "The color and smell are good. Good tasted. Afterwards, the taste is some bitter", her: "7", him: "8" },
+            { day: 1, title: "Dr Congo Kivu. Altitude: 1500 m Process: washed. Roast: dark. Taste palate: marzipane, dried dates, dark chocolate", desc: "The color and smell are normal. Afterwards, the taste is very bitter.", her: "5", him: "4.5" },
+            { day: 2, title: "Nikaragua Maragogype. Altitude: 1200-1500 m Process: washed. Roast: dark, medium. Taste palate: honey, caramel, spices", desc: "The color and smell are good. Good tasted", her: "8.5", him: "9" },
+            { day: 3, title: "Parallel 12 African coffee bean blend. Altitude: - Country: Ethiopia, Tanzania. Process: washed. Roast: medium. Taste palate: Berries, fruit, wine, flowers", desc: "The color and smell are good. Good tasted. Strong kind of the coffee", her: "7", him: "8" },
+            { day: 4, title: "Brasil Santa luzia. Altitude: 1200 m Process: natural. Roast: medium. Taste palate: milk chocolate, caramel, ripe fruit", desc: "The color and smell are amazing. Prefect tasted", her: "-", him: "9" },
+            { day: 5, title: "Parallel 17. Origin: India and Papua new Guinea. Altitude: - Process: natural. Roast: medium. Taste palate: cacao, cloves, dried fruits", desc: "The color and smell are good. Good tasted. Afterwards, the taste is some bitter. Second cup is amazing.", her: "7", him: "8.5" },
             { day: 6, title: "", desc: "", her: "", him: "" },
             { day: 7, title: "", desc: "", her: "", him: "" },
             { day: 8, title: "", desc: "", her: "", him: "" },
@@ -306,8 +302,6 @@
             const card = document.createElement('div');
             card.className = 'day-card';
 
-            // CHECK: Is the day filled out?
-            // If title is not empty, we add the 'filled' class
             if (item.title && item.title.trim() !== "") {
                 card.classList.add('filled');
             }
