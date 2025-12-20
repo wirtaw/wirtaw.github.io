@@ -1,0 +1,188 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.printPage {
+    max-width: 980px;
+    line-height: var(--print-gs);
+    font-size: var(--print-fs-100);
+    padding: 0 var(--print-gs);
+    color: #191818
+}
+
+.printPage img {
+    filter: brightness(102%) grayscale(10%) saturate(90%);
+    width: 500px;
+}
+
+.printPage .printPageBreak {
+    height: calc(2 * var(--print-gs))
+}
+
+.printPage.option-spacing-days .printPageBreak {
+    page-break-after: always
+}
+
+.printPage .printDayNum,.printPage .printDayText,.printPage .printLocMapName,.printPage .printNodeMarker,.printPage .printTitleLine1 {
+    font-weight: 700
+}
+
+.printPage .printTitleLine1 {
+    padding: calc(3 * var(--print-gs)) 0 calc(2 * var(--print-gs) - var(--print-fs-300));
+    font-size: var(--print-fs-300);
+    line-height: 1.2
+}
+
+.printPage .printTitleLine2 {
+    margin: 0 0 calc(1 * var(--print-gs));
+    font-size: var(--print-fs-50);
+    letter-spacing: 2px
+}
+
+.printPage .printTripPhoto {
+    max-width: 100%;
+    width: auto;
+    max-height: 420px;
+    margin: calc(.7 * var(--print-gs)) 0 calc(1 * var(--print-gs));
+    overflow: hidden;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 0 0;
+    object-position: 0 0
+}
+
+.printPage table {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    color: inherit;
+    border-spacing: 0
+}
+
+.printPage table td {
+    vertical-align: top
+}
+
+.printPage table td.col-1 {
+    width: calc(15% - (3 * var(--print-gs)));
+    padding-right: 3em
+}
+
+.printPage table td.col-2 {
+    width: calc(2 * var(--print-gs));
+    padding-right: 1em
+}
+
+.printPage table td.col-3 {
+    width: 83%
+}
+
+.printPage table .blank {
+    height: var(--print-gs)
+}
+
+.printPage .printNode {
+    margin: 0;
+    padding: 0
+}
+
+.printPage .printDay {
+    height: calc(3.5 * var(--print-gs))
+}
+
+.printPage .printDayNum {
+    margin: calc(2.3 * var(--print-gs)) 0 0;
+    font-size: var(--print-fs-200)
+}
+
+.printPage .printDayLine {
+    height: calc(.5 * var(--print-gs));
+    border-top: 4px solid var(--color-grey-0)
+}
+
+.printPage .printNodeTime {
+    margin: calc(1.8 * var(--print-gs) - var(--print-fs-200)) 0 calc(.2 * var(--print-gs));
+    font-weight: 700;
+    font-size: var(--print-fs-200)
+}
+
+.printPage .printNodeTimeLine2 {
+    font-weight: 700;
+    font-size: var(--print-fs-50)
+}
+
+.printPage .printNodeTo {
+    display: inline-block
+}
+
+.printPage .printNodeMarker {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin: calc(1.8 * var(--print-gs) - var(--print-fs-200)) 0 calc(.2 * var(--print-gs));
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    display: none
+}
+
+.printPage.option-markers-show .printNodeMarker {
+    display: block
+}
+
+.printPage .printNodeName {
+    font-weight: 700;
+    font-size: var(--print-fs-200);
+    margin: calc(1.8 * var(--print-gs) - var(--print-fs-200)) 0 calc(.2 * var(--print-gs))
+}
+
+.printPage .printNodeContact {
+    margin: 0
+}
+
+.printPage a.printNodeWebsite {
+    line-height: var(--print-gs);
+    padding: 0;
+    margin: 0;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-style: normal;
+    color: inherit;
+    -webkit-text-decoration-line: none;
+    -moz-text-decoration-line: none;
+    text-decoration-line: none;
+    background-color: transparent;
+    display: block
+}
+
+.printPage .printNodePhoto {
+    width: 50%;
+    height: calc(10 * var(--print-gs));
+    margin: calc(.6 * var(--print-gs)) 0 calc(1.1198 * var(--print-gs));
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 0 0;
+    object-position: 0 0;
+    display: block
+}
+
+.printPage .printNodeDesc {
+    line-height: var(--print-gs);
+    margin: 0 0 var(--print-gs)
+}
+
+.printPage .printNodeNotes {
+    color: var(--color-grey-2);
+    margin: 0 0 calc(2 * var(--print-gs));
+    padding: 0 0 0 var(--print-gs);
+    border-left: 16px solid var(--color-grey-3)
+}
+
+.printPage .printFooter {
+    margin: calc(.8 * var(--print-fs-100)) 0 calc(2.2 * var(--print-fs-100));
+    padding-top: calc(.4 * var(--print-fs-100));
+    font-size: var(--print-fs-50);
+    color: var(--color-grey-1)
+}
