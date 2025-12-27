@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koło Emocji i Odczuć</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-main: #2d3436;
+            --strach: #a29bfe;
+            --gniew: #fab1a0;
+            --odraza: #55efc4;
+            --smutek: #dfe6e9;
+            --radosc: #ffeaa7;
+            --zdziwienie: #ffadad;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header { text-align: center; margin-bottom: 20px; }
+        .header h1 { font-size: 1.5rem; color: var(--text-main); }
+
+        /* Responsive SVG Container */
+        .wheel-container {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            position: relative;
+        }
+
+        svg { width: 100%; height: auto; transform: rotate(-90deg); }
+
+        .segment {
+            cursor: pointer;
+            transition: opacity 0.3s, stroke 0.3s;
+            stroke: #fff;
+            stroke-width: 1;
+        }
+
+        .segment:hover { opacity: 0.8; stroke: #333; }
+
+        /* Tooltip Style */
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            pointer-events: none;
+            display: none;
+            z-index: 10;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .legend {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .legend-item { display: flex; align-items: center; font-size: 0.9rem; }
+        .dot { width: 15px; height: 15px; border-radius: 50%; margin-right: 8px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Koło Emocji i Ciała</h1>
+    <p>Dotknij sekcji, aby zobaczyć odczucia</p>
+</div>
+
+<div class="wheel-container" id="container">
+    <div id="tooltip" class="tooltip"></div>
+    <svg viewBox="0 0 400 400">
+        <circle cx="200" cy="200" r="45" fill="#fff" stroke="#ccc" />
+        <text x="200" y="200" text-anchor="middle" transform="rotate(90 200 200)" font-size="8" font-weight="bold">
+            EMOCJE I CIAŁO
+        </text>
+
+        <path class="segment" d="M200,200 L200,50 A150,150 0 0,1 330,125 Z" fill="var(--strach)" 
+              data-title="STRACH" data-desc="Panika, lęk, drżenie rąk, napięcie, szerokie źrenice." />
+        
+        <path class="segment" d="M200,200 L330,125 A150,150 0 0,1 330,275 Z" fill="var(--gniew)" 
+              data-title="GNIEW" data-desc="Agresja, frustracja, zaciśnięta szczęka, uderzenia gorąca." />
+
+        <path class="segment" d="M200,200 L330,275 A150,150 0 0,1 200,350 Z" fill="var(--odraza)" 
+              data-title="ODRAZA" data-desc="Wstręt, mdłości, gula w gardle, chęć odwrócenia się." />
+
+        <path class="segment" d="M200,200 L200,350 A150,150 0 0,1 70,275 Z" fill="var(--smutek)" 
+              data-title="SMUTEK" data-desc="Apatia, rozpacz, ciężkość w klatce, łzy, brak energii." />
+
+        <path class="segment" d="M200,200 L70,275 A150,150 0 0,1 70,125 Z" fill="var(--radosc)" 
+              data-title="RADOŚĆ" data-desc="Szczęście, lekkość, uśmiech, motyle w brzuchu." />
+
+        <path class="segment" d="M200,200 L70,125 A150,150 0 0,1 200,50 Z" fill="var(--zdziwienie)" 
+              data-title="ZADZIWIENIE" data-desc="Szok, uniesione brwi, szybki oddech, dreszcze." />
+    </svg>
+</div>
+
+<div class="legend">
+    <div class="legend-item"><span class="dot" style="background:var(--strach)"></span> Strach</div>
+    <div class="legend-item"><span class="dot" style="background:var(--gniew)"></span> Gniew</div>
+    <div class="legend-item"><span class="dot" style="background:var(--odraza)"></span> Odraza</div>
+    <div class="legend-item"><span class="dot" style="background:var(--smutek)"></span> Smutek</div>
+    <div class="legend-item"><span class="dot" style="background:var(--radosc)"></span> Radość</div>
+    <div class="legend-item"><span class="dot" style="background:var(--zdziwienie)"></span> Zdziwienie</div>
+</div>
+
+<script>
+    const segments = document.querySelectorAll('.segment');
+    const tooltip = document.getElementById('tooltip');
+
+    segments.forEach(s => {
+        const showTooltip = (e) => {
+            const title = s.getAttribute('data-title');
+            const desc = s.getAttribute('data-desc');
+            tooltip.innerHTML = `<strong>${title}</strong><br>${desc}`;
+            tooltip.style.display = 'block';
+            
+            // Positioning for mobile: center top
+            tooltip.style.left = '50%';
+            tooltip.style.top = '10%';
+            tooltip.style.transform = 'translateX(-50%)';
+        };
+
+        s.addEventListener('mouseover', showTooltip);
+        s.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            showTooltip(e);
+        });
+
+        s.addEventListener('mouseleave', () => tooltip.style.display = 'none');
+    });
+</script>
+
+</body>
+</html>
