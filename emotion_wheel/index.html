@@ -3,146 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koło Emocji i Odczuć</title>
+    <title>Mapa Emocji - Pobierz</title>
     <style>
         :root {
-            --bg-color: #f8f9fa;
-            --text-main: #2d3436;
-            --strach: #a29bfe;
-            --gniew: #fab1a0;
-            --odraza: #55efc4;
-            --smutek: #dfe6e9;
-            --radosc: #ffeaa7;
-            --zdziwienie: #ffadad;
+            --bg: #f0f2f5;
+            --card: #ffffff;
+            --primary: #2d3436;
+            --strach: #9badd3; --gniew: #f2ccc3; --odraza: #d1e8e2;
+            --smutek: #d8c8d8; --radosc: #f9f7ba; --zdziwienie: #f7d1d1;
+            --wstyd: #e0aaff; --duma: #ffbe0b;
         }
 
         body {
-            margin: 0;
-            padding: 20px;
-            font-family: sans-serif;
-            background-color: var(--bg-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin: 0; padding: 15px; font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg); color: var(--primary);
+            display: flex; flex-direction: column; align-items: center;
         }
 
-        .header { text-align: center; margin-bottom: 20px; }
-        .header h1 { font-size: 1.5rem; color: var(--text-main); }
-
-        /* Responsive SVG Container */
-        .wheel-container {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            position: relative;
+        .container {
+            width: 100%; max-width: 500px; background: var(--card);
+            padding: 20px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center; box-sizing: border-box;
         }
 
-        svg { width: 100%; height: auto; transform: rotate(-90deg); }
+        h1 { font-size: 1.3rem; margin: 0 0 10px 0; }
+        
+        .wheel-wrapper { position: relative; width: 100%; margin: 20px auto; }
+        svg { width: 100%; height: auto; transform: rotate(-90deg); display: block; }
+        
+        .segment { cursor: pointer; transition: all 0.3s ease; stroke: #fff; stroke-width: 1; }
 
-        .segment {
-            cursor: pointer;
-            transition: opacity 0.3s, stroke 0.3s;
-            stroke: #fff;
-            stroke-width: 1;
+        #info-panel {
+            margin: 20px 0; min-height: 80px; padding: 15px;
+            border-radius: 12px; background: #f8f9fa; border: 1px solid #eee;
+            text-align: left;
         }
 
-        .segment:hover { opacity: 0.8; stroke: #333; }
-
-        /* Tooltip Style */
-        .tooltip {
-            position: absolute;
-            background: rgba(0, 0, 0, 0.85);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            pointer-events: none;
-            display: none;
-            z-index: 10;
-            max-width: 200px;
-            text-align: center;
+        .btn-download {
+            background-color: #0984e3; color: white; border: none;
+            padding: 12px 24px; border-radius: 30px; font-weight: bold;
+            cursor: pointer; transition: background 0.3s; width: 100%;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
         }
+        .btn-download:hover { background-color: #74b9ff; }
+        .btn-download:active { transform: scale(0.98); }
 
-        .legend {
-            margin-top: 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            width: 100%;
-            max-width: 400px;
-        }
-        .legend-item { display: flex; align-items: center; font-size: 0.9rem; }
-        .dot { width: 15px; height: 15px; border-radius: 50%; margin-right: 8px; }
+        canvas { display: none; } /* Hidden canvas for conversion */
     </style>
 </head>
 <body>
 
-<div class="header">
-    <h1>Koło Emocji i Ciała</h1>
-    <p>Dotknij sekcji, aby zobaczyć odczucia</p>
-</div>
+<div class="container">
+    <h1>Mapa Emocji i Ciała</h1>
+    
+    <div class="wheel-wrapper" id="svg-container">
+        <svg id="emotion-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="400" fill="white" /> <circle cx="200" cy="200" r="35" fill="#fff" stroke="#dfe6e9" />
+            <text x="200" y="200" text-anchor="middle" transform="rotate(90 200 200)" font-size="8" font-family="Arial" font-weight="bold">CIAŁO</text>
 
-<div class="wheel-container" id="container">
-    <div id="tooltip" class="tooltip"></div>
-    <svg viewBox="0 0 400 400">
-        <circle cx="200" cy="200" r="45" fill="#fff" stroke="#ccc" />
-        <text x="200" y="200" text-anchor="middle" transform="rotate(90 200 200)" font-size="8" font-weight="bold">
-            EMOCJE I CIAŁO
-        </text>
+            <path class="segment" d="M200,200 L200,100 A100,100 0 0,1 270,128 Z" fill="#9badd3" 
+                  data-name="Strach" data-body="Zimne dłonie, drżenie, szybkie bicie serca." />
+            
+            <path class="segment" d="M200,200 L270,128 A100,100 0 0,1 300,200 Z" fill="#f2ccc3" 
+                  data-name="Gniew" data-body="Uderzenia gorąca, napięte mięśnie karku." />
 
-        <path class="segment" d="M200,200 L200,50 A150,150 0 0,1 330,125 Z" fill="var(--strach)" 
-              data-title="STRACH" data-desc="Panika, lęk, drżenie rąk, napięcie, szerokie źrenice." />
-        
-        <path class="segment" d="M200,200 L330,125 A150,150 0 0,1 330,275 Z" fill="var(--gniew)" 
-              data-title="GNIEW" data-desc="Agresja, frustracja, zaciśnięta szczęka, uderzenia gorąca." />
+            <path class="segment" d="M200,200 L300,200 A100,100 0 0,1 270,272 Z" fill="#e0aaff" 
+                  data-name="Wstyd" data-body="Pieczenie policzków, unikanie wzroku." />
 
-        <path class="segment" d="M200,200 L330,275 A150,150 0 0,1 200,350 Z" fill="var(--odraza)" 
-              data-title="ODRAZA" data-desc="Wstręt, mdłości, gula w gardle, chęć odwrócenia się." />
+            <path class="segment" d="M200,200 L270,272 A100,100 0 0,1 200,300 Z" fill="#d1e8e2" 
+                  data-name="Odraza" data-body="Mdłości, gula w gardle, dreszcze." />
 
-        <path class="segment" d="M200,200 L200,350 A150,150 0 0,1 70,275 Z" fill="var(--smutek)" 
-              data-title="SMUTEK" data-desc="Apatia, rozpacz, ciężkość w klatce, łzy, brak energii." />
+            <path class="segment" d="M200,200 L200,300 A100,100 0 0,1 130,272 Z" fill="#d8c8d8" 
+                  data-name="Smutek" data-body="Ciężkość w klatce, pieczenie oczu, łzy." />
 
-        <path class="segment" d="M200,200 L70,275 A150,150 0 0,1 70,125 Z" fill="var(--radosc)" 
-              data-title="RADOŚĆ" data-desc="Szczęście, lekkość, uśmiech, motyle w brzuchu." />
+            <path class="segment" d="M200,200 L130,272 A100,100 0 0,1 100,200 Z" fill="#ffeaa7" 
+                  data-name="Duma" data-body="Prosta postawa, ciepło w piersiach." />
 
-        <path class="segment" d="M200,200 L70,125 A150,150 0 0,1 200,50 Z" fill="var(--zdziwienie)" 
-              data-title="ZADZIWIENIE" data-desc="Szok, uniesione brwi, szybki oddech, dreszcze." />
-    </svg>
-</div>
+            <path class="segment" d="M200,200 L100,200 A100,100 0 0,1 130,128 Z" fill="#f9f7ba" 
+                  data-name="Radość" data-body="Lekkość, motyle w brzuchu, uśmiech." />
 
-<div class="legend">
-    <div class="legend-item"><span class="dot" style="background:var(--strach)"></span> Strach</div>
-    <div class="legend-item"><span class="dot" style="background:var(--gniew)"></span> Gniew</div>
-    <div class="legend-item"><span class="dot" style="background:var(--odraza)"></span> Odraza</div>
-    <div class="legend-item"><span class="dot" style="background:var(--smutek)"></span> Smutek</div>
-    <div class="legend-item"><span class="dot" style="background:var(--radosc)"></span> Radość</div>
-    <div class="legend-item"><span class="dot" style="background:var(--zdziwienie)"></span> Zdziwienie</div>
+            <path class="segment" d="M200,200 L130,128 A100,100 0 0,1 200,100 Z" fill="#f7d1d1" 
+                  data-name="Zdziwienie" data-body="Uniesione brwi, wstrzymany oddech." />
+        </svg>
+    </div>
+
+    <div id="info-panel">
+        <h3 id="info-title" style="margin:0">Dotknij segmentu</h3>
+        <p id="info-body" style="margin:5px 0 0 0">Zainspiruj się reakcjami swojego ciała.</p>
+    </div>
+
+    <button class="btn-download" id="download-btn">
+        <span>💾</span> Pobierz jako obraz (PNG)
+    </button>
+    
+    <canvas id="export-canvas" width="800" height="800"></canvas>
 </div>
 
 <script>
+    const svg = document.getElementById('emotion-svg');
     const segments = document.querySelectorAll('.segment');
-    const tooltip = document.getElementById('tooltip');
+    const panel = document.getElementById('info-panel');
+    const title = document.getElementById('info-title');
+    const body = document.getElementById('info-body');
+    const downloadBtn = document.getElementById('download-btn');
 
+    // Interactive logic
     segments.forEach(s => {
-        const showTooltip = (e) => {
-            const title = s.getAttribute('data-title');
-            const desc = s.getAttribute('data-desc');
-            tooltip.innerHTML = `<strong>${title}</strong><br>${desc}`;
-            tooltip.style.display = 'block';
-            
-            // Positioning for mobile: center top
-            tooltip.style.left = '50%';
-            tooltip.style.top = '10%';
-            tooltip.style.transform = 'translateX(-50%)';
+        const update = () => {
+            title.innerText = s.getAttribute('data-name');
+            body.innerText = s.getAttribute('data-body');
+            panel.style.borderLeft = `5px solid ${s.getAttribute('fill')}`;
         };
+        s.addEventListener('mouseenter', update);
+        s.addEventListener('touchstart', (e) => { e.preventDefault(); update(); });
+    });
 
-        s.addEventListener('mouseover', showTooltip);
-        s.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-            showTooltip(e);
-        });
-
-        s.addEventListener('mouseleave', () => tooltip.style.display = 'none');
+    // Download logic
+    downloadBtn.addEventListener('click', () => {
+        const canvas = document.getElementById('export-canvas');
+        const ctx = canvas.getContext('2d');
+        const svgData = new XMLSerializer().serializeToString(svg);
+        const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+        const url = URL.createObjectURL(svgBlob);
+        
+        const img = new Image();
+        img.onload = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0, 800, 800);
+            URL.revokeObjectURL(url);
+            
+            const pngUrl = canvas.toDataURL('image/png');
+            const downloadLink = document.createElement('a');
+            downloadLink.href = pngUrl;
+            downloadLink.download = 'kolo-emocji.png';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        };
+        img.src = url;
     });
 </script>
 
