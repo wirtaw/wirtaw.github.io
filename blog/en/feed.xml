@@ -12,8 +12,7 @@
       <item>
         <title>Fixing JNLP `libnsl.so.1` Error on Fedora Linux</title>
         <link>https://wirtaw.github.io/blog/en/blog/fedora-jnlp-libnsl-fix/</link>
-        <description>&lt;h1&gt;Resolving &lt;code&gt;libnsl.so.1&lt;/code&gt; Error for JNLP Applications on Fedora&lt;/h1&gt;
-&lt;p&gt;When attempting to launch Java Web Start (JNLP) applications on recent Fedora Linux installations, experienced users may encounter a &lt;code&gt;javaws&lt;/code&gt; execution error similar to:&lt;/p&gt;
+        <description>&lt;p&gt;When attempting to launch Java Web Start (JNLP) applications on recent Fedora Linux installations, experienced users may encounter a &lt;code&gt;javaws&lt;/code&gt; execution error similar to:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;javaws: error while loading shared libraries: libnsl.so.1: cannot open shared object file: No such file or directory
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This issue typically arises because the &lt;code&gt;libnsl&lt;/code&gt; (Network Services Library) package, while crucial for some legacy Java applications or specific JDK components, is no longer a default dependency or is deprecated in its traditional form on modern Linux distributions like Fedora. Consequently, a clean JDK installation might not include this library by default.&lt;/p&gt;
@@ -76,35 +75,6 @@ Some things are simply none of your business.&lt;/p&gt;
     
     
     
-      
-      <item>
-        <title>How to Stop Comparing Yourself to Others and Find Your Own Path: Philosophical Reflections on the Meaning of Life</title>
-        <link>https://wirtaw.github.io/blog/en/blog/stop-comparing-find-your-path/</link>
-        <description>&lt;h1&gt;Comparison with Others: How to Find Your Path and the Meaning of Life&lt;/h1&gt;
-&lt;p&gt;Comparing ourselves to others is a habit instilled in us from early childhood. We learn to see ourselves through the eyes of others, to be the object of someone’s assessment, to strive to meet external expectations. This is how a meaningless race begins, in which we lose ourselves.&lt;/p&gt;
-&lt;p&gt;But it’s worth asking: is there a final goal in this race? Can we truly find fulfillment by trying to catch up to others’ successes, changing ourselves according to someone else’s standards?&lt;/p&gt;
-&lt;p&gt;We are rarely taught to follow the path of our own soul, to seek the unique within ourselves, to be in agreement with ourselves. How often do we allow the external world to become our guide, forgetting that true freedom is not the right to be like everyone else, but the right to be oneself?&lt;/p&gt;
-&lt;p&gt;Victory can only be called genuine when it is the result of an internal choice, a response from the heart, a movement of our own will. Only by stepping beyond imposed stereotypes can we begin to live our real life, and not just play a social role.&lt;/p&gt;
-&lt;p&gt;Everything else is just an attempt to stay afloat on the surface of familiar scenarios, never allowing ourselves the question: “Who am I, really?”&lt;/p&gt;
-&lt;p&gt;If you want to move closer to your essence, try taking a step:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Live from the inside out, not the outside in.&lt;/li&gt;
-&lt;li&gt;Allow yourself to be responsible for your feelings and decisions.&lt;/li&gt;
-&lt;li&gt;Give up comparison and competition—choose exploration and acceptance.&lt;/li&gt;
-&lt;li&gt;Don’t explain yourself to the world—the world needs your presence, not your report.&lt;/li&gt;
-&lt;li&gt;Work thoughtfully, not by exhausting yourself.&lt;/li&gt;
-&lt;li&gt;Awaken your creative power; allow it to lead.&lt;/li&gt;
-&lt;li&gt;Fill every action with meaning and attention.&lt;/li&gt;
-&lt;li&gt;Allow yourself to create the meaning of your life—don’t look for a ready-made one, but give birth to your own.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 31 Oct 2025 21:10:49 +0000</pubDate>
-        <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/stop-comparing-find-your-path/</guid>
-      </item>
-      
-    
-    
     
     
     
@@ -115,8 +85,7 @@ Some things are simply none of your business.&lt;/p&gt;
       <item>
         <title>9 Behavioral Signs of Truly Promising People</title>
         <link>https://wirtaw.github.io/blog/en/blog/9-behavioral-signs-of-truly-promising-people/</link>
-        <description>&lt;h1&gt;9 Behavioral Signs of Truly Promising People&lt;/h1&gt;
-&lt;p&gt;The importance of your &lt;strong&gt;social circle&lt;/strong&gt; is obvious. However, how to find &lt;strong&gt;valuable&lt;/strong&gt; or &lt;strong&gt;promising people&lt;/strong&gt; is an open question. Here is a selection of telling behavioral signs.&lt;/p&gt;
+        <description>&lt;p&gt;The importance of your &lt;strong&gt;social circle&lt;/strong&gt; is obvious. However, how to find &lt;strong&gt;valuable&lt;/strong&gt; or &lt;strong&gt;promising people&lt;/strong&gt; is an open question. Here is a selection of telling behavioral signs.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;They are not dragged down by their environment or desires.&lt;/strong&gt; They are independent and know how to decline, reasonably adhering to their priorities.&lt;/p&gt;
@@ -200,8 +169,7 @@ Some things are simply none of your business.&lt;/p&gt;
       <item>
         <title>Helpful Fedora Resources: Manage Your Linux System with Ease</title>
         <link>https://wirtaw.github.io/blog/en/blog/list-fedora-useful-links/</link>
-        <description>&lt;h1&gt;Helpful Resources to Manage Fedora Linux&lt;/h1&gt;
-&lt;p&gt;Welcome to our comprehensive collection of helpful resources designed to make managing your Fedora Linux system straightforward and efficient. Whether you’re a new user looking for installation guidance or an experienced administrator seeking advanced tips, this page offers a curated selection of articles, tutorials, and tools. Dive in to learn how to master package management, configure your desktop, troubleshoot common issues, and unlock the full potential of your Fedora workstation or server. We aim to equip you with the knowledge and resources necessary to confidently navigate and optimize your Fedora experience.&lt;/p&gt;
+        <description>&lt;p&gt;Welcome to our comprehensive collection of helpful resources designed to make managing your Fedora Linux system straightforward and efficient. Whether you’re a new user looking for installation guidance or an experienced administrator seeking advanced tips, this page offers a curated selection of articles, tutorials, and tools. Dive in to learn how to master package management, configure your desktop, troubleshoot common issues, and unlock the full potential of your Fedora workstation or server. We aim to equip you with the knowledge and resources necessary to confidently navigate and optimize your Fedora experience.&lt;/p&gt;
 &lt;p&gt;List of the Fedora links:&lt;/p&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
@@ -220,8 +188,7 @@ Some things are simply none of your business.&lt;/p&gt;
       <item>
         <title>Fix Fedora &quot;Transaction Failed&quot; Updates: Beginner&#39;s Guide</title>
         <link>https://wirtaw.github.io/blog/en/blog/fix-dnf-transaction-failed/</link>
-        <description>&lt;h1&gt;Revised Guide: Resolving “Transaction failed: Rpm transaction failed” on Fedora Updates&lt;/h1&gt;
-&lt;p&gt;So, you’re updating your Fedora Linux system, and suddenly, DNF throws a “Transaction failed” error, specifically mentioning file conflicts like those pesky VLC plugins. Don’t sweat it! This article is your friendly guide to understanding and fixing these common update problems, even if you’re new to Linux.&lt;/p&gt;
+        <description>&lt;p&gt;So, you’re updating your Fedora Linux system, and suddenly, DNF throws a “Transaction failed” error, specifically mentioning file conflicts like those pesky VLC plugins. Don’t sweat it! This article is your friendly guide to understanding and fixing these common update problems, even if you’re new to Linux.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Problem:&lt;/strong&gt;  Your Fedora update failed with a message similar to:&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;Transaction failed&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Rpm transaction failed&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
  &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; file &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;usr&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;lib64&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;vlc&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;plugins&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;codec&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;libfaad_plugin&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;so from install &lt;span class=&quot;token keyword&quot;&gt;of&lt;/span&gt; vlc&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;plugins&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;base&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3.0&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.21&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fc41&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;x86_64 conflicts &lt;span class=&quot;token keyword&quot;&gt;with&lt;/span&gt; file from &lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; vlc&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;plugins&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;freeworld&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3.0&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;.21&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;fc41&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;x86_64&lt;/code&gt;&lt;/pre&gt;
@@ -311,112 +278,6 @@ Some things are simply none of your business.&lt;/p&gt;
       
     
     
-      
-      <item>
-        <title>Implementing Web Speech API: Advanced Text-to-Speech with SpeechSynthesisUtterance in JavaScript</title>
-        <link>https://wirtaw.github.io/blog/en/blog/web-speech-api-text-to-speech-javascript/</link>
-        <description>&lt;h1&gt;SpeechSynthesisUtterance: Converting Text to Speech with JavaScript&lt;/h1&gt;
-&lt;p&gt;This article details the process of converting text to speech using the &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API in JavaScript. This robust API provides granular control over the voice, pitch, and rate of synthesized speech, making it an optimal choice for developing accessible web applications and enhancing user engagement.&lt;/p&gt;
-&lt;h2&gt;Introduction: Leveraging the Web Speech API for Text-to-Speech&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API serves as a fundamental component of the Web Speech API, designed to convert textual content into spoken audio within web applications. This API offers comprehensive control over the voice characteristics, including pitch and rate, enabling developers to create accessible and highly engaging user experiences.&lt;/p&gt;
-&lt;h2&gt;Core Functionality: Understanding &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; object represents a speech request and is the primary interface for configuring synthesized speech. Its constructor accepts a string, which is the text to be spoken.&lt;/p&gt;
-&lt;pre class=&quot;language-javascript&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; utterance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;SpeechSynthesisUtterance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Text to be spoken.&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Key properties of the &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; object allow for granular control over the output:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;text&lt;/code&gt;: The string of text that the &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; will synthesize.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;lang:&lt;/code&gt; The language of the utterance, specified as a BCP 47 language tag (e.g., &lt;code&gt;en-US&lt;/code&gt;, &lt;code&gt;es-ES&lt;/code&gt;).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;voice&lt;/code&gt;: A &lt;code&gt;SpeechSynthesisVoice&lt;/code&gt; object that defines the voice to be used. If not specified, the browser will use its default voice.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;pitch&lt;/code&gt;: The pitch of the voice. A value between 0 (lowest) and 2 (highest), with 1 being the default.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;rate&lt;/code&gt;: The speed at which the utterance is spoken. A value between 0.1 (slowest) and 10 (fastest), with 1 being the default.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;volume&lt;/code&gt;: The volume of the utterance. A value between 0 (silent) and 1 (loudest), with 1 being the default.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Speech operations are managed by the window.speechSynthesis interface, which provides methods such as speak(), pause(), resume(), and cancel().&lt;/p&gt;
-&lt;h2&gt;Practical Implementation: Basic Text-to-Speech&lt;/h2&gt;
-&lt;p&gt;The following example illustrates a basic implementation of the SpeechSynthesisUtterance API to synthesize the text ‘Hello, world!’ into spoken audio:
-JavaScript&lt;/p&gt;
-&lt;pre class=&quot;language-javascript&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; utterance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;SpeechSynthesisUtterance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Hello, world!&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-utterance&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pitch &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1.5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Sets the pitch to 1.5 (range 0 to 2)&lt;/span&gt;
-utterance&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;rate &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1.2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Sets the speech rate to 1.2 (range 0.1 to 10)&lt;/span&gt;
-
-window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthesis&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;speak&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;utterance&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;For comprehensive documentation regarding the SpeechSynthesisUtterance API, consult the official MDN Web Docs: &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Managing Voices: Asynchronous Loading and Selection&lt;/h2&gt;
-&lt;p&gt;In recent Chrome versions, the window.speechSynthesis.getVoices() method may initially return an empty array upon page load. This behavior occurs because Chrome asynchronously fetches the list of available voices from its servers. To ensure voices are populated prior to text synthesis, it is imperative to implement a callback mechanism that awaits the completion of voice loading. The following code snippet demonstrates this approach:&lt;/p&gt;
-&lt;pre class=&quot;language-javascript&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthesis&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;onvoiceschanged&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; voices &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthesis&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getVoices&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Available voices loaded:&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; voices&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;token comment&quot;&gt;// Example: Selecting a specific voice&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;// const desiredVoice = voices.find(voice =&gt; voice.name === &#39;Google US English&#39;);&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;// if (desiredVoice) {&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;//   utterance.voice = desiredVoice;&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;// }&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This code snippet utilizes the &lt;code&gt;onvoiceschanged&lt;/code&gt; event to ensure the &lt;code&gt;voices&lt;/code&gt; array is populated before attempting to access or select a specific voice for text-to-speech operations. The &lt;code&gt;voices&lt;/code&gt; array can then be iterated to identify and assign the desired voice to the &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; instance.&lt;/p&gt;
-&lt;h2&gt;Advanced Use Cases and Considerations&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API facilitates a wide range of advanced web application features:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Accessibility Enhancements:&lt;/strong&gt; The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API can be leveraged to provide auditory feedback for user interactions, guiding users through intricate processes or conveying critical notifications, thereby enhancing accessibility for individuals with visual impairments or cognitive disabilities.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Interactive User Interfaces:&lt;/strong&gt; Implement voice-controlled interfaces, enabling users to navigate web pages, select options, and execute commands through spoken input, fostering a hands-free or alternative interaction paradigm.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Educational Platform Integration:&lt;/strong&gt; Convert static, text-based educational content into dynamic audio lectures, thereby broadening accessibility and diversifying learning modalities for various demographics.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Personalized User Experiences:&lt;/strong&gt; Customize the vocal characteristics and stylistic attributes of the synthesized speech to align with specific brand identities or user preferences, thereby creating highly differentiated and engaging web applications.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;Browser Compatibility and Asynchronous Voice Loading&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API is widely supported across modern web browsers. Below is an overview of its compatibility status:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Chrome: Fully supported from version 4 and up.&lt;/li&gt;
-&lt;li&gt;Firefox: Fully supported from version 2 and up.&lt;/li&gt;
-&lt;li&gt;Safari: Fully supported from version 3.1 and up.&lt;/li&gt;
-&lt;li&gt;Edge: Fully supported from version 12 and up.&lt;/li&gt;
-&lt;li&gt;Opera: Fully supported from version 10 and up.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Note on Voice Consistency:&lt;/strong&gt; It is important for developers to be aware that the availability and quality of synthesized voices can vary significantly across different browsers and operating systems. This necessitates robust testing across target environments and potentially offering users a selection of available voices within the application.&lt;/p&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API provides a powerful and flexible mechanism for integrating text-to-speech capabilities into web applications. By mastering its core functionalities and understanding key considerations such as asynchronous voice loading, developers can create more accessible, interactive, and engaging user experiences. Its broad browser support further solidifies its position as a valuable tool in modern web development.&lt;/p&gt;
-&lt;h2&gt;Resources: Demos and Further Reading:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Live Demo:&lt;/strong&gt; &lt;a href=&quot;https://wirtaw.github.io/speech_synthesis/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://wirtaw.github.io/speech_synthesis/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;MDN Web Speech API Synthesis Examples:&lt;/strong&gt; &lt;a href=&quot;https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Smashing Magazine Article:&lt;/strong&gt; &lt;a href=&quot;https://www.smashingmagazine.com/2017/02/experimenting-with-speechsynthesis/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://www.smashingmagazine.com/2017/02/experimenting-with-speechsynthesis/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;GitHub Repository Example:&lt;/strong&gt; &lt;a href=&quot;https://github.com/Drunkula/twitchtoolsglitch&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;github.com/Drunkula/twitchtoolsglitch&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 30 Jun 2025 12:00:00 +0000</pubDate>
-        <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/web-speech-api-text-to-speech-javascript/</guid>
-      </item>
-      
-    
-    
     
     
     
@@ -427,8 +288,7 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
       <item>
         <title>Helpful Resources to Learn JavaScript on GitHub</title>
         <link>https://wirtaw.github.io/blog/en/blog/list-js-useful-links/</link>
-        <description>&lt;h1&gt;Helpful Resources to Learn JavaScript on GitHub&lt;/h1&gt;
-&lt;p&gt;Welcome to me curated list of excellent GitHub repositories that can help you learn JavaScript, from the very basics to advanced concepts. GitHub is a treasure trove of learning materials, code examples, and interactive projects.&lt;/p&gt;
+        <description>&lt;p&gt;Welcome to me curated list of excellent GitHub repositories that can help you learn JavaScript, from the very basics to advanced concepts. GitHub is a treasure trove of learning materials, code examples, and interactive projects.&lt;/p&gt;
 &lt;p&gt;List of the JavaScript links:&lt;/p&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
@@ -460,8 +320,7 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
       <item>
         <title>Unmasking Neuroticism: 5 Traps to Recognize in Yourself &amp; Others</title>
         <link>https://wirtaw.github.io/blog/en/blog/understanding-the-5-traps-of-neuroticism/</link>
-        <description>&lt;h1&gt;The Invisible Chains: Understanding the 5 Traps of Neuroticism&lt;/h1&gt;
-&lt;p&gt;Have you ever felt a persistent unease, a gnawing feeling that something isn’t quite right, even when outwardly everything seems fine? Or perhaps you’ve observed patterns in others that just don’t add up? It’s possible you’re encountering the subtle, yet powerful, influence of neuroticism.&lt;/p&gt;
+        <description>&lt;p&gt;Have you ever felt a persistent unease, a gnawing feeling that something isn’t quite right, even when outwardly everything seems fine? Or perhaps you’ve observed patterns in others that just don’t add up? It’s possible you’re encountering the subtle, yet powerful, influence of neuroticism.&lt;/p&gt;
 &lt;p&gt;Neuroticism, at its core, is often a consequence of unresolved inner conflicts. It’s a complex psychological landscape where our internal struggles project outwards, sometimes twisting our perceptions and interactions in unexpected ways. Today, we’re going to explore five common “traps” that individuals prone to neurotic patterns often fall into, and crucially, how to recognize them in yourself or those around you.&lt;/p&gt;
 &lt;h2&gt;1. The Claim to Love: When Connection Becomes a Crutch&lt;/h2&gt;
 &lt;p&gt;We all seek love and connection, but for a neurotic individual, the very definition of love can become distorted. What might be labeled as “love” is often something else entirely – a desperate need, a parasitic reliance, or a desire for possession.&lt;/p&gt;
@@ -561,8 +420,7 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
       <item>
         <title>Cynical Truths: Uncomfortable Realities About Life and Relationships</title>
         <link>https://wirtaw.github.io/blog/en/blog/cynical-truths/</link>
-        <description>&lt;h1&gt;11 Cynical Truths That Will Make You Rethink Everything&lt;/h1&gt;
-&lt;picture&gt;
+        <description>&lt;picture&gt;
           &lt;source type=&quot;image/webp&quot; srcset=&quot;https://wirtaw.github.io/blog/img/cynical-truths-600w.webp 600w, https://wirtaw.github.io/blog/img/cynical-truths-900w.webp 900w&quot; sizes=&quot;(min-width: 1024px) 100vw, 50vw&quot; /&gt;
   &lt;source type=&quot;image/jpeg&quot; srcset=&quot;https://wirtaw.github.io/blog/img/cynical-truths-600w.jpeg 600w, https://wirtaw.github.io/blog/img/cynical-truths-900w.jpeg 900w&quot; sizes=&quot;(min-width: 1024px) 100vw, 50vw&quot; /&gt;
         &lt;img src=&quot;https://wirtaw.github.io/blog/img/cynical-truths-600w.jpeg&quot; width=&quot;900&quot; height=&quot;900&quot; alt=&quot;Uncomfortable Realities About Life and Relationships&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;
@@ -670,8 +528,7 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
       <item>
         <title>The Unshakeable Truth? Embracing Justification&#39;s Limits in the Face of Münchhausen</title>
         <link>https://wirtaw.github.io/blog/en/blog/unshakeable-truth-munchhausen-justification-limits/</link>
-        <description>&lt;h1&gt;The Unshakeable Truth? Embracing Justification’s Limits in the Face of Münchhausen&lt;/h1&gt;
-&lt;p&gt;Dive into the profound challenge of &lt;a href=&quot;https://en.wikipedia.org/wiki/M%C3%BCnchhausen_trilemma&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;the Münchhausen Trilemma&lt;/a&gt; and explore how we can find robust understanding even when faced with the limits of justification. This post unpacks the infinite regress, circular reasoning, and dogmatism, offering insights into practical ways to build knowledge and make decisions when absolute certainty remains elusive. Discover how embracing epistemological humility can lead to more resilient beliefs and a clearer path forward.&lt;/p&gt;
+        <description>&lt;p&gt;Dive into the profound challenge of &lt;a href=&quot;https://en.wikipedia.org/wiki/M%C3%BCnchhausen_trilemma&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;the Münchhausen Trilemma&lt;/a&gt; and explore how we can find robust understanding even when faced with the limits of justification. This post unpacks the infinite regress, circular reasoning, and dogmatism, offering insights into practical ways to build knowledge and make decisions when absolute certainty remains elusive. Discover how embracing epistemological humility can lead to more resilient beliefs and a clearer path forward.&lt;/p&gt;
 &lt;h2&gt;Examples&lt;/h2&gt;
 &lt;p&gt;Here are some clear, relatable examples for each part of the Münchhausen Trilemma:&lt;/p&gt;
 &lt;ul&gt;
@@ -793,6 +650,139 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
         <pubDate>Sun, 11 May 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
         <guid>https://wirtaw.github.io/blog/en/blog/stop-wishing-start-doing-stoic/</guid>
+      </item>
+      
+    
+    
+      
+      <item>
+        <title>How to Stop Comparing Yourself to Others and Find Your Own Path: Philosophical Reflections on the Meaning of Life</title>
+        <link>https://wirtaw.github.io/blog/en/blog/stop-comparing-find-your-path/</link>
+        <description>&lt;p&gt;Comparing ourselves to others is a habit instilled in us from early childhood. We learn to see ourselves through the eyes of others, to be the object of someone’s assessment, to strive to meet external expectations. This is how a meaningless race begins, in which we lose ourselves.&lt;/p&gt;
+&lt;p&gt;But it’s worth asking: is there a final goal in this race? Can we truly find fulfillment by trying to catch up to others’ successes, changing ourselves according to someone else’s standards?&lt;/p&gt;
+&lt;p&gt;We are rarely taught to follow the path of our own soul, to seek the unique within ourselves, to be in agreement with ourselves. How often do we allow the external world to become our guide, forgetting that true freedom is not the right to be like everyone else, but the right to be oneself?&lt;/p&gt;
+&lt;p&gt;Victory can only be called genuine when it is the result of an internal choice, a response from the heart, a movement of our own will. Only by stepping beyond imposed stereotypes can we begin to live our real life, and not just play a social role.&lt;/p&gt;
+&lt;p&gt;Everything else is just an attempt to stay afloat on the surface of familiar scenarios, never allowing ourselves the question: “Who am I, really?”&lt;/p&gt;
+&lt;p&gt;If you want to move closer to your essence, try taking a step:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Live from the inside out, not the outside in.&lt;/li&gt;
+&lt;li&gt;Allow yourself to be responsible for your feelings and decisions.&lt;/li&gt;
+&lt;li&gt;Give up comparison and competition—choose exploration and acceptance.&lt;/li&gt;
+&lt;li&gt;Don’t explain yourself to the world—the world needs your presence, not your report.&lt;/li&gt;
+&lt;li&gt;Work thoughtfully, not by exhausting yourself.&lt;/li&gt;
+&lt;li&gt;Awaken your creative power; allow it to lead.&lt;/li&gt;
+&lt;li&gt;Fill every action with meaning and attention.&lt;/li&gt;
+&lt;li&gt;Allow yourself to create the meaning of your life—don’t look for a ready-made one, but give birth to your own.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 30 Dec 2024 21:10:49 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/en/blog/stop-comparing-find-your-path/</guid>
+      </item>
+      
+    
+    
+      
+      <item>
+        <title>Implementing Web Speech API: Advanced Text-to-Speech with SpeechSynthesisUtterance in JavaScript</title>
+        <link>https://wirtaw.github.io/blog/en/blog/web-speech-api-text-to-speech-javascript/</link>
+        <description>&lt;p&gt;This article details the process of converting text to speech using the &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API in JavaScript. This robust API provides granular control over the voice, pitch, and rate of synthesized speech, making it an optimal choice for developing accessible web applications and enhancing user engagement.&lt;/p&gt;
+&lt;h2&gt;Introduction: Leveraging the Web Speech API for Text-to-Speech&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API serves as a fundamental component of the Web Speech API, designed to convert textual content into spoken audio within web applications. This API offers comprehensive control over the voice characteristics, including pitch and rate, enabling developers to create accessible and highly engaging user experiences.&lt;/p&gt;
+&lt;h2&gt;Core Functionality: Understanding &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; object represents a speech request and is the primary interface for configuring synthesized speech. Its constructor accepts a string, which is the text to be spoken.&lt;/p&gt;
+&lt;pre class=&quot;language-javascript&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; utterance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;SpeechSynthesisUtterance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Text to be spoken.&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Key properties of the &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; object allow for granular control over the output:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;text&lt;/code&gt;: The string of text that the &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; will synthesize.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;lang:&lt;/code&gt; The language of the utterance, specified as a BCP 47 language tag (e.g., &lt;code&gt;en-US&lt;/code&gt;, &lt;code&gt;es-ES&lt;/code&gt;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;voice&lt;/code&gt;: A &lt;code&gt;SpeechSynthesisVoice&lt;/code&gt; object that defines the voice to be used. If not specified, the browser will use its default voice.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;pitch&lt;/code&gt;: The pitch of the voice. A value between 0 (lowest) and 2 (highest), with 1 being the default.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;rate&lt;/code&gt;: The speed at which the utterance is spoken. A value between 0.1 (slowest) and 10 (fastest), with 1 being the default.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;volume&lt;/code&gt;: The volume of the utterance. A value between 0 (silent) and 1 (loudest), with 1 being the default.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Speech operations are managed by the window.speechSynthesis interface, which provides methods such as speak(), pause(), resume(), and cancel().&lt;/p&gt;
+&lt;h2&gt;Practical Implementation: Basic Text-to-Speech&lt;/h2&gt;
+&lt;p&gt;The following example illustrates a basic implementation of the SpeechSynthesisUtterance API to synthesize the text ‘Hello, world!’ into spoken audio:
+JavaScript&lt;/p&gt;
+&lt;pre class=&quot;language-javascript&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; utterance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;SpeechSynthesisUtterance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Hello, world!&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+utterance&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pitch &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1.5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Sets the pitch to 1.5 (range 0 to 2)&lt;/span&gt;
+utterance&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;rate &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1.2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Sets the speech rate to 1.2 (range 0.1 to 10)&lt;/span&gt;
+
+window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthesis&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;speak&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;utterance&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For comprehensive documentation regarding the SpeechSynthesisUtterance API, consult the official MDN Web Docs: &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Managing Voices: Asynchronous Loading and Selection&lt;/h2&gt;
+&lt;p&gt;In recent Chrome versions, the window.speechSynthesis.getVoices() method may initially return an empty array upon page load. This behavior occurs because Chrome asynchronously fetches the list of available voices from its servers. To ensure voices are populated prior to text synthesis, it is imperative to implement a callback mechanism that awaits the completion of voice loading. The following code snippet demonstrates this approach:&lt;/p&gt;
+&lt;pre class=&quot;language-javascript&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthesis&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;onvoiceschanged&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; voices &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthesis&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getVoices&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Available voices loaded:&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; voices&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// Example: Selecting a specific voice&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// const desiredVoice = voices.find(voice =&gt; voice.name === &#39;Google US English&#39;);&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// if (desiredVoice) {&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;//   utterance.voice = desiredVoice;&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// }&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This code snippet utilizes the &lt;code&gt;onvoiceschanged&lt;/code&gt; event to ensure the &lt;code&gt;voices&lt;/code&gt; array is populated before attempting to access or select a specific voice for text-to-speech operations. The &lt;code&gt;voices&lt;/code&gt; array can then be iterated to identify and assign the desired voice to the &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; instance.&lt;/p&gt;
+&lt;h2&gt;Advanced Use Cases and Considerations&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API facilitates a wide range of advanced web application features:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Accessibility Enhancements:&lt;/strong&gt; The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API can be leveraged to provide auditory feedback for user interactions, guiding users through intricate processes or conveying critical notifications, thereby enhancing accessibility for individuals with visual impairments or cognitive disabilities.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Interactive User Interfaces:&lt;/strong&gt; Implement voice-controlled interfaces, enabling users to navigate web pages, select options, and execute commands through spoken input, fostering a hands-free or alternative interaction paradigm.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Educational Platform Integration:&lt;/strong&gt; Convert static, text-based educational content into dynamic audio lectures, thereby broadening accessibility and diversifying learning modalities for various demographics.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Personalized User Experiences:&lt;/strong&gt; Customize the vocal characteristics and stylistic attributes of the synthesized speech to align with specific brand identities or user preferences, thereby creating highly differentiated and engaging web applications.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Browser Compatibility and Asynchronous Voice Loading&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API is widely supported across modern web browsers. Below is an overview of its compatibility status:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chrome: Fully supported from version 4 and up.&lt;/li&gt;
+&lt;li&gt;Firefox: Fully supported from version 2 and up.&lt;/li&gt;
+&lt;li&gt;Safari: Fully supported from version 3.1 and up.&lt;/li&gt;
+&lt;li&gt;Edge: Fully supported from version 12 and up.&lt;/li&gt;
+&lt;li&gt;Opera: Fully supported from version 10 and up.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note on Voice Consistency:&lt;/strong&gt; It is important for developers to be aware that the availability and quality of synthesized voices can vary significantly across different browsers and operating systems. This necessitates robust testing across target environments and potentially offering users a selection of available voices within the application.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API provides a powerful and flexible mechanism for integrating text-to-speech capabilities into web applications. By mastering its core functionalities and understanding key considerations such as asynchronous voice loading, developers can create more accessible, interactive, and engaging user experiences. Its broad browser support further solidifies its position as a valuable tool in modern web development.&lt;/p&gt;
+&lt;h2&gt;Resources: Demos and Further Reading:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Live Demo:&lt;/strong&gt; &lt;a href=&quot;https://wirtaw.github.io/speech_synthesis/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://wirtaw.github.io/speech_synthesis/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MDN Web Speech API Synthesis Examples:&lt;/strong&gt; &lt;a href=&quot;https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Smashing Magazine Article:&lt;/strong&gt; &lt;a href=&quot;https://www.smashingmagazine.com/2017/02/experimenting-with-speechsynthesis/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;https://www.smashingmagazine.com/2017/02/experimenting-with-speechsynthesis/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;GitHub Repository Example:&lt;/strong&gt; &lt;a href=&quot;https://github.com/Drunkula/twitchtoolsglitch&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;github.com/Drunkula/twitchtoolsglitch&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 30 Dec 2024 12:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/en/blog/web-speech-api-text-to-speech-javascript/</guid>
       </item>
       
     
