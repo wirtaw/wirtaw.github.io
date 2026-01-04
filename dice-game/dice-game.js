@@ -10,7 +10,8 @@ class DiceGame extends LitElement {
     currentRound: { type: Number },
     maxRounds: { type: Number },
     isRolling: { type: Boolean },
-    gameOver: { type: Boolean }
+    gameOver: { type: Boolean },
+    history: { type: Array }
   };
 
   constructor() {
@@ -28,6 +29,11 @@ class DiceGame extends LitElement {
     this.maxRounds = 5;
     this.isRolling = false;
     this.gameOver = false;
+    this.loadHistory();
+  }
+
+  loadHistory() {
+    this.history = JSON.parse(localStorage.getItem('game-history') || '[]');
   }
 
   createRenderRoot() { return this; }
@@ -183,11 +189,7 @@ class DiceGame extends LitElement {
           </div>
         ` : html`
           <div class="flex justify-center gap-2 mb-8">
-            ${this.dice.map(val => html`
-              <div class="w-12 h-12 flex items-center justify-center bg-indigo-600 text-white text-xl font-bold rounded-lg shadow-lg ${this.isRolling ? 'animate-bounce' : ''}">
-                ${val}
-              </div>
-            `)}
+            ${this.dice.map(val => this.renderDie(val))}
           </div>
           
           <div class="mb-6">
@@ -207,12 +209,59 @@ class DiceGame extends LitElement {
     `;
   }
 
+  renderDie(value) {
+    // 9-cell grid mapping (3x3). 1 = dot, 0 = empty.
+    const patterns = {
+      1: [0,0,0, 0,1,0, 0,0,0],
+      2: [1,0,0, 0,0,0, 0,0,1],
+      3: [1,0,0, 0,1,0, 0,0,1],
+      4: [1,0,1, 0,0,0, 1,0,1],
+      5: [1,0,1, 0,1,0, 1,0,1],
+      6: [1,0,1, 1,0,1, 1,0,1]
+    };
+
+    const cells = patterns[value] || patterns[1];
+
+    return html`
+      <div class="w-16 h-16 bg-white rounded-xl shadow-lg border-2 border-slate-200 grid grid-cols-3 grid-rows-3 p-2 gap-0.5 ${this.isRolling ? 'animate-bounce' : ''}">
+        ${cells.map(hasDot => html`
+          <div class="w-full h-full flex items-center justify-center">
+            ${hasDot ? html`<div class="w-2.5 h-2.5 bg-indigo-600 rounded-full shadow-sm"></div>` : ''}
+          </div>
+        `)}
+      </div>
+    `;
+  }
+
+  renderHistory() {
+    if (!this.history || this.history.length === 0) return '';
+    return html`
+      <div class="mb-6 p-4 bg-slate-50 rounded-xl border border-slate-100">
+        <h3 class="text-xs font-bold text-slate-400 uppercase mb-3">Match History</h3>
+        <div class="space-y-2">
+          ${this.history.slice().reverse().map(game => html`
+            <div class="flex justify-between items-center text-xs border-b border-slate-200 pb-2 last:border-0 last:pb-0">
+              <div>
+                <span class="font-bold text-slate-600">${game.winner}</span>
+                <span class="text-slate-400 block text-[10px]">${game.date}</span>
+              </div>
+              <div class="text-right">
+                ${game.scores.map(s => html`<div class="text-slate-500">${s}</div>`)}
+              </div>
+            </div>
+          `)}
+        </div>
+      </div>
+    `;
+  }
+
   render() {
     return html`
       <div class="bg-white p-8 rounded-[2rem] shadow-2xl max-w-sm w-full border border-slate-100">
         ${this.view === 'menu' ? html`
           <div class="space-y-4">
             <h1 class="text-5xl font-black text-indigo-600 italic">GREED</h1>
+            ${this.renderHistory()}
             <button @click="${() => this.view = 'setup'}" class="w-full py-4 bg-indigo-600 text-white rounded-xl font-bold shadow-lg">New Match</button>
             <button @click="${() => this.view = 'rules'}" class="w-full py-3 bg-slate-100 text-slate-600 rounded-xl font-semibold">Rules</button>
           </div>
@@ -221,8 +270,28 @@ class DiceGame extends LitElement {
         ${this.view === 'game' ? this.renderGame() : ''}
         ${this.view === 'rules' ? html`
            <div class="text-left">
-             <h2 class="text-xl font-bold mb-4">Quick Rules</h2>
-             <p class="text-sm text-slate-600 mb-6">Roll 5 dice. Triples and 1s/5s give points. Highest score after all rounds wins!</p>
+             <h2 class="text-xl font-bold mb-4">Scoring Rules</h2>
+             <div class="space-y-3 text-sm text-slate-600 mb-6 overflow-y-auto max-h-64 pr-2">
+               <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+                 <strong class="block text-indigo-600 mb-1">Single Dice</strong>
+                 <div class="flex justify-between"><span>⚀ One</span> <span class="font-bold">100 pts</span></div>
+                 <div class="flex justify-between"><span>⚄ Five</span> <span class="font-bold">50 pts</span></div>
+               </div>
+               
+               <div class="p-3 bg-indigo-50 rounded-lg border border-indigo-100">
+                 <strong class="block text-indigo-600 mb-1">Three of a Kind</strong>
+                 <div class="flex justify-between"><span>⚀⚀⚀ Ones</span> <span class="font-bold">1000 pts</span></div>
+                 <div class="flex justify-between"><span>⚅⚅⚅ Sixes</span> <span class="font-bold">600 pts</span></div>
+                 <div class="flex justify-between"><span>⚄⚄⚄ Fives</span> <span class="font-bold">500 pts</span></div>
+                 <div class="flex justify-between"><span>⚃⚃⚃ Fours</span> <span class="font-bold">400 pts</span></div>
+                 <div class="flex justify-between"><span>⚂⚂⚂ Threes</span> <span class="font-bold">300 pts</span></div>
+                 <div class="flex justify-between"><span>⚁⚁⚁ Twos</span> <span class="font-bold">200 pts</span></div>
+               </div>
+
+               <p class="text-xs text-slate-400 italic mt-2">
+                 * Points accumulate. E.g., four 1s = 1000 (trip) + 100 (single) = 1100 pts.
+               </p>
+             </div>
              <button @click="${() => this.view = 'menu'}" class="w-full py-3 bg-slate-800 text-white rounded-xl">Back</button>
            </div>
         ` : ''}
