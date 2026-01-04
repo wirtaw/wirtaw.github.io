@@ -1,971 +1,397 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Vladimir Poplavskij personal webpage</title>
-    <meta name="description" content="Senior NodeJS developer Vladimir Poplavskij personal homepage">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords"
-        content="wirtaw, poplauki, poplavskij, backend developer, senior nodejs developer, full stack developer, programmer, software engineer, travel, maps, homepage" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vladimir | Backend Developer</title>
 
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://wirtaw.github.io/sitemap.xml">
-    <link rel="dns-prefetch" href="https://ajax.googleapis.com">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.webp">
-    <!-- Place favicon.ico in the root directory -->
+  <!-- DevIcons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css" />
 
-    <!-- Facebook -->
-    <meta property="og:title" content="Wirtaw">
-    <meta property="og:description" content="Web developer Vladimir Poplavskij Homepage">
-    <meta property="og:image" content="https://wirtaw.github.io/apple-touch-icon.webp">
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://wirtaw.github.io/index.html" />
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="homepage">
-    <meta name="twitter:site" content="@wirtaw">
-    <meta name="twitter:creator" content="@wirtaw">
-    <meta name="twitter:url" content="https://wirtaw.github.io//index.html">
-    <meta name="twitter:title" content="Wirtaw">
-    <meta name="twitter:description" content="Web developer Vladimir Poplavskij Homepage">
-    <meta name="twitter:image" content="https://wirtaw.github.io//apple-touch-icon.webp">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-timeline@2.0.0/dist/bulma-timeline.min.css">
 
-    <!-- Validations -->
-    <meta name='freelancehunt' content='2f46b959c96104b'>
+  <style>
+    html[data-theme="dark"] {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
 
-    <link rel="canonical" href="https://wirtaw.github.io/">
-    <link rel="manifest" href="./manifest.json">
-    <meta name="theme-color" content="#ffffff">
+    html[data-theme="dark"] .box {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
 
-    <style type="text/css">
-        body {
-            font-family: 'Roboto Slab', serif;
-            overflow-x: hidden
-        }
+    .icon-box {
+      font-size: 3rem;
+      margin: 1rem;
+    }
 
-        img.email-image,
-        source.email-image {
-            width: 250px
-        }
-    </style>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Vladimir Poplavskij","jobTitle":"full-stack, backend developer","description":"web-developer from Vilnius","email":"wirtaw@poplauki.eu","url":"https://wirtaw.github.io","gender":"male","givenName":"Poplavskij","nationality":"Lithuania","contactPoint":[{"@type":"ContactPoint","telephone":"+37065013085","contactType":"technical support","areaServed":["LT","EU"]},{"@type":"ContactPoint","telephone":"+38095221691","contactType":"technical support","areaServed":"UA"}]}</script>
-    <link rel="stylesheet" type="text/css" href="./css/personal.css">
+    .dark-toggle,
+    .lang-toggle {
+      position: fixed;
+      top: 1rem;
+      z-index: 1000;
+    }
+
+    .dark-toggle {
+      right: 1rem;
+    }
+
+    .lang-toggle {
+      left: 1rem;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Navigation bar -->
-    <nav class="navbar is-link is-fixed-top">
-        <div class="navbar-brand">
-            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+  <!-- Language Switch -->
+  <div class="lang-toggle">
+    <div class="select is-small">
+      <select id="langSelect">
+        <option value="en">EN</option>
+        <option value="lt">LT</option>
+        <option value="pl">PL</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <div class="dark-toggle">
+    <button id="themeBtn" class="button is-small is-dark">🌙</button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero is-dark is-bold" data-aos="fade-down">
+    <div class="hero-body has-text-centered">
+      <h1 class="title" id="hero-title"></h1>
+      <h2 class="subtitle" id="hero-subtitle"></h2>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="title is-3" id="about-title"></h2>
+      <p id="about-text"></p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="title is-3" id="projects-title"></h2>
+
+      <div class="box" data-aos="zoom-in">
+        <h3 class="title is-5" id="proj1-title"></h3>
+        <p id="proj1-text"></p>
+        <a href="https://migrane-tracker-dashboard.sliplane.app" target="_blank" id="proj1-link"></a>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+        <h3 class="title is-5" id="proj2-title"></h3>
+        <p id="proj2-text"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="title is-3" id="portfolio-title">Portfolio</h2>
+
+      <div class="columns is-multiline">
+
+        <div class="column is-one-third" data-aos="zoom-in">
+          <div class="box">
+            <h3 class="title is-5">Migraine Tracker App</h3>
+            <p>Full-stack NestJS + React application with OAuth, encryption, weather integrations.</p>
+            <a href="https://migrane-tracker-dashboard.sliplane.app" target="_blank">Open project</a>
+          </div>
         </div>
 
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
-            <div class="navbar-end">
-                <a class="navbar-item" href="#about">
-                    <span class="icon">
-                        <i class="fas fa-info"></i>
-                    </span>
-                    <span>About</span>
-                </a>
-                <a class="navbar-item" href="#services">
-                    <span class="icon">
-                        <i class="fas fa-bars"></i>
-                    </span>
-                    <span>Services</span>
-                </a>
-                <a class="navbar-item" href="#resume">
-                    <span class="icon">
-                        <i class="fas fa-file-alt"></i>
-                    </span>
-                    <span>Resume</span>
-                </a>
-                <a class="navbar-item" href="#portfolio">
-                    <span class="icon">
-                        <i class="fas fa-th-list"></i>
-                    </span>
-                    <span>Portfolio</span>
-                </a>
-                <a class="navbar-item" href="#contact">
-                    <span class="icon">
-                        <i class="fas fa-envelope"></i>
-                    </span>
-                    <span>Contact</span>
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Header -->
-    <section class="hero is-link is-fullheight is-fullheight-with-navbar">
-        <div class="hero-body">
-            <div class="container">Hello! I am
-                <h1 class="title is-1">
-                    Vladimir Poplavskij
-                </h1>
-                <h2 class="subtitle is-3">
-                    Backend Developer
-                </h2>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section class="section" id="about">
-        <!-- Title -->
-        <div class="section-heading">
-            <h3 class="title is-2">About Me</h3>
-            <h4 class="subtitle is-5">Jack of all trades, master of "some"</h4>
-            <div class="container">
-                <p>A seasoned Senior Backend Developer hailing from Lithuania, I bring a wealth of experience and a
-                    proven track record of excellence to every project.
-                    My expertise spans a diverse tech stack, including JavaScript, NodeJS, and various database
-                    technologies.
-                    I excel in crafting robust backend solutions, seamlessly integrating third-party and internal
-                    services, and optimizing database performance.
-                    With a keen eye for detail, I specialize in maintaining high-performance production services and
-                    enhancing system observability.
-                    My proficiency in Linux environments and CSS further complements my backend prowess, allowing me to
-                    deliver comprehensive and efficient solutions.
-                    Committed to continuous improvement and innovation, I leverage my skills to drive technological
-                    advancement and create impactful, scalable applications.</p>
-            </div>
+        <div class="column is-one-third" data-aos="zoom-in">
+          <div class="box">
+            <h3 class="title is-5">IoT Temperature Sensor</h3>
+            <p>Arduino Uno + temperature sensor → secure API ingestion → dashboard visualization.</p>
+          </div>
         </div>
 
-        <div class="columns has-same-height is-gapless">
-            <div class="column">
-                <!-- Profile -->
-                <div class="card">
-                    <div class="card-content">
-                        <h3 class="title is-4">Profile</h3>
-
-                        <div class="content">
-                            <table class="table-profile">
-                                <tr>
-                                    <th colspan="1"></th>
-                                    <th colspan="2"></th>
-                                </tr>
-                                <tr>
-                                    <td>Address:</td>
-                                    <td>Vilnius, Lithuania</td>
-                                </tr>
-                                <tr>
-                                    <td>Blog:</td>
-                                    <td><a href="https://wirtaw.github.io/blog" class="is-link">Blog</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Email:</td>
-                                    <td>
-                                        <picture>
-                                            <source class="email-image" srcset="img/email.svg 2x"
-                                                media="(min-width: 200px)">
-                                            <img class="email-image" srcset="img/email.webp, img/email.webp"
-                                                alt="Contacts - email">
-                                        </picture>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <br>
-                        <div class="buttons has-addons is-centered">
-                            <a href="https://github.com/wirtaw" target="_blank" class="button is-link m-2">GitHub</a>
-                            <a href="https://bitbucket.org/wirtaw/" target="_blank"
-                                class="button is-link m-2">bitbucket</a>
-                            <a href="https://jsfiddle.net/user/wirtaw/fiddles/" target="_blank"
-                                class="button is-link m-2">personal</a>
-                            <a href="https://codepen.com/wirtaw/" target="_blank" class="button is-link m-2">Codepen</a>
-                            <a href="https://repl.it/@wirtaw" target="_blank" class="button is-link m-2">Repl.it</a>
-                            <a href="https://codewars.com/users/wirtaw" target="_blank"
-                                class="button is-link m-2">Codewars</a>
-                            <a href="https://exercism.io/users/wirtaw" target="_blank"
-                                class="button is-link m-2">Exercism</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <!-- Profile picture -->
-                <div class="card">
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <img src="./img/first-post.webp" image-src="./img/first-post.webp" alt="Placeholder image">
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <!-- Skills -->
-                <div class="card">
-                    <div class="card-content skills-content">
-                        <h3 class="title is-4">Skills</h3>
-                        <div class="content">
-
-                            <article class="media">
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>JavaScript:</strong>
-                                            <br>
-                                            <progress class="progress is-primary" value="90" max="100"></progress>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="media">
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Node.js:</strong>
-                                            <br>
-                                            <progress class="progress is-primary" value="90" max="100"></progress>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="media">
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Databases</strong>
-                                            <br>
-                                            <progress class="progress is-primary" value="80" max="100"></progress>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="media">
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Git</strong>
-                                            <br>
-                                            <progress class="progress is-primary" value="80" max="100"></progress>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="media">
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>HTML5/CSS3</strong>
-                                            <br>
-                                            <progress class="progress is-primary" value="80" max="100"></progress>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="media">
-                                <div class="media-content">
-                                    <div class="content">
-                                        <p>
-                                            <strong>Vue.js:</strong>
-                                            <br>
-                                            <progress class="progress is-primary" value="60" max="100"></progress>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="column is-one-third" data-aos="zoom-in">
+          <div class="box">
+            <h3 class="title is-5">Security Audit Toolkit</h3>
+            <p>OWASP-based audit templates, scripts, and checklists for API security testing.</p>
+          </div>
         </div>
 
-        <!-- Skills tags -->
-        <div class="columns is-gapless">
-            <div class="column">
-                <div class="tags custom-tags" id="skillTagsBlock"></div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="title is-3" id="timeline-title">Career Timeline</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="heading">2024–2025</p>
+            <p>Senior Backend Developer — building secure NestJS monolith, OAuth, integrations.</p>
+          </div>
         </div>
 
-        <div class="columns is-gapless">
-            <div class="column">
-                <div class="has-text-centered">
-                    <blockquote class="badgr-badge"
-                        style="font-family: Helvetica, Roboto, 'Segoe UI', Calibri, sans-serif;"><a
-                            href="https://api.badgr.io/public/assertions/Citb83W6TfWqHeBPGU0g2A"><img width="120px"
-                                height="120px"
-                                src="https://api.badgr.io/public/assertions/Citb83W6TfWqHeBPGU0g2A/image"></a>
-                        <p class="badgr-badge-name"
-                            style="hyphens: auto; overflow-wrap: break-word; word-wrap: break-word; margin: 0; font-size: 16px; font-weight: 600; font-style: normal; font-stretch: normal; line-height: 1.25; letter-spacing: normal; text-align: left; color: #05012c;">
-                            30 days of Postman - for developers</p>
-                        <p class="badgr-badge-date"
-                            style="margin: 0; font-size: 12px; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: normal; text-align: left; color: #555555;">
-                            <strong
-                                style="font-size: 12px; font-weight: bold; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: normal; text-align: left; color: #000;">Awarded:
-                            </strong>Feb 14, 2022
-                        </p>
-                        <p class="badgr-badge-recipient"
-                            style="margin: 0; font-size: 12px; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: normal; text-align: left; color: #555555;">
-                            <strong
-                                style="font-size: 12px; font-weight: bold; font-style: normal; font-stretch: normal; line-height: 1.67; letter-spacing: normal; text-align: left; color: #000;">Awarded
-                                To: </strong><span style="display: block;"> Poplavskij Vladimir</span>
-                        </p>
-                        <p style="margin: 16px 0; padding: 0;"><a class="badgr-badge-verify" target="_blank"
-                                href="https://badgecheck.io?url=https%3A%2F%2Fapi.badgr.io%2Fpublic%2Fassertions%2FCitb83W6TfWqHeBPGU0g2A"
-                                style="box-sizing: content-box; display: flex; align-items: center; justify-content: center; margin: 0; font-size:14px; font-weight: bold; width: 48px; height: 16px; border-radius: 4px; border: solid 1px black; text-decoration: none; padding: 6px 16px; margin: 16px 0; color: black;">VERIFY</a>
-                        </p>
-                        <script async="async" src="https://badgr.com/assets/widgets.bundle.js"></script>
-                    </blockquote>
-                </div>
-            </div>
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="heading">2023–2024</p>
+            <p>Backend Developer — API design, database optimization, observability improvements.</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Services -->
-    <section class="section" id="services">
-        <div class="section-heading">
-            <h3 class="title is-2">Services</h3>
-            <h4 class="subtitle is-5">What can I do for you?</h4>
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <p class="heading">Earlier</p>
+            <p>Software Engineer — full-stack development, system integrations, cloud deployments.</p>
+          </div>
         </div>
-        <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <div class="box">
-                        <div class="content">
-                            <h4 class="title is-5">Node.js Web Scraping Service</h4>
-                            <p>Unlock the power of data with our cutting-edge Node.js Web Scraping Service! I harness
-                                the flexibility and speed of Node.js to scrape, extract, and deliver valuable data from
-                                the web. Whether you need real-time updates, comprehensive market research, or
-                                competitive intelligence, our Node.js experts ensure seamless and efficient extraction.
-                            </p>
 
-                            <b>Key Features:</b><br>
-                            <ul>
-                                <li>🌐 Scalable and Fast: Leverage the asynchronous nature of Node.js for rapid and
-                                    scalable web scraping.</li>
-                                <li>🛠 Custom Solutions: Tailored web scraping solutions to meet your specific data
-                                    requirements.</li>
-                                <li>🛡 Robust Error Handling: Built-in mechanisms to handle errors and ensure data
-                                    accuracy.</li>
-                                <li>📈 Real-time Updates: Stay ahead of the curve with real-time data extraction and
-                                    updates.</li>
-                                <li>🔄 Continuous Monitoring: Set up automated scraping schedules for continuous
-                                    monitoring.</li>
-                            </ul>
+      </div>
+    </div>
+  </section>
 
-                            <b>Technologies I Use:</b>
-                            <ul>
-                                <li>Node.js</li>
-                                <li>Cheerio or Puppeteer for HTML parsing and automation</li>
-                                <li>Express.js for building RESTful APIs</li>
-                                <li>MongoDB for storing and managing scraped data</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="box">
-                        <div class="content">
-                            <h4 class="title is-5">Node.js API CRUD Application</h4>
-                            <p>
-                                Transform your data management with our cutting-edge Node.js API CRUD application
-                                powered by the Express framework. Ideliver robust and scalable solutions to handle
-                                Create, Read, Update, and Delete (CRUD) operations with ease. Whether you're building a
-                                dynamic web application or need a backend system to manage your data, our Node.js
-                                experts have you covered.
-                            </p>
 
-                            <b>
-                                Key Features:
-                            </b>
+  <!-- Blog -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="title is-3" id="blog-title"></h2>
 
-                            <ul>
-                                <li>
-                                    🌐 RESTful Architecture: Our API follows RESTful principles, providing a
-                                    standardized and efficient way to interact with your data.
-                                </li>
-                                <li>
-                                    🚀 Fast and Scalable: Utilizing the power of Node.js, we ensure rapid and scalable
-                                    performance to handle your growing data needs.
-                                </li>
-                                <li>
-                                    🛠 Flexible and Customizable: Tailor the API to your specific requirements. Add new
-                                    endpoints, customize data models, and integrate seamlessly with your existing
-                                    systems.
-                                </li>
-                                <li>
-                                    🛡 Robust Validation: Implement robust data validation to ensure the integrity and
-                                    security of your data.
-                                </li>
-                                <li>
-                                    📈 Real-time Updates: Utilize WebSocket integration for real-time updates, ideal for
-                                    applications that demand instant data synchronization.
-                                </li>
-                            </ul>
+      <div id="blog-list"></div>
+    </div>
+  </section>
 
-                            <b>
-                                Technologies We Use:
-                            </b>
+  <!-- Skills -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="title is-3" id="skills-title"></h2>
 
-                            <ul>
-                                <li>Node.js: Harness the asynchronous nature of Node.js for efficient handling of
-                                    concurrent requests.</li>
-                                <li>Express.js: Build a powerful and flexible API with the widely adopted Express
-                                    framework.</li>
-                                <li>MongoDB or SQL Database: Choose between NoSQL (MongoDB) or SQL databases for
-                                    efficient data storage and retrieval.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="columns">
-                <div class="column">
-                    <div class="box">
-                        <div class="content">
-                            <h4 class="title is-5">Python Web Scraping Service</h4>
-                            <p>Empower your business with our Python Web Scraping Service – your gateway to extracting
-                                valuable insights from the web effortlessly! Using Python's robust ecosystem for web
-                                scraping, providing you with accurate and up-to-date data for informed decision-making.
-                            </p>
-
-                            <b>Key Features:</b>
-                            <ul>
-                                <li>🕸 Versatility: Python's extensive libraries make it easy to scrape data from
-                                    websites, APIs, and more.</li>
-                                <li>🤖 Automation: Utilize tools like BeautifulSoup and Selenium for automated data
-                                    extraction and interaction.</li>
-                                <li>📊 Data Analysis: Seamlessly integrate scraped data with Python's data analysis
-                                    tools for actionable insights.</li>
-                                <li>🛡 Error Handling: Robust error handling mechanisms to ensure data accuracy.</li>
-                                <li>🚀 Scalability: Scale your web scraping operations effortlessly with Python's
-                                    multiprocessing capabilities.</li>
-                            </ul>
-
-                            <b>Technologies We Use:</b>
-                            <ul>
-                                <li>Python (BeautifulSoup, Selenium, Scrapy)</li>
-                                <li>Flask or Django for building web applications or APIs</li>
-                                <li>MongoDB or SQLite for data storage</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="box">
-                        <div class="content">
-                            <h4 class="title is-5">Back End Web Development</h4>
-                            Develop Back End application/service using Node.js or Python and SQL server or Mongo DB
-                            databases.
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="columns is-multiline is-mobile has-text-centered">
+        <div class="column is-one-quarter" data-aos="flip-left">
+          <i class="devicon-typescript-plain icon-box"></i>
+          <p>TypeScript</p>
         </div>
-    </section>
-
-    <!-- Resume -->
-    <section class="section" id="resume">
-        <div class="section-heading">
-            <h3 class="title is-2">Resume</h3>
-            <h4 class="subtitle is-5">More about my past</h4>
-            <a href="https://wirtaw.github.io/Vladimir_Poplavskij_Resume.pdf" class="button is-link is-medium">
-                <span class="icon">
-                    <i class="fas fa-file-alt"></i>
-                </span>
-                <span>Download My Resume</span>
-            </a>
+        <div class="column is-one-quarter" data-aos="flip-left">
+          <i class="devicon-nodejs-plain icon-box"></i>
+          <p>Node.js</p>
         </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="section" id="portfolio">
-        <div class="container">
-            <div class="section-heading">
-                <h3 class="title is-2">Portfolio</h3>
-                <h4 class="subtitle is-5">My latest works</h4>
-            </div>
-            <br>
-
-            <div class="container portfolio-container">
-                <div class="columns">
-                    <div class="column is-4">
-                        <!-- migraine -->
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span> Migraine Tracker Dashboard </span>
-                                    <span class="is-pulled-right">
-                                        <a href="https://migrane-tracker-dashboard.sliplane.app">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-                                <figure class="image">
-                                    <img src="../img/sites/migraine-tracker.webp"
-                                        image-src="../img/sites/migraine-tracker.webp" alt="Migraine Tracker Dashboard">
-                                </figure>
-                                <p>The Migraine Tracker is a specialized health dashboard built to empower users in
-                                    understanding their migraine patterns. Going beyond simple logging, it contextually
-                                    enriches every incident with precise historical weather and geomagnetic data,
-                                    offering a
-                                    holistic view of potential environmental triggers.</p>
-
-                                <h3>Key Features:</h3>
-                                <ul>
-                                    <li>Context-Aware Incident Logging: Automatically syncs incidents with historical
-                                        weather data (temperature, pressure, humidity) and solar relationships (K-Index,
-                                        Solar Flux) to identify environmental correlations.
-                                    </li>
-                                    <li>Comprehensive Data Management: Track detailed metrics including specific
-                                        triggers, symptoms, and medication usage side-by-side with incidents.
-                                    </li>
-                                    <li>Holistic Health Visualization: Features an integrated Biorhythm calculator and
-                                        interactive calendar view to visualize cycles and patterns over time.
-                                    </li>
-                                    <li>Environmental Intelligence: Real-time and historical monitoring of UV alerts,
-                                        Ozone levels, and Solar Flux to warn of potential environmental stressors.
-                                    </li>
-                                    <li>Privacy-First Architecture: Includes secure data handling with JSON
-                                        import/export capabilities, ensuring users own their health data.
-                                    </li>
-                                    <li>Educational Resources: Built-in "Migraine Management Suite" offering
-                                        evidence-based lifestyle recommendations and dietary guides (tyramine-reduced
-                                        diet).</li>
-                                </ul>
-                                <h3>Tech Stack:</h3>
-                                <ul>
-                                    <li>Frontend: React, TypeScript, Tailwind CSS</li>
-                                    <li>Data Visualization: Chart.js, Lucide React</li>
-                                    <li>APIs: OpenMeteo (Weather), Geomagnetic Data Services</li>
-                                    <li>Backend: NestJS</li>
-                                    <li>DataBase: MongoDB</li>
-                                </ul>
-                            </div>
-                            <footer class="card-footer">
-                                <a href="https://migrane-tracker-dashboard.sliplane.app"
-                                    class="card-footer-item">Preview</a>
-                            </footer>
-                        </div>
-                    </div>
-                    <div class="column is-4">
-                        <!-- admin -->
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>Szawl.eu </span>
-                                    <span class="is-pulled-right">
-                                        <a href="https://szawl.eu">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-                                <figure class="image">
-                                    <img src="../img/sites/szawleu.webp" image-src="../img/sites/szawleu.webp"
-                                        alt="Szawl.eu">
-                                </figure>
-                            </div>
-                            <footer class="card-footer">
-                                <a href="https://szawl.eu" class="card-footer-item">Preview</a>
-                            </footer>
-                        </div>
-                    </div>
-                    <div class="column is-4">
-
-                    </div>
-                </div>
-            </div>
+        <div class="column is-one-quarter" data-aos="flip-left">
+          <i class="devicon-nestjs-plain icon-box"></i>
+          <p>NestJS</p>
         </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section" id="projects">
-        <div class="container">
-            <div class="section-heading">
-                <h3 class="title is-2">Projects</h3>
-                <h4 class="subtitle is-5">My latest projects</h4>
-            </div>
-            <br>
-
-            <div class="container portfolio-container">
-                <div class="columns">
-                    <div class="column is-4">
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>Neural Networks</span>
-                                    <span class="is-pulled-right">
-                                        <a href="./neural_networks/index.html">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-                                This interactive single-page application (SPA) demonstrates the power of neural networks
-                                for sports analytics. Using the classic example of predicting baseball player types
-                                (pitcher, catcher, etc.) based on how they throw a ball, we'll compare the performance
-                                and capabilities of several popular JavaScript neural network libraries
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>Fastify API + TypeScript Boilerplate </span>
-                                    <span class="is-pulled-right">
-                                        <a href="https://github.com/wirtaw/fastify-api-typescript-boilerplate">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-                                This project provides a basic Fastify API built with TypeScript. It includes: <br>
-                                <ul>
-                                    <li>Type-safe routing and validation</li>
-                                    <li>Efficient JSON serialization</li>
-                                    <li>Example endpoints (GET, POST) for demonstration</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>A minimal TypeScript boilerplate project with modern ESLint configuration,
-                                        optimized for VSCode and Linux Fedora environments. </span>
-                                    <span class="is-pulled-right">
-                                        <a href="https://github.com/wirtaw/typescript-boilerplate">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-                                This project provides a basic TypeScript Boilerplate. It includes: <br>
-                                <ul>
-                                    <li><b>TypeScript Setup:</b> Pre-configured tsconfig.json for optimal TypeScript
-                                        compilation.</li>
-                                    <li><b>Modern ESLint:</b> Uses eslint.config.mjs with @typescript-eslint/parser and
-                                        @typescript-eslint/eslint-plugin for robust linting.</li>
-                                    <li><b>VSCode Integration:</b> Recommended VSCode settings and extensions for a
-                                        smooth development experience.</li>
-                                    <li><b>Clean Directory Structure:</b> Organized src and dist directories.</li>
-                                    <li><b>Knip tool:</b> Control unused files and packages.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>TensorFlow.js Training in Node.js Codelab </span>
-                                    <span class="is-pulled-right">
-                                        <a href="https://github.com/wirtaw/baseball-tensorflow-pitch-type">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-                                Updated example from <a
-                                    href="https://codelabs.developers.google.com/codelabs/tensorflowjs-nodejs-codelab#0">Codelab</a>.
-                                This helps how to build a Node.js web server to train and classify baseball pitch types
-                                on the server-side using TensorFlow.js, a powerful and flexible machine learning library
-                                for JavaScript.
-                            </div>
-                        </div>
-
-
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>React single page game "Bulls and cows" </span>
-                                    <span class="is-pulled-right">
-                                        <a href="./bulls/index.html">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-4">
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>Vue single page game "Bulls and cows"</span>
-                                    <span class="is-pulled-right">
-                                        <a href="./bulls/index.html">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                        <a href="https://github.com/wirtaw/bulls-and-cows-game">
-                                            <span class="tag is-default">code</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>React single page app "Biorythms"</span>
-                                    <span class="is-pulled-right">
-                                        <a href="https://bio-ncfx.onrender.com">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>Lit Dice Game</span>
-                                    <span class="is-pulled-right">
-                                        <a href="https://wirtaw.github.io/dice-game/">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>Vue single page app "Biorythms"</span>
-                                    <span class="is-pulled-right">
-                                        <a href="./bio_vue/">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>Ice Hockey Player Data</span>
-                                    <span class="is-pulled-right">
-                                        <a href="https://ice-hockey-player-search.onrender.com/search">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-                                A Node.js application to scrape ice hockey player data from various online sources and
-                                parse basic information like position, height, weight, birth date, and hand.
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <p class="card-header-title">
-                                    <span>English-Lithuanian IT Terms Dictionary</span>
-                                    <span class="is-pulled-right">
-                                        <a href="https://wirtaw.github.io/dictionary/">
-                                            <span class="tag is-default">visit</span>
-                                        </a>
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="card-content">
-                                A comprehensive English-Lithuanian IT terms dictionary for developers, students, and
-                                professionals. Find accurate translations for technology terms.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-4">
-
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column is-4">
-
-                    </div>
-                </div>
-            </div>
+        <div class="column is-one-quarter" data-aos="flip-left">
+          <i class="devicon-mongodb-plain icon-box"></i>
+          <p>MongoDB</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="section-heading">
-            <p id="footer">
-                <strong>Poplauki</strong> by <a href="https://wirtaw.github.io">Vladimir Poplavskij</a>.
-            </p>
+        <div class="column is-one-quarter" data-aos="flip-left">
+          <i class="devicon-arduino-plain icon-box"></i>
+          <p>Arduino</p>
         </div>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-    <script src="../js/cookieConsent.js"></script>
-    <script>
-        const skills = [{
-            title: 'JavaScript (12+ years)',
-            icon: 'devicon-javascript-plain',
-            id: 'js'
-        },
-        {
-            title: 'NodeJS (12+ years)',
-            icon: 'devicon-nodejs-plain',
-            id: 'nodejs'
-        },
-        {
-            title: 'VueJS / Vuex (8+ years)',
-            icon: 'devicon-vuejs-plain',
-            id: 'vuejs'
-        },
-        {
-            title: 'Fastify / Express / Koa (10+ years)',
-            icon: 'devicon-fastify-plain',
-            id: 'fastify'
-        },
-        {
-            title: 'TypeScript (8+ years)',
-            icon: 'devicon-typescript-plain',
-            id: 'ts'
-        },
-        {
-            title: 'NestJS (6+ years)',
-            icon: 'devicon-nestjs-plain',
-            id: 'nestjs'
-        },
-        {
-            title: 'Mocha / Jest (6+ years)',
-            icon: 'devicon-mocha-plain',
-            id: 'mocha'
-        },
-        {
-            title: 'MSSQL/T-SQL (10+ years)',
-            icon: 'devicon-microsoftsqlserver-plain',
-            id: 'mssql'
-        },
-        {
-            title: 'MySQL (10+ years)',
-            icon: 'devicon-mysql-plain',
-            id: 'mysql'
-        },
-        {
-            title: 'MongoDB (8+ years)',
-            icon: 'devicon-mongodb-plain',
-            id: 'mongodb'
-        },
-        {
-            title: 'RabbitMQ (7+ years)',
-            icon: 'devicon-rabbitmq-plain',
-            id: 'rabbitmq'
-        },
-        {
-            title: 'Redis (7+ years)',
-            icon: 'devicon-redis-plain',
-            id: 'redis'
-        },
-        {
-            title: 'PostgreSQL (5+ years)',
-            icon: 'devicon-postgresql-plain',
-            id: 'postgresql'
-        },
-        {
-            title: 'GIT (12+ years)',
-            icon: 'devicon-git-plain',
-            id: 'git'
-        },
-        {
-            title: 'Rust (2+ years)',
-            icon: 'devicon-rust-plain',
-            id: 'rust'
-        },
-        {
-            title: 'Python (5+ years)',
-            icon: 'devicon-python-plain',
-            id: 'python'
-        },
-        {
-            title: 'Ruby (3+ years)',
-            icon: 'devicon-ruby-plain',
-            id: 'ruby'
-        },
-        {
-            title: 'QT (2+ years)',
-            icon: 'devicon-qt-plain',
-            id: 'qt'
-        },
-        {
-            title: 'C (5+ years)',
-            icon: 'devicon-c-plain',
-            id: 'c'
-        }];
-        WebFont.load({
-            google: {
-                families: ['Roboto Slab']
-            }
-        });
+        <div class="column is-one-quarter" data-aos="flip-left">
+          <i class="devicon-linux-plain icon-box"></i>
+          <p>Linux</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        (function () {
-            const footer = document.getElementById('footer');
-            if ('undefined' !== typeof footer) {
-                const date = new Date();
-                footer.innerHTML = '&copy; Poplauki <a href="https://wirtaw.github.io/">Vladimir Poplavskij</a> ' + date.getFullYear() + '.';
-            }
-            const burger = document.querySelector('.burger');
-            const menu = document.querySelector('#' + burger.dataset.target);
-            burger.addEventListener('click', function () {
-                burger.classList.toggle('is-active');
-                menu.classList.toggle('is-active');
-            });
+  <!-- Contact -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="title is-3" id="contact-title"></h2>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:float45@gmail.com">float45@gmail.com</a>
+      </p>
 
-            const skillTagsBlock = document.getElementById('skillTagsBlock');
-            if (skillTagsBlock) {
-                for (const skill of skills) {
-                    const { title, icon, id } = skill;
+      <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/wirtaw/" target="_blank">
+          linkedin.com/in/wirtaw
+        </a>
+      </p>
 
-                    const span = document.createElement('span');
-                    const tagId = `skill-tag-${id}`;
+      <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/wirtaw" target="_blank">
+          github.com/wirtaw
+        </a>
+      </p>
+    </div>
+  </section>
 
-                    span.classList.add('tag', 'is-light');
-                    span.setAttribute('id', tagId);
-                    span.innerHTML = `<i class="${icon} colored mr-2"></i>${title}`;
-                    skillTagsBlock.appendChild(span);
-                }
-            }
-        }());
-    </script>
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init()</script>
+
+  <!-- Translations -->
+  <script>
+    const translations = {
+      en: {
+        heroTitle: "Vladimir",
+        heroSubtitle: "Senior Backend Developer • Security Explorer • IoT Hobbyist",
+        aboutTitle: "About Me",
+        aboutText: "I am a backend developer from Lithuania specializing in TypeScript, NestJS, and API architecture.",
+        projectsTitle: "Projects",
+        proj1Title: "Migraine Tracker App",
+        proj1Text: "NestJS monolith + React dashboard with OAuth, encryption, weather integrations.",
+        proj1Link: "Open App",
+        proj2Title: "IoT Temperature Sensor",
+        proj2Text: "Arduino Uno + temperature sensor → secure API ingestion → visualization.",
+        blogTitle: "Blog",
+        blog: [
+          {
+            title: "OWASP in practice — auditing my NestJS monolith",
+            text: "How I performed a security audit of my own backend.",
+            link: "/blog/owasp-audit"
+          },
+          {
+            title: "Arduino + API — my first IoT prototype",
+            text: "Connecting a temperature sensor to a backend.",
+            link: "/blog/arduino-iot"
+          }
+        ],
+        skillsTitle: "Skills",
+        contactTitle: "Contact"
+      },
+
+      lt: {
+        heroTitle: "Vladimir",
+        heroSubtitle: "Vyresnysis Backend programuotojas • Saugumo entuziastas • IoT kūrėjas",
+        aboutTitle: "Apie mane",
+        aboutText: "Esu backend programuotojas iš Lietuvos, dirbantis su TypeScript, NestJS ir API architektūra.",
+        projectsTitle: "Projektai",
+        proj1Title: "Migrenos sekimo aplikacija",
+        proj1Text: "NestJS monolitas + React prietaisų skydelis su OAuth ir šifravimu.",
+        proj1Link: "Atidaryti",
+        proj2Title: "IoT temperatūros jutiklis",
+        proj2Text: "Arduino Uno + temperatūros jutiklis → saugus API duomenų siuntimas.",
+        blogTitle: "Blogas",
+
+        blog: [
+          {
+            title: "OWASP praktikoje — mano NestJS monolito auditas",
+            text: "Kaip atlikau saugumo auditą savo backendui.",
+            link: "/blog/owasp-auditas"
+          }
+        ],
+
+        skillsTitle: "Įgūdžiai",
+        contactTitle: "Kontaktai"
+      },
+
+      pl: {
+        heroTitle: "Vladimir",
+        heroSubtitle: "Senior Backend Developer • Entuzjasta bezpieczeństwa • IoT Hobbyist",
+        aboutTitle: "O mnie",
+        aboutText: "Jestem backend developerem z Litwy, specjalizującym się w TypeScript, NestJS i architekturze API.",
+        projectsTitle: "Projekty",
+        proj1Title: "Migraine Tracker App",
+        proj1Text: "Monolit NestJS + React dashboard z OAuth i szyfrowaniem.",
+        proj1Link: "Otwórz",
+        proj2Title: "IoT Temperature Sensor",
+        proj2Text: "Arduino Uno + czujnik temperatury → bezpieczne przesyłanie danych.",
+        blogTitle: "Blog",
+        blog: [
+          {
+            title: "OWASP w praktyce — audyt mojego NestJS monolitu",
+            text: "Jak przeprowadziłem audyt bezpieczeństwa backendu.",
+            link: "/blog/owasp-audyt"
+          },
+          {
+            title: "Arduino + API — mój pierwszy IoT prototyp",
+            text: "Jak połączyłem czujnik temperatury z API.",
+            link: "/blog/arduino-iot"
+          }
+        ],
+        skillsTitle: "Umiejętności",
+        contactTitle: "Kontakt"
+      }
+    };
+
+    function applyLang(lang) {
+      const t = translations[lang];
+      document.getElementById("hero-title").textContent = t.heroTitle;
+      document.getElementById("hero-subtitle").textContent = t.heroSubtitle;
+      document.getElementById("about-title").textContent = t.aboutTitle;
+      document.getElementById("about-text").textContent = t.aboutText;
+      document.getElementById("projects-title").textContent = t.projectsTitle;
+      document.getElementById("proj1-title").textContent = t.proj1Title;
+      document.getElementById("proj1-text").textContent = t.proj1Text;
+      document.getElementById("proj1-link").textContent = t.proj1Link;
+      document.getElementById("proj2-title").textContent = t.proj2Title;
+      document.getElementById("proj2-text").textContent = t.proj2Text;
+      document.getElementById("blog-title").textContent = t.blogTitle;
+      document.getElementById("skills-title").textContent = t.skillsTitle;
+      document.getElementById("contact-title").textContent = t.contactTitle;
+
+      // BLOG LIST
+      const blogContainer = document.getElementById("blog-list");
+      blogContainer.innerHTML = ""; // clear old items
+
+      t.blog.forEach(post => {
+        const box = document.createElement("div");
+        box.className = "box";
+        box.setAttribute("data-aos", "fade-right");
+
+        box.innerHTML = `
+          <h3 class="title is-5">${post.title}</h3>
+          <p>${post.text}</p>
+          <a href="${post.link}" target="_blank">Read more</a>
+        `;
+
+        blogContainer.appendChild(box);
+      });
+    }
+
+    const langSelect = document.getElementById("langSelect");
+    langSelect.addEventListener("change", () => {
+      const lang = langSelect.value;
+      localStorage.setItem("lang", lang);
+      applyLang(lang);
+    });
+
+    const savedLang = localStorage.getItem("lang") || navigator.language.slice(0, 2);
+    const lang = ["en", "lt", "pl"].includes(savedLang) ? savedLang : "en";
+    langSelect.value = lang;
+    applyLang(lang);
+
+    const btn = document.getElementById("themeBtn");
+
+    btn.addEventListener("click", () => {
+      const html = document.documentElement;
+      const current = html.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      html.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      btn.textContent = next === "light" ? "🌙" : "☀️";
+    });
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    btn.textContent = savedTheme === "light" ? "🌙" : "☀️";
+
+  </script>
+
 </body>
 
 </html>
