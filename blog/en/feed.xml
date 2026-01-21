@@ -42,6 +42,55 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
     
     
+      
+      <item>
+        <title>OWASP in practice — auditing my NestJS monolith</title>
+        <link>https://wirtaw.github.io/blog/en/blog/migraine-tracking-nestjs-owasp-audit/</link>
+        <description>&lt;p&gt;Here is base checklist to analyse:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Authentication &amp;amp; Session Management&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;JWT Strategy&lt;/em&gt;: Verify that JwtStrategy correctly extracts the &lt;code&gt;Bearer&lt;/code&gt; token from the request headers and validates the sub (user ID) against your database.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Secret Key Management&lt;/em&gt;: Ensure that &lt;code&gt;JWT_SECRET&lt;/code&gt; and &lt;code&gt;SUPABASE_JWT_SECRET&lt;/code&gt; are not hardcoded but are managed via secure environment variables in your deployment environment.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Token Expiration&lt;/em&gt;: Confirm that JWTs have a reasonable expiration time set in your AuthConfig to minimize the window for token misuse if compromised.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Supabase Integration&lt;/em&gt;: Since you use Supabase for auth, ensure your SupabaseService properly handles the &lt;code&gt;AUTH_CLIENT_OPTIONS&lt;/code&gt; and that the service role key is never exposed to the client.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Authorization (RBAC &amp;amp; Ownership)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;RBAC Guard Logic&lt;/em&gt;: Audit &lt;code&gt;RbacGuard&lt;/code&gt; to ensure it correctly checks both roles and permissions metadata before granting access to controllers.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Ownership Checks&lt;/em&gt;: In &lt;code&gt;IncidentsService&lt;/code&gt;, you have logic to check if a user owns an incident before they can update or delete it. Ensure this “Ownership Guard” pattern is consistently applied across all services (e.g., &lt;code&gt;Symptoms&lt;/code&gt;, &lt;code&gt;Medications&lt;/code&gt;, &lt;code&gt;Triggers&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Public Decorator&lt;/em&gt;: Check all routes marked with &lt;code&gt;@Public()&lt;/code&gt; to ensure they are intended to be accessible without authentication.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Data Protection &amp;amp; Encryption&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Symmetric Encryption&lt;/em&gt;: Your SymmetricKeyService uses &lt;code&gt;aes-256-cbc&lt;/code&gt; for encryption. Verify that:&lt;/p&gt;
+&lt;p&gt;- The &lt;code&gt;ENCRYPTION_KEY&lt;/code&gt; is exactly 32 bytes.&lt;/p&gt;
+&lt;p&gt;- The Initialization Vector (IV) is unique for every encryption operation to prevent pattern matching.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Hashing&lt;/em&gt;: Your IncidentsService uses &lt;code&gt;createHash(&#39;sha256&#39;)&lt;/code&gt;. While SHA-256 is fast, ensure it is being used for data integrity and not for password storage (which Supabase handles).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Exception Filters&lt;/em&gt;: Your &lt;code&gt;AllExceptionsFilter&lt;/code&gt; is designed to catch all errors. Ensure that in production mode, it does not leak internal stack traces or database query details to the end-user.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Input Validation &amp;amp; API Security&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Global Validation Pipe&lt;/em&gt;: Ensure main.ts has &lt;code&gt;app.useGlobalPipes(new ValidationPipe({ whitelist: true }))&lt;/code&gt; enabled to strip any properties from the request body that are not defined in your DTOs.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CORS Configuration&lt;/em&gt;: Review the CORS settings in &lt;code&gt;main.ts&lt;/code&gt;. Ensure that only your dashboard domain (https://migrane-tracker-dashboard.sliplane.app) is allowed in production, rather than using *.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Helmet/Security Headers&lt;/em&gt;: Check if helmet is implemented in main.ts to set security-related HTTP headers (e.g., X-Content-Type-Options, X-Frame-Options).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Infrastructure &amp;amp; Deployment&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Environment Isolation&lt;/em&gt;: Confirm that env/.env.example is the only environment file in your repository and that actual .env files are ignored by git.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Database Connectivity&lt;/em&gt;: Ensure your Mongoose connection uses TLS/SSL when connecting to your production MongoDB instance.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Dependency Audit&lt;/em&gt;: Regularly run pnpm audit to check for known vulnerabilities in your project’s dependencies.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CI/CD Secrets&lt;/em&gt;: Verify that secrets like &lt;code&gt;SLIPLANE_API_KEY&lt;/code&gt; used in your GitHub Actions are stored as encrypted repository secrets and not in plain text.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Wed, 21 Jan 2026 20:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/en/blog/migraine-tracking-nestjs-owasp-audit/</guid>
+      </item>
+      
+    
+    
     
     
     
