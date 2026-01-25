@@ -10,34 +10,46 @@
     
       
       <item>
-        <title>Fixing JNLP `libnsl.so.1` Error on Fedora Linux</title>
-        <link>https://wirtaw.github.io/blog/en/blog/fedora-jnlp-libnsl-fix/</link>
-        <description>&lt;p&gt;When attempting to launch Java Web Start (JNLP) applications on recent Fedora Linux installations, experienced users may encounter a &lt;code&gt;javaws&lt;/code&gt; execution error similar to:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;javaws: error while loading shared libraries: libnsl.so.1: cannot open shared object file: No such file or directory
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This issue typically arises because the &lt;code&gt;libnsl&lt;/code&gt; (Network Services Library) package, while crucial for some legacy Java applications or specific JDK components, is no longer a default dependency or is deprecated in its traditional form on modern Linux distributions like Fedora. Consequently, a clean JDK installation might not include this library by default.&lt;/p&gt;
-&lt;h3&gt;The Solution&lt;/h3&gt;
-&lt;p&gt;The resolution is straightforward: explicitly install the &lt;code&gt;libnsl&lt;/code&gt; package using DNF.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Install &lt;code&gt;libnsl&lt;/code&gt;:&lt;/strong&gt;
-Execute the following command in your terminal:&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; libnsl&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Rerun Your JNLP Application:&lt;/strong&gt;
-After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching your &lt;code&gt;.jnlp&lt;/code&gt; file:&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;javaws start.jnlp&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The application should now execute without the &lt;code&gt;libnsl.so.1&lt;/code&gt; error.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Context and Explanation&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;libnsl&lt;/code&gt; library historically provided an interface for network services, including functionalities related to NIS (Network Information Service). While its direct role has diminished in modern system architectures, certain older applications, or specific implementations within the Java Development Kit (JDK), might still carry dependencies on it. When these applications are invoked on systems where &lt;code&gt;libnsl&lt;/code&gt; is not present, the &lt;code&gt;javaws&lt;/code&gt; binary (part of the JDK) fails to load due to the missing shared object. Manually installing it ensures all necessary dependencies are met for legacy Java Web Start applications to function correctly.&lt;/p&gt;
-&lt;p&gt;This fix is applicable across various Fedora versions where this dependency omission might occur, ensuring smooth operation of JNLP applications for those requiring them.&lt;/p&gt;
+        <title>Modernizing Your TypeScript Project: Migrating from TSLint to ESLint (Flat Config)</title>
+        <link>https://wirtaw.github.io/blog/en/blog/typescript-eslint-flat-config-guide/</link>
+        <description>&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;TSLint has been &lt;a href=&quot;https://www.npmjs.com/package/tslint&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;deprecated&lt;/a&gt; for years, but many legacy projects (and their forks) still rely on it. In this post, I’ll show you how we migrated our repository to ESLint using the modern Flat Configuration, improving both performance and developer experience.&lt;/p&gt;
+&lt;h2&gt;Why Migrate?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Deprecated Stack&lt;/em&gt;: TSLint no longer receives updates.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Improved Performance&lt;/em&gt;: ESLint (especially with Flat Config) is significantly faster.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Modern Ecosystem&lt;/em&gt;: Better compatibility with modern tooling (&lt;code&gt;Prettier&lt;/code&gt;, &lt;code&gt;Jest&lt;/code&gt;, &lt;code&gt;VS Code&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Stricter Type Safety&lt;/em&gt;: Catch common bugs like floating promises and unsafe type assignments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;The Migration Journey&lt;/h2&gt;
+&lt;h3&gt;Step 1: Out with the Old&lt;/h3&gt;
+&lt;p&gt;I started by clearing out the legacy TSLint packages and the &lt;code&gt;tslint.json&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;pnpm&lt;/span&gt; remove tslint tslint-config-prettier
+&lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; tslint.json&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Step 2: In with the New&lt;/h3&gt;
+&lt;p&gt;I installed the core ESLint dependencies and the new &lt;code&gt;typescript-eslint&lt;/code&gt; toolkit.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;pnpm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-D&lt;/span&gt; eslint typescript-eslint globals&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Step 3: Configuring for the Future&lt;/h3&gt;
+&lt;p&gt;The new &lt;code&gt;eslint.config.mjs&lt;/code&gt; setup is much cleaner and more modular. Here’s a snippet of our final configuration: &lt;a href=&quot;https://github.com/wirtaw/fastify-api-typescript-boilerplate/blob/master/eslint.config.mjs&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Step 4: Fixing the Fun Stuff&lt;/h3&gt;
+&lt;p&gt;The migration revealed several hidden issues in our codebase:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Floating Promises&lt;/em&gt;: Discovered several unawaited calls that could cause race conditions.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Type Safety&lt;/em&gt;: Tightened up areas where &lt;code&gt;any&lt;/code&gt; was being used loosely.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[*] &lt;em&gt;Faster linting&lt;/em&gt;: Noticeably faster.&lt;/li&gt;
+&lt;li&gt;[*] &lt;em&gt;Better DX&lt;/em&gt;: Integrated seamlessly with our IDEs.&lt;/li&gt;
+&lt;li&gt;[*] &lt;em&gt;Cleaner Code&lt;/em&gt;: Caught several bugs that TSLint missed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Don’t wait! Migrating to ESLint is an investment in your project’s long-term health. The Flat Config system makes the setup more intuitive than ever.&lt;/p&gt;
+&lt;p&gt;Follow my journey at &lt;a href=&quot;https://github.com/wirtaw/fastify-api-typescript-boilerplate&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Fastify API with TypeScript&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 03 Jul 2026 08:00:00 +0000</pubDate>
+        <pubDate>Sun, 25 Jan 2026 14:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/fedora-jnlp-libnsl-fix/</guid>
+        <guid>https://wirtaw.github.io/blog/en/blog/typescript-eslint-flat-config-guide/</guid>
       </item>
       
     
@@ -214,6 +226,40 @@ Some things are simply none of your business.&lt;/p&gt;
     
     
     
+    
+    
+      
+      <item>
+        <title>Fixing JNLP `libnsl.so.1` Error on Fedora Linux</title>
+        <link>https://wirtaw.github.io/blog/en/blog/fedora-jnlp-libnsl-fix/</link>
+        <description>&lt;p&gt;When attempting to launch Java Web Start (JNLP) applications on recent Fedora Linux installations, experienced users may encounter a &lt;code&gt;javaws&lt;/code&gt; execution error similar to:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;javaws: error while loading shared libraries: libnsl.so.1: cannot open shared object file: No such file or directory
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This issue typically arises because the &lt;code&gt;libnsl&lt;/code&gt; (Network Services Library) package, while crucial for some legacy Java applications or specific JDK components, is no longer a default dependency or is deprecated in its traditional form on modern Linux distributions like Fedora. Consequently, a clean JDK installation might not include this library by default.&lt;/p&gt;
+&lt;h3&gt;The Solution&lt;/h3&gt;
+&lt;p&gt;The resolution is straightforward: explicitly install the &lt;code&gt;libnsl&lt;/code&gt; package using DNF.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Install &lt;code&gt;libnsl&lt;/code&gt;:&lt;/strong&gt;
+Execute the following command in your terminal:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dnf &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; libnsl&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Rerun Your JNLP Application:&lt;/strong&gt;
+After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching your &lt;code&gt;.jnlp&lt;/code&gt; file:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;javaws start.jnlp&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The application should now execute without the &lt;code&gt;libnsl.so.1&lt;/code&gt; error.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Context and Explanation&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;libnsl&lt;/code&gt; library historically provided an interface for network services, including functionalities related to NIS (Network Information Service). While its direct role has diminished in modern system architectures, certain older applications, or specific implementations within the Java Development Kit (JDK), might still carry dependencies on it. When these applications are invoked on systems where &lt;code&gt;libnsl&lt;/code&gt; is not present, the &lt;code&gt;javaws&lt;/code&gt; binary (part of the JDK) fails to load due to the missing shared object. Manually installing it ensures all necessary dependencies are met for legacy Java Web Start applications to function correctly.&lt;/p&gt;
+&lt;p&gt;This fix is applicable across various Fedora versions where this dependency omission might occur, ensuring smooth operation of JNLP applications for those requiring them.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Jul 2025 08:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/en/blog/fedora-jnlp-libnsl-fix/</guid>
+      </item>
+      
     
     
       
