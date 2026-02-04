@@ -176,7 +176,13 @@ const tools = [
     title: "Madge",
     description: "Developer tool for generating a visual graph of your module dependencies, finding circular dependencies, and giving you other useful info",
     tags: ["utility", "tools", "graph", "dependencies"],
-  }
+  },
+  {
+    url: 'https://yamline.com/',
+    title: "Yamline",
+    description: "Yamline is a tool for a powerful and widely-used format, especially for configuration management in platforms like Kubernetes and beyond. Here, you'll find a curated collection of tools tailored to streamline your YAML workflow. While advancements in AI may reduce the need for some of these tools, they will continue to be invaluable to many developers working with YAML",
+    tags: ["utility", "tools", "yaml", "development", "configuration", "kubernetes", "ai", "workflow"],
+  },
 ];
 
 const toolsContainer = document.getElementById("tools-container");
