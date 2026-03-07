@@ -255,6 +255,8 @@
     
     
     
+    
+    
       
       <item>
         <title>Як спростити життя 42 правила для усвідомленого життя</title>
@@ -967,6 +969,8 @@
     
     
     
+    
+    
       
       <item>
         <title>Get started with Polyglot Tech Blog template</title>
@@ -1110,6 +1114,8 @@ You can then check the HTML validity with:&lt;/p&gt;
       
     
     
+    
+    
       
       <item>
         <title>Customize the colors</title>
@@ -1128,6 +1134,8 @@ You can then check the HTML validity with:&lt;/p&gt;
         <guid>https://wirtaw.github.io/blog/uk/blog/_drafts/colors/</guid>
       </item>
       
+    
+    
     
     
       
@@ -1208,6 +1216,8 @@ You can then check the HTML validity with:&lt;/p&gt;
         <guid>https://wirtaw.github.io/blog/uk/blog/_drafts/add-language/</guid>
       </item>
       
+    
+    
     
     
       
@@ -1294,6 +1304,8 @@ layout: &quot;base.html&quot;
       
     
     
+    
+    
       
       <item>
         <title>Add a post</title>
@@ -1341,6 +1353,8 @@ tags:
       
     
     
+    
+    
       
       <item>
         <title>Check blog metrics</title>
@@ -1362,6 +1376,8 @@ tags:
         <guid>https://wirtaw.github.io/blog/uk/blog/_drafts/metrics/</guid>
       </item>
       
+    
+    
     
     
       
@@ -1432,6 +1448,8 @@ tags:
         <guid>https://wirtaw.github.io/blog/uk/blog/_drafts/deploy/</guid>
       </item>
       
+    
+    
     
   </channel>
 </rss>

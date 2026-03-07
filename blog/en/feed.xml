@@ -14,8 +14,6 @@
     
     
     
-    
-    
       
       <item>
         <title>How to Find Tranquility in a Turbulent World Seneca&#92;’s Stoic Strategies</title>
@@ -148,6 +146,8 @@ The Takeaway&lt;/p&gt;
       
     
     
+    
+    
       
       <item>
         <title>Modernizing Your TypeScript Project: Migrating from TSLint to ESLint (Flat Config)</title>
@@ -224,8 +224,8 @@ The Takeaway&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;em&gt;Input Validation &amp;amp; API Security&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Global Validation Pipe&lt;/em&gt;: Ensure main.ts has &lt;code&gt;app.useGlobalPipes(new ValidationPipe({ whitelist: true }))&lt;/code&gt; enabled to strip any properties from the request body that are not defined in your DTOs.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;CORS Configuration&lt;/em&gt;: Review the CORS settings in &lt;code&gt;main.ts&lt;/code&gt;. Ensure that only your dashboard domain (https://migrane-tracker-dashboard.sliplane.app) is allowed in production, rather than using *.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Helmet/Security Headers&lt;/em&gt;: Check if helmet is implemented in main.ts to set security-related HTTP headers (e.g., X-Content-Type-Options, X-Frame-Options).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;CORS Configuration&lt;/em&gt;: Review the CORS settings in &lt;code&gt;main.ts&lt;/code&gt;. Ensure that only your dashboard domain (https://migrainepulse.com) is allowed in production, rather than using *.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Helmet/Security Headers&lt;/em&gt;: Check if helmet is implemented in main.ts to set security-related HTTP headers (e.g., &lt;code&gt;X-Content-Type-Options&lt;/code&gt;, &lt;code&gt;X-Frame-Options&lt;/code&gt;).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;em&gt;Infrastructure &amp;amp; Deployment&lt;/em&gt;&lt;/p&gt;
@@ -241,8 +241,6 @@ The Takeaway&lt;/p&gt;
         <guid>https://wirtaw.github.io/blog/en/blog/migraine-tracking-nestjs-owasp-audit/</guid>
       </item>
       
-    
-    
     
     
     
@@ -330,6 +328,10 @@ Some things are simply none of your business.&lt;/p&gt;
         <guid>https://wirtaw.github.io/blog/en/blog/9-behavioral-signs-of-truly-promising-people/</guid>
       </item>
       
+    
+    
+    
+    
     
     
     
@@ -523,8 +525,6 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
         <guid>https://wirtaw.github.io/blog/en/blog/fix-dnf-transaction-failed/</guid>
       </item>
       
-    
-    
     
     
     
@@ -859,6 +859,8 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
     
     
     
+    
+    
       
       <item>
         <title>The Spectrum of Motivation: Material and Non-Material Drivers</title>
@@ -870,8 +872,6 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
         <guid>https://wirtaw.github.io/blog/en/blog/the-spectrum-of-motivation/</guid>
       </item>
       
-    
-    
     
     
     
@@ -913,6 +913,8 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
         <guid>https://wirtaw.github.io/blog/en/blog/stop-wishing-start-doing-stoic/</guid>
       </item>
       
+    
+    
     
     
       
@@ -1046,8 +1048,6 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
         <guid>https://wirtaw.github.io/blog/en/blog/web-speech-api-text-to-speech-javascript/</guid>
       </item>
       
-    
-    
     
     
     
@@ -1221,6 +1221,24 @@ Not with a whip, of course.&lt;/p&gt;
         <guid>https://wirtaw.github.io/blog/en/blog/success-pyramide/</guid>
       </item>
       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
