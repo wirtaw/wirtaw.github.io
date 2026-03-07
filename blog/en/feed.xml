@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://wirtaw.github.io/blog" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://wirtaw-tech-blog-eleventy.pages.dev/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Poplavskij Vladimir blog</title>
-    <link>https://wirtaw.github.io/blog/en/feed.xml</link>
-    <atom:link href="https://wirtaw.github.io/blog/en/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/feed.xml</link>
+    <atom:link href="https://wirtaw-tech-blog-eleventy.pages.dev//en/feed.xml" rel="self" type="application/rss+xml"/>
     <description>English</description>
     <language>en</language>
     
@@ -17,7 +17,7 @@
       
       <item>
         <title>How to Find Tranquility in a Turbulent World Seneca&#92;’s Stoic Strategies</title>
-        <link>https://wirtaw.github.io/blog/en/blog/stoic-strategies-tranquility-modern-world/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/stoic-strategies-tranquility-modern-world/</link>
         <description>&lt;p&gt;We live in a world that feels like it’s constantly shouting. Between the polarized political landscape, the relentless ping of social media notifications, and the rising temperature of public discourse, “inner peace” can feel like a luxury reserved for monks on a mountaintop.&lt;/p&gt;
 &lt;p&gt;But according to the Roman philosopher Seneca, tranquility isn’t about the world falling silent; it’s about finding a “smooth flow” within yourself while the storm rages outside. Based on his timeless essay &lt;a href=&quot;https://thestoicgym.substack.com/p/fifteen-ways-to-be-tranquil?publication_id=1991170&amp;amp;post_id=188890630&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;On Tranquillity of Mind&lt;/a&gt;, here is how we can reclaim our headspace in 2026.&lt;/p&gt;
 &lt;ol&gt;
@@ -76,7 +76,7 @@ The Takeaway&lt;/p&gt;
 </description>
         <pubDate>Sat, 28 Feb 2026 16:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/stoic-strategies-tranquility-modern-world/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/stoic-strategies-tranquility-modern-world/</guid>
       </item>
       
     
@@ -92,7 +92,7 @@ The Takeaway&lt;/p&gt;
       
       <item>
         <title>40 Provocative Questions for Deep Self-Reflection</title>
-        <link>https://wirtaw.github.io/blog/en/blog/40-provocative-questions-deep-self-reflection/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/40-provocative-questions-deep-self-reflection/</link>
         <description>&lt;h2&gt;Provocative Questions for Yourself&lt;/h2&gt;
 &lt;p&gt;Many of us need a good shake-up from time to time to tear ourselves away from a semi-automatic, routine state. The list of provocative questions below is sobering and allows you to look at your life from different angles, become a little more mindful, understand what is important, where opportunities are hidden, and much more. There are no single “correct” answers to them, and not all can be answered immediately. But the very search for answers will help you know yourself and your needs, reflecting on what often remains out of sight.&lt;/p&gt;
 &lt;ul&gt;
@@ -141,7 +141,7 @@ The Takeaway&lt;/p&gt;
 </description>
         <pubDate>Wed, 28 Jan 2026 23:29:37 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/40-provocative-questions-deep-self-reflection/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/40-provocative-questions-deep-self-reflection/</guid>
       </item>
       
     
@@ -151,7 +151,7 @@ The Takeaway&lt;/p&gt;
       
       <item>
         <title>Modernizing Your TypeScript Project: Migrating from TSLint to ESLint (Flat Config)</title>
-        <link>https://wirtaw.github.io/blog/en/blog/typescript-eslint-flat-config-guide/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/typescript-eslint-flat-config-guide/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;TSLint has been &lt;a href=&quot;https://www.npmjs.com/package/tslint&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;deprecated&lt;/a&gt; for years, but many legacy projects (and their forks) still rely on it. In this post, I’ll show you how we migrated our repository to ESLint using the modern Flat Configuration, improving both performance and developer experience.&lt;/p&gt;
 &lt;h2&gt;Why Migrate?&lt;/h2&gt;
@@ -189,7 +189,7 @@ The Takeaway&lt;/p&gt;
 </description>
         <pubDate>Sun, 25 Jan 2026 14:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/typescript-eslint-flat-config-guide/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/typescript-eslint-flat-config-guide/</guid>
       </item>
       
     
@@ -197,7 +197,7 @@ The Takeaway&lt;/p&gt;
       
       <item>
         <title>OWASP in practice — auditing my NestJS monolith</title>
-        <link>https://wirtaw.github.io/blog/en/blog/migraine-tracking-nestjs-owasp-audit/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/migraine-tracking-nestjs-owasp-audit/</link>
         <description>&lt;p&gt;Here is base checklist to analyse:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -238,7 +238,7 @@ The Takeaway&lt;/p&gt;
 </description>
         <pubDate>Wed, 21 Jan 2026 20:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/migraine-tracking-nestjs-owasp-audit/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/migraine-tracking-nestjs-owasp-audit/</guid>
       </item>
       
     
@@ -254,14 +254,14 @@ The Takeaway&lt;/p&gt;
       
       <item>
         <title>The Power of Not Having an Opinion Online</title>
-        <link>https://wirtaw.github.io/blog/en/blog/power-of-not-having-an-online-opinion/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/power-of-not-having-an-online-opinion/</link>
         <description>&lt;p&gt;You don’t have to have an opinion about everything on the internet.
 Some things are simply none of your business.&lt;/p&gt;
 &lt;p&gt;In today’s hyper-connected world, we feel pressured to weigh in on every trending topic. However, true digital freedom comes from realizing that your silence is just as valuable as your voice. Protect your peace by choosing what deserves your energy and what doesn’t.&lt;/p&gt;
 </description>
         <pubDate>Sat, 27 Dec 2025 16:02:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/power-of-not-having-an-online-opinion/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/power-of-not-having-an-online-opinion/</guid>
       </item>
       
     
@@ -293,7 +293,7 @@ Some things are simply none of your business.&lt;/p&gt;
       
       <item>
         <title>9 Behavioral Signs of Truly Promising People</title>
-        <link>https://wirtaw.github.io/blog/en/blog/9-behavioral-signs-of-truly-promising-people/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/9-behavioral-signs-of-truly-promising-people/</link>
         <description>&lt;p&gt;The importance of your &lt;strong&gt;social circle&lt;/strong&gt; is obvious. However, how to find &lt;strong&gt;valuable&lt;/strong&gt; or &lt;strong&gt;promising people&lt;/strong&gt; is an open question. Here is a selection of telling behavioral signs.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -325,7 +325,7 @@ Some things are simply none of your business.&lt;/p&gt;
 </description>
         <pubDate>Wed, 29 Oct 2025 20:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/9-behavioral-signs-of-truly-promising-people/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/9-behavioral-signs-of-truly-promising-people/</guid>
       </item>
       
     
@@ -347,7 +347,7 @@ Some things are simply none of your business.&lt;/p&gt;
       
       <item>
         <title>Why You&#39;re Stuck: 7 Reasons to Stop and Start Moving</title>
-        <link>https://wirtaw.github.io/blog/en/blog/why-youre-stuck-personal-growth/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/why-youre-stuck-personal-growth/</link>
         <description>&lt;p&gt;Each of us has certainly had a moment in life when we felt like we were standing still. We dream of great things, we make plans, but for some reason, reality doesn’t keep up with our ambitions. This article isn’t meant to demotivate you, but to shed light on uncomfortable truths that may be the key to unlocking your true potential. Prepare to confront the seven reasons that may be the source of your lack of progress. Ready for an honest conversation with yourself?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;You haven’t lost enough.&lt;/em&gt; You’re too comfy in your average life and don’t even try. You talk about learning new things instead of actually doing them.&lt;/li&gt;
@@ -363,7 +363,7 @@ Some things are simply none of your business.&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 Sep 2025 19:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/why-youre-stuck-personal-growth/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/why-youre-stuck-personal-growth/</guid>
       </item>
       
     
@@ -383,7 +383,7 @@ Some things are simply none of your business.&lt;/p&gt;
       
       <item>
         <title>Fixing JNLP `libnsl.so.1` Error on Fedora Linux</title>
-        <link>https://wirtaw.github.io/blog/en/blog/fedora-jnlp-libnsl-fix/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/fedora-jnlp-libnsl-fix/</link>
         <description>&lt;p&gt;When attempting to launch Java Web Start (JNLP) applications on recent Fedora Linux installations, experienced users may encounter a &lt;code&gt;javaws&lt;/code&gt; execution error similar to:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;javaws: error while loading shared libraries: libnsl.so.1: cannot open shared object file: No such file or directory
 &lt;/code&gt;&lt;/pre&gt;
@@ -409,7 +409,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
 </description>
         <pubDate>Thu, 03 Jul 2025 08:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/fedora-jnlp-libnsl-fix/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/fedora-jnlp-libnsl-fix/</guid>
       </item>
       
     
@@ -417,7 +417,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
       <item>
         <title>Helpful Fedora Resources: Manage Your Linux System with Ease</title>
-        <link>https://wirtaw.github.io/blog/en/blog/list-fedora-useful-links/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/list-fedora-useful-links/</link>
         <description>&lt;p&gt;Welcome to our comprehensive collection of helpful resources designed to make managing your Fedora Linux system straightforward and efficient. Whether you’re a new user looking for installation guidance or an experienced administrator seeking advanced tips, this page offers a curated selection of articles, tutorials, and tools. Dive in to learn how to master package management, configure your desktop, troubleshoot common issues, and unlock the full potential of your Fedora workstation or server. We aim to equip you with the knowledge and resources necessary to confidently navigate and optimize your Fedora experience.&lt;/p&gt;
 &lt;p&gt;List of the Fedora links:&lt;/p&gt;
 &lt;hr /&gt;
@@ -428,7 +428,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
 </description>
         <pubDate>Tue, 01 Jul 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/list-fedora-useful-links/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/list-fedora-useful-links/</guid>
       </item>
       
     
@@ -436,7 +436,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
       <item>
         <title>Fix Fedora &quot;Transaction Failed&quot; Updates: Beginner&#39;s Guide</title>
-        <link>https://wirtaw.github.io/blog/en/blog/fix-dnf-transaction-failed/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/fix-dnf-transaction-failed/</link>
         <description>&lt;p&gt;So, you’re updating your Fedora Linux system, and suddenly, DNF throws a “Transaction failed” error, specifically mentioning file conflicts like those pesky VLC plugins. Don’t sweat it! This article is your friendly guide to understanding and fixing these common update problems, even if you’re new to Linux.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Problem:&lt;/strong&gt;  Your Fedora update failed with a message similar to:&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;Transaction failed&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Rpm transaction failed&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
@@ -522,7 +522,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
 </description>
         <pubDate>Tue, 01 Jul 2025 08:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/fix-dnf-transaction-failed/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/fix-dnf-transaction-failed/</guid>
       </item>
       
     
@@ -536,7 +536,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
       <item>
         <title>Helpful Resources to Learn JavaScript on GitHub</title>
-        <link>https://wirtaw.github.io/blog/en/blog/list-js-useful-links/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/list-js-useful-links/</link>
         <description>&lt;p&gt;Welcome to me curated list of excellent GitHub repositories that can help you learn JavaScript, from the very basics to advanced concepts. GitHub is a treasure trove of learning materials, code examples, and interactive projects.&lt;/p&gt;
 &lt;p&gt;List of the JavaScript links:&lt;/p&gt;
 &lt;hr /&gt;
@@ -554,7 +554,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
 </description>
         <pubDate>Sun, 29 Jun 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/list-js-useful-links/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/list-js-useful-links/</guid>
       </item>
       
     
@@ -570,7 +570,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
       <item>
         <title>Unmasking Neuroticism: 5 Traps to Recognize in Yourself &amp; Others</title>
-        <link>https://wirtaw.github.io/blog/en/blog/understanding-the-5-traps-of-neuroticism/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/understanding-the-5-traps-of-neuroticism/</link>
         <description>&lt;p&gt;Have you ever felt a persistent unease, a gnawing feeling that something isn’t quite right, even when outwardly everything seems fine? Or perhaps you’ve observed patterns in others that just don’t add up? It’s possible you’re encountering the subtle, yet powerful, influence of neuroticism.&lt;/p&gt;
 &lt;p&gt;Neuroticism, at its core, is often a consequence of unresolved inner conflicts. It’s a complex psychological landscape where our internal struggles project outwards, sometimes twisting our perceptions and interactions in unexpected ways. Today, we’re going to explore five common “traps” that individuals prone to neurotic patterns often fall into, and crucially, how to recognize them in yourself or those around you.&lt;/p&gt;
 &lt;h2&gt;1. The Claim to Love: When Connection Becomes a Crutch&lt;/h2&gt;
@@ -656,7 +656,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
 </description>
         <pubDate>Sat, 28 Jun 2025 16:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/understanding-the-5-traps-of-neuroticism/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/understanding-the-5-traps-of-neuroticism/</guid>
       </item>
       
     
@@ -672,11 +672,11 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
       <item>
         <title>Cynical Truths: Uncomfortable Realities About Life and Relationships</title>
-        <link>https://wirtaw.github.io/blog/en/blog/cynical-truths/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/cynical-truths/</link>
         <description>&lt;picture&gt;
-          &lt;source type=&quot;image/webp&quot; srcset=&quot;https://wirtaw.github.io/blog/img/cynical-truths-600w.webp 600w, https://wirtaw.github.io/blog/img/cynical-truths-900w.webp 900w&quot; sizes=&quot;(min-width: 1024px) 100vw, 50vw&quot; /&gt;
-  &lt;source type=&quot;image/jpeg&quot; srcset=&quot;https://wirtaw.github.io/blog/img/cynical-truths-600w.jpeg 600w, https://wirtaw.github.io/blog/img/cynical-truths-900w.jpeg 900w&quot; sizes=&quot;(min-width: 1024px) 100vw, 50vw&quot; /&gt;
-        &lt;img src=&quot;https://wirtaw.github.io/blog/img/cynical-truths-600w.jpeg&quot; width=&quot;900&quot; height=&quot;900&quot; alt=&quot;Uncomfortable Realities About Life and Relationships&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;
+          &lt;source type=&quot;image/webp&quot; srcset=&quot;https://wirtaw-tech-blog-eleventy.pages.dev/blog/img/cynical-truths-600w.webp 600w, https://wirtaw-tech-blog-eleventy.pages.dev/blog/img/cynical-truths-900w.webp 900w&quot; sizes=&quot;(min-width: 1024px) 100vw, 50vw&quot; /&gt;
+  &lt;source type=&quot;image/jpeg&quot; srcset=&quot;https://wirtaw-tech-blog-eleventy.pages.dev/blog/img/cynical-truths-600w.jpeg 600w, https://wirtaw-tech-blog-eleventy.pages.dev/blog/img/cynical-truths-900w.jpeg 900w&quot; sizes=&quot;(min-width: 1024px) 100vw, 50vw&quot; /&gt;
+        &lt;img src=&quot;https://wirtaw-tech-blog-eleventy.pages.dev/blog/img/cynical-truths-600w.jpeg&quot; width=&quot;900&quot; height=&quot;900&quot; alt=&quot;Uncomfortable Realities About Life and Relationships&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;
     &lt;/picture&gt;
 &lt;p&gt;&lt;strong&gt;Introduction to Cynicism&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Cynicism, at its core, is a philosophy rooted in questioning societal norms and perceived truths. It’s about stripping away illusions and facing the world with a critical, often skeptical, eye. While it can be seen as pessimistic, cynicism can also be a pathway to a more authentic and self-aware existence. Cynics value virtue and reason, often rejecting conventional desires for wealth, power, and fame.&lt;/p&gt;
@@ -719,7 +719,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
 </description>
         <pubDate>Mon, 23 Jun 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/cynical-truths/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/cynical-truths/</guid>
       </item>
       
     
@@ -735,7 +735,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
       <item>
         <title>The Double-Edged Sword of Desire: Why &quot;Be Careful What You Wish For&quot; is Timeless Wisdom</title>
-        <link>https://wirtaw.github.io/blog/en/blog/be-careful-what-you-wish-for-timeless-wisdom/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/be-careful-what-you-wish-for-timeless-wisdom/</link>
         <description>&lt;p&gt;“That’s a big takeaway from history, and it leads to a realization that will always be true: Be careful what you wish for.”&lt;/p&gt;
 &lt;p&gt;– “Same as Ever: A Guide to What Never Changes” &lt;a href=&quot;https://www.amazon.com/Morgan-Housel/e/B084ZNV1LR&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Morgan Housel&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This powerful quote distills a truth as old as humanity itself. We often chase desires with unwavering focus, convinced that their attainment will bring ultimate happiness. Yet, history, personal experience, and profound philosophical traditions consistently reveal a paradox: getting exactly what we want can sometimes lead to unforeseen difficulties, deeper dissatisfaction, or even regret. Both Stoicism and Mindfulness offer invaluable frameworks for understanding this intricate relationship with our desires, guiding us toward a more discerning and peaceful approach to life.&lt;/p&gt;
@@ -768,7 +768,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
 </description>
         <pubDate>Sun, 15 Jun 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/be-careful-what-you-wish-for-timeless-wisdom/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/be-careful-what-you-wish-for-timeless-wisdom/</guid>
       </item>
       
     
@@ -784,7 +784,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
       <item>
         <title>The Unshakeable Truth? Embracing Justification&#39;s Limits in the Face of Münchhausen</title>
-        <link>https://wirtaw.github.io/blog/en/blog/unshakeable-truth-munchhausen-justification-limits/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/unshakeable-truth-munchhausen-justification-limits/</link>
         <description>&lt;p&gt;Dive into the profound challenge of &lt;a href=&quot;https://en.wikipedia.org/wiki/M%C3%BCnchhausen_trilemma&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;the Münchhausen Trilemma&lt;/a&gt; and explore how we can find robust understanding even when faced with the limits of justification. This post unpacks the infinite regress, circular reasoning, and dogmatism, offering insights into practical ways to build knowledge and make decisions when absolute certainty remains elusive. Discover how embracing epistemological humility can lead to more resilient beliefs and a clearer path forward.&lt;/p&gt;
 &lt;h2&gt;Examples&lt;/h2&gt;
 &lt;p&gt;Here are some clear, relatable examples for each part of the Münchhausen Trilemma:&lt;/p&gt;
@@ -848,7 +848,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
 </description>
         <pubDate>Sun, 08 Jun 2025 13:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/unshakeable-truth-munchhausen-justification-limits/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/unshakeable-truth-munchhausen-justification-limits/</guid>
       </item>
       
     
@@ -864,12 +864,12 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
       <item>
         <title>The Spectrum of Motivation: Material and Non-Material Drivers</title>
-        <link>https://wirtaw.github.io/blog/en/blog/the-spectrum-of-motivation/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/the-spectrum-of-motivation/</link>
         <description>&lt;p&gt;What truly drives us to be productive? It’s rarely just about the paycheck. This diagram breaks down the core elements of motivation, revealing the spectrum from tangible rewards to intangible drivers that influence our engagement and output. Let’s explore the key categories:&lt;/p&gt;
 &lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/the-spectrum-of-motivation.svg&quot; alt=&quot;The Spectrum of Motivation&quot; /&gt;</description>
         <pubDate>Thu, 15 May 2025 20:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/the-spectrum-of-motivation/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/the-spectrum-of-motivation/</guid>
       </item>
       
     
@@ -883,7 +883,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
       <item>
         <title>Stop Wishing, Start Doing: Stoic Quotes to Ignite Action and Focus</title>
-        <link>https://wirtaw.github.io/blog/en/blog/stop-wishing-start-doing-stoic/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/stop-wishing-start-doing-stoic/</link>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;You don’t need more time, you need less distractions.&lt;/p&gt;
@@ -910,7 +910,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
 </description>
         <pubDate>Sun, 11 May 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/stop-wishing-start-doing-stoic/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/stop-wishing-start-doing-stoic/</guid>
       </item>
       
     
@@ -920,7 +920,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
       <item>
         <title>How to Stop Comparing Yourself to Others and Find Your Own Path: Philosophical Reflections on the Meaning of Life</title>
-        <link>https://wirtaw.github.io/blog/en/blog/stop-comparing-find-your-path/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/stop-comparing-find-your-path/</link>
         <description>&lt;p&gt;Comparing ourselves to others is a habit instilled in us from early childhood. We learn to see ourselves through the eyes of others, to be the object of someone’s assessment, to strive to meet external expectations. This is how a meaningless race begins, in which we lose ourselves.&lt;/p&gt;
 &lt;p&gt;But it’s worth asking: is there a final goal in this race? Can we truly find fulfillment by trying to catch up to others’ successes, changing ourselves according to someone else’s standards?&lt;/p&gt;
 &lt;p&gt;We are rarely taught to follow the path of our own soul, to seek the unique within ourselves, to be in agreement with ourselves. How often do we allow the external world to become our guide, forgetting that true freedom is not the right to be like everyone else, but the right to be oneself?&lt;/p&gt;
@@ -940,7 +940,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
 </description>
         <pubDate>Mon, 30 Dec 2024 21:10:49 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/stop-comparing-find-your-path/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/stop-comparing-find-your-path/</guid>
       </item>
       
     
@@ -948,7 +948,7 @@ After the &lt;code&gt;libnsl&lt;/code&gt; package is installed, retry launching 
       
       <item>
         <title>Implementing Web Speech API: Advanced Text-to-Speech with SpeechSynthesisUtterance in JavaScript</title>
-        <link>https://wirtaw.github.io/blog/en/blog/web-speech-api-text-to-speech-javascript/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/web-speech-api-text-to-speech-javascript/</link>
         <description>&lt;p&gt;This article details the process of converting text to speech using the &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API in JavaScript. This robust API provides granular control over the voice, pitch, and rate of synthesized speech, making it an optimal choice for developing accessible web applications and enhancing user engagement.&lt;/p&gt;
 &lt;h2&gt;Introduction: Leveraging the Web Speech API for Text-to-Speech&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;SpeechSynthesisUtterance&lt;/code&gt; API serves as a fundamental component of the Web Speech API, designed to convert textual content into spoken audio within web applications. This API offers comprehensive control over the voice characteristics, including pitch and rate, enabling developers to create accessible and highly engaging user experiences.&lt;/p&gt;
@@ -1045,7 +1045,7 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
 </description>
         <pubDate>Mon, 30 Dec 2024 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/web-speech-api-text-to-speech-javascript/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/web-speech-api-text-to-speech-javascript/</guid>
       </item>
       
     
@@ -1059,7 +1059,7 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
       
       <item>
         <title>The Difference Between Being Alone and Loneliness</title>
-        <link>https://wirtaw.github.io/blog/en/blog/the-difference-between-being-alone-and-loneliness/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/the-difference-between-being-alone-and-loneliness/</link>
         <description>&lt;p&gt;Social isolation can affect your mental health if you are not used to spending time with yourself. However, even this can be adapted to and enjoyed.&lt;/p&gt;
 &lt;p&gt;Many thinkers over the centuries have emphasized the importance of coming to terms with this state. Michel de Montaigne once even wrote: “The greatest thing in the world is to know how to belong to yourself.”&lt;/p&gt;
 &lt;p&gt;Solitude encourages the imagination and makes it possible for serious thoughts to appear in people’s heads that go beyond the usual routine and force the convolutions to move.&lt;/p&gt;
@@ -1073,7 +1073,7 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
 </description>
         <pubDate>Sun, 29 Dec 2024 20:44:16 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/the-difference-between-being-alone-and-loneliness/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/the-difference-between-being-alone-and-loneliness/</guid>
       </item>
       
     
@@ -1089,14 +1089,14 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
       
       <item>
         <title>Finding Inner Peace in a Crazy World</title>
-        <link>https://wirtaw.github.io/blog/en/blog/finding-inner-peace-crazy-world/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/finding-inner-peace-crazy-world/</link>
         <description>&lt;p&gt;One day you stop fussing and trying to prove something to someone, you look with a smile at the world around you with all its madness, you don’t rush to please people, you don’t rush to give advice or judge or save anyone, you stop answering calls from people who haven’t admired or interested you for a long time, you look at the sky more than at who is busy with what and how they live, you remember what inspires you regardless of the circumstances, you don’t apologize, you don’t explain, you don’t argue, you don’t waste time on the uninteresting and temporary, and you discover incredible peace and many things that you didn’t notice before in the pursuit of meeting someone’s ideas or meeting someone’s expectations.  Comfort within is more precious than any temptations of temporary pleasure. More precious than any temporary people and temporary things. Everything you like is personal, and the personal belongs only to the person you see in the mirror. The rest is empty speculation and conjecture of those who are trying to see something else in you.&lt;/p&gt;
 &lt;p&gt;You are your own best ally in how to be yourself and be happy in this crazy world.&lt;/p&gt;
 &lt;p&gt;Source: &lt;em&gt;Tatiana Marach&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 29 Dec 2024 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/finding-inner-peace-crazy-world/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/finding-inner-peace-crazy-world/</guid>
       </item>
       
     
@@ -1112,7 +1112,7 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
       
       <item>
         <title>Stop Doing This: Habits That Kill Success</title>
-        <link>https://wirtaw.github.io/blog/en/blog/habits-that-kill-success/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/habits-that-kill-success/</link>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Stop being a people-pleaser. It’s impossible to please everyone, and it’s stressful. It’s better to have a small circle of close contacts than many acquaintances you need to appease. You want to be successful, not a sycophant, right?&lt;/p&gt;
@@ -1142,7 +1142,7 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
 </description>
         <pubDate>Sat, 21 Dec 2024 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/habits-that-kill-success/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/habits-that-kill-success/</guid>
       </item>
       
     
@@ -1158,7 +1158,7 @@ window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;speechSynthe
       
       <item>
         <title>4 foundations for self-discipline</title>
-        <link>https://wirtaw.github.io/blog/en/blog/four-foundations-of-self-discipline/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/four-foundations-of-self-discipline/</link>
         <description>&lt;p&gt;1. Too many responsibilities - a destructive break to pieces. Do only what you want to do no matter what. Ignore the irrelevant.&lt;/p&gt;
 &lt;p&gt;Each commitment that you shoulder affects willpower.
 If there is too much excess, it will not stand and you will break.&lt;/p&gt;
@@ -1173,7 +1173,7 @@ Not with a whip, of course.&lt;/p&gt;
 </description>
         <pubDate>Sun, 15 Dec 2024 08:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/four-foundations-of-self-discipline/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/four-foundations-of-self-discipline/</guid>
       </item>
       
     
@@ -1189,7 +1189,7 @@ Not with a whip, of course.&lt;/p&gt;
       
       <item>
         <title>Self-restraint and sacrifice</title>
-        <link>https://wirtaw.github.io/blog/en/blog/self-resistaint-and-sacrifice/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/self-resistaint-and-sacrifice/</link>
         <description>&lt;p&gt;It may be that the taste for self-restraint which these creeds, however false, have instilled in mankind has been of some use in strengthening the human race.&lt;/p&gt;
 &lt;p&gt;For the strength of the generic and individual character consists chiefly in the capacity to sacrifice the present to the future, to scorn the temptations of an ephemeral pleasure for a more distant and lasting satisfaction.&lt;/p&gt;
 &lt;p&gt;The more this faculty is exercised, the more exalted and strong becomes the character; and the highest heroism is attained by those who, in order to preserve or win liberty and truth for other, perhaps distant, ages, renounce the pleasures of life, and even life itself.&lt;/p&gt;
@@ -1198,7 +1198,7 @@ Not with a whip, of course.&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 Dec 2024 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/self-resistaint-and-sacrifice/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/self-resistaint-and-sacrifice/</guid>
       </item>
       
     
@@ -1214,11 +1214,11 @@ Not with a whip, of course.&lt;/p&gt;
       
       <item>
         <title>Success Piramida</title>
-        <link>https://wirtaw.github.io/blog/en/blog/success-pyramide/</link>
+        <link>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/success-pyramide/</link>
         <description></description>
         <pubDate>Sun, 08 Dec 2024 08:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw.github.io/blog/en/blog/success-pyramide/</guid>
+        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//en/blog/success-pyramide/</guid>
       </item>
       
     
