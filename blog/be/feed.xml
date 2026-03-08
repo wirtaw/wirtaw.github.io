@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://wirtaw-tech-blog-eleventy.pages.dev/" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://wirtaw.github.io/blog" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Poplavskij Vladimir blog</title>
-    <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/feed.xml</link>
-    <atom:link href="https://wirtaw-tech-blog-eleventy.pages.dev//be/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://wirtaw.github.io/blog/be/feed.xml</link>
+    <atom:link href="https://wirtaw.github.io/blog/be/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Беларуская</description>
     <language>be</language>
     
@@ -19,7 +19,7 @@
       
       <item>
         <title>Спакой у турбулентным свеце Урокі Сэнэкі для 2026 года</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/stoic-strategies-tranquility-modern-world/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/stoic-strategies-tranquility-modern-world/</link>
         <description>&lt;p&gt;Асноўныя стратэгіі:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -35,7 +35,7 @@
 </description>
         <pubDate>Sat, 28 Feb 2026 16:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/stoic-strategies-tranquility-modern-world/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/stoic-strategies-tranquility-modern-world/</guid>
       </item>
       
     
@@ -51,7 +51,7 @@
       
       <item>
         <title>40 правакацыйных пытанняў для глыбокай самарэфлексіі</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/40-provocative-questions-deep-self-reflection/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/40-provocative-questions-deep-self-reflection/</link>
         <description>&lt;h2&gt;Правакацыйныя пытанні для самага сябе&lt;/h2&gt;
 &lt;p&gt;Шмат каму з нас час ад часу патрэбна добрае струс для таго, каб вырваць сябе з паўаўтаматычнага рутиннага стану. Спіс прыведзеных ніжэй правакацыйных пытанняў адразвольвае і дазваляе паглядзець на сваё жыццё з розных кутоў, стаць трохі усведомленей, зразумець што важна, дзе схаваны магчымасці і шмат іншага. Адзіна правільных адказаў на іх няма, дый не на ўсе можна адказаць адразу. Але нават самы пошук дапаможа пазнаць сябе і свае патрэбнасці, задумацца пра тое, што часта застаецца па-за полем зроку.&lt;/p&gt;
 &lt;ul&gt;
@@ -100,7 +100,7 @@
 </description>
         <pubDate>Wed, 28 Jan 2026 23:29:37 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/40-provocative-questions-deep-self-reflection/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/40-provocative-questions-deep-self-reflection/</guid>
       </item>
       
     
@@ -122,14 +122,14 @@
       
       <item>
         <title>Сіла маўчання ѡ інтэрнэце: чаму не абавязкова мець меркаванне пра ѡсё</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/power-of-not-having-an-online-opinion/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/power-of-not-having-an-online-opinion/</link>
         <description>&lt;p&gt;Табе не абавязкова мець меркаванне адносна ѡсёга ѡ інтэрнэце.
 Некаторыя рэчы — не твайго сабачага розуму справа.&lt;/p&gt;
 &lt;p&gt;У сучасным свеце соцсеткі прымушаюць нас адчуваць, што мы павінны высказацца па любому прычыне. Але сапраунае свабода пачынаецца там, дзе вы дазваляеце сабе не ѡнікаць у лішняе. Беражыце свой рэсурс.&lt;/p&gt;
 </description>
         <pubDate>Sat, 27 Dec 2025 16:02:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/power-of-not-having-an-online-opinion/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/power-of-not-having-an-online-opinion/</guid>
       </item>
       
     
@@ -145,7 +145,7 @@
       
       <item>
         <title>Як перастаць парауноуваць сябе з іншымі і знайсці свой шлях: філасофскія разважанні пра сэнс жыцця</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/stop-comparing-find-your-path/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/stop-comparing-find-your-path/</link>
         <description>&lt;p&gt;Парауноуваць сябе з іншымі — звычка, закладзеная ѡ нас з ранняга дзяцінства. Мы вучымся глядзець на сябе вачамі навакольных, быць аб’ектам чыйсьці ацэнкі, імкнуцца адпавядаць чужым чаканням. Так узнікае безглузда гонка, у якой мы губляем сябе.&lt;/p&gt;
 &lt;p&gt;Але варта задумацца: ці ёсць у гэтай гонцы канечная мэта? Хіба можна атрымаць сапраунае задавальненне, спрабучы наздагнаць чужыя поспехі, змяняючыся па чыйсьці стандартах?&lt;/p&gt;
 &lt;p&gt;Нас рэдка вучаць ісці шляхом уласнай душы, шукаць у сабе унікальнае, быць у згодзе з сабой. Як часта мы дазваляем знешняму свету станавіцца нашым керманічам, забываючы, што сапраунае свабода — гэта не права быць як усе, а права быць сабой?&lt;/p&gt;
@@ -181,7 +181,7 @@
 </description>
         <pubDate>Fri, 31 Oct 2025 22:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/stop-comparing-find-your-path/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/stop-comparing-find-your-path/</guid>
       </item>
       
     
@@ -203,14 +203,14 @@
       
       <item>
         <title>моральня философия Э.Канта</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/moral-philosophy-emanuil-kant/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/_drafts/moral-philosophy-emanuil-kant/</link>
         <description>&lt;h1&gt;моральня философия Э.Канта&lt;/h1&gt;
 &lt;p&gt;Поступай так, чтобы ты всегда относился к человечеству и в своём лице, и в лице всякого другого так же, как к цели, и никогда не относился бы к нему только как к средству.&lt;/p&gt;
 &lt;p&gt;Главное - саморазвитие. Человек может хорошо узнать только самого себя.&lt;/p&gt;
 </description>
         <pubDate>Wed, 29 Oct 2025 20:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/moral-philosophy-emanuil-kant/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/_drafts/moral-philosophy-emanuil-kant/</guid>
       </item>
       
     
@@ -218,7 +218,7 @@
       
       <item>
         <title>9 Паводніцкіх Прыкмет Спрауды Перспектыуных Людзей</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/9-behavioral-signs-of-truly-promising-people/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/9-behavioral-signs-of-truly-promising-people/</link>
         <description>&lt;p&gt;Важнасць атачэння чаргоуна. Аднак як знайсці карысных людзей — пытанне адкрытае. Прапануем падборку гаварлівых паводніцкіх прыкмет.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -250,7 +250,7 @@
 </description>
         <pubDate>Wed, 29 Oct 2025 20:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/9-behavioral-signs-of-truly-promising-people/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/9-behavioral-signs-of-truly-promising-people/</guid>
       </item>
       
     
@@ -262,7 +262,7 @@
       
       <item>
         <title>Як спрасціць жыццё 42 правілы для усведомленага жыцця</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/how-to-make-life-simpler-42-rules/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/how-to-make-life-simpler-42-rules/</link>
         <description>&lt;p&gt;У сучасным свеце, дзе мы пастаянна спяшаемся і спрабуем паспець усё і адразу, прастата становіцца раскошшу. Хэнрык Эдберг, аўтар папулярнага блога &lt;a href=&quot;https://www.positivityblog.com/welcome-new-homepage/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;The Positivity Blog&lt;/a&gt;, сабраў 42 прынцыпы, якія дапамагаюць не толькі спрасціць жыццё, але і зрабіць яго па-сапраўднаму поўназначным.&lt;/p&gt;
 &lt;h2&gt;Выход са зоны камфорту&lt;/h2&gt;
 &lt;p&gt;Першае правіла здаецца парадаксальным — паспрабуйце рабіць процілеглыя рэчы. Калі звыклі есці шмат мяса, адмовіцеся ад яго на час. Любіце спрэчыць — прамаўчыце. Прасыпаліся позна — уставайце раней. Гэтыя маленькія эксперыменты становяцца прышчэпкай супраць застою і дапамагаюць лягчэй адаптавацца да зменаў у жыцці.&lt;/p&gt;
@@ -298,7 +298,7 @@
 </description>
         <pubDate>Fri, 26 Sep 2025 21:40:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/how-to-make-life-simpler-42-rules/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/how-to-make-life-simpler-42-rules/</guid>
       </item>
       
     
@@ -338,7 +338,7 @@
       
       <item>
         <title>Карысныя рэсурсы для вывучэння JavaScript на GitHub</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/list-js-useful-links/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/list-js-useful-links/</link>
         <description>&lt;p&gt;Сардэчна запрашаем у мой адобраны спіс выдатных рэпазіторыяу GitHub, якія могуць дапамагчы вам вывучыць JavaScript, ад самых асоу да прасунутых канцэпцый. GitHub з’яуляецца скарбніцай навучальных матэрыялау, прыкладау кода і інтэрактыуных праектау.&lt;/p&gt;
 &lt;p&gt;Спіс спасылак на JavaScript:&lt;/p&gt;
 &lt;hr /&gt;
@@ -356,7 +356,7 @@
 </description>
         <pubDate>Sun, 29 Jun 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/list-js-useful-links/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/list-js-useful-links/</guid>
       </item>
       
     
@@ -372,7 +372,7 @@
       
       <item>
         <title>Раскрыццё неўротызму: 5 пастак, якія трэба распознаць у сабе і іншых</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/understanding-the-5-traps-of-neuroticism/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/understanding-the-5-traps-of-neuroticism/</link>
         <description>&lt;p&gt;Вы калі-небудзь адчувалі пастаяннае непакой, гнятучае пачуцце, што нешта не так, нават калі звонку ўсё здавалася  парадку? Або, магчыма, вы замечалі ў іншых патэрны, якія проста не складаюцца? Цалкам магчыма, вы сутыкаецеся з тонкім, але магутным уплывам неўротызму.&lt;/p&gt;
 &lt;p&gt;Неўротызм, па сваёй сутнасці, часта з’яўляецца следствам нерозвязаных ѡнутраных канфліктаў. Гэта складаны псіхалагічны ландшафт, дзе нашы ѡнутраныя барацьбы праецыруюцца вонку, часам скажаючы нашы успрыманні і ѡзаемадзеянні нечаканымі спосабамі. Сёння мы збіраемся даследаваць пяць пашыраных «пастак», у якія часта трапляюцца людзі, схільныя да неѡротычных патэрнаў, і, што асабліва важна, як распознаць іх у сабе ці навакольных.&lt;/p&gt;
 &lt;h2&gt;1. Прэтэнзія на каханне: Калі сувязь становіцца кастылём&lt;/h2&gt;
@@ -428,7 +428,7 @@
 </description>
         <pubDate>Sat, 28 Jun 2025 16:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/understanding-the-5-traps-of-neuroticism/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/understanding-the-5-traps-of-neuroticism/</guid>
       </item>
       
     
@@ -444,11 +444,11 @@
       
       <item>
         <title>Цынічныя Праўды: Непрыемныя Рэальнасці пра Жыццё і Стасункі</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/cynical-truths/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/cynical-truths/</link>
         <description>&lt;picture&gt;
-          &lt;source type=&quot;image/webp&quot; srcset=&quot;https://wirtaw-tech-blog-eleventy.pages.dev/blog/img/cynical-truths-600w.webp 600w, https://wirtaw-tech-blog-eleventy.pages.dev/blog/img/cynical-truths-900w.webp 900w&quot; sizes=&quot;(min-width: 1024px) 100vw, 50vw&quot; /&gt;
-  &lt;source type=&quot;image/jpeg&quot; srcset=&quot;https://wirtaw-tech-blog-eleventy.pages.dev/blog/img/cynical-truths-600w.jpeg 600w, https://wirtaw-tech-blog-eleventy.pages.dev/blog/img/cynical-truths-900w.jpeg 900w&quot; sizes=&quot;(min-width: 1024px) 100vw, 50vw&quot; /&gt;
-        &lt;img src=&quot;https://wirtaw-tech-blog-eleventy.pages.dev/blog/img/cynical-truths-600w.jpeg&quot; width=&quot;900&quot; height=&quot;900&quot; alt=&quot;Непрыемныя Рэальнасці пра Жыццё і Стасункі&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;
+          &lt;source type=&quot;image/webp&quot; srcset=&quot;https://wirtaw.github.io/blog/img/cynical-truths-600w.webp 600w, https://wirtaw.github.io/blog/img/cynical-truths-900w.webp 900w&quot; sizes=&quot;(min-width: 1024px) 100vw, 50vw&quot; /&gt;
+  &lt;source type=&quot;image/jpeg&quot; srcset=&quot;https://wirtaw.github.io/blog/img/cynical-truths-600w.jpeg 600w, https://wirtaw.github.io/blog/img/cynical-truths-900w.jpeg 900w&quot; sizes=&quot;(min-width: 1024px) 100vw, 50vw&quot; /&gt;
+        &lt;img src=&quot;https://wirtaw.github.io/blog/img/cynical-truths-600w.jpeg&quot; width=&quot;900&quot; height=&quot;900&quot; alt=&quot;Непрыемныя Рэальнасці пра Жыццё і Стасункі&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;
     &lt;/picture&gt;
 &lt;p&gt;&lt;strong&gt;Уводзіны ў Цынізм&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Цынізм, па сваёй сутнасці, — гэта філасофія, якая ўкаранілася ў сумненні ў грамадскіх нормах і успрымаемых праўдах. Гэта імкненне адкінуць ілюзіі і паглядзець на свет крытычным, часта скептычным, поглядам. Хоць яго можна лічыць песімістычным, цынізм таксама можа быць шляхам да больш аўтэнтычнага і самасвядомага існавання. Цынікі каштуюць дабрадзейнасць і розум, часта адвяргаючы звычайныя жаданні багацця, ўлады і славы.&lt;/p&gt;
@@ -493,7 +493,7 @@
 </description>
         <pubDate>Mon, 23 Jun 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/cynical-truths/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/cynical-truths/</guid>
       </item>
       
     
@@ -509,7 +509,7 @@
       
       <item>
         <title>Двухбаковае Меч Жадання: Чаму «Будзь асцярожным са сваімі жаданнямі» — гэта пазачасовая мудрасць</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/be-careful-what-you-wish-for-timeless-wisdom/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/be-careful-what-you-wish-for-timeless-wisdom/</link>
         <description>&lt;p&gt;«Гэта важны ѡрок гісторыі, і ён прыводзіць да усвідомлення, якое заўсёды будзе правільным: будзьце асцярожнымі са сваімі жаданнямі.»&lt;/p&gt;
 &lt;p&gt;— «То ж, што і заўсёды: Кіраўніцтва да таго, што ніколі не змяняецца» &lt;a href=&quot;https://www.amazon.com/Morgan-Housel/e/B084ZNV1LR&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Морган Хаўзел&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Гэтая магутная цытата выражае ісціну, такую ж старажытную, як самае чалавецтва. Мы часта женёмся за жаданнямі з непахіснай сканцэнтраванасцю, перакананыя, што іх дасягненне прынясе вышэйшае шчасце. Тым не менш, гісторыя, асабісты вопыт і глыбокія філасофскія традыцыі пастаянна раскрываюць парадокс: атрыманне менавіта таго, чаго мы хочам, часам можа прывесці да нечаканых цяжкасцей, больш глыбокага незадавальнення або нават шкадавання. І стоіцызм, і усведомленасць прапануюць безцінныя рамкі для разумення гэтых складаных адносін з нашымі жаданнямі, накіроўваючы нас да больш праніклівага і мірнага падыходу да жыцця.&lt;/p&gt;
@@ -541,7 +541,7 @@
 </description>
         <pubDate>Sun, 15 Jun 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/be-careful-what-you-wish-for-timeless-wisdom/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/be-careful-what-you-wish-for-timeless-wisdom/</guid>
       </item>
       
     
@@ -557,7 +557,7 @@
       
       <item>
         <title>Незрушная праўда? Прыняцце межаў абгрунтавання перад абліччам Мюнхгаўзена</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/unshakeable-truth-munchhausen-justification-limits/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/unshakeable-truth-munchhausen-justification-limits/</link>
         <description>&lt;p&gt;Занурыцеся ў глыбокую праблему &lt;a href=&quot;https://en.wikipedia.org/wiki/M%C3%BCnchhausen_trilemma&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;трылемы Мюнхгаўзена&lt;/a&gt; і даследуйце, як мы можам дасягнуць трывалага разумення, нават сутыкаючыся з межамі абгрунтавання. Гэты пост раскрывае бесканечны рэгрес, замкнёнае кола і дагматызм, прапануючы ідэі для практычных спосабаў пабудовы ведаў і прыняцця рашэнняў, калі абсалютная ўпэўненасць застаецца недасяжнай. Даведайцеся, як прыняцце эпістэмалагічнай сціпласці можа прывесці да больш устойлівых перакананняў і больш яснага шляху наперад.&lt;/p&gt;
 &lt;h2&gt;Прыклады&lt;/h2&gt;
 &lt;p&gt;Вось некалькі чыстых, зразумелых прыкладаў для кожнай часткі трылемы Мюнхгаўзена:&lt;/p&gt;
@@ -624,7 +624,7 @@
 </description>
         <pubDate>Sun, 08 Jun 2025 13:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/unshakeable-truth-munchhausen-justification-limits/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/unshakeable-truth-munchhausen-justification-limits/</guid>
       </item>
       
     
@@ -636,13 +636,13 @@
       
       <item>
         <title>Спектр матывацыі: матэрыяльныя і нематэрыяльныя драйверы</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/the-spectrum-of-motivation/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/the-spectrum-of-motivation/</link>
         <description>&lt;p&gt;Што насамрэч прымушае нас быць прадуктыуным? Гэта рэдка звязана толькі са зарплатай. Гэтая дыяграма разбівае асноўныя элементы матывацыі, паказваючы дыяпазон ад матэрыяльных узнагарод да нематэрыяльных фактарау, якія уплываюць на нашу залучанасць і прадукцыйнасць. Давайце даследуем ключавыя катэгорыі:&lt;/p&gt;
 &lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/the-spectrum-of-motivation-be.svg&quot; alt=&quot;Спектр матывацыі&quot; /&gt;
 </description>
         <pubDate>Sat, 17 May 2025 20:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/the-spectrum-of-motivation/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/the-spectrum-of-motivation/</guid>
       </item>
       
     
@@ -660,7 +660,7 @@
       
       <item>
         <title>Досыць Жадаць, Пачні Дзеяць: Стоічныя Цытаты, Якія Запаляць Дзеянне і Канцэнтрацыю</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/stop-wishing-start-doing-stoic/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/stop-wishing-start-doing-stoic/</link>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Вам не трэба больш часу, вам трэба менш адволіканняу.&lt;/p&gt;
@@ -687,7 +687,7 @@
 </description>
         <pubDate>Sun, 11 May 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/stop-wishing-start-doing-stoic/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/stop-wishing-start-doing-stoic/</guid>
       </item>
       
     
@@ -707,7 +707,7 @@
       
       <item>
         <title>Быць аднаму і самотнасць — розныя рэчы</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/byt-odnomu-i-odinochestvo-raznye-veshchi/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/byt-odnomu-i-odinochestvo-raznye-veshchi/</link>
         <description>&lt;p&gt;Сацыяльная ізоляцыя можа паўплыць на вашае псіхічнае здароуе, калі вы не звыклі праводзіць час з сабой. Аднак нават да гэтага чалавек можа адаптавацца і атрымліваць задавальненне.&lt;/p&gt;
 &lt;p&gt;Шмат мысліцелёй на працягу стагоддзяу падкрэслівалі важнасць прымірэння з гэтым станам. Мішэль дэ Мантэнь аднойчы нават напісау: «Найвялікшая рэч у свеце — гэта ведаць, як належаць сабе».&lt;/p&gt;
 &lt;p&gt;Уединене з сабой заахвочвае ѡуяву і робіць магчымым з’яуленне сур’ёзных думак у людзкой галаве, якія выходзяць за межы звычайнай рутыны і вымушаюць звіліны рухацца.&lt;/p&gt;
@@ -721,7 +721,7 @@
 </description>
         <pubDate>Sun, 29 Dec 2024 20:44:16 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/byt-odnomu-i-odinochestvo-raznye-veshchi/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/byt-odnomu-i-odinochestvo-raznye-veshchi/</guid>
       </item>
       
     
@@ -737,14 +737,14 @@
       
       <item>
         <title>Абрэнне ўнутранага спакою ў вар&#39;ятым свеце</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/finding-inner-peace-crazy-world/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/finding-inner-peace-crazy-world/</link>
         <description>&lt;p&gt;Аднойчы ты перастаеш метушыцца і нешта камусьці даказваць, глядзіш з усмешкай на навакольны свет з усімі яго вар’яцтвамі, не спяшаешся падабацца людзям, не спяшаешся раздаваць парады і кагосьці судзіць або ратаваць, перастаеш адказваць на званкі людзей, якія даўно не захапляюць і не цікавяць, больш глядзіш на неба, чым на тое, хто чым заняты і як жывеш, успамінаеш тое, што натхняе незалежна ад абставін, не выбачаешся, не тлумачыш, не спрэчыся, не выдаткоўваеш час на нецікавае і часовае, і выяўляеш неверагодны спакой і мноства рэчаў, якія не замечаў раней у пагоні за тым, каб падыходзіць пад чыйсьці погляды або адпавядаць чыйсьці чаканням. Зручнасць усярэдзіне - даражэйш за любыя спакусы часовага задавальнення. Дарожэй, чым любыя часовыя людзі і часовыя рэчы. Усё, што табе падабаецца - гэта асабістае, а асабістае - належыць толькі таму чалавеку, якога ты бачыш у люстэрку. Астатняе - пустыя здагадкі і меркаванні тых, хто спрабуе бачыць у табе нешта іншае.&lt;/p&gt;
 &lt;p&gt;Ты - лепшы сабе адзіндумец у тым, як у гэтым вар’ятым свеце быць сабой і быць шчаслівым.&lt;/p&gt;
 &lt;p&gt;Крыніца: &lt;em&gt;Вольга Марач&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 29 Dec 2024 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/finding-inner-peace-crazy-world/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/finding-inner-peace-crazy-world/</guid>
       </item>
       
     
@@ -760,7 +760,7 @@
       
       <item>
         <title>Перастань гэта рабіць: звычкі, якія забіваюць поспех</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/habits-that-kill-success/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/habits-that-kill-success/</link>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Перастань быць падабраным для навакольных. Угадзіць усім немагчыма. Да і таго ж, гэта стрэс. Лепш трымацца невялікага кола зносін, чым мець шмат знаёмстваў, якіх трэба трымаць. Ты ж хочаш быць паспяховым, а не падлізай, так?&lt;/p&gt;
@@ -790,7 +790,7 @@
 </description>
         <pubDate>Sat, 21 Dec 2024 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/habits-that-kill-success/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/habits-that-kill-success/</guid>
       </item>
       
     
@@ -806,7 +806,7 @@
       
       <item>
         <title>4 асновы для самадысцыпліны</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/four-foundations-of-self-discipline/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/four-foundations-of-self-discipline/</link>
         <description>&lt;h2&gt;1. Занадта шмат абавязкаў&lt;/h2&gt;
 &lt;p&gt;згубны разрыў на часткі. Займайцеся толькі тым, што вы хочаце рабіць нягледзячы ні на што. Ігнаруйце несуттэвае.&lt;/p&gt;
 &lt;p&gt;Кожны абавязак, які вы ўскладаеце на свае плячы, уплывае на сілу волі. Калі занадта шмат лішняга, яна не вытрымае і вы зрываецеся.&lt;/p&gt;
@@ -823,7 +823,7 @@
 </description>
         <pubDate>Sun, 15 Dec 2024 08:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/four-foundations-of-self-discipline/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/four-foundations-of-self-discipline/</guid>
       </item>
       
     
@@ -839,7 +839,7 @@
       
       <item>
         <title>Самаабмежаванне і ахвяра</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/self-resistaint-and-sacrifice/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/self-resistaint-and-sacrifice/</link>
         <description>&lt;p&gt;Магчыма, што смак да самаабмежавання, які гэтыя перакананні, якім бы яны ні былі ілжывыя, прышчыпілі чалавецтву, быў небескарысны для ѡмацнення чалавечага роду.&lt;/p&gt;
 &lt;p&gt;Бо сіла роднага і індывідуальнага характару складаецца пераважна ѡ здольнасці ахвяраваць цяперашнім дзеля будучага, у пагардзе спакусамі эфемэрнага задавальнення дзеля больш аддаленага і ѡстойлівага задаволення.&lt;/p&gt;
 &lt;p&gt;Чым больш практыкуюць у сабе гэтую здольнасць, тым узнесены характар становіцца; вышэйшы ж героізм дасягаецца тым, хто дзеля захавання або заваявання свабоды і прауды для іншых, магчыма далёкіх, эпох, адмаўляецца ад жыццёвы задавальненняу і нават ад самага жыцця.&lt;/p&gt;
@@ -848,7 +848,7 @@
 </description>
         <pubDate>Sun, 08 Dec 2024 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/self-resistaint-and-sacrifice/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/self-resistaint-and-sacrifice/</guid>
       </item>
       
     
@@ -864,11 +864,11 @@
       
       <item>
         <title>Пирамида успеха</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/success-pyramide/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/success-pyramide/</link>
         <description></description>
         <pubDate>Sun, 08 Dec 2024 08:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/success-pyramide/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/success-pyramide/</guid>
       </item>
       
     
@@ -878,7 +878,7 @@
       
       <item>
         <title>Сутнасць сталасці: дагляд пра сябе і эмацыйная шчырасць</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/essential-of-maturity/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/essential-of-maturity/</link>
         <description>&lt;p&gt;Для мяне сталасць да непрыстойнасці ў простым.&lt;br /&gt;
 У умінні пра сябе пабачыцца.&lt;br /&gt;
 Галодны? Наесца.&lt;br /&gt;
@@ -922,7 +922,7 @@
 </description>
         <pubDate>Sun, 17 Nov 2024 08:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/essential-of-maturity/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/essential-of-maturity/</guid>
       </item>
       
     
@@ -934,13 +934,13 @@
       
       <item>
         <title>Ideały świetlistego rycerza</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/idealy-swietlistego-rycerza/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/_drafts/idealy-swietlistego-rycerza/</link>
         <description>&lt;p&gt;&lt;em&gt;Pierwszy ideał&lt;/em&gt;: Życie ponad śmiercią. Siła ponad słabością. Podróż ponad celem.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Drugi ideał Wiatrowych&lt;/em&gt;: Chronić tych, którzy nie mogą chronić się sami.&lt;/p&gt;
 </description>
         <pubDate>Sat, 16 Nov 2024 14:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/idealy-swietlistego-rycerza/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/_drafts/idealy-swietlistego-rycerza/</guid>
       </item>
       
     
@@ -950,7 +950,7 @@
       
       <item>
         <title>Get started with Polyglot Tech Blog template</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/get-started/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/_drafts/get-started/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;You have found Polyglot Tech Blog and wish to use it as a basis for your blog. Great! Let’s go through the steps to get the code and adapt it to your needs.&lt;/p&gt;
 &lt;h2&gt;Get the code and install the dependencies&lt;/h2&gt;
@@ -1044,7 +1044,7 @@
 &lt;h2&gt;Adapt the style&lt;/h2&gt;
 &lt;p&gt;You can go to the article about colors for further details about this step.&lt;/p&gt;
 &lt;h2&gt;Add or remove languages&lt;/h2&gt;
-&lt;p&gt;Removing a language is simply deleting the corresponding directory and updating the &lt;code&gt;src &amp;gt; _data &amp;gt; data.json&lt;/code&gt; file accordingly. When adding a new language, there are a bit more things to consider, so you can consult &lt;a href=&quot;https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/add-language/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;the dedicated article&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Removing a language is simply deleting the corresponding directory and updating the &lt;code&gt;src &amp;gt; _data &amp;gt; data.json&lt;/code&gt; file accordingly. When adding a new language, there are a bit more things to consider, so you can consult &lt;a href=&quot;https://wirtaw.github.io/blog/be/blog/add-language/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;the dedicated article&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Add static pages&lt;/h2&gt;
 &lt;p&gt;The starter comes with four static page: “Галоўная”, “Пра мяне”, “Блог” and “404”. They are written in HTML and can be found in each language directory:&lt;/p&gt;
 &lt;pre class=&quot;language-plain&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-plain&quot;&gt;src
@@ -1061,7 +1061,7 @@
      └── 404.html&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You may decide to add some static pages. Here as well, there is a dedicated article that covers the topic.&lt;/p&gt;
 &lt;h2&gt;Add posts&lt;/h2&gt;
-&lt;p&gt;This is probably the most basic thing expected from a blog start. You can do this by following the instructions on the &lt;a href=&quot;https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/add-post/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;dedicated article&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is probably the most basic thing expected from a blog start. You can do this by following the instructions on the &lt;a href=&quot;https://wirtaw.github.io/blog/be/blog/add-post/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;dedicated article&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Check markup validity&lt;/h2&gt;
 &lt;p&gt;The starter template comes with commands and dependencies to check HTML and CSS validity using &lt;a href=&quot;https://validator.github.io/validator/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;W3C’s vnu-jar&lt;/a&gt;. However, vnu-jar checker is written in Java, so you will have to install a Java Runtime Environment to make these commands work. I recommend the free and excellent &lt;a href=&quot;https://adoptium.net/temurin/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Eclipse Temurin&lt;/a&gt;.&lt;br /&gt;
 You can then check the HTML validity with:&lt;/p&gt;
@@ -1077,15 +1077,15 @@ You can then check the HTML validity with:&lt;/p&gt;
 &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run check:css:win &lt;span class=&quot;token comment&quot;&gt;# with npm on Window systems&lt;/span&gt;
 &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; check:css:win &lt;span class=&quot;token comment&quot;&gt;# with Yarn on Windows systems&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Check various metrics about your blog&lt;/h2&gt;
-&lt;p&gt;The number of things you can check to ensure the &lt;a href=&quot;https://www.w3.org/WAI/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;accessibility&lt;/a&gt; (&lt;abbr title=&quot;Accessibility&quot;&gt;a11y&lt;/abbr&gt;), performance, &lt;a href=&quot;https://en.wikipedia.org/wiki/Search_engine_optimization&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Search Engine Optimization&lt;/a&gt; (&lt;abbr title=&quot;Search Engine Optimization&quot;&gt;SEO&lt;/abbr&gt;), validity… of a website is unlimited and may require some advanced skills or tools. Some simple and basic checks are covered in the &lt;a href=&quot;https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/metrics/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;dedicated article&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The number of things you can check to ensure the &lt;a href=&quot;https://www.w3.org/WAI/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;accessibility&lt;/a&gt; (&lt;abbr title=&quot;Accessibility&quot;&gt;a11y&lt;/abbr&gt;), performance, &lt;a href=&quot;https://en.wikipedia.org/wiki/Search_engine_optimization&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Search Engine Optimization&lt;/a&gt; (&lt;abbr title=&quot;Search Engine Optimization&quot;&gt;SEO&lt;/abbr&gt;), validity… of a website is unlimited and may require some advanced skills or tools. Some simple and basic checks are covered in the &lt;a href=&quot;https://wirtaw.github.io/blog/be/blog/metrics/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;dedicated article&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Build and deploy&lt;/h2&gt;
-&lt;p&gt;Our blog is ready to be put online. This can bon done on multiple ways depending on where your code is and who hosts the blog. This &lt;a href=&quot;https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/deploy/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;article&lt;/a&gt; covers some common scenarios.&lt;/p&gt;
+&lt;p&gt;Our blog is ready to be put online. This can bon done on multiple ways depending on where your code is and who hosts the blog. This &lt;a href=&quot;https://wirtaw.github.io/blog/be/blog/deploy/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;article&lt;/a&gt; covers some common scenarios.&lt;/p&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;We have seen all basic steps to get a Polyglot Tech Blog up and running with your content. If you followed all these steps, you have now an online blog. Congratulations! Of course, many more customizations are possible, so feel free to experiment and share your ideas on &lt;a href=&quot;https://gitlab.com/florent_tassy/polyglot-tech-blog&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;GitLab&lt;/a&gt; 😉&lt;/p&gt;
 </description>
         <pubDate>Sun, 09 Jul 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/get-started/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/_drafts/get-started/</guid>
       </item>
       
     
@@ -1095,7 +1095,7 @@ You can then check the HTML validity with:&lt;/p&gt;
       
       <item>
         <title>Customize the colors</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/colors/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/_drafts/colors/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;The colors of a web page are the most fundamental thing to choose in order to feel at home and to reflect who we are. Let’s see where Polyglot Tech Blog colors are defined in order to modify them.&lt;/p&gt;
 &lt;h2&gt;Syntax highlight&lt;/h2&gt;
@@ -1107,7 +1107,7 @@ You can then check the HTML validity with:&lt;/p&gt;
 </description>
         <pubDate>Wed, 05 Jul 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/colors/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/_drafts/colors/</guid>
       </item>
       
     
@@ -1117,7 +1117,7 @@ You can then check the HTML validity with:&lt;/p&gt;
       
       <item>
         <title>Add language</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/add-language/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/_drafts/add-language/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;div&gt;Polyglot Tech Blog comes in English and French to show in action. However, it is possible to add as many languages as you want. Let&#39;s show how by adding German 🇩🇪&lt;/div&gt;
 &lt;h2&gt;Update data.json&lt;/h2&gt;
@@ -1189,7 +1189,7 @@ You can then check the HTML validity with:&lt;/p&gt;
 </description>
         <pubDate>Sun, 02 Jul 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/add-language/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/_drafts/add-language/</guid>
       </item>
       
     
@@ -1199,7 +1199,7 @@ You can then check the HTML validity with:&lt;/p&gt;
       
       <item>
         <title>Add a static page</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/add-page/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/_drafts/add-page/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Polyglot Tech Blog comes with three pages:&lt;/p&gt;
 &lt;ul&gt;
@@ -1275,7 +1275,7 @@ layout: &quot;base.html&quot;
 </description>
         <pubDate>Fri, 30 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/add-page/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/_drafts/add-page/</guid>
       </item>
       
     
@@ -1285,7 +1285,7 @@ layout: &quot;base.html&quot;
       
       <item>
         <title>Add a post</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/add-post/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/_drafts/add-post/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;A blog is basically made of a few static pages and many articles. Let’s see then how we can create a new article in all that languages that our blog supports.&lt;/p&gt;
 &lt;h2&gt;Create the files&lt;/h2&gt;
@@ -1324,7 +1324,7 @@ tags:
 </description>
         <pubDate>Fri, 23 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/add-post/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/_drafts/add-post/</guid>
       </item>
       
     
@@ -1334,7 +1334,7 @@ tags:
       
       <item>
         <title>Check blog metrics</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/metrics/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/_drafts/metrics/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;We are now going to verify a few metrics and present some simple and user-friendly tools to ensure our blog’s validity, performance, accessibility and &lt;abbr title=&quot;Search Engine Optimization&quot;&gt;SEO&lt;/abbr&gt;. Those topics are potentially infinite and highly specialized, that is why we will just touch on each of them with automated tools.&lt;/p&gt;
 &lt;h2&gt;Lighthouse&lt;/h2&gt;
@@ -1349,7 +1349,7 @@ tags:
 </description>
         <pubDate>Thu, 15 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/metrics/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/_drafts/metrics/</guid>
       </item>
       
     
@@ -1359,7 +1359,7 @@ tags:
       
       <item>
         <title>Deploy</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/deploy/</link>
+        <link>https://wirtaw.github.io/blog/be/blog/_drafts/deploy/</link>
         <description>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;div&gt;Now that we have adapted the template with our content, we would like to deploy it on the web. Let&#39;s go through some common deployment scenarios.&lt;/div&gt;
 &lt;h2&gt;Deploy manually&lt;/h2&gt;
@@ -1421,7 +1421,7 @@ tags:
 </description>
         <pubDate>Sun, 11 Jun 2023 12:00:00 +0000</pubDate>
         <dc:creator>Florent Tassy</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//be/blog/_drafts/deploy/</guid>
+        <guid>https://wirtaw.github.io/blog/be/blog/_drafts/deploy/</guid>
       </item>
       
     

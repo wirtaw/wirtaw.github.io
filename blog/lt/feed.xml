@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://wirtaw-tech-blog-eleventy.pages.dev/" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://wirtaw.github.io/blog" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Poplavskij Vladimir blog</title>
-    <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/feed.xml</link>
-    <atom:link href="https://wirtaw-tech-blog-eleventy.pages.dev//lt/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://wirtaw.github.io/blog/lt/feed.xml</link>
+    <atom:link href="https://wirtaw.github.io/blog/lt/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Lietuvių</description>
     <language>lt</language>
     
@@ -15,7 +15,7 @@
       
       <item>
         <title>Kaip rasti ramybę chaotiškame pasaulyje Senekos įžvalgos šiuolaikiniam žmogui</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/stoic-strategies-tranquility-modern-world/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/stoic-strategies-tranquility-modern-world/</link>
         <description>&lt;p&gt;Pagrindiniai patarimai:&lt;/p&gt;
 &lt;p&gt;- Tikslinga veikla: Nuobodulys yra didžiausias ramybės priešas. Net jei jūsų pagrindinis kelias užblokuotas, raskite kitą būdą būti naudingiems.&lt;/p&gt;
 &lt;p&gt;- Saikas ir paprastumas: Mes dažnai jaudinamės dėl turtų ar statuso. Stoikai moko siekti „pakankamumo“ – paprastumas išlaisvina protą nuo nuolatinio nerimo.&lt;/p&gt;
@@ -23,7 +23,7 @@
 </description>
         <pubDate>Sat, 28 Feb 2026 16:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/stoic-strategies-tranquility-modern-world/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/stoic-strategies-tranquility-modern-world/</guid>
       </item>
       
     
@@ -39,7 +39,7 @@
       
       <item>
         <title>40 provokuojančių klausimų giliai savirefleksijai</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/40-provocative-questions-deep-self-reflection/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/40-provocative-questions-deep-self-reflection/</link>
         <description>&lt;h2&gt;Provokuojantys klausimai sau pačiam&lt;/h2&gt;
 &lt;p&gt;Daugeliui iš mūsų laikas nuo laiko reikia gero sukrėtimo, kad išsivaduotume iš pusiau automatinės, rutininės būsenos. Žemiau pateiktas provokuojančių klausimų sąrašas blaivina ir leidžia pažvelgti į savo gyvenimą iš skirtingų kampų, tapti šiek tiek sąmoningesniems, suprasti, kas svarbu, kur slypi galimybės ir dar daugiau. Vienintelių teisingų atsakymų į juos nėra, o ir ne į visus galima atsakyti iš karto. Tačiau pati paieška padės pažinti save ir savo poreikius, susimąstyti apie tai, kas dažnai lieka nepastebėta.&lt;/p&gt;
 &lt;ul&gt;
@@ -88,7 +88,7 @@
 </description>
         <pubDate>Wed, 28 Jan 2026 23:29:37 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/40-provocative-questions-deep-self-reflection/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/40-provocative-questions-deep-self-reflection/</guid>
       </item>
       
     
@@ -104,7 +104,7 @@
       
       <item>
         <title>Vyras ir vaikas: Tony Parsons pamokos apie tėvystę, netektį ir meną paleisti</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/man-and-boy-tony-parsons/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/man-and-boy-tony-parsons/</link>
         <description>&lt;h2&gt;Vyras ir vaikas: Ko mus moko Tony Parsons apie tikrąją meilę?&lt;/h2&gt;
 &lt;p&gt;Gyvenime būna akimirkų, kai vienas pasirinkimas, viena klaida ar netikėtas likimo posūkis priverčia pervertinti viską, ką žinojome apie šeimą ir save pačius. Tony Parsons romanas „Vyras ir vaikas“ – tai ne tik istorija apie skyrybas. Tai gilus žvilgsnis į vyro transformaciją, kai jis iš „didžiojo vaiko“ tampa tikru tėvu.&lt;/p&gt;
 &lt;h2&gt;Ambicijos prieš šeimą: Amžinasis balansas&lt;/h2&gt;
@@ -124,7 +124,7 @@
 </description>
         <pubDate>Sun, 04 Jan 2026 20:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/man-and-boy-tony-parsons/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/man-and-boy-tony-parsons/</guid>
       </item>
       
     
@@ -136,14 +136,14 @@
       
       <item>
         <title>Nuomonės neturėjimo galia: kodėl nebūtina visko komentuoti</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/power-of-not-having-an-online-opinion/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/power-of-not-having-an-online-opinion/</link>
         <description>&lt;p&gt;Tau nebūtina turėti nuomonės apie viską internete.
 Kai kurie dalykai tiesiog ne tavo reikalas.&lt;/p&gt;
 &lt;p&gt;Šiuolaikiniame pasaulyje jaučiame spaudimą reaguoti į kiekvieną naujieną. Tačiau tikroji laisvė atsiranda tada, kai suvokiame, kad mūsų tyla yra vertingesnė už tuščius ginčus. Saugokite savo vidinę ramybę.&lt;/p&gt;
 </description>
         <pubDate>Sat, 27 Dec 2025 16:02:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/power-of-not-having-an-online-opinion/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/power-of-not-having-an-online-opinion/</guid>
       </item>
       
     
@@ -155,7 +155,7 @@ Kai kurie dalykai tiesiog ne tavo reikalas.&lt;/p&gt;
       
       <item>
         <title>Keturi tūkstančiai savaičių. Kaip mirtingiesiems valdyti laiką (Ištraukos). Oliver Burkeman</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/4000-weeks-how-manage-time-oliver-burkeman/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/4000-weeks-how-manage-time-oliver-burkeman/</link>
         <description>&lt;h2&gt;Tapti geresniu atideluotiju&lt;/h2&gt;
 &lt;p&gt;Šios problemos sprendimo būdas yra griežtai nusistatyti, kiek daugiausia darbų vykdysite bet kuriuo metu. Knygoje Personal Kanban („Asmeninis Kanban&amp;quot;) laiko valdymo specialistai Jimas Bensonas ir Tonianne DeMaria Barry siūlo pasirinkti ne daugiau nei tris darbus. Jums pasirinkus, bet kurie nauji jūsų lai-ko reikalaujantys darbai turi palaukti, kol bent vienas iš trijų bus padarytas ir atsilaisvins vieta (vietą atlaisvinti galima ir apskritai nutraukiant projektą, jei šis nesiklosto. Esmė - ne prisiversti už-baigti visa, ką pradėjote, o atsikratyti negero įpročio vis didinti tik iš dalies atliktų projektų krūvą).&lt;/p&gt;
 &lt;p&gt;Pradėjęs darbo veikloje remtis šiuo gana paprastu patarimu, patyriau stulbinamų pokyčių. Nebeišėjo nekreipti dėmesio į tai, kad dirbti galiu griežtai ribotai, nes kaskart, iš sąrašo išsirinkęs naują užduotį kaip vieną iš trijų darbų, privalėdavau pagalvoti apie visas kitas, kurių būtinai reikės atsisakyti. Ir visgi būtent todėl, kad šitaip buvau priverstas stoti&lt;/p&gt;
@@ -231,7 +231,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sat, 27 Dec 2025 15:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/4000-weeks-how-manage-time-oliver-burkeman/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/4000-weeks-how-manage-time-oliver-burkeman/</guid>
       </item>
       
     
@@ -241,7 +241,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Leisk jiems - leisk sau</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/let-them-let-you-mel-robbins/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/let-them-let-you-mel-robbins/</link>
         <description>&lt;h2&gt;5 sekundziu taisykle&lt;/h2&gt;
 &lt;h2&gt;1 skyrius&lt;/h2&gt;
 &lt;p&gt;Taigi apibendrinkime, ko išmokote apie streso valdymą. Šiuo metu leidžiate kitiems žmonėms kelti nereikalingą stresą jūsų gyvenime. Teo-gikliams valdyti jūsų gyvenimo, ir skirti ją tikrai vertiems dalykams. rija Leisk jiems moko apsaugoti savo energiją, neleidžiant smulkiems dir-Kiti žmonės nuolat darys dalykus, kurie mus&lt;/p&gt;
@@ -418,7 +418,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Thu, 27 Nov 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/let-them-let-you-mel-robbins/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/let-them-let-you-mel-robbins/</guid>
       </item>
       
     
@@ -432,7 +432,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Kaip nustoti lyginti save su kitais ir rasti savo kelią: Filosofiniai apmąstymai apie gyvenimo prasmę</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/stop-comparing-find-your-path/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/stop-comparing-find-your-path/</link>
         <description>&lt;p&gt;Lyginimas savęs su kitais yra įprotis, įskiepytas mums nuo ankstyvos vaikystės. Mes išmokstame žiūrėti į save aplinkinių akimis, būti kieno nors vertinimo objektu, siekti atitikti svetimus lūkesčius. Taip atsiranda beprasmės lenktynės, kuriose prarandame save.&lt;/p&gt;
 &lt;p&gt;Tačiau verta susimąstyti: ar šiose lenktynėse yra galutinis tikslas? Ar tikrai galima rasti tikrą pasitenkinimą, bandant pavyti svetimas sėkmes, keičiantis pagal kieno nors standartus?&lt;/p&gt;
 &lt;p&gt;Mums retai mokoma eiti savo sielos keliu, ieškoti savyje to, kas unikalu, būti sutarime su savimi. Kaip dažnai leidžiame išoriniam pasauliui tapti mūsų vairininku, pamiršdami, kad tikra laisvė yra ne teisė būti kaip visi, o teisė būti savimi?&lt;/p&gt;
@@ -452,7 +452,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Fri, 31 Oct 2025 21:10:49 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/stop-comparing-find-your-path/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/stop-comparing-find-your-path/</guid>
       </item>
       
     
@@ -466,7 +466,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>9 Elgesio Požymiai, Rodantys Išties Perspektyvius Žmones</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/9-behavioral-signs-of-truly-promising-people/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/9-behavioral-signs-of-truly-promising-people/</link>
         <description>&lt;p&gt;Jūsų &lt;strong&gt;socialinio rato&lt;/strong&gt; svarba yra akivaizdi. Tačiau kaip rasti &lt;strong&gt;vertingų&lt;/strong&gt; ar &lt;strong&gt;perspektyvių žmonių&lt;/strong&gt; – atviras klausimas. Štai iškalbingų elgesio požymių rinkinys.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -498,7 +498,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Wed, 29 Oct 2025 20:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/9-behavioral-signs-of-truly-promising-people/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/9-behavioral-signs-of-truly-promising-people/</guid>
       </item>
       
     
@@ -512,7 +512,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Ką pasakoja Vilniaus sienos? Nuo bazilisko iki stebuklingos plytos.</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/vilniaus-legendos-sv-onos-baznycia-basiliskas-vilnele/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/vilniaus-legendos-sv-onos-baznycia-basiliskas-vilnele/</link>
         <description>&lt;p&gt;Vilnius – tai miestas, apie kurį girdėjote, ir, tikėtina, matėte nuotraukose. Žinote, kad tai UNESCO saugomas perlas su nuostabia istorija, puikiais restoranais ir gyvybinga kultūra. Tačiau po šiuo istorijos sluoksniu slepiasi dar kai kas – paslaptingas pasaulis, pripildytas legendų, kurios kelia fantaziją ir žadina smalsumą. Užuot gilinęsi į nuobodybės faktus, siūlau leistis į kelionę, kurioje atrasime tris įdomiausias Vilniaus paslaptis ir paklausysime, ką tyliai šnabžda senosios sienos.&lt;/p&gt;
 &lt;h2&gt;1. Šv. Onos bažnyčia – „užkeikta plyta“ 🧱&lt;/h2&gt;
 &lt;p&gt;Vilniaus senamiestyje stovi gotikinės architektūros šedevras – Šv. Onos bažnyčia. Jos raudonų plytų siluetas atrodo tarsi iš pasakų knygos. Pasakojama, kad viena plyta čia yra „užkeikta“: jei kas bandytų ją pajudinti, visa bažnyčia ims byrėti. Vietiniai meistrai šią legendą labai rimtai vertina – rekonstrukcijos atliekamos itin kruopščiai, kad plyta liktų vietoje.&lt;/p&gt;
@@ -535,7 +535,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sun, 05 Oct 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/vilniaus-legendos-sv-onos-baznycia-basiliskas-vilnele/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/vilniaus-legendos-sv-onos-baznycia-basiliskas-vilnele/</guid>
       </item>
       
     
@@ -549,7 +549,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Kodėl tu stovi vietoje: 7 priežastys, dėl kurių verta sustoti ir pradėti judėti</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/why-youre-stuck-personal-growth/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/why-youre-stuck-personal-growth/</link>
         <description>&lt;p&gt;Kiekvienas iš mūsų tikrai yra patyręs tą akimirką, kai jaučiamės lyg stovėtume vietoje. Mes svajojame apie didelius dalykus, kuriame planus, bet dėl kažkokių priežasčių realybė nebespėja vytis mūsų ambicijų. Šis straipsnis skirtas ne tam, kad jus demotyvuotų, o tam, kad atskleistų nepatogias tiesas, kurios gali būti raktas į tikrojo jūsų potencialo atskleidimą. Pasiruoškite susidurti su septyniomis priežastimis, kurios gali būti jūsų progreso trūkumo šaltinis. Pasiruošę nuoširdžiam pokalbiui su savimi?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Jums nepakako nesėkmių.&lt;/em&gt; Jūs per daug patogiai įsitaisėte savo vidutiniškame gyvenime ir net nemėginate. Jūs kalbate apie naujų dalykų mokymąsi, užuot tai darydami iš tikrųjų.&lt;/li&gt;
@@ -565,7 +565,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Thu, 25 Sep 2025 19:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/why-youre-stuck-personal-growth/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/why-youre-stuck-personal-growth/</guid>
       </item>
       
     
@@ -575,7 +575,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Arthur C. Clarke&#39;o „Vaikystės pabaiga“: Kai auksinis amžius tampa paauksuotu narvu</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/vaikystes-pabaiga-artur-clarke-apzvalga/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/vaikystes-pabaiga-artur-clarke-apzvalga/</link>
         <description>&lt;p&gt;Ar kada susimąstėte, kas nutiktų, jei Šaltojo karo kosminės lenktynės tarp Sovietų Sąjungos ir JAV būtų pasibaigusios ne vienos iš supergalių pergale, o… ateivių atvykimu? Būtent tokią viziją Arthuras C. Clarke’as pateikia savo 1953 m. romane „Vaikystės pabaiga“. Milžiniški ateivių laivai pasirodo virš didžiausių Žemės miestų, nutraukia bet kokius karinius konfliktus, panaikina valstybių sienas ir pradeda kurti globalią utopiją.&lt;/p&gt;
 &lt;p&gt;Ir pats sumanymas, knyga parašyta 1960 metais, kad žmonija gali išgelbėti tiktai trečioji jėga. Taip, jau ir tada atrode. Iš esmes niekas nepasikeitė. 2025 situacija parodo, jog ir JAV negali atgrasyti užpolymo ant demokratiniu šaliu, o Jungtinės Tautos į kiekvieną raketu atakos naktį reiškia susirupinimą.&lt;/p&gt;
 &lt;p&gt;Jau tuomet, XX a. viduryje, autoriui atrodė, kad išsigelbėti pati žmonija nepajėgi – tam reikalinga trečioji, išorinė jėga. Deja, ši mintis atrodo stebėtinai aktuali ir šiandien. Matant, kaip tarptautinės organizacijos dažnai apsiriboja „susirūpinimo reiškimu“, o supergalios ne visada sugeba užkirsti kelio agresijai, Clarke’o idėja apie išmintingus globėjus iš kosmoso įgauna naują prasmę.&lt;/p&gt;
@@ -600,7 +600,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Thu, 18 Sep 2025 20:30:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/vaikystes-pabaiga-artur-clarke-apzvalga/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/vaikystes-pabaiga-artur-clarke-apzvalga/</guid>
       </item>
       
     
@@ -608,7 +608,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Knygos „Vidurio Europos istorija“ (Martyn Rady) apžvalga ir pamąstymai</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/vidurio-europos-istorija-martyn-rady-apzvalga/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/vidurio-europos-istorija-martyn-rady-apzvalga/</link>
         <description>&lt;p&gt;Yra knygų, kurios ne tik papasakoja istoriją, bet ir priverčia iš naujo permąstyti tai, ką, atrodė, jau žinojai. Būtent tokia man tapo Martyno Rady knyga „Vidurio Europos istorija“. Kaip žmogus, mėgstantis istorines knygas ir neseniai perskaitęs Simono Jenkinso „Trumpą Anglijos istoriją“, buvau įpratęs prie Vakarų ar Rytų Europos naratyvų. Ši knyga atvėrė visiškai kitokį, ne mažiau sudėtingą ir be galo įdomų pasaulį.&lt;/p&gt;
 &lt;p&gt;Autorius kviečia keliauti po teritorijas, kuriose šiandien yra Vokietija, Lenkija, Čekija, Slovakija, Austrija, Vengrija, tačiau paliečia ir Rumunijos, Lietuvos, Kroatijos bei Slovėnijos likimus. Svarbiausia, kad tai nėra vien sausas chronologinis faktų išdėstymas. Rady meistriškai pina į vieną pasakojimą kultūros, meno, valdymo ypatumų raidą ir nuolat ieško atsakymo į klausimą – kur yra ta riba tarp Rytų ir Vakarų Europos ir ką ji reiškia?&lt;/p&gt;
 &lt;h2&gt;Niūrus, bet realistiškas žvilgsnis į dabartį&lt;/h2&gt;
@@ -663,7 +663,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Tue, 16 Sep 2025 16:30:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/vidurio-europos-istorija-martyn-rady-apzvalga/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/vidurio-europos-istorija-martyn-rady-apzvalga/</guid>
       </item>
       
     
@@ -675,7 +675,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Kai sąmoningai nusprendi nespręsti visų pasaulio problemų: R. Feynmano socialinis aktyvus neatsakingumas</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/richard-feynman-socialinis-neatsakingumas-von-neumann/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/richard-feynman-socialinis-neatsakingumas-von-neumann/</link>
         <description>&lt;p&gt;Pradėkime nuo klausimo: ar jaučiatės atsakingas už visas pasaulio problemas? Už klimato kaitą, karą, skurdą? Daugelis iš mūsų retkarčiais pasijaučia slegiami šios naštos. Tačiau ką daryti, jei atsakomybę sąmoningai sumažintumėte? Šiandien norėčiau pakalbėti apie gana neįprastą, bet provokuojančią idėją, kurią radau knygoje &lt;a href=&quot;https://www.goodreads.com/book/show/58718050-j-s-gi-ai-ku-juokaujate-pone-feynmanai&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;„Jūs gi, aišku, juokaujate, pone Feynmanai!“&lt;/a&gt; apie garsųjį fiziką Richardą P. Feynmaną. Tai – &lt;em&gt;socialinis aktyvus neatsakingumas&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Nesupraskite klaidingai. Tai nėra tiesiog abejingumas. Tai veikiau sąmoningas pasirinkimas nesijausti atsakingam už visas pasaulio problemas ir leisti sau susitelkti į tai, kas iš tiesų svarbu ir ką galime paveikti.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Gimimas iš protingiausiojo lūpų&lt;/strong&gt;&lt;/p&gt;
@@ -692,7 +692,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sat, 02 Aug 2025 17:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/richard-feynman-socialinis-neatsakingumas-von-neumann/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/richard-feynman-socialinis-neatsakingumas-von-neumann/</guid>
       </item>
       
     
@@ -700,7 +700,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Anglijos Istorija Patyrusiems: Simon Jenkins Apžvalga</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/anglijos-istorija-simon-jenkins-apzvalga-patyrusiem/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/anglijos-istorija-simon-jenkins-apzvalga-patyrusiem/</link>
         <description>&lt;h2&gt;Įvadas&lt;/h2&gt;
 &lt;p&gt;Simono Jenkinso „Trumpa Anglijos Istorija“ – tai ambicingas bandymas glaustai apžvelgti šalies istoriją nuo seniausių laikų iki šių dienų. Ši apžvalga skirta patyrusiems istorijos skaitytojams, siekiantiems įžvalgų ir analitinio požiūrio į svarbiausius Anglijos istorijos įvykius ir asmenybes.&lt;/p&gt;
 &lt;h2&gt;Pagrindinės Knygos Temos&lt;/h2&gt;
@@ -738,7 +738,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sun, 06 Jul 2025 15:30:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/anglijos-istorija-simon-jenkins-apzvalga-patyrusiem/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/anglijos-istorija-simon-jenkins-apzvalga-patyrusiem/</guid>
       </item>
       
     
@@ -756,7 +756,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Naudingos ištekliai JavaScript mokymuisi GitHub&#39;e</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/list-js-useful-links/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/list-js-useful-links/</link>
         <description>&lt;p&gt;Sveiki atvykę į mano sudarytą puikių GitHub saugyklų sąrašą, kuris gali padėti jums išmokti JavaScript, pradedant nuo pačių pagrindų iki pažangių konceptų. GitHub yra mokymosi medžiagų, kodo pavyzdžių ir interaktyvių projektų lobynas.&lt;/p&gt;
 &lt;p&gt;JavaScript nuorodų sąrašas:&lt;/p&gt;
 &lt;hr /&gt;
@@ -774,7 +774,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sun, 29 Jun 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/list-js-useful-links/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/list-js-useful-links/</guid>
       </item>
       
     
@@ -790,7 +790,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Neuroticizmo Dešifravimas: 5 Spąstai, Kuriuos Reikia Atpažinti Savyje ir Kituose</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/understanding-the-5-traps-of-neuroticism/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/understanding-the-5-traps-of-neuroticism/</link>
         <description>&lt;p&gt;Ar kada nors jautėte nuolatinį nerimą, graužiantį jausmą, kad kažkas ne taip, net kai išoriškai viskas atrodo puikiai? O gal pastebėjote kitų elgesio modelius, kurie tiesiog nesiderina? Gali būti, kad susiduriate su subtilia, bet galinga neuroticizmo įtaka.&lt;/p&gt;
 &lt;p&gt;Neuroticizmas, iš esmės, dažnai yra neišspręstų vidinių konfliktų pasekmė. Tai sudėtingas psichologinis kraštovaizdis, kuriame mūsų vidinės kovos projektuojamos į išorę, kartais netikėtai iškraipydamos mūsų suvokimą ir sąveiką. Šiandien mes nagrinėsime penkis dažniausius „spąstus“, į kuriuos dažnai patenka asmenys, linkę į neurotinius elgesio modelius, ir, svarbiausia, kaip juos atpažinti savyje ar aplinkiniuose.&lt;/p&gt;
 &lt;h2&gt;1. Pretenzija į Meilę: Kai Ryšys Tampa Ramentu&lt;/h2&gt;
@@ -876,7 +876,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sat, 28 Jun 2025 16:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/understanding-the-5-traps-of-neuroticism/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/understanding-the-5-traps-of-neuroticism/</guid>
       </item>
       
     
@@ -892,7 +892,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Ciniškos Tiesos: Nepatogios Realybės Apie Gyvenimą ir Santykius</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/cynical-truths/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/cynical-truths/</link>
         <description>&lt;p&gt;Cinizmas, savo esme, yra filosofija, pagrįsta visuomenės normų ir suvokiamų tiesų kvestionavimu. Tai yra iliuzijų nusimetimas ir susidūrimas su pasauliu kritišku, dažnai skeptišku, žvilgsniu. Nors tai gali būti vertinama kaip pesimizmas, cinizmas taip pat gali būti kelias į autentiškesnį ir savarankiškesnį egzistavimą. Cinikai vertina dorybę ir protą, dažnai atmesdami įprastus turto, galios ir šlovės troškimus.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;11 Ciniškų Tiesų&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -950,7 +950,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Mon, 23 Jun 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/cynical-truths/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/cynical-truths/</guid>
       </item>
       
     
@@ -966,7 +966,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Dvigubas Troškimo Ašmuo: Kodėl „Būk atsargus, ko trokšti“ yra nesenstanti išmintis</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/be-careful-what-you-wish-for-timeless-wisdom/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/be-careful-what-you-wish-for-timeless-wisdom/</link>
         <description>&lt;p&gt;„Tai didelė istorijos pamoka, ir ji veda prie supratimo, kuris visada bus teisingas: Būk atsargus, ko trokšti.“&lt;/p&gt;
 &lt;p&gt;— „Same as Ever: A Guide to What Never Changes“ &lt;a href=&quot;https://www.amazon.com/Morgan-Housel/e/B084ZNV1LR&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Morgan Housel&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Ši galinga citata apibendrina tiesą, seną kaip pati žmonija. Dažnai mes vejame troškimus su nepajudinama koncentracija, įsitikinę, kad jų pasiekimas atneš didžiausią laimę. Tačiau istorija, asmeninė patirtis ir gilios filosofinės tradicijos nuosekliai atskleidžia paradoksą: gauti būtent tai, ko norime, kartais gali sukelti nenumatytų sunkumų, didesnį nepasitenkinimą ar net apgailestavimą. Tiek stoicizmas, tiek sąmoningumas siūlo neįkainojamas sistemas, padedančias suprasti šį sudėtingą santykį su mūsų troškimais, nukreipdami mus į įžvalgesnį ir ramesnį požiūrį į gyvenimą.&lt;/p&gt;
@@ -998,7 +998,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sun, 15 Jun 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/be-careful-what-you-wish-for-timeless-wisdom/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/be-careful-what-you-wish-for-timeless-wisdom/</guid>
       </item>
       
     
@@ -1014,7 +1014,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Nepajudinama Tiesa? Priėmimas Pagrindimo Ribų, susidūrus su Miunhauzenu</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/unshakeable-truth-munchhausen-justification-limits/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/unshakeable-truth-munchhausen-justification-limits/</link>
         <description>&lt;p&gt;Pasinerkite į gilų Miunhauzeno trilemos iššūkį ir išnagrinėkite, kaip galime rasti tvirtą supratimą, net kai susiduriame su pagrindimo ribomis. Šis įrašas nagrinėja begalinį regresą, užburtą ratą ir dogmatizmą, siūlydamas įžvalgas apie praktinius būdus, kaip kurti žinias ir priimti sprendimus, kai absoliutus tikrumas išlieka nepasiekiamas. Atraskite, kaip epistemologinės kuklumo priėmimas gali lemti atsparesnius įsitikinimus ir aiškesnį kelią į priekį.&lt;/p&gt;
 &lt;h2&gt;Pavyzdžiai&lt;/h2&gt;
 &lt;p&gt;Štai keli aiškūs, suprantami pavyzdžiai kiekvienai Miunhauzeno trilemos daliai:&lt;/p&gt;
@@ -1078,7 +1078,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sun, 08 Jun 2025 13:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/unshakeable-truth-munchhausen-justification-limits/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/unshakeable-truth-munchhausen-justification-limits/</guid>
       </item>
       
     
@@ -1090,7 +1090,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Knygos „Neregimoji šviesa“ (Anthony Doerr) apžvalga ir pamąstymai</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/neregimoji-sviesa-anthony-doerr-apzvalga/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/neregimoji-sviesa-anthony-doerr-apzvalga/</link>
         <description>&lt;p&gt;Ar Jums būna taip, kad skaitote knygą, ir įvykiai joje atspindi tikrovę? Būtent taip man ir nutiko skaitant Anthony Doerrio „Neregimąją šviesą“.&lt;/p&gt;
 &lt;h2&gt;Pagrindiniai veikėjai:&lt;/h2&gt;
 &lt;ul&gt;
@@ -1148,7 +1148,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sun, 18 May 2025 20:30:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/neregimoji-sviesa-anthony-doerr-apzvalga/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/neregimoji-sviesa-anthony-doerr-apzvalga/</guid>
       </item>
       
     
@@ -1166,7 +1166,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Nustok Svajoti, Pradėk Daryti: Stoikų Citatos, Kurios Įžiebs Veiksmą ir Susikaupimą</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/stop-wishing-start-doing-stoic/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/stop-wishing-start-doing-stoic/</link>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Jums nereikia daugiau laiko, jums reikia mažiau išsiblaškymo.&lt;/p&gt;
@@ -1193,7 +1193,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sun, 11 May 2025 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/stop-wishing-start-doing-stoic/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/stop-wishing-start-doing-stoic/</guid>
       </item>
       
     
@@ -1213,7 +1213,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Būti Vienam ir Vienatvė - Du Skirtingi Dalykai</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/buti-vienam-ir-vienatve-du-skirtingi-dalykai/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/buti-vienam-ir-vienatve-du-skirtingi-dalykai/</link>
         <description>&lt;p&gt;Socialinė izoliacija gali paveikti jūsų psichinę sveikatą, jei nesate įpratę leisti laiką su savimi. Tačiau net ir prie to galima prisitaikyti ir mėgautis.&lt;/p&gt;
 &lt;p&gt;Daugelis mąstytojų per amžius pabrėžė susitaikymo su šia būsena svarbą. Michel de Montaigne kartą netgi parašė: „Didžiausias dalykas pasaulyje yra žinoti, kaip priklausyti sau“.&lt;/p&gt;
 &lt;p&gt;Vienuma skatina vaizduotę ir suteikia galimybę žmonių galvose atsirasti rimtoms mintims, kurios peržengia įprastą rutiną ir priverčia vingius judėti.&lt;/p&gt;
@@ -1227,7 +1227,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sun, 29 Dec 2024 20:44:16 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/buti-vienam-ir-vienatve-du-skirtingi-dalykai/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/buti-vienam-ir-vienatve-du-skirtingi-dalykai/</guid>
       </item>
       
     
@@ -1243,14 +1243,14 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Ramybės Atradimas Pašėlusiame Pasaulyje</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/finding-inner-peace-crazy-world/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/finding-inner-peace-crazy-world/</link>
         <description>&lt;p&gt;Vieną dieną nustoji nerimauti ir kažkam kažką įrodyti, su šypsena žvelgi į tave supantį pasaulį su visa jo beprotybe, neskubi įtikti žmonėms, neskubi nieko patarinėti ar teisti ar gelbėti. , nustojate atsiliepti į skambučius iš žmonių, kurie jumis nesižavėjo ir nesidomėjote, daugiau žiūrite į dangų, nei į tai, kas kuo užsiima ir kaip gyvena, prisimenate, kas jus įkvepia, nepaisant aplinkybių, neatsiprašyk, neaiškinsi, nesiginčiji, nešvaistai laiko neįdomiems ir laikiniems dalykams, atrandi neįtikėtiną ramybę ir daug dalykų, kurių anksčiau nepastebėjai, siekdamas susitikti su kitu žmogumi. idėjų ar kažkieno lūkesčių patenkinimas. Patogumas viduje yra brangesnis už bet kokias laikinų malonumų pagundas. Brangesnis už bet kokius laikinus žmones ir laikinus dalykus. Viskas, kas tau patinka, yra asmeniška, o asmeniška priklauso tik tam žmogui, kurį matai veidrodyje. Likusi dalis yra tuščios spėlionės ir spėlionės tų, kurie bando tavyje įžvelgti ką nors kita.&lt;/p&gt;
 &lt;p&gt;Jūs esate geriausias savo sąjungininkas, kaip būti savimi ir būti laimingam šiame beprotiškame pasaulyje.&lt;/p&gt;
 &lt;p&gt;Šaltinis: &lt;em&gt;Tatjana Marach&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 29 Dec 2024 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/finding-inner-peace-crazy-world/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/finding-inner-peace-crazy-world/</guid>
       </item>
       
     
@@ -1266,7 +1266,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>Nustokite tai daryti: įpročiai, kurie žudo sėkmę</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/habits-that-kill-success/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/habits-that-kill-success/</link>
         <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Nustok būti pataikūnu aplinkiniams. Neįmanoma visiems įtikti, be to, tai kelia stresą. Geriau turėti mažą artimų žmonių ratą nei daug pažįstamų, kuriems reikia įsiteikti. Juk nori būti sėkmingas, o ne pataikūnas, tiesa?&lt;/p&gt;
@@ -1296,7 +1296,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
 </description>
         <pubDate>Sat, 21 Dec 2024 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/habits-that-kill-success/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/habits-that-kill-success/</guid>
       </item>
       
     
@@ -1312,7 +1312,7 @@ Setiya savo knygoje Midlife („Vidurio amžius&amp;quot;) pasakoja, kad, artėj
       
       <item>
         <title>4 savęs drausmės pagrindai</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/four-foundations-of-self-discipline/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/four-foundations-of-self-discipline/</link>
         <description>&lt;p&gt;1. Per daug pareigų – pražūtingas susiskaldymas į dalis. Darykite tik tai, ką norite daryti, kad ir kas būtų. Ignoruokite nereikšmingus dalykus.&lt;/p&gt;
 &lt;p&gt;Kiekvienas įsipareigojimas, kurį prisiimate, veikia valią.
 Jei per daug pertekliaus, ji neatlaikys ir jūs palūšite.&lt;/p&gt;
@@ -1326,7 +1326,7 @@ Jei per daug pertekliaus, ji neatlaikys ir jūs palūšite.&lt;/p&gt;
 </description>
         <pubDate>Sun, 15 Dec 2024 08:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/four-foundations-of-self-discipline/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/four-foundations-of-self-discipline/</guid>
       </item>
       
     
@@ -1342,7 +1342,7 @@ Jei per daug pertekliaus, ji neatlaikys ir jūs palūšite.&lt;/p&gt;
       
       <item>
         <title>Susivaldymas ir pasiaukojimas</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/self-resistaint-and-sacrifice/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/self-resistaint-and-sacrifice/</link>
         <description>&lt;p&gt;Gali būti, kad savitvardos skonis, kurį šie įsitikinimai, kad ir kokie klaidingi, įskiepijo žmonijai, nebuvo naudingas stiprinant žmonių rasę.&lt;/p&gt;
 &lt;p&gt;Galų gale, bendrinio ir individualaus charakterio stiprybė pirmiausia yra gebėjimas paaukoti dabartį vardan ateities, nepaisyti trumpalaikio malonumo pagundų, siekiant tolimesnio ir ilgalaikio pasitenkinimo.&lt;/p&gt;
 &lt;p&gt;Kuo daugiau žmogus naudojasi šiuo gebėjimu, tuo charakteris išaukštinamas ir stiprėja; Aukščiausio herojiškumo pasiekia tie, kurie, siekdami išsaugoti ar laimėti laisvę ir tiesą kitoms, galbūt tolimoms, epochoms, atsisako gyvenimo malonumų ir net paties gyvenimo.&lt;/p&gt;
@@ -1351,7 +1351,7 @@ Jei per daug pertekliaus, ji neatlaikys ir jūs palūšite.&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 Dec 2024 12:00:00 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/self-resistaint-and-sacrifice/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/self-resistaint-and-sacrifice/</guid>
       </item>
       
     
@@ -1367,11 +1367,11 @@ Jei per daug pertekliaus, ji neatlaikys ir jūs palūšite.&lt;/p&gt;
       
       <item>
         <title>Sekmes Piramida</title>
-        <link>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/success-pyramide/</link>
+        <link>https://wirtaw.github.io/blog/lt/blog/success-pyramide/</link>
         <description></description>
         <pubDate>Sun, 08 Dec 2024 08:18:57 +0000</pubDate>
         <dc:creator>Vladimir Poplavskij</dc:creator>
-        <guid>https://wirtaw-tech-blog-eleventy.pages.dev//lt/blog/success-pyramide/</guid>
+        <guid>https://wirtaw.github.io/blog/lt/blog/success-pyramide/</guid>
       </item>
       
     
