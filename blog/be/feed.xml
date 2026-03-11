@@ -18,6 +18,54 @@
     
       
       <item>
+        <title>Migraine Pulse – мая гісторыя стварэння асабістага дадатку для адсочвання мігрэні</title>
+        <link>https://wirtaw.github.io/blog/be/blog/migraine-pulse-origin/</link>
+        <description>&lt;h2&gt;Частка першая. Як усё пачалося&lt;/h2&gt;
+&lt;p&gt;Часам мяне турбуюць прыступы мігрэні – часам моцныя. Я чуў, што вядзенне дзённіка прыступаў карыснае. У 2024 годзе, пасля асабліва моцнага прыступу, я пачаў запісваць тэкставыя апісанні з датамі і сімптомамі. Паралельна я пачаў тэставаць розныя дадаткі, у якіх спрабаваў запісваць тыя ж падзеі.&lt;/p&gt;
+&lt;h2&gt;Чаму існуючыя дадаткі мне не падыходзілі&lt;/h2&gt;
+&lt;p&gt;Першае, што мне не спадабалася ў існуючых дадатках – апрацоўка асабістых даных была недастаткова празрыстай. І бяспека таксама была сумніўнай.&lt;/p&gt;
+&lt;p&gt;Другое, не хапала магчымасці імпарту і экспарту маіх даных. Мала фарматаў і ніякіх стандартаў.&lt;/p&gt;
+&lt;p&gt;Трэцяе, не было магчымасці дадаваць сваю логіку прыступаў. Ці іншы рэсурс з данымі, якія менавіта мне патрэбныя, напрыклад прагноз магнітных бур або іх гісторыю.&lt;/p&gt;
+&lt;p&gt;Тады я вырашыў, што зраблю свой уласны дзённік мігрэні для адсочвання сімптомаў. І не толькі гэта.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Што я вывучыў, ствараючы гэты праект&lt;/h2&gt;
+&lt;p&gt;Ствараючы гэты праект, як і ўсё ствараючы, я вывучаў новыя тэхналогіі і інструменты. Я выпрабоўваў сэрвісы, якіх раней не выкарыстоўваў ні на рабоце, ні ў іншых асабістых праектах.&lt;/p&gt;
+&lt;p&gt;Адным з першых рэчаў, што я выкарыстаў, было стварэнне протатыпу frontend. Ён застаўся амаль нязменным.&lt;/p&gt;
+&lt;p&gt;Другой рэччу, якую я выкарыстоўваў для штурму мазгоў, генерацыі протатыпаў і перапісвання манатоннага коду, была AI. Тут я паспрабаваў ChatGPT, Khoj (Gemini, Claude Sonnet) і сэрвісы Google Antigravity.&lt;/p&gt;
+&lt;p&gt;Код сэрвісаў – &lt;a href=&quot;https://github.com/wirtaw/migraine-tracker-monolith&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;backend&lt;/a&gt; і &lt;a href=&quot;https://github.com/wirtaw/migrane-tracker-dashboard&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;frontend&lt;/a&gt; – я пакінуў публічна даступным, бо лічу, што кожны павінен мець магчымасць узяць яго і мадыфікаваць для сябе. Ці дапамагчы мне ўдасканаліць. Ці прапанаваць і дадаць новы функцыянал.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Што будзе ў будучыні?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Дадам больш розных справаздач і модуль, які будзе аналізаваць толькі твае даныя і на іх аснове папярэджваць аб павышанай верагоднасці мігрэні або галаўнога болю.&lt;/li&gt;
+&lt;li&gt;Пераклад на іншыя мовы – першымі будуць украінская, літоўская і польская.&lt;/li&gt;
+&lt;li&gt;Выбар полу і даданне жаночага цыклу.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Дэма-асяроддзе, дзе можна паспрабаваць, не ўводзячы шмат інфармацыі – можна знайсці, перайшоўшы па гэтай &lt;a href=&quot;https://migrane-tracker-dashboard.sliplane.app/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;спасылцы&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Старонка дакументацыі знаходзіцца &lt;a href=&quot;https://wirtaw.github.io/migraine-tracker-docs/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;тут&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Афіцыйны прадукт праграмы, дзе будзе мой асабісты функцыянал і больш інтэграцый – можна знайсці &lt;a href=&quot;https://migrainepulse.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;тут&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/migraine-pulse-kaip-pradejau-kurti-heatmap.webp&quot; alt=&quot;Heatmap Migrain Pulse&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Заключэнне&lt;/h2&gt;
+&lt;p&gt;У наступных блогах я раскажу падрабязней пра кожную функцыю. Таксама пра цікавыя адкрыцці пры стварэнні гэтага прадукту.&lt;/p&gt;
+&lt;p&gt;Поспеху і здароўя!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 11 Mar 2026 22:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/be/blog/migraine-pulse-origin/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>Спакой у турбулентным свеце Урокі Сэнэкі для 2026 года</title>
         <link>https://wirtaw.github.io/blog/be/blog/stoic-strategies-tranquility-modern-world/</link>
         <description>&lt;p&gt;Асноўныя стратэгіі:&lt;/p&gt;

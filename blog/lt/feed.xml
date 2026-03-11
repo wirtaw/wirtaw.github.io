@@ -14,6 +14,54 @@
     
       
       <item>
+        <title>Migraine Pulse – mano kelias kuriant asmeninę migrenos stebėjimo programėlę</title>
+        <link>https://wirtaw.github.io/blog/lt/blog/migraine-pulse-origin/</link>
+        <description>&lt;h2&gt;Pirma dalis. Kaip viskas prasidėjo&lt;/h2&gt;
+&lt;p&gt;Kartais mane kamuoja migrenos priepuoliai – kartais stiprios. Kad verta vesti priepuolių dienyną, buvau girdėjęs. 2024 metais po vieno stipraus priepuolio pradėjau užsirašinėti tekstinius aprašymus su datomis ir simptomais. Lygiagrečiai pradėjau testuoti įvairias programėles, kuriose bandžiau vesti tuos pačius įvykius.&lt;/p&gt;
+&lt;h2&gt;Kodėl egzistuojančios programėlės man netiko&lt;/h2&gt;
+&lt;p&gt;Pirma, kas man netiko esamose programėlėse – jose asmeninių duomenų tvarkymas buvo nepakankamai skaidrus. Ir saugumas taip pat buvo abejotinas.&lt;/p&gt;
+&lt;p&gt;Antra, trūko importavimo ir eksportavimo savo duomenų. Mažai formatų ir jokių standartų.&lt;/p&gt;
+&lt;p&gt;Trečia, nebuvo dinamikos pridėti savo priepuolių logiką. Arba kitą resursą su tik tau reikalingais duomenimis, pavyzdžiui kaip magnetinių audrų prognozę ar jų istoriją.&lt;/p&gt;
+&lt;p&gt;Tada nusprendžiau, kad padarysiu savo migrenos dienoraštį stebėti simptomams. Ir ne tik.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Ką išmokau kurdamas šį projektą&lt;/h2&gt;
+&lt;p&gt;Kuriant šį projektą, kaip ir viską kuriant, mokiausi naujų technologijų ir įrankių. Bandžiau servisus, kurių dar netekdavo panaudoti nei darbe, nei su kitais asmeniniais projektais.&lt;/p&gt;
+&lt;p&gt;Vienas iš pirmų dalykų, ką panaudojau, tai sukurti prototipą frontend. Jis išliko beveik nepakeistas.&lt;/p&gt;
+&lt;p&gt;Antrą, ką naudojau smegenų šturmui, prototipų generavimui ir monotoninio kodo perrašymui – tai DI. Čia bandžiau ChatGPT, Khoj (Gemini, Claude Sonnet), Google Antigravity servisus.&lt;/p&gt;
+&lt;p&gt;Patį kodą servisų – &lt;a href=&quot;https://github.com/wirtaw/migraine-tracker-monolith&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;backend&lt;/a&gt; ir &lt;a href=&quot;https://github.com/wirtaw/migrane-tracker-dashboard&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;frontend&lt;/a&gt; – palikau viešai prieinamą, nes manau, jog visi turi galimybę paimti ir modifikuoti pagal save. Ar padėti man tobulėti. Arba pasiūlyti ir pridėti naujo funkcionalumo.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Kas bus ateityje?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Pridėsiu daugiau įvairių ataskaitų ir modulį, kuris analizuos tik tavo duomenis ir remiantis jais perspės apie išaugusią tikimybę apie migreną ar galvos skausmą.&lt;/li&gt;
+&lt;li&gt;Vertimas į kitas kalbas – pirma būtų ukrainiečių, lietuvių ir lenkų.&lt;/li&gt;
+&lt;li&gt;Lyties pasirinkimas ir moterų ciklo pridėjimas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Demo aplinkoje, kurioje galima pabandyti, neįvedant daug informacijos – galima rasti perėjus šią &lt;a href=&quot;https://migrane-tracker-dashboard.sliplane.app/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;nuorodą&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Dokumentacijos puslapis yra &lt;a href=&quot;https://wirtaw.github.io/migraine-tracker-docs/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;čia&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Programos oficialus produktas, kuriame bus mano asmeninis funkcionalumas ir daugiau integracijų – galima rasti &lt;a href=&quot;https://migrainepulse.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;čia&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/migraine-pulse-kaip-pradejau-kurti-heatmap.webp&quot; alt=&quot;Heatmap Migrain Pulse&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Išvada&lt;/h2&gt;
+&lt;p&gt;Sekančiose blogo įrašuose pasakosiu detaliau apie kiekvieno funkcionalumo detales. Taip pat apie įdomius atradimus kuriant šitą produktą.&lt;/p&gt;
+&lt;p&gt;Sėkmės ir sveikatos!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 11 Mar 2026 22:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/lt/blog/migraine-pulse-origin/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>Kaip rasti ramybę chaotiškame pasaulyje Senekos įžvalgos šiuolaikiniam žmogui</title>
         <link>https://wirtaw.github.io/blog/lt/blog/stoic-strategies-tranquility-modern-world/</link>
         <description>&lt;p&gt;Pagrindiniai patarimai:&lt;/p&gt;

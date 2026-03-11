@@ -12,6 +12,54 @@
     
       
       <item>
+        <title>Migraine Pulse – moja droga do stworzenia osobistej aplikacji do śledzenia migreny</title>
+        <link>https://wirtaw.github.io/blog/pl/blog/migraine-pulse-origin/</link>
+        <description>&lt;h2&gt;Część pierwsza. Jak to się zaczęło&lt;/h2&gt;
+&lt;p&gt;Czasami cierpię na napady migreny – czasem silne. Słyszałem, że warto prowadzić dziennik napadów. W 2024 roku, po jednym szczególnie silnym napadzie, zacząłem spisywać tekstowe opisy z datami i objawami. Równolegle zacząłem testować różne aplikacje, w których próbowałem zapisywać te same zdarzenia.&lt;/p&gt;
+&lt;h2&gt;Dlaczego istniejące aplikacje mi nie odpowiadały&lt;/h2&gt;
+&lt;p&gt;Po pierwsze, co mi się nie podobało w istniejących aplikacjach – ich sposób przetwarzania danych osobowych był niewystarczająco przejrzysty. A bezpieczeństwo też było wątpliwe.&lt;/p&gt;
+&lt;p&gt;Po drugie, brakowało importu i eksportu moich danych. Mało formatów i żadnych standardów.&lt;/p&gt;
+&lt;p&gt;Po trzecie, nie było możliwości dodawania własnej logiki napadów. Lub innego zasobu z danymi, które są mi potrzebne, jak prognozy burz magnetycznych lub ich historia.&lt;/p&gt;
+&lt;p&gt;Wtedy zdecydowałem, że stworzę własny dziennik migreny do śledzenia objawów. I nie tylko to.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Czego się nauczyłem budując ten projekt&lt;/h2&gt;
+&lt;p&gt;Budując ten projekt, jak i wszystko inne, uczyłem się nowych technologii i narzędzi. Wypróbowywałem usługi, których wcześniej nie używałem w pracy ani w innych osobistych projektach.&lt;/p&gt;
+&lt;p&gt;Jedną z pierwszych rzeczy, której użyłem, było stworzenie prototypu frontendu. Pozostał prawie niezmieniony.&lt;/p&gt;
+&lt;p&gt;Drugą rzeczą, której użyłem do burzy mózgów, generowania prototypów i przepisywania monotonnego kodu, była AI. Wypróbowałem tutaj ChatGPT, Khoj (Gemini, Claude Sonnet) oraz usługi Google Antigravity.&lt;/p&gt;
+&lt;p&gt;Kod serwisów – &lt;a href=&quot;https://github.com/wirtaw/migraine-tracker-monolith&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;backend&lt;/a&gt; i &lt;a href=&quot;https://github.com/wirtaw/migrane-tracker-dashboard&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;frontend&lt;/a&gt; – udostępniłem publicznie, ponieważ uważam, że każdy powinien mieć możliwość wzięcia go i modyfikacji dla siebie. Albo aby pomóc mi go ulepszyć. Albo zaproponować i dodać nowe funkcje.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Co będzie w przyszłości?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Dodam więcej różnych raportów i moduł, który będzie analizował tylko twoje dane i na ich podstawie ostrzegał o zwiększonym prawdopodobieństwie migreny lub bólu głowy.&lt;/li&gt;
+&lt;li&gt;Tłumaczenie na inne języki – pierwsze to ukraiński, litewski i polski.&lt;/li&gt;
+&lt;li&gt;Wybór płci i dodanie cyklu kobiecego.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Środowisko demo, w którym można to wypróbować, nie wprowadzając wielu informacji – można je znaleźć, przechodząc przez ten &lt;a href=&quot;https://migrane-tracker-dashboard.sliplane.app/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Strona z dokumentacją jest &lt;a href=&quot;https://wirtaw.github.io/migraine-tracker-docs/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;tutaj&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Oficjalny produkt programu, który będzie zawierał moje osobiste funkcje i więcej integracji – można go znaleźć &lt;a href=&quot;https://migrainepulse.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;tutaj&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/migraine-pulse-kaip-pradejau-kurti-heatmap.webp&quot; alt=&quot;Heatmap Migrain Pulse&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Podsumowanie&lt;/h2&gt;
+&lt;p&gt;W kolejnych postach na blogu opowiem bardziej szczegółowo o każdej funkcji. Również o ciekawych odkryciach podczas tworzenia tego produktu.&lt;/p&gt;
+&lt;p&gt;Powodzenia i zdrowia!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 11 Mar 2026 22:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/pl/blog/migraine-pulse-origin/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>Spokój w niespokojnych czasach Stoickie lekcje Seneki na rok 2026</title>
         <link>https://wirtaw.github.io/blog/pl/blog/stoic-strategies-tranquility-modern-world/</link>
         <description>&lt;p&gt;Kluczowe lekcje:&lt;/p&gt;

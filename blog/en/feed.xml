@@ -16,6 +16,54 @@
     
       
       <item>
+        <title>Migraine Pulse – my journey creating a personal migraine tracking app</title>
+        <link>https://wirtaw.github.io/blog/en/blog/migraine-pulse-origin/</link>
+        <description>&lt;h2&gt;Part One. How It All Started&lt;/h2&gt;
+&lt;p&gt;Sometimes I suffer from migraine attacks – sometimes severe. I’d heard that keeping an attack diary was worthwhile. In 2024, after one particularly severe attack, I started writing text descriptions with dates and symptoms. In parallel, I began testing various apps where I tried to record the same events.&lt;/p&gt;
+&lt;h2&gt;Why Existing Apps Didn’t Suit Me&lt;/h2&gt;
+&lt;p&gt;First, what I didn’t like about existing apps – their handling of personal data was insufficiently transparent. And security was also questionable.&lt;/p&gt;
+&lt;p&gt;Second, they lacked import and export capabilities for my own data. Few formats and no standards.&lt;/p&gt;
+&lt;p&gt;Third, there was no flexibility to add my own attack logic. Or another resource with data I specifically needed, like magnetic storm forecasts or their history.&lt;/p&gt;
+&lt;p&gt;That’s when I decided to create my own migraine diary to track symptoms. And not just that.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;What I Learned Building This Project&lt;/h2&gt;
+&lt;p&gt;Building this project, like building anything, I learned new technologies and tools. I tried services I hadn’t used before in work or in other personal projects.&lt;/p&gt;
+&lt;p&gt;One of the first things I used was creating a frontend prototype. It remained almost unchanged.&lt;/p&gt;
+&lt;p&gt;The second thing I used for brainstorming, prototype generation, and rewriting monotonous code was AI. Here I tried ChatGPT, Khoj (Gemini, Claude Sonnet), and Google Antigravity services.&lt;/p&gt;
+&lt;p&gt;I made the service code – &lt;a href=&quot;https://github.com/wirtaw/migraine-tracker-monolith&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;backend&lt;/a&gt; and &lt;a href=&quot;https://github.com/wirtaw/migrane-tracker-dashboard&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;frontend&lt;/a&gt; – publicly available, because I believe everyone should have the opportunity to take it and modify it for themselves. Either to help me improve. Or to suggest and add new functionality.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;What’s Coming in the Future?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I’ll add more various reports and a module that will analyze only your data and, based on them, warn about increased probability of migraine or headache.&lt;/li&gt;
+&lt;li&gt;Translation into other languages – first would be Ukrainian, Lithuanian, and Polish.&lt;/li&gt;
+&lt;li&gt;Gender selection and adding women’s cycles.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A demo environment where you can try it out without entering much information – you can find it by following this &lt;a href=&quot;https://migrane-tracker-dashboard.sliplane.app/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The documentation page is &lt;a href=&quot;https://wirtaw.github.io/migraine-tracker-docs/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The official product of the program, which will have my personal functionality and more integrations – you can find it &lt;a href=&quot;https://migrainepulse.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/migraine-pulse-kaip-pradejau-kurti-heatmap.webp&quot; alt=&quot;Heatmap Migrain Pulse&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In future blog posts, I’ll tell you more details about each feature. Also about interesting discoveries I made building this product.&lt;/p&gt;
+&lt;p&gt;Good luck and health!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 11 Mar 2026 22:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/en/blog/migraine-pulse-origin/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>How to Find Tranquility in a Turbulent World Seneca&#92;’s Stoic Strategies</title>
         <link>https://wirtaw.github.io/blog/en/blog/stoic-strategies-tranquility-modern-world/</link>
         <description>&lt;p&gt;We live in a world that feels like it’s constantly shouting. Between the polarized political landscape, the relentless ping of social media notifications, and the rising temperature of public discourse, “inner peace” can feel like a luxury reserved for monks on a mountaintop.&lt;/p&gt;
