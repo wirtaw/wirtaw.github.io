@@ -39,4 +39,24 @@
         sunIcon.style.display = 'block';
         moonIcon.style.display = 'none';
     });
+
+    // Toggle highlight theme based on .dark-mode class
+    const highlightLight = document.getElementById('highlight-light');
+    const highlightDark = document.getElementById('highlight-dark');
+
+    function updateHighlightTheme() {
+    if (document.body.classList.contains('dark-mode')) {
+        highlightLight.disabled = true;
+        highlightDark.disabled = false;
+    } else {
+        highlightLight.disabled = false;
+        highlightDark.disabled = true;
+    }
+    }
+
+    // Run on load and on theme change
+    updateHighlightTheme();
+    const observer = new MutationObserver(updateHighlightTheme);
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
 }());

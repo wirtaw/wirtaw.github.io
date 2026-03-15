@@ -1,0 +1,15 @@
+/* Fix for prism-one-light.css HSL errors */
+/* These rules fix invalid hsl() values in the original theme */
+
+.prism-previewer.prism-previewer:before,
+.prism-previewer-gradient.prism-previewer-gradient div {
+    border-color: hsl(0, 0%, 95%);
+}
+
+.prism-previewer.prism-previewer:after {
+    border-top-color: hsl(0, 0%, 95%);
+}
+
+.prism-previewer-flipped.prism-previewer-flipped.after {
+    border-bottom-color: hsl(0, 0%, 95%);
+}
