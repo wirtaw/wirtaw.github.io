@@ -24,7 +24,7 @@
 &lt;p&gt;Later I started building a &lt;a href=&quot;https://github.com/wirtaw/migraine-tracker-monolith&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;backend&lt;/a&gt; which already had a connection to the database. But when creating NestJS modules, I took into account the schema I worked out above.&lt;/p&gt;
 &lt;p&gt;However, until now the schema format itself was described statically on the &lt;code&gt;settings/DataManagement&lt;/code&gt; page.&lt;/p&gt;
 &lt;p&gt;I decided to make it dynamic, i.e., when fields change or are added, so you don’t have to manually edit the page every time.&lt;/p&gt;
-&lt;h3&gt;Implementation&lt;/h3&gt;
+&lt;h2&gt;Implementation&lt;/h2&gt;
 &lt;p&gt;The first step is simple - create a new NestJS &lt;code&gt;data-management&lt;/code&gt; module with service and controller.&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;nest g module data-management 
 nest g &lt;span class=&quot;token function&quot;&gt;service&lt;/span&gt; data-management
@@ -968,7 +968,7 @@ Some things are simply none of your business.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;javaws: error while loading shared libraries: libnsl.so.1: cannot open shared object file: No such file or directory
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This issue typically arises because the &lt;code&gt;libnsl&lt;/code&gt; (Network Services Library) package, while crucial for some legacy Java applications or specific JDK components, is no longer a default dependency or is deprecated in its traditional form on modern Linux distributions like Fedora. Consequently, a clean JDK installation might not include this library by default.&lt;/p&gt;
-&lt;h3&gt;The Solution&lt;/h3&gt;
+&lt;h2&gt;The Solution&lt;/h2&gt;
 &lt;p&gt;The resolution is straightforward: explicitly install the &lt;code&gt;libnsl&lt;/code&gt; package using DNF.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -1801,34 +1801,6 @@ Not with a whip, of course.&lt;/p&gt;
         <guid>https://wirtaw.github.io/blog/en/blog/success-pyramide/</guid>
       </item>
       
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     

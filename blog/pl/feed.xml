@@ -20,7 +20,7 @@
 &lt;p&gt;Później zacząłem budować &lt;a href=&quot;https://github.com/wirtaw/migraine-tracker-monolith&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;backend&lt;/a&gt;, który miał już połączenie z bazą danych. Tworząc moduły NestJS, brałem pod uwagę schemat, nad którym pracowałem wcześniej.&lt;/p&gt;
 &lt;p&gt;Jednak do tej pory sam format schematu był opisany statycznie na stronie &lt;code&gt;settings/DataManagement&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Postanowiłem go zdynamicznić, tzn. gdy pola się zmienią lub zostaną dodane, aby nie trzeba było ręcznie edytować strony za każdym razem.&lt;/p&gt;
-&lt;h3&gt;Implementacja&lt;/h3&gt;
+&lt;h2&gt;Implementacja&lt;/h2&gt;
 &lt;p&gt;Pierwszy krok jest prosty - utwórz nowy moduł NestJS &lt;code&gt;data-management&lt;/code&gt; z serwisem i kontrolerem.&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;nest g module data-management 
 nest g &lt;span class=&quot;token function&quot;&gt;service&lt;/span&gt; data-management
@@ -1580,34 +1580,6 @@ Niektóre sprawy to po prostu nie twój interes.&lt;/p&gt;
         <guid>https://wirtaw.github.io/blog/pl/blog/idealy-swietlistego-rycerza/</guid>
       </item>
       
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     

@@ -22,7 +22,7 @@
 &lt;p&gt;Paskui jau perėjau kurti &lt;a href=&quot;https://github.com/wirtaw/migraine-tracker-monolith&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;backend&lt;/a&gt; kuris jau turėjo ryšį su duomenų baze. Bet kuriant modulius NestJS atsižvelgdavau į schemą kurią atidirbau aukščiau.&lt;/p&gt;
 &lt;p&gt;Bet iki šiol pats formatas schemos buvo aprašytas statiškai puslapyje &lt;code&gt;settings/DataManagement&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Nutariau jį padaryti dinamišką, t.y. pasikeitus laukams ar pridėjus, kad nereikėtų rankomis kaskart keisti puslapyje.&lt;/p&gt;
-&lt;h3&gt;Implementacija&lt;/h3&gt;
+&lt;h2&gt;Implementacija&lt;/h2&gt;
 &lt;p&gt;Pirmas žingsnis gana paprastas sukurti NestJS nauja modulį &lt;code&gt;data-management&lt;/code&gt; su servisu ir kontroleriu.&lt;/p&gt;
 &lt;pre class=&quot;language-bash&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;nest g module data-management 
 nest g &lt;span class=&quot;token function&quot;&gt;service&lt;/span&gt; data-management
@@ -1965,34 +1965,6 @@ Jei per daug pertekliaus, ji neatlaikys ir jūs palūšite.&lt;/p&gt;
         <guid>https://wirtaw.github.io/blog/lt/blog/success-pyramide/</guid>
       </item>
       
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
