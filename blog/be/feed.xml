@@ -18,6 +18,68 @@
     
       
       <item>
+        <title>Сіметрычнае шыфраванне даных пра здароўе: Архітэктура бяспекі MigrainePulse</title>
+        <link>https://wirtaw.github.io/blog/be/blog/migraine-pulse-security-key-management-service/</link>
+        <description>&lt;p&gt;Ствараючы прадукты HealthTech, такія як &lt;a href=&quot;https://migrainepulse.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;MigrainePulse&lt;/a&gt;, адным з самых вялікіх выклікаў з’яўляецца забеспячэнне абсолютнай бяспекі і канфідэнцыйнасці канфідэнцыйных даных карыстальнікаў. Гісторыя прыступаў мігрэні, прынятыя лекаванні, медыцынскія запісы і дэталі ладу жыцця – усё гэта з’яўляецца вельмі асабістай інфармацыяй.&lt;/p&gt;
+&lt;p&gt;З першага дня нашая філасофія была простай: даныя карыстальнікаў належаць толькі ім. Каб забяспечыць гэта, мы ўкаранілі перадавую сістэму сіметрычнага шыфравання (англ. &lt;code&gt;Symmetric Key Encryption&lt;/code&gt;) у архітэктуры MigrainePulse, якая працуе разам з ізаляванымі мікрасэрвіснымі рашэннямі (&lt;code&gt;Cloudflare Workers&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;У гэтым артыкуле мы запрашаем вас тэхнічна зазірнуць пад капот і даведацца, як працуюць нашы ахоўныя механізмы.&lt;/p&gt;
+&lt;h2&gt;Чаму стандартных рашэнняў недастаткова?&lt;/h2&gt;
+&lt;p&gt;Большасць дадаткаў сёння выкарыстоўваюць шыфраванне падчас перадачы даных (&lt;code&gt;TLS/SSL&lt;/code&gt;) і шыфраванне ў стане спакою (зашыфраваныя базы даных). Аднак калі ўся сістэма (база даных і галоўны сервер, які захоўвае ключы шыфравання) будзе скампраметавана адначасова, даныя могуць стаць адкрытымі.&lt;/p&gt;
+&lt;p&gt;Каб пазбегнуць гэтага, у сістэме MigrainePulse мы аддзялілі самі даныя ад ключоў, неабходных для іх расшыфроўкі.&lt;/p&gt;
+&lt;h2&gt;Аснова архітэктуры: SymmetricKeyService&lt;/h2&gt;
+&lt;p&gt;У нашай бэкенд-сістэме (выкарыстоўваючы маналіт NestJS) спецыяльны модуль &lt;code&gt;SymmetricKeyService&lt;/code&gt; кіруе шыфраваннем і дэшыфраваннем канфідэнцыйных даных.&lt;/p&gt;
+&lt;p&gt;Як гэта працуе на практыцы?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Прынцып аднаго ключа: Сіметрычнае шыфраванне азначае, што адзін і той жа ўнікальны ключ выкарыстоўваецца як для шыфравання, так і для дэшыфравання даных. Кожны карыстальнік мае ўнікальны ключ, прызначаны яму, які нават мы самі не маем у нашай галоўнай базе даных.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Шыфраванне карыснага нагрузкі (Payload Encryption): Калі карыстальнік захоўвае новы запіс пра здароўе (напрыклад, дадае новы прыступ мігрэні), даныя трапляюць на наш сервер. &lt;code&gt;SymmetricKeyService&lt;/code&gt; атрымлівае гэтыя канфідэнцыйныя даныя, шыфруе іх з дапамогай перадавога алгарытму (напрыклад, &lt;code&gt;AES-256-GCM&lt;/code&gt;) і толькі потым захоўвае ў базе даных. У базе даных захоўваецца толькі бессэнсоўны набор сімвалаў.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ідэнтыфікацыя карыстальніка: Сесія карыстальніка і доступ да даных цесна звязаны з JWT (&lt;code&gt;JSON Web Tokens&lt;/code&gt;) і аўтэнтыфікацыяй Supabase. Карыстальнік пацвярджае сваю асобу, а ключ шыфравання, які належыць яму, прадастаўляецца толькі пасля верифікаванага ўваходу.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/migraine-pulse-security-key-management-service-diagram.webp&quot; alt=&quot;migraine-pulse-security-key-management-service diagram&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Дадатковы ўзровень абароны: Cloudflare Worker&lt;/h2&gt;
+&lt;p&gt;Узнікае натуральнае пытанне – дзе тады захоўваюцца самі ключы шыфравання, калі не ў галоўнай базе даных?&lt;/p&gt;
+&lt;p&gt;Тут нам на дапамогу прыйшла тэхналогія &lt;code&gt;Cloudflare Workers&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;У нашай архітэктуры ключы шыфравання кіруюцца праз цалкам ізаляваную інфраструктуру, якая працуе ў Edge-мережы. Рашэнне, апісанае ў дакументацыі &lt;a href=&quot;https://github.com/wirtaw/migraine-tracker-docs/blob/master/docs/backend/cloudflare-worker.md&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;doc/backend/cloudflare-worker.md&lt;/a&gt;, забяспечвае, што галоўны API-сервер і база даных ніколі не захоўваюць самі ключы ў даўгатэрміновай памяці.&lt;/p&gt;
+&lt;h2&gt;Перавагі інтэграцыі:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Дэцэнтралізацыя:&lt;/strong&gt; Паколькі ключы захоўваюцца і кіруюцца ў асобнай воблачнай інфраструктуры (Cloudflare), патэнцыйнаму хакера не будзе дастаткова скампраметаваць наш галоўны сервер. Яму спатрэбілася б адначасова пераадолець дзве зусім розныя, узаемна ізаляваныя сістэмы.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Хуткасць (Low Latency):&lt;/strong&gt; Cloudflare Workers працуюць у глабальнай Edge-мережы (найбліжэйшай да карыстальніка), таму запыт ключа да іх (для аўтарызаванага дэшыфравання) дадае толькі мінімальную затрымку, захоўваючы прадукцыйнасць праграмы.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Строгі кантроль доступу:&lt;/strong&gt; Worker наладжаны так, што аддае ключы толькі пасля атрымання правільна падпісаных і пацверджаных запытаў ад нашага SymmetricKeyService, правяраючы ўсе абмежаванні CORS і IP.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Вынік&lt;/h2&gt;
+&lt;p&gt;MigrainePulse – гэта не проста інструмент для адсочвання даных. Гэта бяспечная прастора. Спалучаючы надзейную архітэктуру NestJS (&lt;a href=&quot;https://github.com/wirtaw/migraine-tracker-monolith/blob/master/src/auth/symmetric-key/symmetric-key.service.ts&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;symmetric-key.service.ts&lt;/a&gt;) з дэцэнтралізацыяй, якую прадастаўляюць Cloudflare Workers, мы стварылі сістэму, у якой асабістая інфармацыя карыстальніка застаецца заблакаванай нават у самых горшых сцэнарыях.&lt;/p&gt;
+&lt;p&gt;Для нас «Бяспека па-першае» – гэта не проста гучная фраза для маркетынгу – гэта інжынерны фундамент, на якім пабудавана ўся сістэма MigrainePulse. Таму што калі мы гаворым пра здароўе, няма месца для кампрomісаў у пытанні канфідэнцыйнасці.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Ёсць пытанні пра нашу тэхнічную архітэктуру? Далучайцеся да дыскусіі ў каментарах альбо паспрабуйце &lt;a href=&quot;https://migrainepulse.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;MigrainePulse&lt;/a&gt; самі!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/be/blog/migraine-pulse-security-key-management-service/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>Migraine Pulse – перанос схемы дадзеных у бэкенд</title>
         <link>https://wirtaw.github.io/blog/be/blog/migraine-pulse-data-schema-backend/</link>
         <description>&lt;p&gt;&lt;strong&gt;Сутатэнне&lt;/strong&gt;: У гэтым артыкуле апісана перанос схемы дадзеных з фронтэнду ў бэкенд у дадатку Migraine Pulse. Вы даведаецеся, як мы рэалізавалі дынамічную схему з выкарыстаннем NestJS, валідацыю JSON Schema і як гэта спрасціла працэс экспарту/імпарту дадзеных.&lt;/p&gt;

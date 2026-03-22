@@ -14,6 +14,68 @@
     
       
       <item>
+        <title>Simetrinio rakto šifravimas sveikatos duomenims: MigrainePulse saugumo architektūra</title>
+        <link>https://wirtaw.github.io/blog/lt/blog/migraine-pulse-security-key-management-service/</link>
+        <description>&lt;p&gt;Kuriant sveikatos technologijų (HealthTech) produktus, tokius kaip &lt;a href=&quot;https://migrainepulse.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;„MigrainePulse“&lt;/a&gt;, susiduriama su vienu didžiausių iššūkių – kaip užtikrinti absoliutų vartotojų jautrių duomenų saugumą ir privatumą. Migrenos priepuolių istorija, vartojami vaistai, sveikatos įrašai ir gyvenimo būdo detalės – visa tai yra itin asmeniška informacija.&lt;/p&gt;
+&lt;p&gt;Nuo pat pirmos dienos mūsų filosofija buvo paprasta: vartotojų duomenys priklauso tik jiems. Kad tai užtikrintume, „MigrainePulse“ architektūroje įdiegėme pažangią simetrinio rakto šifravimo (angl. &lt;code&gt;Symmetric Key Encryption&lt;/code&gt;) sistemą, kuri veikia kartu su izoliuotais mikropaslaugų sprendimais (&lt;code&gt;Cloudflare Workers&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Šiame straipsnyje kviečiame techniškai pažvelgti po gaubtu ir sužinoti, kaip veikia mūsų apsaugos mechanizmai.&lt;/p&gt;
+&lt;h2&gt;Kodėl standartinių sprendimų nepakanka?&lt;/h2&gt;
+&lt;p&gt;Dauguma aplikacijų šiandien naudoja šifravimą duomenų perdavimo metu (&lt;code&gt;TLS/SSL&lt;/code&gt;) ir šifravimą ramybės būsenoje (šifruotos duomenų bazės). Tačiau jei visa sistema (duomenų bazė ir pagrindinis serveris, kuris laiko šifravimo raktus) yra pažeidžiama vienu metu, duomenys gali tapti atviri.&lt;/p&gt;
+&lt;p&gt;Norėdami to išvengti, &lt;a href=&quot;https://migrainepulse.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;„MigrainePulse“&lt;/a&gt; sistemoje atskyrėme pačius duomenis nuo raktų, reikalingų jiems iššifruoti.&lt;/p&gt;
+&lt;h2&gt;Architektūros pagrindas: „SymmetricKeyService“&lt;/h2&gt;
+&lt;p&gt;Mūsų backend sistemoje (kuriai naudojame „NestJS“ monolitą) jautrių duomenų šifravimą ir dešifravimą valdo specialus &lt;code&gt;SymmetricKeyService&lt;/code&gt; modulis.&lt;/p&gt;
+&lt;p&gt;Kaip tai veikia praktikoje?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Vieno rakto principas: Simetrinis šifravimas reiškia, kad tas pats unikalus raktas yra naudojamas ir duomenims užšifruoti, ir jiems atšifruoti. Kiekvienas vartotojas turi jam priskirtą unikalų raktą, kurio neturime net mes patys savo pagrindinėje duomenų bazėje.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Duomenų apdorojimas (&lt;code&gt;Payload Encryption&lt;/code&gt;): Kai vartotojas išsaugo naują sveikatos įrašą (pvz., prideda naują migrenos priepuolį), duomenys pasiekia mūsų serverį. &lt;code&gt;SymmetricKeyService&lt;/code&gt; paima šį jautrų payload, užšifruoja jį naudojant pažangų algoritmą (pvz., &lt;code&gt;AES-256-GCM&lt;/code&gt;) ir tik tada išsaugo duomenų bazėje. Duomenų bazėje saugomas tik beprasmis simbolių rinkinys.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vartotojo identifikacija: Vartotojo sesija ir prieinamumas prie duomenų yra griežtai susieti su JWT (&lt;code&gt;JSON Web Tokens&lt;/code&gt;) ir „Supabase“ autentifikacija. Vartotojas patvirtina tapatybę, o jam priklausantis šifravimo raktas yra pateikiamas tik patvirtintam prisijungimui.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/migraine-pulse-security-key-management-service-diagram.webp&quot; alt=&quot;migraine-pulse-security-key-management-service diagram&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Papildomas gynybos sluoksnis: „Cloudflare Worker“&lt;/h2&gt;
+&lt;p&gt;Kyla natūralus klausimas – kur tuomet saugomi patys šifravimo raktai, jei ne pagrindinėje duomenų bazėje?&lt;/p&gt;
+&lt;p&gt;Čia į pagalbą pasitelkėme &lt;code&gt;Cloudflare Workers&lt;/code&gt; technologiją.&lt;/p&gt;
+&lt;p&gt;Mūsų architektūroje šifravimo raktai yra valdomi per visiškai izoliuotą, Edge tinkle veikiančią infrastruktūrą. &lt;a href=&quot;https://github.com/wirtaw/migraine-tracker-docs/blob/master/docs/backend/cloudflare-worker.md&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;doc/backend/cloudflare-worker.md&lt;/a&gt; dokumentacijoje aprašytas sprendimas leidžia užtikrinti, kad pagrindinis API serveris ir duomenų bazė niekada nesaugotų pačių raktų ilgalaikėje atmintyje.&lt;/p&gt;
+&lt;h2&gt;Integracijos naudos:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Decentralizacija:&lt;/strong&gt; Kadangi raktai saugomi ir valdomi atskiroje debesijos infrastruktūroje („Cloudflare“), potencialiam įsilaužėliui nepakaktų kompromituoti mūsų pagrindinio serverio. Jam reikėtų vienu metu įveikti dvi visiškai skirtingas, tarpusavyje izoliuotas sistemas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Greitis (Low Latency):&lt;/strong&gt; „Cloudflare Workers“ veikia globaliame Edge tinkle (arčiausiai vartotojo), todėl kreipimasis į juos dėl rakto gavimo (autorizuotam atšifravimui) prideda tik minimalią delsą, išlaikant programėlės spartą.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Griežta prieigos kontrolė:&lt;/strong&gt; Worker’is sukonfigūruotas taip, kad raktus atiduoda tik sulaukęs teisingai pasirašytų ir patvirtintų užklausų iš mūsų SymmetricKeyService, patikrinęs visus CORS ir IP apribojimus.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Apibendrinimas&lt;/h2&gt;
+&lt;p&gt;„MigrainePulse“ nėra tik įrankis duomenims sekti. Tai – saugi erdvė. Kombinuodami tvirtą „NestJS“ architektūrą (&lt;a href=&quot;https://github.com/wirtaw/migraine-tracker-monolith/blob/master/src/auth/symmetric-key/symmetric-key.service.ts&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;symmetric-key.service.ts&lt;/a&gt;) su „Cloudflare Workers“ teikiama decentralizacija, mes sukūrėme sistemą, kurioje vartotojo asmeninė informacija išlieka užrakinta net pačių blogiausių scenarijų atveju.&lt;/p&gt;
+&lt;p&gt;Mums „Saugumas pirmiausia“ nėra tik skambi frazė marketingui – tai inžinerinis pamatas, ant kurio pastatyta visa „MigrainePulse“ sistema. Nes kai kalbame apie sveikatą, kompromisams dėl privatumo vietos nėra.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Ar turite klausimų apie mūsų techninę architektūrą? Prisijunkite prie diskusijos komentaruose arba išbandykite &lt;a href=&quot;https://migrainepulse.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;MigrainePulse&lt;/a&gt; patys!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/lt/blog/migraine-pulse-security-key-management-service/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>Migraine Pulse – duomenų schemos perkėlimas į backendą</title>
         <link>https://wirtaw.github.io/blog/lt/blog/migraine-pulse-data-schema-backend/</link>
         <description>&lt;p&gt;&lt;strong&gt;Santrauka&lt;/strong&gt;: Šiame straipsnyje aprašomas duomenų schemos perkėlimas iš frontend’o į backend’ą Migraine Pulse programėlėje. Sužinosite, kaip implementavome dinaminę schemą naudojant NestJS, JSON schema validaciją ir kaip tai palengvino duomenų eksporto/importo procesą.&lt;/p&gt;
