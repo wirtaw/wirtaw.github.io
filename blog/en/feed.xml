@@ -16,6 +16,54 @@
     
       
       <item>
+        <title>Stoic Guide to Inner Peace</title>
+        <link>https://wirtaw.github.io/blog/en/blog/15-ways-to-achieve-tranquility/</link>
+        <description>&lt;p&gt;The sources present fifteen ways to achieve tranquility (based on &lt;a href=&quot;https://en.wikipedia.org/wiki/Seneca_the_Younger&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Seneca’s&lt;/a&gt; suggestions) and also discuss the technical structure of subordinate virtues that fall under the four cardinal virtues of Stoicism. While the specific count of “15 subordinate virtues” is not explicitly defined as a single canonical list in the sources, they provide a detailed list of fifteen practical suggestions for living virtuously and identify various subordinate virtues within the broader Stoic framework&lt;/p&gt;
+&lt;h2&gt;The 15 Suggestions for Tranquility&lt;/h2&gt;
+&lt;p&gt;These fifteen points are drawn from Seneca’s essay On Tranquillity of Mind and represent practical applications of Stoic virtue:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Get involved in the world&lt;/em&gt;: Actively engaging in daily activities and worthwhile work steadies the mind and counters restlessness.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Don’t let obstacles stop you&lt;/em&gt;: Practice perseverance and find alternative paths when blocked; even small services contribute to a quiet dignity.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Decide to be alive until you die&lt;/em&gt;: Commit to staying fully present and content regardless of whether your circumstances are harsh or pleasant.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Match your actions with your ability&lt;/em&gt;: Choose tasks you can carry well and avoid commitments that overwhelm your nature or abilities.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Be careful in choosing friends&lt;/em&gt;: Prioritize genuine companions and avoid “miserable people” who find something to complain about in everything.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Don’t go after possessions&lt;/em&gt;: Avoid the consuming pursuit of wealth and aim instead for sufficiency.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Live simply&lt;/em&gt;: Avoid display and extravagance; a simple life is easier to maintain and steadies the mind.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Handle life with skill&lt;/em&gt;: Use practice and skill to turn hardships into bearable circumstances rather than crushing weights.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Be willing to let go&lt;/em&gt;: Recognize that every human condition is temporary and avoid clinging too tightly to status, possessions, or life itself.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Avoid useless activities&lt;/em&gt;: Choose meaningful purposes and avoid aimless busyness that breeds distraction.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Be prepared for disappointment&lt;/em&gt;: Expect that things will not always go as hoped to strip disappointment of its power.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Be neither stubborn nor indecisive&lt;/em&gt;: Maintain the flexibility to adapt to changing circumstances or to withdraw when reason advises.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Don’t be guided by other people’s opinions&lt;/em&gt;: Ignore human folly and follow what reason demands.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Learn from other people’s courage&lt;/em&gt;: Observe how others face misfortune and strengthen your own heart through their example.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Be yourself, relax, have fun&lt;/em&gt;: Give the mind rest through walks, enjoyment, and meals in moderation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;The Technical Structure of Subordinate Virtues&lt;/h2&gt;
+&lt;p&gt;The sources explain that the four cardinal virtues—Wisdom (Prudence), Justice, Courage, and Temperance—each encompass several subordinate virtues. According to Arius Didymus, Prudence includes six subordinate virtues, Courage includes five, and Justice and Temperance each have four, totaling 19. Specific examples named in the sources include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Subordinate Virtues of Justice: These include kindness (knowledge of how to do good), fair dealing, good fellowship, and piety. Other aspects include honesty, truthfulness, and faithfulness.&lt;/li&gt;
+&lt;li&gt;Subordinate Virtues of Temperance: This category includes self-control (enkrateia), orderliness (eutaxia), propriety, and modesty.&lt;/li&gt;
+&lt;li&gt;Subordinate Virtues of Courage: This includes magnanimity (greatness of mind or soul), perseverance (philoponia or “love of toil”), and patience (patientia).&lt;/li&gt;
+&lt;li&gt;Subordinate Virtues of Prudence (Wisdom): While the sources do not list all six, they define wisdom as the “master virtue” or “clear-sighted intelligence” that directs the others&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 29 Mar 2026 20:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/en/blog/15-ways-to-achieve-tranquility/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>Symmetric Key Encryption for Health Data: MigrainePulse Security Architecture</title>
         <link>https://wirtaw.github.io/blog/en/blog/migraine-pulse-security-key-management-service/</link>
         <description>&lt;p&gt;When building HealthTech products like &lt;a href=&quot;https://migrainepulse.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;MigrainePulse&lt;/a&gt;, one of the biggest challenges is ensuring absolute security and privacy of sensitive user data. Migraine attack history, medications taken, health records, and lifestyle details – all of this is highly personal information.&lt;/p&gt;
