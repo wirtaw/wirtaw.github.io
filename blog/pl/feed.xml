@@ -12,6 +12,129 @@
     
       
       <item>
+        <title>📡 Odbiór prognozy pogody z czujników 433 MHz na Raspberry Pi z RTL-SDR</title>
+        <link>https://wirtaw.github.io/blog/pl/blog/forecast-receiver-raspberry-pi-rtl-sdr/</link>
+        <description>&lt;h2&gt;Od sygnału radiowego do eleganckich dashboardów w Grafanie&lt;/h2&gt;
+&lt;p&gt;W pewnym momencie przestało mi wystarczać sprawdzanie pogody w aplikacji. Chciałem wiedzieć, jaka temperatura jest na balkonie — i to nie z jakiegoś chmurzastego API, tylko z moich własnych czujników, działających w czasie rzeczywistym.
+Tak narodził się pomysł stworzenia własnego, w pełni prywatnego systemu monitoringu pogody.&lt;/p&gt;
+&lt;h3&gt;📡 1. Złapanie sygnału z powietrza&lt;/h3&gt;
+&lt;p&gt;Podstawą całego projektu jest dongle RTL‑SDR — mały odbiornik radiowy, który potrafi przechwycić transmisje z tanich czujników 433 MHz.
+Z pomocą narzędzia &lt;strong&gt;rtl_433&lt;/strong&gt; zamieniłem surowy sygnał radiowy na czytelne JSON‑y.
+To moment, w którym „magia radiowa” staje się danymi.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/photos/IMG20260411083210.jpg&quot; alt=&quot;dongle RTL-SDR + raspberry-pi&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/photos/IMG20260411083455.jpg&quot; alt=&quot;czujnik 433 MHz pogodowy&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;🔧 2. Inteligentny filtr: tylko moje czujniki, tylko to, co ważne&lt;/h3&gt;
+&lt;p&gt;Nie chciałem śmieci w systemie.
+Dlatego stworzyłem &lt;code&gt;bridge.js&lt;/code&gt; — mały, sprytny skrypt &lt;code&gt;Node.js&lt;/code&gt;, który:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;rozpoznaje tylko moje czujniki (po modelu i ID),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mapuje je na przyjazne nazwy: balcony (kąt ciemny) oraz balcony_2 (kąt sloneczny),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;konwertuje temperaturę z &lt;strong&gt;°F&lt;/strong&gt; na &lt;strong&gt;°C&lt;/strong&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;publikuje czyste, ujednolicone dane na MQTT (&lt;code&gt;weather/&amp;lt;name&amp;gt;&lt;/code&gt;),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;zapisuje timestamp ostatniego sygnału,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;wysyła powiadomienia, gdy bateria w czujniku zaczyna umierać.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To nie jest zwykły filtr — to mój prywatny „weather intelligence layer”.&lt;/p&gt;
+&lt;h3&gt;🧠 3. Backend, który rozumie dane&lt;/h3&gt;
+&lt;p&gt;Dalej dane trafiają do backendu opartego o NestJS.
+Zbudowałem własny klient MQTT, który:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;subskrybuje &lt;code&gt;weather/#&lt;/code&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;odbiera gotowe JSON‑y z &lt;code&gt;bridge.js&lt;/code&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;aktualizuje cache ostatnich odczytów,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;agreguje dane i zapisuje je do PostgreSQL bazy danych.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Backend nie musi znać protokołów radiowych ani modeli czujników.
+Dostaje czyste, ustandaryzowane dane — i robi z nimi to, co robi najlepiej.&lt;/p&gt;
+&lt;h3&gt;🗄️ 4. Historia pogody w PostgreSQL&lt;/h3&gt;
+&lt;p&gt;Każdy czujnik generuje wiele odczytów na minutę.
+Zamiast zapisywać wszystko, backend:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;buforuje dane,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;liczy średnie,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;zapisuje eleganckie rekordy do tabeli &lt;code&gt;weather_record&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dzięki temu baza jest lekka, szybka i gotowa do analizy.&lt;/p&gt;
+&lt;h3&gt;📊 5. Pogoda w moim domu — na żywo&lt;/h3&gt;
+&lt;p&gt;Na koniec wszystko trafia do Grafany, gdzie stworzyłem zestaw dashboardów:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;wykres temperatury z podziałem na sensory,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;wilgotność w czasie,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;panel diagnostyczny (bateria, ostatni sygnał),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;szybki podgląd ostatnich wartości.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To nie jest zwykły wykres — to mój prywatny „weather center”, działający 24/7.&lt;/p&gt;
+&lt;p&gt;🎯 Efekt końcowy&lt;/p&gt;
+&lt;p&gt;Zbudowałem system, który:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;odbiera sygnał radiowy z czujników 433 MHz,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;filtruje i normalizuje dane,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;publikuje je na MQTT,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;backend je agreguje i zapisuje,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Grafana prezentuje je w piękny, czytelny sposób.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Zero chmury. Zero vendor lock‑in.
+Wszystko działa lokalnie, szybko i dokładnie tak, jak chcę.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Apr 2026 10:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/pl/blog/forecast-receiver-raspberry-pi-rtl-sdr/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>15 Sposobów na Osiągnięcie Spokoju Wewnętrznego: Stoicki Przewodnik</title>
         <link>https://wirtaw.github.io/blog/pl/blog/15-ways-to-achieve-tranquility/</link>
         <description>&lt;p&gt;Źródła przedstawiają piętnaście sposobów na osiągnięcie spokoju wewnętrznego (na podstawie sugestii &lt;a href=&quot;https://pl.wikipedia.org/wiki/Seneka_M%C5%82odszy&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Seneki&lt;/a&gt;) oraz omawiają techniczną strukturę cnót podrzędnych, które mieszczą się w czterech głównych cnotach stoicyzmu. Chociaż konkretna liczba “15 cnót podrzędnych” nie jest jawnie zdefiniowana jako jedna kanoniczna lista w źródłach, dostarczają one szczegółowej listy piętnastu praktycznych sugestii do życia cnotliwego oraz identyfikują różne cnoty podrzędne w ramach szerszego systemu stoickiego.&lt;/p&gt;

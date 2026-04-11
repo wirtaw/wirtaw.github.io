@@ -14,6 +14,129 @@
     
       
       <item>
+        <title>📡 Oro prognozės gavimas iš 433 MHz jutiklių su Raspberry Pi ir RTL-SDR</title>
+        <link>https://wirtaw.github.io/blog/lt/blog/forecast-receiver-raspberry-pi-rtl-sdr/</link>
+        <description>&lt;h2&gt;Nuo radijo signalo iki elegantiškų Grafanos prietaisų skydelių&lt;/h2&gt;
+&lt;p&gt;Kadaise man nebepakako orų prognozių tikrinimo programėlėje. Norėjau žinoti, kokia temperatūra yra balkone — ir ne iš kokios nors debesų API, o iš savo pačių jutiklių, veikiančių realiuoju laiku.
+Taip gimė idėja sukurti visiškai privačią orų stebėjimo sistemą.&lt;/p&gt;
+&lt;h3&gt;📡 1. Signalų sugavimas iš eterio&lt;/h3&gt;
+&lt;p&gt;Pagrindas viso projekto — RTL-SDR adapteris, mažas radijo imtuvas, galintis perimti signalus iš pigių 433 MHz jutiklių.
+Su įrankiu &lt;strong&gt;rtl_433&lt;/strong&gt; žalią radijo signalą pavertiau aiškiais JSON formato duomenimis.
+Tai momentas, kai „radijo magija“ tampa duomenimis.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/photos/IMG20260411083210.jpg&quot; alt=&quot;adapteris RTL-SDR + raspberry-pi&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/photos/IMG20260411083455.jpg&quot; alt=&quot;oro jutiklis 433 MHz&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;🔧 2. Protingas filtras: tik mano jutikliai, tik tai, kas svarbu&lt;/h3&gt;
+&lt;p&gt;Nenorėjau šiukšlių sistemoje.
+Todėl sukūriau &lt;code&gt;bridge.js&lt;/code&gt; — mažą, išmanų &lt;code&gt;Node.js&lt;/code&gt; skritą, kuris:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;atpažįsta tik mano jutiklius (pagal modelį ir ID),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;priskiria jiems draugiškus pavadinimus:  balcony (balkonas išorinis saulėta pusė) ir balcony_2 (balkonas tamsus kampas),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;konvertuoja temperatūrą iš &lt;strong&gt;°F&lt;/strong&gt; į &lt;strong&gt;°C&lt;/strong&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;publikuoja švarius, standartizuotus duomenis MQTT (&lt;code&gt;weather/&amp;lt;name&amp;gt;&lt;/code&gt;),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;įrašo paskutinio signalo laiką,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;siunčia pranešimus, kai jutiklio baterija pradeda sekti.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tai ne paprastas filtras — tai mano privatus „orų intelekto sluoksnis“.&lt;/p&gt;
+&lt;h3&gt;🧠 3. Backend’as, suprantantis duomenis&lt;/h3&gt;
+&lt;p&gt;Toliau duomenys patenka į NestJS pagrįstą backend’ą.
+Sukūriau savo MQTT klientą, kuris:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;prenumeruoja &lt;code&gt;weather/#&lt;/code&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;priima paruoštus JSON’us iš &lt;code&gt;bridge.js&lt;/code&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;atnaujina paskutinių nuskaitymų talpyklą,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;agreguoja duomenis ir įrašo juos į PostgreSQL duombaze.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Backend’ui nereikia žinoti radijo protokolų ar jutiklių modelių.
+Jis gauna švarius, standartizuotus duomenis — ir daro su jais tai, ką moka geriausiai.&lt;/p&gt;
+&lt;h3&gt;🗄️ 4. Orų istorija PostgreSQL&lt;/h3&gt;
+&lt;p&gt;Kiekvienas jutiklis generuoja daug nuskaitymų per minutę.
+Užuot įrašinėjęs viską, backend’as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;kaupia duomenis buferyje,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;skaičiuoja vidurkius,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;įrašo elegantiškus įrašus į lentelę &lt;code&gt;weather_record&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dėl to duomenų bazė yra lengva, greita ir paruošta analizei.&lt;/p&gt;
+&lt;h3&gt;📊 5. Orų stebėjimas mano namuose — tiesiogiai&lt;/h3&gt;
+&lt;p&gt;Galiausiai viskas patenka į Grafaną, kur sukūriau rinkinį prietaisų skydelių:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;temperatūros grafiką pagal jutiklius,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;drėgmės kitimą laike,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;diagnostikos skydelį (baterija, paskutinis signalas),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;greitą paskutinių reikšmių peržiūrą.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tai ne paprastas grafikas — tai mano privatus „orų centras“, veikiantis 24/7.&lt;/p&gt;
+&lt;p&gt;🎯 Galutinis rezultatas&lt;/p&gt;
+&lt;p&gt;Sukūriau sistemą, kuri:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;priima radijo signalus iš 433 MHz jutiklių,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;filtruoja ir normalizuoja duomenis,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;publikuoja juos MQTT,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;backend’as juos agreguoja ir įrašo,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Grafana pristato juos gražiai ir aiškiai.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Jokių debesų. Jokio gamintojo priklausomybės.
+Viskas veikia lokaliai, greitai ir būtent taip, kaip noriu.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Apr 2026 10:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/lt/blog/forecast-receiver-raspberry-pi-rtl-sdr/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>15 Būdų Pasiekti Vidinį Ramybę: Stoikiškas Vadovas</title>
         <link>https://wirtaw.github.io/blog/lt/blog/15-ways-to-achieve-tranquility/</link>
         <description>&lt;p&gt;Šaltiniai pateikia penkiolika būdų pasiekti vidinę ramybę (remiantis &lt;a href=&quot;https://lt.wikipedia.org/wiki/Seneka&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Senekos&lt;/a&gt; pasiūlymais) ir taip pat nagrinėja papildomų dorybių, priklausančių keturioms stoicizmo kardinėms dorybėms, techninę struktūrą. Nors konkretus “15 papildomų dorybių” skaičius nėra aiškiai apibrėžtas kaip vienas kanoninis sąrašas šaltiniuose, jie pateikia išsamų penkiolikos praktiškų gyvenimo pagal dorybes pasiūlymų sąrašą ir identifikuoja įvairias papildomas dorybes platesniame stoicizmo kontekste.&lt;/p&gt;

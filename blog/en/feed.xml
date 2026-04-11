@@ -16,6 +16,129 @@
     
       
       <item>
+        <title>📡 Receiving Weather Forecasts from 433 MHz Sensors on Raspberry Pi with RTL-SDR</title>
+        <link>https://wirtaw.github.io/blog/en/blog/forecast-receiver-raspberry-pi-rtl-sdr/</link>
+        <description>&lt;h2&gt;From Raw Radio Signals to Elegant Grafana Dashboards&lt;/h2&gt;
+&lt;p&gt;At some point, checking the weather in an app stopped being enough. I wanted to know the temperature on the balcony—not from some cloud-based API, but from my own sensors, working in real time.
+That’s how the idea for a fully private weather monitoring system was born.&lt;/p&gt;
+&lt;h3&gt;📡 1. Capturing Signals from the Air&lt;/h3&gt;
+&lt;p&gt;The foundation of this project is the RTL-SDR dongle—a small radio receiver capable of intercepting transmissions from cheap 433 MHz sensors.
+With the help of &lt;strong&gt;rtl_433&lt;/strong&gt;, I transformed raw radio signals into readable JSON data.
+This is the moment when “radio magic” becomes actionable data.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/photos/IMG20260411083210.jpg&quot; alt=&quot;dongle RTL-SDR + raspberry-pi&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/photos/IMG20260411083455.jpg&quot; alt=&quot;forecast sensors 433 MHz&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;🔧 2. Smart Filter: Only My Sensors, Only What Matters&lt;/h3&gt;
+&lt;p&gt;I didn’t want noise in the system.
+That’s why I created &lt;code&gt;bridge.js&lt;/code&gt;—a small, clever &lt;code&gt;Node.js&lt;/code&gt; script that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Recognizes only my sensors (by model and ID),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Maps them to friendly names: kitchen, balcony, garden,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Converts temperature from &lt;strong&gt;°F&lt;/strong&gt; to &lt;strong&gt;°C&lt;/strong&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Publishes clean, standardized data to MQTT (&lt;code&gt;weather/&amp;lt;name&amp;gt;&lt;/code&gt;),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Records the timestamp of the last signal,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sends notifications when a sensor’s battery starts dying.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This isn’t just a filter—it’s my private “weather intelligence layer.”&lt;/p&gt;
+&lt;h3&gt;🧠 3. A Backend That Understands Data&lt;/h3&gt;
+&lt;p&gt;Next, the data flows into a NestJS-based backend.
+I built a custom MQTT client that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Subscribes to &lt;code&gt;weather/#&lt;/code&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Receives ready-to-use JSON data from &lt;code&gt;bridge.js&lt;/code&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Updates a cache of recent readings,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Aggregates data and stores it in PostgreSQL.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The backend doesn’t need to know about radio protocols or sensor models.
+It receives clean, standardized data—and does what it does best.&lt;/p&gt;
+&lt;h3&gt;🗄️ 4. Weather History in PostgreSQL&lt;/h3&gt;
+&lt;p&gt;Each sensor generates multiple readings per minute.
+Instead of storing everything, the backend:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Buffers the data,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Calculates averages,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Saves elegant records to the &lt;code&gt;weather_record&lt;/code&gt; table.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This keeps the database lightweight, fast, and ready for analysis.&lt;/p&gt;
+&lt;h3&gt;📊 5. Real-Time Weather in My Home&lt;/h3&gt;
+&lt;p&gt;Finally, everything lands in Grafana, where I created a set of dashboards:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Temperature charts segmented by sensor,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Humidity over time,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A diagnostic panel (battery status, last signal),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A quick view of recent values.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This isn’t just a chart—it’s my private “weather center,” running 24/7.&lt;/p&gt;
+&lt;h3&gt;🎯 Final Result&lt;/h3&gt;
+&lt;p&gt;I built a system that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Receives radio signals from 433 MHz sensors,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Filters and normalizes the data,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Publishes it to MQTT,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Aggregates and stores it in the backend,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Displays it beautifully in Grafana.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Zero cloud. Zero vendor lock-in.
+Everything runs locally, quickly, and exactly how I want.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Apr 2026 10:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/en/blog/forecast-receiver-raspberry-pi-rtl-sdr/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>Stoic Guide to Inner Peace</title>
         <link>https://wirtaw.github.io/blog/en/blog/15-ways-to-achieve-tranquility/</link>
         <description>&lt;p&gt;The sources present fifteen ways to achieve tranquility (based on &lt;a href=&quot;https://en.wikipedia.org/wiki/Seneca_the_Younger&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Seneca’s&lt;/a&gt; suggestions) and also discuss the technical structure of subordinate virtues that fall under the four cardinal virtues of Stoicism. While the specific count of “15 subordinate virtues” is not explicitly defined as a single canonical list in the sources, they provide a detailed list of fifteen practical suggestions for living virtuously and identify various subordinate virtues within the broader Stoic framework&lt;/p&gt;

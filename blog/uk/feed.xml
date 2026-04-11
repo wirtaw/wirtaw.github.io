@@ -10,6 +10,129 @@
     
       
       <item>
+        <title>📡 Отримання прогнозу погоди з датчиків 433 МГц на Raspberry Pi з RTL-SDR</title>
+        <link>https://wirtaw.github.io/blog/uk/blog/forecast-receiver-raspberry-pi-rtl-sdr/</link>
+        <description>&lt;h2&gt;Від сирого радіосигналу до елегантних дашбордів у Grafana&lt;/h2&gt;
+&lt;p&gt;У певний момент мені перестало вистачати перевірки погоди в додатку. Я хотів знати, яка температура на балконі — і не з якогось хмарного API, а зі своїх власних датчиків, що працюють у реальному часі.
+Так народилася ідея створити власну, повністю приватну систему моніторингу погоди.&lt;/p&gt;
+&lt;h3&gt;📡 1. Перехоплення сигналу з ефіру&lt;/h3&gt;
+&lt;p&gt;Основою всього проєкту є донгл RTL-SDR — маленький радіоприймач, який здатен перехоплювати передачі з дешевих датчиків 433 МГц.
+За допомогою інструменту &lt;strong&gt;rtl_433&lt;/strong&gt; я перетворив сирий радіосигнал на зрозумілі JSON-об’єкти.
+Це момент, коли «радіомагія» стає даними.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/photos/IMG20260411083210.jpg&quot; alt=&quot;донгл RTL-SDR raspberry-pi&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.g.s4.mega.io/ckcmkjmaqedml3aiyva3m3o2rbwu4mbvztutq/poplauki/blog/photos/IMG20260411083455.jpg&quot; alt=&quot;датчик 433 MHz погодний&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;🔧 2. Інтелектуальний фільтр: тільки мої датчики, тільки те, що важливо&lt;/h3&gt;
+&lt;p&gt;Я не хотів сміття в системі.
+Тому створив &lt;code&gt;bridge.js&lt;/code&gt; — невеликий, розумний скрипт на &lt;code&gt;Node.js&lt;/code&gt;, який:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;розпізнає тільки мої датчики (за моделлю та ID),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;зіставляє їх із зручними назвами: balcony (кут темний) oraz balcony_2 (кут світлий),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;конвертує температуру з &lt;strong&gt;°F&lt;/strong&gt; у &lt;strong&gt;°C&lt;/strong&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;публікує чисті, уніфіковані дані в MQTT (&lt;code&gt;weather/&amp;lt;name&amp;gt;&lt;/code&gt;),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;записує timestamp останнього сигналу,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;надсилає сповіщення, коли батарея в датчику починає розряджатися.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Це не просто фільтр — це мій приватний «шар погодного інтелекту».&lt;/p&gt;
+&lt;h3&gt;🧠 3. Бекенд, який розуміє дані&lt;/h3&gt;
+&lt;p&gt;Далі дані потрапляють до бекенду на базі NestJS.
+Я створив власного клієнта MQTT, який:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;підписується на &lt;code&gt;weather/#&lt;/code&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;отримує готові JSON-об’єкти з &lt;code&gt;bridge.js&lt;/code&gt;,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;оновлює кеш останніх показників,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;агрегує дані та записує їх у PostgreSQL базі даніх.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Бекенд не мусить знати про радіопротоколи чи моделі датчиків.
+Він отримує чисті, стандартизовані дані — і робить з ними те, що вміє найкраще.&lt;/p&gt;
+&lt;h3&gt;🗄️ 4. Історія погоди в PostgreSQL&lt;/h3&gt;
+&lt;p&gt;Кожен датчик генерує багато показників за хвилину.
+Замість того, щоб записувати все, бекенд:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;буферизує дані,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;обчислює середні значення,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;записує акуратні записи до таблиці &lt;code&gt;weather_record&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Завдяки цьому база легка, швидка й готова до аналізу.&lt;/p&gt;
+&lt;h3&gt;📊 5. Погода у моєму домі — у реальному часі&lt;/h3&gt;
+&lt;p&gt;На завершення все потрапляє до Grafana, де я створив набір дашбордів:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;графік температури з розподілом за датчиками,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;вологість у динаміці,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;діагностична панель (батарея, останній сигнал),&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;швидкий перегляд останніх значень.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Це не просто графік — це мій приватний «погодний центр», що працює цілодобово.&lt;/p&gt;
+&lt;p&gt;🎯 Кінцевий результат&lt;/p&gt;
+&lt;p&gt;Я побудував систему, яка:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;отримує радіосигнал з датчиків 433 МГц,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;фільтрує та нормалізує дані,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;публікує їх у MQTT,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;бекенд агрегує та зберігає їх,&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Grafana відображає їх у красивий, зрозумілий спосіб.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Жодних хмар. Жодного vendor lock-in.
+Все працює локально, швидко й саме так, як я хочу.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 09 Apr 2026 10:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/uk/blog/forecast-receiver-raspberry-pi-rtl-sdr/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>15 Спосіб Знайти Внутрішній Спокій: Стойкий Путівник</title>
         <link>https://wirtaw.github.io/blog/uk/blog/15-ways-to-achieve-tranquility/</link>
         <description>&lt;p&gt;Джерела представляють п’ятнадцять способів досягнення внутрішнього спокою (на основі пропозицій &lt;a href=&quot;https://uk.wikipedia.org/wiki/%D0%9B%D1%83%D1%86%D1%96%D0%B9_%D0%90%D0%BD%D0%BD%D0%B5%D0%B9_%D0%A1%D0%B5%D0%BD%D0%B5%D0%BA%D0%B0&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Сенеки&lt;/a&gt;) та обговорюють технічну структуру другорядних чеснот, які належать до чотирьох кардинальних чеснот стоїцизму. Хоча конкретна кількість “15 другорядних чеснот” явно не визначена як єдиний канонічний список у джерелах, вони надають детальний список п’ятнадцяти практичних пропозицій для життя за чеснотами та визначають різні другорядні чесноти в рамках ширшої стоїчної системи.&lt;/p&gt;
