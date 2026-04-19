@@ -18,6 +18,44 @@
     
       
       <item>
+        <title>Няобходныя інструменты бяспекі OWASP: кантрольны спіс перад запускам сайта</title>
+        <link>https://wirtaw.github.io/blog/be/blog/list-owasp-useful-links/</link>
+        <description>&lt;p&gt;Спіс спасылак OWASP:&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Сканеры&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://radar.cloudflare.com/scan&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Cloudflare Radar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.projectdiscovery.io/opensource/nuclei/overview&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Хуткі і наладжальны сканэр уразлівасцяў на аснове простых шаблонаў YAML&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;DNS&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://dnsdumpster.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;dns recon &amp;amp; research, find &amp;amp; lookup dns records&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Загалоўкі&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://check.town/csp-validator&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Валідатар загалоўка CSP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://securityheaders.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Загалоўкі бяспекі (Snyk)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Праверка HSTS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://showdns.net/hsts-checker&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;HTTP Strict Transport Security Test&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 18 Apr 2026 12:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/be/blog/list-owasp-useful-links/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>Штодзённая стаічная практыка</title>
         <link>https://wirtaw.github.io/blog/be/blog/daily-stoic-routine-habits-for-inner-peace/</link>
         <description>&lt;h2&gt;Ранішнія дысцыпліны: Авалоданне днём&lt;/h2&gt;

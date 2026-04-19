@@ -16,6 +16,44 @@
     
       
       <item>
+        <title>Essential OWASP Security Tools: Pre-Launch Website Checklist</title>
+        <link>https://wirtaw.github.io/blog/en/blog/list-owasp-useful-links/</link>
+        <description>&lt;p&gt;List of the OWASP links:&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Scanners&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://radar.cloudflare.com/scan&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Cloudflare Radar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.projectdiscovery.io/opensource/nuclei/overview&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;A fast and customisable vulnerability scanner powered by simple YAML-based templates&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;DNS&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://dnsdumpster.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;dns recon &amp;amp; research, find &amp;amp; lookup dns records&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Headers&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://check.town/csp-validator&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;CSP Header Validator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://securityheaders.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Security Headers (Snyk)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;HSTS Checker&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://showdns.net/hsts-checker&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;HTTP Strict Transport Security Test&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 18 Apr 2026 12:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/en/blog/list-owasp-useful-links/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>Stoic daily practice</title>
         <link>https://wirtaw.github.io/blog/en/blog/daily-stoic-routine-habits-for-inner-peace/</link>
         <description>&lt;h2&gt;Morning Disciplines: Claiming the Day&lt;/h2&gt;

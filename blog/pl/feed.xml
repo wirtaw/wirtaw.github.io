@@ -12,6 +12,44 @@
     
       
       <item>
+        <title>Niezbędne narzędzia bezpieczeństwa OWASP: lista kontrolna przed publikacją witryny</title>
+        <link>https://wirtaw.github.io/blog/pl/blog/list-owasp-useful-links/</link>
+        <description>&lt;p&gt;Lista linków OWASP:&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Skanery&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://radar.cloudflare.com/scan&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Cloudflare Radar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.projectdiscovery.io/opensource/nuclei/overview&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Szybki i konfigurowalny skaner podatności oparty na prostych szablonach YAML&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;DNS&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://dnsdumpster.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;dns recon &amp;amp; research, find &amp;amp; lookup dns records&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Nagłówki&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://check.town/csp-validator&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Walidator nagłówka CSP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://securityheaders.com/&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;Nagłówki bezpieczeństwa (Snyk)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Sprawdzanie HSTS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://showdns.net/hsts-checker&quot; target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;&gt;HTTP Strict Transport Security Test&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 18 Apr 2026 12:00:00 +0000</pubDate>
+        <dc:creator>Vladimir Poplavskij</dc:creator>
+        <guid>https://wirtaw.github.io/blog/pl/blog/list-owasp-useful-links/</guid>
+      </item>
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      <item>
         <title>Codzienna praktyka stoicka</title>
         <link>https://wirtaw.github.io/blog/pl/blog/daily-stoic-routine-habits-for-inner-peace/</link>
         <description>&lt;h2&gt;Poranne dyscypliny: Odzyskiwanie dnia&lt;/h2&gt;
