@@ -183,6 +183,12 @@ const tools = [
     description: "Yamline is a tool for a powerful and widely-used format, especially for configuration management in platforms like Kubernetes and beyond. Here, you'll find a curated collection of tools tailored to streamline your YAML workflow. While advancements in AI may reduce the need for some of these tools, they will continue to be invaluable to many developers working with YAML",
     tags: ["utility", "tools", "yaml", "development", "configuration", "kubernetes", "ai", "workflow"],
   },
+  {
+    url: 'https://www.jstools.space/',
+    title: "Developer Utilities",
+    description: "Small, focused tools for everyday development work. Format data, generate secure values, inspect tokens, and test snippets without sending your input to a server. ",
+    tags: ["utility", "tools", "js", "development", "formatting", "security", "testing"],
+  }
 ];
 
 const toolsContainer = document.getElementById("tools-container");
