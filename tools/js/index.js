@@ -188,6 +188,12 @@ const tools = [
     title: "Developer Utilities",
     description: "Small, focused tools for everyday development work. Format data, generate secure values, inspect tokens, and test snippets without sending your input to a server. ",
     tags: ["utility", "tools", "js", "development", "formatting", "security", "testing"],
+  },
+  {
+    url: 'https://ethereal.email/',
+    title: "Ethereal",
+    description: " a fake SMTP service, mostly aimed at Nodemailer and EmailEngine users (but not limited to). It's a completely free anti-transactional email service where messages never get delivered. ",
+    tags: ["utility", "tools", "email", "smtp", "testing"],
   }
 ];
 
