@@ -194,6 +194,12 @@ const tools = [
     title: "Ethereal",
     description: " a fake SMTP service, mostly aimed at Nodemailer and EmailEngine users (but not limited to). It's a completely free anti-transactional email service where messages never get delivered. ",
     tags: ["utility", "tools", "email", "smtp", "testing"],
+  },
+  {
+    url: 'https://www.suncalc.org',
+    title: "SunCalc",
+    description: "Calculate sun position and light information for a given date and location.",
+    tags: ["utility", "tools", "sun", "light", "astronomy"],
   }
 ];
 
