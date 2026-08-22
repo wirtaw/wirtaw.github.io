@@ -200,6 +200,12 @@ const tools = [
     title: "SunCalc",
     description: "Calculate sun position and light information for a given date and location.",
     tags: ["utility", "tools", "sun", "light", "astronomy"],
+  },
+  {
+    url: 'https://portscan.com/',
+    title: "PortScan",
+    description: "Scan ports on a network host to identify open ports and services.",
+    tags: ["utility", "tools", "network", "security", "scanner"],
   }
 ];
 
